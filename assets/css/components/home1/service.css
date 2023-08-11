@@ -1,0 +1,5 @@
+@media (max-width: 767.99px) {
+  .section-service .container .row:first-child > div:last-child {
+    text-align: left !important;
+  }
+}

@@ -1,0 +1,128 @@
+.slider-block {
+    &.style-one {
+        @media (max-width: 1199.99px) {
+            .row {
+                flex-direction: column-reverse;
+
+                .text {
+                    .pr-55 {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slider-block.style-two {
+    width: 100%;
+    height: calc(100vh - 44px);
+    position: relative;
+
+    .slider-item {
+        width: 100%;
+        height: calc(100vh - 44px);
+        position: relative;
+
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .row {
+                position: absolute;
+                top: calc(44px + 50%);
+                left: 15px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .prev-arrow,
+    .next-arrow {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        cursor: pointer;
+        display: flex !important;
+        position: absolute;
+        top: calc(44px + 50%);
+        transform: translateY(-50%);
+        transition: all ease 0.5s;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.6);
+        }
+    }
+
+    .prev-arrow {
+        left: 20px;
+    }
+
+    .next-arrow {
+        right: 20px;
+    }
+
+    &:hover {
+
+        .prev-arrow,
+        .next-arrow {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .prev-arrow.slick-disabled,
+    .next-arrow.slick-disabled {
+        display: none !important;
+    }
+
+    @media (max-width: 767.99px) {
+
+        .prev-arrow,
+        .next-arrow {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 1350px) {
+        .container {
+            .row {
+                left: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 991.99px) {
+        height: calc(80vh - 44px);
+
+        .slider-item {
+            height: calc(80vh - 44px);
+        }
+    }
+
+    @media (max-width: 575.00px) {
+        height: calc(70vh - 44px);
+
+        .slider-item {
+            height: calc(70vh - 44px);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.section-contact .container .form-block .row > div:nth-child(6) {
+  position: relative;
+}
+.section-contact .container .form-block .row > div:nth-child(6) i {
+  position: absolute;
+  bottom: 13px;
+  right: 26px;
+  font-size: 18px;
+}

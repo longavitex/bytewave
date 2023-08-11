@@ -1,0 +1,26 @@
+.section-contact .container .form-block .row > div:nth-child(1) {
+  padding-right: 6px;
+}
+.section-contact .container .form-block .row > div:nth-child(2) {
+  padding-left: 6px;
+}
+.section-contact .container .form-block .row > div:nth-child(6) {
+  position: relative;
+}
+.section-contact .container .form-block .row > div:nth-child(6) i {
+  position: absolute;
+  bottom: 13px;
+  right: 26px;
+  font-size: 18px;
+}
+@media (max-width: 576px) {
+  .section-contact .container .form-block .row > div:nth-child(1) {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .section-contact .container .form-block .row > div:nth-child(2) {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
+.section-contact.style-three .list-infor a {
+  text-decoration: underline;
+}

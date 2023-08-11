@@ -1,0 +1,35 @@
+:root {
+    --blue: #2D4FE1;
+    --secondary: #1533B4;
+    --error: #C72929;
+    --tertiary: #27AE60;
+    --yellow: #F4D118;
+    --white: #FFFFFF;
+    --surface: #F3F5F9;
+    --outline: #E4E4E4;
+    --line: #DFE2E7;
+    --grey: #EAEDFD;
+    --on-surface: #0C1228;
+    --on-surface-variant1: #646570;
+    --on-surface-variant2: #AAB1B8;
+}
+
+@import './base/reset.scss';
+@import './base/custom-bootstrap.scss';
+@import './base/global.scss';
+
+@import './components/section-case-studies.scss';
+@import './components/section-testimonial.scss';
+@import './components/section-service.scss';
+@import './components/section-banner.scss';
+@import './components/section-about.scss';
+@import './components/section-contact.scss';
+@import './components/section-counter.scss';
+@import './components/section-industry.scss';
+@import './components/list-social.scss';
+
+@import './layout/slider.scss';
+@import './layout/top-nav.scss';
+@import './layout/menu.scss';
+@import './layout/footer.scss';
+@import './layout/font-reduce.scss';

@@ -1,0 +1,91 @@
+.footer-block .row .footer-navigate {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-block .row .company-contact .send-block {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.footer-block .row .company-contact .send-block > i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: block;
+  color: var(--on-surface-variant1);
+}
+.footer-block .row .company-contact .send-block input {
+  color: var(--on-surface);
+  background: transparent;
+  height: 50px;
+  width: 100%;
+  padding: 14px 28px;
+  border-bottom: 1px solid var(--on-surface);
+}
+.footer-block .row .company-contact .send-block input:focus, .footer-block .row .company-contact .send-block input:active {
+  background-color: transparent;
+}
+.footer-block .row .company-contact .send-block button {
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.footer-block .row .company-contact .send-block button i {
+  display: block;
+  font-size: 20px;
+  color: var(--on-surface);
+  background-color: transparent;
+}
+
+@media (max-width: 767.99px) {
+  .footer-block .footer-bottom {
+    flex-direction: column;
+    row-gap: 6px;
+  }
+}
+@media (max-width: 575.99px) {
+  .footer-block .row .footer-navigate {
+    justify-content: space-between;
+  }
+  .footer-block .footer-bottom .nav-link {
+    gap: 6px;
+  }
+  .footer-block .footer-bottom .nav-link .caption1 {
+    font-size: 12px;
+  }
+}
+.footer-style-three .footer-block {
+  background-color: var(--on-surface);
+  color: var(--on-surface-variant2);
+}
+.footer-style-three .footer-block a {
+  color: var(--on-surface-variant2);
+}
+.footer-style-three .footer-block .border-line {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-style-three .footer-block .bg-white {
+  background-color: var(--on-surface);
+}
+.footer-style-three .footer-block .logo svg path {
+  fill: var(--white);
+}
+.footer-style-three .footer-block .item-heading,
+.footer-style-three .footer-block .company-contact .heading {
+  color: var(--white);
+}
+.footer-style-three .footer-block .list-social .item {
+  border: 1px solid var(--on-surface-variant2);
+}
+.footer-style-three .footer-block .row .company-contact .send-block input {
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+}
+.footer-style-three .footer-block .row .company-contact .send-block button i {
+  color: var(--white);
+}

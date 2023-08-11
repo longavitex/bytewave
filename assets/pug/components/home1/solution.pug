@@ -1,0 +1,20 @@
+include ../../mixins/solutionItem.pug
+
+.section-solution.bg-linear.mt-80.pt-80.pb-80 
+    .container.text-center
+        .text-label.text-blue.text-center.pt-4.pb-4.pl-12.pr-12.bg-grey.bora-2.display-inline-block How we do
+        .heading3.text-center.mt-12 Our solutions
+        .row.row-gap-40.mt-40
+            .col-12.col-xl-4.col-sm-6
+                +solutionItem({classname:'p-40 bora-20 bg-white h-100', style:'solution-one', icon: 'icon-phone-hand', title: 'Managed IT Services', desc: 'Outsourcing IT management and maintenance, including network monitoring, data backup, cybersecurity, help desk support.'})
+            .col-12.col-xl-4.col-sm-6
+                +solutionItem({classname:'p-40 bora-20 bg-white h-100', style:'solution-one', icon: 'icon-user-sync', title: 'IT Consulting', desc: 'Strategic guidance on IT strategy, digital transformation, software implementation, and project management.'})
+            .col-12.col-xl-4.col-sm-6
+                +solutionItem({classname:'p-40 bora-20 bg-white h-100', style:'solution-one', icon: 'icon-device-cloud', title: 'Cloud Computing', desc: 'Access to remote servers and infrastructure for data storage, application hosting, and scalable resources.'})
+            .col-12.col-xl-4.col-sm-6
+                +solutionItem({classname:'p-40 bora-20 bg-white h-100', style:'solution-one', icon: 'icon-cloud-dots', title: 'Cybersecurity Solutions', desc: 'Protecting businesses from cyber threats through measures like network security, encryption, and training.'})
+            .col-12.col-xl-4.col-sm-6
+                +solutionItem({classname:'p-40 bora-20 bg-white h-100', style:'solution-one', icon: 'icon-user-sync', title: 'Data Analytics', desc: 'Services for data storage, backup, integration, governance, and analytics to drive insights and informed decisions.'})
+            .col-12.col-xl-4.col-sm-6
+                +solutionItem({classname:'p-40 bora-20 bg-white h-100', style:'solution-one', icon: 'icon-target-chart', title: 'Software Development', desc: ' Custom software development and integration services to meet specific business needs.'})
+            

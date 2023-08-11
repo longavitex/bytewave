@@ -1,0 +1,23 @@
+extends base/layout.pug
+block title
+    title Home 3 - IoT Services
+block header
+    include components/header/top-nav/top-nav-three.pug
+    div(class="menu-style-two menu-style-three")
+        include components/header/menu/menu-three.pug
+block content
+    include components/slider/slider-three.pug
+    include components/home3/benefit.pug
+    include components/home3/about.pug
+    div(class="banner-style-three")
+        include components/home3/banner.pug
+    include components/home3/solution.pug
+    div(class="testimonial-style-three")
+        include components/home2/testimonial.pug
+    include components/home3/industry.pug
+    include components/home3/news.pug
+    include components/home1/brand.pug
+    include components/home3/contact.pug
+block footer 
+    div(class="footer-style-three")
+        include components/footer/footer.pug

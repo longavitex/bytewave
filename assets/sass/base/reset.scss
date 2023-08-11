@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--on-surface);
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+#content {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--on-surface);
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    outline: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+select {
+    -webkit-appearance: none;
+}

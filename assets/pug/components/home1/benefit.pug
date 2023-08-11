@@ -1,0 +1,14 @@
+include ../../mixins/benefitItem.pug
+
+.section-benefit.mt-80
+    .container 
+        .row.row-gap-40
+            .col-12.col-lg-3.col-sm-6
+                +benefitItem({classname:'', icon: 'ph ph-medal fs-42', title: 'Expertise', desc: 'Access to specialized knowledge and technology expertise for effective IT solutions.'})
+            .col-12.col-lg-3.col-sm-6
+                +benefitItem({classname:'', icon: 'ph ph-money fs-42', title: 'Cost Savings', desc: 'Avoiding expenses associated with maintaining an in-house IT department.'})
+            .col-12.col-lg-3.col-sm-6
+                +benefitItem({classname:'', icon: 'ph ph-fingerprint fs-42', title: 'Enhanced Security', desc: 'Robust measures to protect against cyber threats and ensure data security.'})
+            .col-12.col-lg-3.col-sm-6
+                +benefitItem({classname:'', icon: 'ph ph-chart-line-up fs-42', title: 'Increased Efficiency', desc: 'Streamlined operations, automation, and proactive monitoring for improved productivity.'})
+            

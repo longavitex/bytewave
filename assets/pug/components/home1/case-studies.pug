@@ -1,0 +1,20 @@
+include ../../mixins/blogItem.pug
+
+.section-case-studies.bg-linear.mt-80.pt-80.pb-80 
+    .container
+        .row.gy-1.flex-between
+            .col-xl-5.col-md-4.col-12
+                .text-label.text-blue.pt-4.pb-4.pl-12.pr-12.bg-grey.bora-2.display-inline-block Why we do
+                .heading3.mt-12 Case studies
+            .col-xl-5.col-lg-6.col-md-7.col-12
+                .body2 Case studies that showcase the agency's approach, process, and results for specific clients.
+        .row.row-gap-24.mt-40
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item1.png', category:'Performance Enhancement', title:'Demystifying IT Services: Exploring Tech Trends & Solutions', desc:'Enhanced performance for a manufacturing firm by optimizing their database structure, resulting in improved efficiency and competitiveness.', learn:true})
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item2.png', category:'Cloud Solutions', title:'Unlocking Business Potential: The Role of IT Services Today', desc:"Secured sensitive data during a financial company's cloud migration by designing a hybrid solution combining cloud flexibility and on-premises control.", learn:true})
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item3.png', category:'Application Development', title:'Tech Insights: How IT Services Drive Modern Business', desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', learn:true})
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'display-none', style:'style-one', img:'assets/images/blog/item4.png', category:'Finance & Banking', title:'Optimizing database system', desc:'Enhanced performance for a manufacturing firm by optimizing their database structure, resulting in improved efficiency and competitiveness.', learn:true})
+            

@@ -1,0 +1,22 @@
+.section-banner {
+  background-color: var(--primary);
+}
+.section-banner .list {
+  display: flex;
+  width: 2658.2px;
+  overflow: hidden;
+  animation: scroll 10s linear infinite;
+  padding: 28px 0;
+}
+.section-banner .list .heading4 {
+  margin: 0 60px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-850.624px);
+  }
+}

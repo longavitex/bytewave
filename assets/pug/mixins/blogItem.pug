@@ -1,0 +1,15 @@
+mixin blogItem(props = {})
+    -var {classname = '', style, href='#!', img, category, title, desc, learn=false, date} = props
+    div(class=`blog-item hover-box-shadow ${classname}`)
+        if(style=='style-one')
+            a(href=`${href}`).main-item
+                .bg-img.w-100.overflow-hidden
+                    img(src=`${img}`).w-100.h-100.display-block
+                .infor.mt-28
+                    .caption1.fw-700.text-blue.pt-4.pb-4.pl-12.pr-12.bg-grey.bora-8.display-inline-block!= category
+                    .heading5.mt-12!= title
+                    .text-on-surface-variant1.mt-12!= desc 
+                    if(learn==true)
+                        .caption1.fw-700.mt-16 Learn more
+                    if(date)
+                        .text-label.text-on-surface-variant1.fw-700.mt-16!= date

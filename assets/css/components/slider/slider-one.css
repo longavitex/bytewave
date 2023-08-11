@@ -1,0 +1,5 @@
+@media (max-width: 1199.99px) {
+  .slider-block .row {
+    flex-direction: column-reverse;
+  }
+}

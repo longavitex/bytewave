@@ -1,0 +1,204 @@
+.header-menu {
+  border-bottom: 1px solid var(--outline);
+  position: relative;
+}
+.header-menu .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+.header-menu .menu-main {
+  height: 100%;
+}
+.header-menu .menu-main ul {
+  height: 100%;
+}
+.header-menu .menu-main ul li {
+  cursor: pointer;
+}
+.header-menu .menu-main ul li a {
+  padding: 24px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.header-menu .right-block {
+  justify-content: right;
+}
+.header-menu .right-block .call-block {
+  margin-right: 16px;
+  border-radius: 999px;
+  background: rgba(39, 75, 227, 0.1);
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 4px 12px 4px 6px;
+}
+.header-menu .right-block .call-block i {
+  font-size: 18px;
+  color: var(--blue);
+  padding: 7px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: inline-block;
+}
+.header-menu .right-block .call-block span {
+  padding-left: 8px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+.header-menu .right-block a {
+  margin-right: 40px;
+}
+.header-menu .right-block .search-icon {
+  margin-right: 16px;
+  cursor: pointer;
+}
+.header-menu .right-block .search-icon i {
+  font-size: 18px;
+  display: block;
+  padding: 3px;
+}
+.header-menu .right-block .bag-icon {
+  position: relative;
+  cursor: pointer;
+}
+.header-menu .right-block .bag-icon i {
+  font-size: 18px;
+  display: block;
+  padding: 3px;
+}
+.header-menu .right-block .bag-icon span {
+  position: absolute;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 2px 5px;
+  top: -4px;
+  right: -6px;
+}
+.header-menu .menu-humburger {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .header-menu .right-block .call-block {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .header-menu .menu-main {
+    display: none;
+  }
+  .header-menu .right-block a {
+    display: none;
+  }
+  .header-menu .right-block .search-icon i,
+  .header-menu .right-block .bag-icon i {
+    font-size: 24px;
+  }
+  .header-menu .right-block .menu-humburger {
+    display: block;
+    font-size: 24px;
+    padding-left: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .header-menu .container {
+    height: 60px;
+  }
+  .header-menu .right-block .search-icon i,
+  .header-menu .right-block .bag-icon i {
+    font-size: 20px;
+  }
+  .header-menu .right-block .menu-humburger {
+    font-size: 20px;
+  }
+}
+
+.menu-style-two .header-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: all linear 0.5s;
+}
+.menu-style-two .header-menu .right-block .call-block {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+.menu-style-two .header-menu .right-block .call-block i {
+  color: var(--on-surface);
+}
+.menu-style-two .header-menu.sticky {
+  top: 0;
+  position: fixed;
+  background-color: #fff;
+  color: var(--on-surface);
+}
+.menu-style-two .header-menu.sticky .logo svg path {
+  fill: var(--on-surface);
+  transition: all linear 0.5s;
+}
+.menu-style-two .header-menu.sticky .menu-main ul li a {
+  color: var(--on-surface) !important;
+  transition: all linear 0.5s;
+}
+.menu-style-two .header-menu.sticky .right-block .call-block {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+.menu-style-two .header-menu.sticky .right-block .call-block span {
+  color: var(--on-surface) !important;
+}
+.menu-style-two .header-menu.sticky .right-block > div i {
+  color: var(--on-surface) !important;
+}
+@media (min-width: 1850px) {
+  .menu-style-two .header-menu .logo {
+    margin-left: -250px;
+  }
+  .menu-style-two .header-menu .right-block {
+    margin-right: -250px;
+  }
+}
+@media (max-width: 1849.99px) {
+  .menu-style-two .header-menu .container {
+    justify-content: center;
+  }
+  .menu-style-two .header-menu .logo {
+    position: absolute;
+    left: 15px;
+  }
+  .menu-style-two .header-menu .right-block {
+    position: absolute;
+    right: 15px;
+  }
+}
+
+.menu-style-three .header-menu .container {
+  justify-content: space-between;
+}
+.menu-style-three .header-menu .logo {
+  margin-left: 0;
+  left: 0;
+  position: relative;
+}
+.menu-style-three .header-menu .right-block {
+  margin-right: 0;
+  right: 0;
+  position: relative;
+}
+.menu-style-three .header-menu .right-block a {
+  margin-right: 0;
+}
+.menu-style-three .header-menu .right-block .bag-icon span {
+  background-color: var(--yellow);
+  color: var(--on-surface);
+}
+.menu-style-three .header-menu.sticky .container .right-block a {
+  background-color: var(--yellow) !important;
+}

@@ -1,0 +1,89 @@
+.section-testimonial .row > div .testimonial-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-testimonial .row > div .testimonial-item .content-main {
+  width: 59.0909090909%;
+  padding: 40px 60px;
+}
+.section-testimonial .row > div .testimonial-item .bg-img {
+  width: 40.9090909091%;
+  height: 100%;
+}
+.section-testimonial .row > div .testimonial-item .bg-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-testimonial.style-two .list-comment .slick-list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.section-testimonial.style-two .list-comment .slick-list .slick-track > div {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (max-width: 575.99px) {
+  .section-testimonial.style-two .list-comment .slick-list .slick-track > div .item {
+    padding: 24px 20px;
+  }
+  .section-testimonial.style-two .list-comment .slick-list .slick-track > div .item img {
+    width: 80px;
+    height: 80px;
+  }
+  .section-testimonial.style-two .list-comment .slick-list .slick-track > div .item .content .star i {
+    font-size: 14px;
+  }
+  .section-testimonial.style-two .list-comment .slick-list .slick-track > div .item .content .mt-12 {
+    margin-top: 8px;
+  }
+}
+.section-testimonial .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 16px;
+}
+@media (max-width: 767.99px) {
+  .section-testimonial .slick-dots {
+    margin-top: 30px;
+  }
+}
+.section-testimonial .slick-dots li {
+  position: relative;
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.section-testimonial .slick-dots li button {
+  display: none;
+}
+.section-testimonial .slick-dots li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #171717;
+  transition: 0.5s;
+}
+.section-testimonial .slick-dots li.slick-active {
+  border: 1px solid var(--on-surface);
+  background-color: #fff;
+}
+.section-testimonial .slick-dots li.slick-active::after {
+  background-color: var(--on-surface);
+  border: 1px solid var(--on-surface);
+}
+
+.testimonial-style-three .section-testimonial .row .item .star i.ph-star {
+  color: var(--yellow);
+}

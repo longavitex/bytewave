@@ -1,0 +1,7 @@
+mixin benefitItem(props = {})
+    -var {classname = '', icon, title, desc} = props
+    div(class=`benefit-item hover-box-shadow ${classname}`)
+        .block-icon 
+            i(class=`${icon}`)
+        .heading6.mt-8!= title
+        .text-on-surface-variant1.mt-8!= desc

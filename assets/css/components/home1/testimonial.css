@@ -1,0 +1,16 @@
+.section-testimonial .row > div .testimonial-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-testimonial .row > div .testimonial-item .content-main {
+  width: 59.0909090909%;
+  padding: 40px 60px;
+}
+.section-testimonial .row > div .testimonial-item .bg-img {
+  width: 40.9090909091%;
+}
+.section-testimonial .row > div .testimonial-item .bg-img img {
+  width: 100%;
+  object-fit: cover;
+}
