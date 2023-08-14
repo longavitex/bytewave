@@ -202,3 +202,38 @@
 .menu-style-three .header-menu.sticky .container .right-block a {
   background-color: var(--yellow) !important;
 }
+
+.menu-style-four .header-menu .container {
+  justify-content: center;
+}
+.menu-style-four .header-menu .logo {
+  margin-left: 0;
+  position: absolute;
+  left: 80px;
+}
+.menu-style-four .header-menu .right-block {
+  margin-right: 0;
+  position: absolute;
+  right: 80px;
+}
+.menu-style-four .header-menu .right-block .bag-icon span {
+  background-color: var(--pink);
+}
+.menu-style-four .header-menu .right-block a {
+  margin-right: 0;
+}
+@media (max-width: 1560px) {
+  .menu-style-four .header-menu .container {
+    justify-content: space-between;
+  }
+  .menu-style-four .header-menu .logo {
+    margin-left: 0;
+    position: relative;
+    left: 0;
+  }
+  .menu-style-four .header-menu .right-block {
+    margin-right: 0;
+    position: relative;
+    right: 0;
+  }
+}

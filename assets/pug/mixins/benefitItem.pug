@@ -4,4 +4,5 @@ mixin benefitItem(props = {})
         .block-icon 
             i(class=`${icon}`)
         .heading6.mt-8!= title
-        .text-on-surface-variant1.mt-8!= desc
+        if(desc)
+            .text-on-surface-variant1.mt-8!= desc

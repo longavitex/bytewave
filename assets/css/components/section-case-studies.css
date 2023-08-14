@@ -35,3 +35,12 @@
     display: block;
   }
 }
+
+.section-news.style-four .container > .row > div .bg-img {
+  position: relative;
+}
+.section-news.style-four .container > .row > div .bg-img .text-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

@@ -16,8 +16,8 @@ $(".slider-block .list-slider").slick({
     infinite: false,
     swipe: true,
     swipeToSlide: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     speed: 800,
     // fade: true,
     pauseOnFocus: false,
@@ -43,7 +43,7 @@ $(".section-testimonial.style-two .container .list-comment").slick({
     touchThreshold: 100,
     swipe: true,
     swipeToSlide: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     speed: 500,
     pauseOnFocus: false,
@@ -74,6 +74,16 @@ $(".section-testimonial.style-two .container .list-comment").slick({
         },
     ]
 });
+
+
+// circle box about home3
+const textBoxCircle = document.querySelector('.section-about .text-box-circle .text-label')
+
+if(textBoxCircle) {
+    textBoxCircle.innerHTML = textBoxCircle.innerText.split('').map(
+        (char, i) => `<span style="transform: rotate(${i*10.5}deg);">${char}</span>`
+    ).join('')
+}
 
 
 // industry home3

@@ -162,8 +162,20 @@
     background-color: var(--on-surface);
 }
 
+.bg-black-surface {
+    background-color: var(--black-surface);
+}
+
 .bg-yellow {
     background-color: var(--yellow);
+}
+
+.bg-pink {
+    background-color: var(--pink);
+}
+
+.bg-green {
+    background-color: var(--green);
 }
 
 .bg-linear {
@@ -172,6 +184,10 @@
 
 .bg-linear-grey {
     background: linear-gradient(46deg, #414E62 53.13%, #805D5D 100%);
+}
+
+.bg-linear-pink {
+    background: linear-gradient(46deg, #231A87 0%, #E13789 100%);
 }
 
 .bg-white {
@@ -347,12 +363,24 @@
     font-weight: 400;
 }
 
+.p-60 {
+    padding: 60px;
+}
+
 .p-40 {
     padding: 40px;
 }
 
+.p-28 {
+    padding: 28px;
+}
+
 .p-20 {
     padding: 20px;
+}
+
+.p-16 {
+    padding: 16px;
 }
 
 .pr-65 {
@@ -475,6 +503,10 @@
     padding-bottom: 80px;
 }
 
+.pb-70 {
+    padding-bottom: 70px;
+}
+
 .pb-60 {
     padding-bottom: 60px;
 }
@@ -581,6 +613,10 @@
 
 .mt-80 {
     margin-top: 80px;
+}
+
+.mt-70 {
+    margin-top: 70px;
 }
 
 .mt-60 {

@@ -4,7 +4,10 @@
     --error: #C72929;
     --tertiary: #27AE60;
     --yellow: #F4D118;
+    --pink: #E13789;
+    --green: #63E483;
     --white: #FFFFFF;
+    --black-surface: #1A1A1A;
     --surface: #F3F5F9;
     --outline: #E4E4E4;
     --line: #DFE2E7;
@@ -22,10 +25,13 @@
 @import './components/section-testimonial.scss';
 @import './components/section-service.scss';
 @import './components/section-banner.scss';
+@import './components/section-benefit.scss';
 @import './components/section-about.scss';
 @import './components/section-contact.scss';
 @import './components/section-counter.scss';
 @import './components/section-industry.scss';
+@import './components/section-portfolio.scss';
+@import './components/section-newsletter.scss';
 @import './components/list-social.scss';
 
 @import './layout/slider.scss';

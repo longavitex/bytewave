@@ -1,0 +1,17 @@
+include ../../mixins/solutionItem.pug
+
+.section-solution.style-four.bg-surface.pt-80.pb-80 
+    .container.text-center
+        .heading.flex-between 
+            .heading3.text-center.mt-12 Our solutions
+            a(href="#!").text-button-small.display-inline-block.border-underline-blue-2px View All Solutions
+        .row.row-gap-32.mt-40
+            .col-12.col-sm-6
+                +solutionItem({classname:'h-100 p-60 bg-white bora-20', style:'solution-two', icon: 'icon-phone-hand fs-60', title: 'Business Strategy  ', desc: 'Develop long-term plans and make informed decisions to drive corporate growth and competitiveness.'})
+            .col-12.col-sm-6
+                +solutionItem({classname:'h-100 p-60 bg-white bora-20', style:'solution-two', icon: 'icon-user-sync fs-60', title: 'Financial Advisory', desc: 'Maximize your finances with expert Financial Advisory. Smart strategies for saving, investing, debt, retirement, and asset protection'})
+            .col-12.col-sm-6
+                +solutionItem({classname:'h-100 p-60 bg-white bora-20', style:'solution-two', icon: 'icon-device-cloud fs-60', title: 'HR Consulting', desc: 'Optimize talent acquisition, employee development, performance management, and organizational design.'})
+            .col-12.col-sm-6
+                +solutionItem({classname:'h-100 p-60 bg-white bora-20', style:'solution-two', icon: 'icon-cloud-dots fs-60', title: 'IT Solutions', desc: 'Leverage technology for efficient business processes, enhanced cybersecurity, digital transformation innovation.'})
+            

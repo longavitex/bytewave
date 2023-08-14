@@ -13,3 +13,11 @@ mixin blogItem(props = {})
                         .caption1.fw-700.mt-16 Learn more
                     if(date)
                         .text-label.text-on-surface-variant1.fw-700.mt-16!= date
+        if(style=='style-four')
+            a(href=`${href}`).main-item
+                .bg-img.w-100.overflow-hidden
+                    img(src=`${img}`).w-100.h-100.display-block
+                    .text-label.bg-pink.text-white.pt-8.pb-8.pl-12.pr-12.display-inline-block!= category
+                .infor.p-28
+                    .heading5!= title 
+                    .text-label.text-on-surface-variant1.fw-700.mt-16!= date

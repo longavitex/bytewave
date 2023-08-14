@@ -84,6 +84,6 @@
   border: 1px solid var(--on-surface);
 }
 
-.testimonial-style-three .section-testimonial .row .item .star i.ph-star {
+.testimonial-style-three .section-testimonial .col .item .star i.ph-star {
   color: var(--yellow);
 }

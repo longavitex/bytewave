@@ -5,21 +5,35 @@
   display: flex;
   width: 2658.2px;
   overflow: hidden;
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
   padding: 28px 0;
 }
 .section-banner .list .heading4 {
   margin: 0 60px;
+  white-space: nowrap;
 }
 .section-banner.style-two .list {
   width: 3597.14px;
+  animation: scroll2 20s linear infinite;
 }
 
 .banner-style-three .section-banner {
   background-color: var(--yellow);
 }
+.banner-style-three .section-banner .list {
+  width: 3590px;
+  animation: scroll3 20s linear infinite;
+}
 .banner-style-three .section-banner .list i::before {
   color: var(--on-surface);
+}
+
+.banner-style-four .section-banner {
+  background-color: var(--pink);
+}
+.banner-style-four .section-banner .list {
+  width: 2989.2px;
+  animation: scroll3 20s linear infinite;
 }
 
 @keyframes scroll {
@@ -27,6 +41,22 @@
     transform: translateX(0);
   }
   to {
+    transform: translateX(-850.624px);
+  }
+}
+@keyframes scroll2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
     transform: translateX(-1151.0848px);
+  }
+}
+@keyframes scroll3 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1148.8px);
   }
 }

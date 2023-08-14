@@ -283,3 +283,51 @@
         }
     }
 }
+
+.menu-style-four {
+    .header-menu {
+        .container {
+            justify-content: center;
+        }
+
+        .logo {
+            margin-left: 0;
+            position: absolute;
+            left: 80px;
+        }
+
+        .right-block {
+            margin-right: 0;
+            position: absolute;
+            right: 80px;
+
+            .bag-icon {
+                span {
+                    background-color: var(--pink);
+                }
+            }
+
+            a {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 1560px) {
+            .container {
+                justify-content: space-between;
+            }
+
+            .logo {
+                margin-left: 0;
+                position: relative;
+                left: 0;
+            }
+
+            .right-block {
+                margin-right: 0;
+                position: relative;
+                right: 0;
+            }
+        }
+    }
+}

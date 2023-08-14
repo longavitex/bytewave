@@ -1,0 +1,47 @@
+.section-benefit {
+    &.style-four {
+        @media (max-width: 1169.99px) {
+            .container {
+                >.row {
+                    >div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 33%;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 575.99px) {
+            .container {
+                >.row {
+                    align-items: flex-start;
+
+                    >div {
+                        >div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+
+                            .heading6 {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .cta-block {
+            @media (max-width: 767.99px) {
+                .row {
+                    >div {
+                        text-align: center !important;
+                    }
+                }
+            }
+        }
+    }
+}

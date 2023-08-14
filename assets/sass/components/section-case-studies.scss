@@ -67,3 +67,21 @@
         }
     }
 }
+
+.section-news.style-four {
+    .container {
+        >.row {
+            >div {
+                .bg-img {
+                    position: relative;
+
+                    .text-label {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

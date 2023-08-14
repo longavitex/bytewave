@@ -1,0 +1,18 @@
+.section-newsletter .row .block-input input {
+  border-radius: 4px 0 0 4px;
+  height: 48px;
+  width: calc(100% - 128px);
+}
+.section-newsletter .row .block-input button {
+  height: 48px;
+  width: 128px;
+  border-radius: 0 4px 4px 0;
+}
+@media (max-width: 419.99px) {
+  .section-newsletter .row .block-input input {
+    width: calc(100% - 100px);
+  }
+  .section-newsletter .row .block-input button {
+    width: 100px;
+  }
+}

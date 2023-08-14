@@ -1,0 +1,18 @@
+.section-portfolio .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.section-portfolio .row > div {
+  padding-left: 0;
+  padding-right: 0;
+}
+.section-portfolio .row > div .portfolio-item {
+  position: relative;
+}
+.section-portfolio .row > div .portfolio-item .title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  transition: all linear 0.3s;
+}

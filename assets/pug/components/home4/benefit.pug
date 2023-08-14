@@ -1,0 +1,22 @@
+include ../../mixins/benefitItem.pug
+
+.section-benefit.style-four.bg-white.pt-80.pb-80
+    .container 
+        .heading3.text-center Experience Digital Excellence with Us
+        .row.row-gap-32.mt-60.flex-center
+            .col-2-4
+                +benefitItem({classname:'', icon: 'ph ph-headset fs-42', title: 'Trusted Advisor'})
+            .col-2-4
+                +benefitItem({classname:'', icon: 'ph ph-users-three fs-42', title: 'Team Augmentation'})
+            .col-2-4
+                +benefitItem({classname:'', icon: 'ph ph-rocket fs-42', title: 'Digital Innovation'})
+            .col-2-4
+                +benefitItem({classname:'', icon: 'ph ph-crown fs-42', title: 'Faith-Based Morality'})
+            .col-2-4
+                +benefitItem({classname:'', icon: 'ph ph-piggy-bank fs-42', title: 'Time Savings'})
+        .cta-block.bg-linear-pink.pl-40.pr-40.pt-28.pb-28.mt-70
+            .row.flex-between.row-gap-20
+                .col-12.col-md-8
+                    .text-white.heading4 Ready to Ignite Your Digital Presence?
+                .col-12.col-md-4.text-end
+                    a(href="#!").button.bg-white.bora-4.border-none Get a free Quote
