@@ -34,6 +34,10 @@ $(".slider-block .list-slider").slick({
 });
 
 
+// testimonial home1
+
+
+
 // testimonial home2
 $(".section-testimonial.style-two .container .list-comment").slick({
     dots: true,
@@ -125,3 +129,4 @@ $(".section-industry .row").slick({
         },
     ]
 });
+

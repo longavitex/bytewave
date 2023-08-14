@@ -17,9 +17,41 @@
                 input {
                     width: calc(100% - 100px);
                 }
-    
+
                 button {
                     width: 100px;
+                }
+            }
+        }
+    }
+
+    &.style-five {
+        .double-slash {
+            i {
+                font-size: 46px;
+                width: 25px;
+                display: inline-block;
+            }
+        }
+
+        .row {
+            >div:last-child {
+                >div:last-child {
+                    input {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    >div {
+                        padding-left: 12px;
+
+                        a.text-on-surface {
+                            &:hover {
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
         }

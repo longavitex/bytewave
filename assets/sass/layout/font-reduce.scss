@@ -3,12 +3,44 @@
         margin-top: 60px;
     }
 
+    .pt-80 {
+        padding-top: 60px;
+    }
+
+    .pb-80 {
+        padding-bottom: 60px;
+    }
+
     .mt-60 {
         margin-top: 40px;
     }
 
+    .pt-60 {
+        padding-top: 40px;
+    }
+
+    .pb-60 {
+        padding-bottom: 40px;
+    }
+
     .mt-40 {
         margin-top: 30px;
+    }
+
+    .mt-24 {
+        margin-top: 16px;
+    }
+
+    .mt-16 {
+        margin-top: 12px;
+    }
+
+    .mt-12 {
+        margin-top: 8px;
+    }
+
+    .mt-8 {
+        margin-top: 6px;
     }
 
     .row-gap-40 {
@@ -77,8 +109,8 @@
     }
 
     .text-label {
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 11px;
+        line-height: 16px;
     }
 
     .text-button {
@@ -89,7 +121,7 @@
 
     .text-button-small {
         font-size: 12px;
-        line-height: 20px;
+        line-height: 16px;
     }
 }
 
@@ -128,7 +160,8 @@
         line-height: 24px;
     }
 
-    .heading1, .heading2 {
+    .heading1,
+    .heading2 {
         font-size: 32px;
         line-height: 40px;
     }
@@ -181,5 +214,16 @@
     .text-label {
         font-size: 12px;
         line-height: 20px;
+    }
+
+    .text-button {
+        font-size: 13px;
+        line-height: 22px;
+        text-transform: capitalize;
+    }
+
+    .text-button-small {
+        font-size: 11px;
+        line-height: 16px;
     }
 }

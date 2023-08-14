@@ -73,7 +73,6 @@
 .header-menu .right-block .bag-icon span {
   position: absolute;
   color: var(--white);
-  background-color: var(--blue);
   border-radius: 50%;
   font-size: 10px;
   line-height: 12px;
@@ -196,11 +195,10 @@
   margin-right: 0;
 }
 .menu-style-three .header-menu .right-block .bag-icon span {
-  background-color: var(--yellow);
   color: var(--on-surface);
 }
 .menu-style-three .header-menu.sticky .container .right-block a {
-  background-color: var(--yellow) !important;
+  background-color: var(--yellow);
 }
 
 .menu-style-four .header-menu .container {
@@ -236,4 +234,33 @@
     position: relative;
     right: 0;
   }
+}
+
+.menu-style-five .header-menu .right-block .call-block {
+  background-color: transparent;
+  position: relative;
+}
+.menu-style-five .header-menu .right-block .call-block i {
+  background-color: transparent;
+  font-size: 20px;
+}
+.menu-style-five .header-menu .right-block .call-block::before, .menu-style-five .header-menu .right-block .call-block::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: var(--green);
+  height: 75%;
+  transform: rotate(20deg);
+}
+.menu-style-five .header-menu .right-block .call-block::before {
+  left: 0;
+}
+.menu-style-five .header-menu .right-block .call-block::after {
+  right: 0;
+}
+.menu-style-five .header-menu.sticky .container .right-block .call-block {
+  background-color: transparent;
+}
+.menu-style-five .header-menu.sticky .container .right-block a {
+  background-color: var(--green);
 }

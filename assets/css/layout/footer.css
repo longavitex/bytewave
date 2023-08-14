@@ -89,3 +89,20 @@
 .footer-style-three .footer-block .row .company-contact .send-block button i {
   color: var(--white);
 }
+
+.footer-style-four .footer-block {
+  background-color: var(--black-surface);
+}
+.footer-style-four .footer-block .container > .row .footer-navigate {
+  align-items: flex-start;
+}
+.footer-style-four .footer-block .footer-bottom .list-social {
+  margin-top: 0;
+  gap: 0;
+}
+.footer-style-four .footer-block .footer-bottom .list-social a {
+  border: none;
+}
+.footer-style-four .footer-block .footer-bottom .list-social a i::before {
+  color: var(--white);
+}

@@ -156,3 +156,35 @@
         }
     }
 }
+
+.slider-block.style-five {
+    height: 100vh;
+
+    .slider-item {
+        height: 100vh;
+
+        .container {
+            .row {
+                top: unset;
+                transform: unset;
+                bottom: 80px;
+            }
+        }
+    }
+
+    @media (max-width: 991.99px) {
+        height: calc(80vh - 44px);
+
+        .slider-item {
+            height: calc(80vh - 44px);
+        }
+    }
+
+    @media (max-width: 575.00px) {
+        height: calc(70vh - 44px);
+
+        .slider-item {
+            height: calc(70vh - 44px);
+        }
+    }
+}

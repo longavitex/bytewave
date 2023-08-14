@@ -1,20 +1,20 @@
 mixin solutionItem(props = {})
-    -var {classname = '', style, icon, title, desc} = props
+    -var {classname = '', style, href='#!', icon, title, desc} = props
     div(class=`solution-item hover-box-shadow ${classname}`)
         if(style=='solution-one')
-            .main-item.flex-column-item-center
+            a(href=`${href}`).main-item.flex-column-item-center
                 i(class=`${icon}`)
                 .heading5.text-center.mt-24!= title
                 .text-on-surface-variant1.text-center.mt-12!= desc
         if(style=='solution-two')
-            .main-item.d-flex.gap-24
+            a(href=`${href}`).main-item.d-flex.gap-24
                 i(class=`${icon}`)
                 .desc.text-start
                     .heading5!= title
                     .text-on-surface-variant1.mt-12!= desc
         if(style=='solution-three')
-            .main-item
-                i(class=`${icon}`)
+            a(href=`${href}`).main-item
+                i(class=`${icon} display-block text-start`)
                 .desc.text-start.mt-24
                     .heading5!= title
                     .text-on-surface-variant1.mt-12!= desc

@@ -150,6 +150,18 @@
     color: var(--yellow);
 }
 
+.text-pink {
+    color: var(--pink);
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-on-surface {
+    color: var(--on-surface);
+}
+
 .text-on-surface-variant1 {
     color: var(--on-surface-variant1);
 }
@@ -192,6 +204,10 @@
 
 .bg-white {
     background-color: var(--white);
+}
+
+.bg-yellow-surface {
+    background-color: var(--yellow-surface);
 }
 
 .bg-surface {
@@ -361,6 +377,10 @@
 
 .fw-400 {
     font-weight: 400;
+}
+
+.p-80 {
+    padding: 80px;
 }
 
 .p-60 {
@@ -779,6 +799,14 @@
 
 .border-underline-on-surface-2px {
     border-bottom: 2px solid var(--on-surface);
+}
+
+.border-underline-pink-2px {
+    border-bottom: 2px solid var(--pink);
+}
+
+.border-underline-green-2px {
+    border-bottom: 2px solid var(--green);
 }
 
 .hover-underline {

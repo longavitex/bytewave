@@ -99,3 +99,99 @@
         }
     }
 }
+
+.section-industry-five {
+    background-attachment: fixed;
+    background-image: url(../images/component/industry5.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container>.row {
+        padding-top: 265px;
+        padding-bottom: 60px;
+
+        >div:first-child {
+            .play-block {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: var(--green);
+            }
+        }
+
+        >div:last-child {
+            .nav-item {
+                a {
+                    position: relative;
+                    transition: all linear 0.3s;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        background-color: var(--green);
+                        height: 1px;
+                        width: 0;
+                        transition: all linear 0.3s;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: var(--on-surface);
+                        margin-left: 8px;
+
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 991.99px) {
+            padding-top: 140px;
+
+            >div:first-child {
+                .mt-24 {
+                    margin-top: 16px;
+                }
+
+                .play-block {
+                    width: 60px;
+                    height: 60px;
+
+                    i {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 575.99px) {
+            padding-top: 80px;
+            padding-bottom: 40px;
+
+            >div:first-child {
+                .mt-24 {
+                    margin-top: 12px;
+                }
+
+                .play-block {
+                    width: 50px;
+                    height: 50px;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-below {
+        background-image: url(../images/component/industry5-below.png);
+    }
+}

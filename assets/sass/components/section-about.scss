@@ -124,6 +124,34 @@
             object-fit: cover;
         }
     }
+
+    &.style-five {
+        .row {
+            .counter {
+                .item {
+                    i.icon-slash {
+                        font-size: 36px;
+                    }
+                }
+            }
+
+            >div:last-child {
+                position: relative;
+
+                .double-slash {
+                    position: absolute;
+                    top: -16px;
+                    right: 115px;
+
+                    i {
+                        font-size: 46px;
+                        width: 25px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes circleScroll {

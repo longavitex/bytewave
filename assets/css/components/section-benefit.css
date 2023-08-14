@@ -25,3 +25,16 @@
     text-align: center !important;
   }
 }
+.section-benefit.style-five .row .bg-img {
+  position: relative;
+}
+.section-benefit.style-five .row .bg-img .double-slash {
+  position: absolute;
+  top: -16px;
+  right: 115px;
+}
+.section-benefit.style-five .row .bg-img .double-slash i {
+  font-size: 46px;
+  width: 25px;
+  display: inline-block;
+}

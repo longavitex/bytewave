@@ -79,3 +79,76 @@
   background-color: var(--white);
   border: 1px solid var(--white);
 }
+
+.section-industry-five {
+  background-attachment: fixed;
+  background-image: url(../images/component/industry5.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-industry-five .container > .row {
+  padding-top: 265px;
+  padding-bottom: 60px;
+}
+.section-industry-five .container > .row > div:first-child .play-block {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+.section-industry-five .container > .row > div:last-child .nav-item a {
+  position: relative;
+  transition: all linear 0.3s;
+}
+.section-industry-five .container > .row > div:last-child .nav-item a::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: var(--green);
+  height: 1px;
+  width: 0;
+  transition: all linear 0.3s;
+}
+.section-industry-five .container > .row > div:last-child .nav-item:hover a {
+  color: var(--on-surface);
+  margin-left: 8px;
+}
+.section-industry-five .container > .row > div:last-child .nav-item:hover a::before {
+  width: 100%;
+}
+@media (max-width: 991.99px) {
+  .section-industry-five .container > .row {
+    padding-top: 140px;
+  }
+  .section-industry-five .container > .row > div:first-child .mt-24 {
+    margin-top: 16px;
+  }
+  .section-industry-five .container > .row > div:first-child .play-block {
+    width: 60px;
+    height: 60px;
+  }
+  .section-industry-five .container > .row > div:first-child .play-block i {
+    font-size: 24px;
+  }
+}
+@media (max-width: 575.99px) {
+  .section-industry-five .container > .row {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  .section-industry-five .container > .row > div:first-child .mt-24 {
+    margin-top: 12px;
+  }
+  .section-industry-five .container > .row > div:first-child .play-block {
+    width: 50px;
+    height: 50px;
+  }
+  .section-industry-five .container > .row > div:first-child .play-block i {
+    font-size: 20px;
+  }
+}
+.section-industry-five.style-below {
+  background-image: url(../images/component/industry5-below.png);
+}

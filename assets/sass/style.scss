@@ -9,6 +9,7 @@
     --white: #FFFFFF;
     --black-surface: #1A1A1A;
     --surface: #F3F5F9;
+    --yellow-surface: #F3F2F0;
     --outline: #E4E4E4;
     --line: #DFE2E7;
     --grey: #EAEDFD;
@@ -26,6 +27,7 @@
 @import './components/section-service.scss';
 @import './components/section-banner.scss';
 @import './components/section-benefit.scss';
+@import './components/section-solution.scss';
 @import './components/section-about.scss';
 @import './components/section-contact.scss';
 @import './components/section-counter.scss';

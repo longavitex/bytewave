@@ -1,0 +1,39 @@
+.section-solution.style-five .container > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.section-solution.style-five .container > .row > div {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  border-right: 1px solid var(--outline);
+}
+.section-solution.style-five .container > .row > div:last-child {
+  border-right: none;
+}
+.section-solution.style-five .container > .row > div .double-slash {
+  position: absolute;
+  top: -16px;
+  right: 30px;
+  transition: all linear 0.3s;
+  opacity: 0;
+}
+.section-solution.style-five .container > .row > div .double-slash i {
+  font-size: 46px;
+  width: 25px;
+  display: inline-block;
+}
+.section-solution.style-five .container > .row > div .solution-item .heading5 {
+  transition: all linear 0.3s;
+}
+.section-solution.style-five .container > .row > div:hover {
+  cursor: pointer;
+}
+.section-solution.style-five .container > .row > div:hover .double-slash {
+  opacity: 1;
+  right: 40px;
+}
+.section-solution.style-five .container > .row > div:hover .solution-item .heading5 {
+  color: var(--green);
+  text-decoration: underline;
+}

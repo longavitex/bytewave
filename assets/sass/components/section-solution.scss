@@ -1,0 +1,57 @@
+.section-solution {
+    &.style-five {
+        .container {
+            >.row {
+                margin-left: 0;
+                margin-right: 0;
+
+                >div {
+                    position: relative;
+                    padding-left: 0;
+                    padding-right: 0;
+                    border-right: 1px solid var(--outline);
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    .double-slash {
+                        position: absolute;
+                        top: -16px;
+                        right: 30px;
+                        transition: all linear 0.3s;
+                        opacity: 0;
+
+                        i {
+                            font-size: 46px;
+                            width: 25px;
+                            display: inline-block;
+                        }
+                    }
+
+                    .solution-item {
+                        .heading5 {
+                            transition: all linear 0.3s;
+                        }
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        .double-slash {
+                            opacity: 1;
+                            right: 40px;
+                        }
+
+                        .solution-item {
+                            .heading5 {
+                                color: var(--green);
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

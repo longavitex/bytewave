@@ -85,7 +85,6 @@
             span {
                 position: absolute;
                 color: var(--white);
-                background-color: var(--blue);
                 border-radius: 50%;
                 font-size: 10px;
                 line-height: 12px;
@@ -266,7 +265,6 @@
 
             .bag-icon {
                 span {
-                    background-color: var(--yellow);
                     color: var(--on-surface);
                 }
             }
@@ -277,7 +275,7 @@
         .container {
             .right-block {
                 a {
-                    background-color: var(--yellow) !important;
+                    background-color: var(--yellow);
                 }
             }
         }
@@ -327,6 +325,54 @@
                 margin-right: 0;
                 position: relative;
                 right: 0;
+            }
+        }
+    }
+}
+
+.menu-style-five {
+    .header-menu {
+        .right-block {
+            .call-block {
+                background-color: transparent;
+                position: relative;
+
+                i {
+                    background-color: transparent;
+                    font-size: 20px;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    background-color: var(--green);
+                    height: 75%;
+                    transform: rotate(20deg);
+                }
+
+                &::before {
+                    left: 0;
+                }
+
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .header-menu.sticky {
+        .container {
+            .right-block {
+                .call-block {
+                    background-color: transparent;
+                }
+
+                a {
+                    background-color: var(--green);
+                }
             }
         }
     }

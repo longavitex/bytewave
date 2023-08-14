@@ -138,3 +138,34 @@
         }
     }
 }
+
+.footer-style-four {
+    .footer-block {
+        background-color: var(--black-surface);
+
+        .container {
+            >.row {
+                .footer-navigate {
+                    align-items: flex-start;
+                }
+            }
+        }
+
+        .footer-bottom {
+            .list-social {
+                margin-top: 0;
+                gap: 0;
+
+                a {
+                    border: none;
+
+                    i {
+                        &::before {
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

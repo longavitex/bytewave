@@ -16,3 +16,19 @@
     width: 100px;
   }
 }
+.section-newsletter.style-five .double-slash i {
+  font-size: 46px;
+  width: 25px;
+  display: inline-block;
+}
+.section-newsletter.style-five .row > div:last-child > div:last-child input {
+  width: 24px;
+  height: 24px;
+}
+.section-newsletter.style-five .row > div:last-child > div:last-child > div {
+  padding-left: 12px;
+}
+.section-newsletter.style-five .row > div:last-child > div:last-child > div a.text-on-surface:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
