@@ -1,14 +1,55 @@
-.section-case-studies .container > .row:last-child {
+.section-case-studies .container .list-news {
   margin-left: -24px;
-  margin-right: -24px;
+  margin-right: -23px;
 }
-.section-case-studies .container > .row:last-child > div {
+.section-case-studies .container .list-news .item {
   padding-left: 24px;
   padding-right: 24px;
   border-right: 1px solid var(--outline);
 }
-.section-case-studies .container > .row:last-child > div:nth-child(3) {
-  border-right: none;
+.section-case-studies .container .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 16px;
+}
+@media (max-width: 767.99px) {
+  .section-case-studies .container .slick-dots {
+    margin-top: 30px;
+  }
+}
+.section-case-studies .container .slick-dots li {
+  position: relative;
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.section-case-studies .container .slick-dots li button {
+  display: none;
+}
+.section-case-studies .container .slick-dots li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #171717;
+  transition: 0.5s;
+}
+.section-case-studies .container .slick-dots li.slick-active {
+  border: 1px solid var(--on-surface);
+  background-color: #fff;
+}
+.section-case-studies .container .slick-dots li.slick-active::after {
+  background-color: var(--on-surface);
+  border: 1px solid var(--on-surface);
 }
 @media (max-width: 991.99px) {
   .section-case-studies .container > .row:last-child > div:nth-child(3) {

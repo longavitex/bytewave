@@ -1502,17 +1502,58 @@ select {
   background-image: url(../images/component/industry5-below.png);
 }
 
-.section-case-studies .container > .row:last-child {
+.section-case-studies .container .list-news {
   margin-left: -24px;
-  margin-right: -24px;
+  margin-right: -23px;
 }
-.section-case-studies .container > .row:last-child > div {
+.section-case-studies .container .list-news .item {
   padding-left: 24px;
   padding-right: 24px;
   border-right: 1px solid var(--outline);
 }
-.section-case-studies .container > .row:last-child > div:nth-child(3) {
-  border-right: none;
+.section-case-studies .container .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 16px;
+}
+@media (max-width: 767.99px) {
+  .section-case-studies .container .slick-dots {
+    margin-top: 30px;
+  }
+}
+.section-case-studies .container .slick-dots li {
+  position: relative;
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.section-case-studies .container .slick-dots li button {
+  display: none;
+}
+.section-case-studies .container .slick-dots li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #171717;
+  transition: 0.5s;
+}
+.section-case-studies .container .slick-dots li.slick-active {
+  border: 1px solid var(--on-surface);
+  background-color: #fff;
+}
+.section-case-studies .container .slick-dots li.slick-active::after {
+  background-color: var(--on-surface);
+  border: 1px solid var(--on-surface);
 }
 @media (max-width: 991.99px) {
   .section-case-studies .container > .row:last-child > div:nth-child(3) {
@@ -1938,6 +1979,11 @@ select {
   }
   .slider-block.style-one .row .text .pr-55 {
     padding-right: 0;
+  }
+}
+@media (max-width: 576px) {
+  .slider-block .block-button.mt-40 {
+    margin-top: 20px;
   }
 }
 
@@ -2824,6 +2870,24 @@ select {
   .mt-8 {
     margin-top: 6px;
   }
+  .p-80 {
+    padding: 64px;
+  }
+  .p-60 {
+    padding: 48px;
+  }
+  .p-40 {
+    padding: 32px;
+  }
+  .p-32 {
+    padding: 28px;
+  }
+  .p-28 {
+    padding: 24px;
+  }
+  .p-20 {
+    padding: 18px;
+  }
   .row-gap-40 {
     row-gap: 32px;
   }
@@ -2835,10 +2899,13 @@ select {
     font-size: 15px;
     line-height: 24px;
   }
-  .heading1,
-  .heading2 {
+  .heading1 {
     font-size: 44px;
     line-height: 52px;
+  }
+  .heading2 {
+    font-size: 40px;
+    line-height: 48px;
   }
   .heading3 {
     font-size: 32px;
@@ -2924,6 +2991,30 @@ select {
   .mt-8 {
     margin-top: 4px;
   }
+  .p-80 {
+    padding: 56px;
+  }
+  .p-60 {
+    padding: 40px;
+  }
+  .p-40 {
+    padding: 28px;
+  }
+  .p-32 {
+    padding: 24px;
+  }
+  .p-28 {
+    padding: 20px;
+  }
+  .p-20 {
+    padding: 16px;
+  }
+  .p-16 {
+    padding: 12px;
+  }
+  .p-12 {
+    padding: 10px;
+  }
   .row-gap-40 {
     row-gap: 26px;
   }
@@ -2935,10 +3026,13 @@ select {
     font-size: 14px;
     line-height: 24px;
   }
-  .heading1,
-  .heading2 {
+  .heading1 {
     font-size: 32px;
     line-height: 40px;
+  }
+  .heading2 {
+    font-size: 28px;
+    line-height: 36px;
   }
   .heading3 {
     font-size: 24px;
@@ -2988,5 +3082,16 @@ select {
   .text-button-small {
     font-size: 12px;
     line-height: 16px;
+  }
+  [class^=button-],
+  [class*=" button-"] {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .button {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 24px;
   }
 }

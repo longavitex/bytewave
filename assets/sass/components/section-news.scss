@@ -1,16 +1,61 @@
 .section-case-studies {
     .container {
-        >.row:last-child {
+        .list-news {
             margin-left: -24px;
-            margin-right: -24px;
+            margin-right: -23px;
 
-            >div {
+            .item {
                 padding-left: 24px;
                 padding-right: 24px;
                 border-right: 1px solid var(--outline);
+            }
+        }
 
-                &:nth-child(3) {
-                    border-right: none;
+        .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 16px;
+
+            @media (max-width:767.99px) {
+                margin-top: 30px;
+            }
+
+            li {
+                position: relative;
+                border: none;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                button {
+                    display: none;
+                }
+
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 1px solid #171717;
+                    transition: 0.5s;
+                }
+
+                &.slick-active {
+                    border: 1px solid var(--on-surface);
+                    background-color: #fff;
+
+                    &::after {
+                        background-color: var(--on-surface);
+                        border: 1px solid var(--on-surface);
+                    }
                 }
             }
         }

@@ -6,6 +6,11 @@
     padding-right: 0;
   }
 }
+@media (max-width: 576px) {
+  .slider-block .block-button.mt-40 {
+    margin-top: 20px;
+  }
+}
 
 .slider-block.style-two {
   width: 100%;

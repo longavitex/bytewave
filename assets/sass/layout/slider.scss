@@ -12,6 +12,12 @@
             }
         }
     }
+
+    @media (max-width: 576px) {
+        .block-button.mt-40 {
+            margin-top: 20px;
+        }
+    }
 }
 
 .slider-block.style-two {

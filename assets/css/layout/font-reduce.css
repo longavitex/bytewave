@@ -32,6 +32,24 @@
   .mt-8 {
     margin-top: 6px;
   }
+  .p-80 {
+    padding: 64px;
+  }
+  .p-60 {
+    padding: 48px;
+  }
+  .p-40 {
+    padding: 32px;
+  }
+  .p-32 {
+    padding: 28px;
+  }
+  .p-28 {
+    padding: 24px;
+  }
+  .p-20 {
+    padding: 18px;
+  }
   .row-gap-40 {
     row-gap: 32px;
   }
@@ -43,10 +61,13 @@
     font-size: 15px;
     line-height: 24px;
   }
-  .heading1,
-  .heading2 {
+  .heading1 {
     font-size: 44px;
     line-height: 52px;
+  }
+  .heading2 {
+    font-size: 40px;
+    line-height: 48px;
   }
   .heading3 {
     font-size: 32px;
@@ -132,6 +153,30 @@
   .mt-8 {
     margin-top: 4px;
   }
+  .p-80 {
+    padding: 56px;
+  }
+  .p-60 {
+    padding: 40px;
+  }
+  .p-40 {
+    padding: 28px;
+  }
+  .p-32 {
+    padding: 24px;
+  }
+  .p-28 {
+    padding: 20px;
+  }
+  .p-20 {
+    padding: 16px;
+  }
+  .p-16 {
+    padding: 12px;
+  }
+  .p-12 {
+    padding: 10px;
+  }
   .row-gap-40 {
     row-gap: 26px;
   }
@@ -143,10 +188,13 @@
     font-size: 14px;
     line-height: 24px;
   }
-  .heading1,
-  .heading2 {
+  .heading1 {
     font-size: 32px;
     line-height: 40px;
+  }
+  .heading2 {
+    font-size: 28px;
+    line-height: 36px;
   }
   .heading3 {
     font-size: 24px;
@@ -196,5 +244,16 @@
   .text-button-small {
     font-size: 12px;
     line-height: 16px;
+  }
+  [class^=button-],
+  [class*=" button-"] {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .button {
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 24px;
   }
 }
