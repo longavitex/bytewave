@@ -158,6 +158,10 @@
     color: var(--green);
 }
 
+.text-purple {
+    color: var(--purple);
+}
+
 .text-on-surface {
     color: var(--on-surface);
 }
@@ -190,6 +194,10 @@
     background-color: var(--green);
 }
 
+.bg-purple {
+    background-color: var(--purple);
+}
+
 .bg-linear {
     background: linear-gradient(225deg, #FAF7EF 0%, #F4F6FC 100%);
 }
@@ -200,6 +208,10 @@
 
 .bg-linear-pink {
     background: linear-gradient(46deg, #231A87 0%, #E13789 100%);
+}
+
+.bg-linear-purple {
+    background: linear-gradient(180deg, #F5ECF9 0%, rgba(243, 242, 240, 0.00) 100%);
 }
 
 .bg-white {
@@ -222,9 +234,11 @@
     background-color: var(--outline);
 }
 
-.col-2-4 {
-    flex: 0 0 auto;
-    width: 20%;
+.col-xl-2-4 {
+    @media (min-width: 1200px) {
+        flex: 0 0 auto;
+        width: 20%;
+    }
 }
 
 .flex-wrap {
@@ -285,6 +299,10 @@
 
 .gap-10 {
     gap: 10px;
+}
+
+.gap-8 {
+    gap: 8px;
 }
 
 .row-gap-60 {
@@ -391,6 +409,10 @@
     padding: 40px;
 }
 
+.p-32 {
+    padding: 32px;
+}
+
 .p-28 {
     padding: 28px;
 }
@@ -401,6 +423,10 @@
 
 .p-16 {
     padding: 16px;
+}
+
+.p-12 {
+    padding: 12px;
 }
 
 .pr-65 {
@@ -719,6 +745,14 @@
     height: 120px;
 }
 
+.w-60 {
+    width: 60px;
+}
+
+.h-60 {
+    height: 60px;
+}
+
 .w-40 {
     width: 40px;
 }
@@ -807,6 +841,10 @@
 
 .border-underline-green-2px {
     border-bottom: 2px solid var(--green);
+}
+
+.border-underline-purple-2px {
+    border-bottom: 2px solid var(--purple);
 }
 
 .hover-underline {

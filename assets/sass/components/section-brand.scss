@@ -1,0 +1,19 @@
+.section-brand {
+    @media (max-width: 1200px) {
+        .container {
+            >.row {
+                .row {
+                    row-gap: 24px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.brand-style-six {
+    .section-brand {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

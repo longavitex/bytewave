@@ -130,3 +130,42 @@ $(".section-industry .row").slick({
     ]
 });
 
+
+// change switch btn pricing home6
+const switchBtn = document.querySelector('.switch')
+const listPricingMonth = document.querySelector('.list-pricing')
+const listPricingYear = document.querySelector('.list-pricing-year')
+
+if (switchBtn) {
+  switchBtn.addEventListener('click', () => {
+    switchBtn.classList.toggle('enable')
+
+    let text = switchBtn.parentElement.querySelectorAll('.text-title')
+
+    text.forEach(item => {
+      if (item.classList.contains('text-on-surface-variant1')) {
+        item.classList.remove('text-on-surface-variant1')
+      }
+      else {
+        item.classList.add('text-on-surface-variant1')
+      }
+    })
+
+    if (switchBtn.classList.contains('enable')) {
+      listPricingMonth.classList.remove('show')
+      listPricingMonth.classList.add('hide')
+      listPricingYear.classList.remove('hide')
+      listPricingYear.classList.add('show')
+    } else {
+      if (listPricingYear.classList.contains('show')) {
+        listPricingYear.classList.remove('show')
+      }
+      listPricingYear.classList.add('hide')
+
+      if (listPricingMonth.classList.contains('hide')) {
+        listPricingMonth.classList.remove('hide')
+      }
+      listPricingMonth.classList.add('show')
+    }
+  })
+}

@@ -38,3 +38,19 @@
   width: 25px;
   display: inline-block;
 }
+@media (max-width: 991.99px) {
+  .section-benefit.style-six .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-benefit.style-six .row .mt-28 {
+    margin-top: 20px;
+  }
+  .section-benefit.style-six .row .mt-16 {
+    margin-top: 12px;
+  }
+  .section-benefit.style-six .row .mt-36 {
+    margin-top: 24px;
+  }
+}

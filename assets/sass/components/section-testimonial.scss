@@ -150,6 +150,41 @@
         }
     }
 
+    &.style-six {
+        .list-comment {
+            .slick-list {
+                overflow: unset;
+            }
+        }
+
+        .item {
+            position: relative;
+            cursor: pointer;
+            transition: all linear 0.3s;
+
+            .double-slash {
+                position: absolute;
+                right: 10px;
+                bottom: 40px;
+                opacity: 0;
+                transition: all linear 0.3s;
+
+                i {
+                    font-size: 32px;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
+
+                .double-slash {
+                    right: 32px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .slick-dots {
         display: flex;
         align-items: center;

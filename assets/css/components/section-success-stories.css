@@ -1,0 +1,11 @@
+.section-success-stories .row > div .item {
+  position: relative;
+}
+.section-success-stories .row > div .item .title {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(247, 243, 249, 0.7);
+  backdrop-filter: blur(4px);
+}

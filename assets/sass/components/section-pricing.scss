@@ -1,0 +1,88 @@
+.section-pricing {
+    .heading {
+        .switch {
+            .bg-white {
+                display: block;
+                width: 80px;
+                height: 40px;
+                border-radius: 99px;
+                border: 1px solid #e4e4e4;
+                outline: none;
+                position: relative;
+                transition: all linear 0.3s;
+                overflow: hidden;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 32px;
+                    height: 32px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 4px;
+                    background-color: var(--purple);
+                    border-radius: 50%;
+                    transition: all linear 0.3s;
+                }
+            }
+
+            &.enable {
+                .bg-white {
+                    background-color: var(--purple);
+
+                    &::before {
+                        left: 42px;
+                        background-color: var(--white);
+                    }
+                }
+            }
+        }
+
+        .switch.enable .body3:first-child {
+            color: var(--placehover);
+        }
+
+        .switch.enable .body3:last-child {
+            color: var(--on-surface);
+        }
+    }
+
+    .list-pricing,
+    .list-pricing-year {
+        .pricing-item {
+            cursor: pointer;
+            transition: all linear 0.3s;
+
+            .price {
+                display: flex;
+                align-items: end;
+            }
+
+            &:hover {
+                box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+            }
+        }
+    }
+
+    @keyframes showList {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .list-pricing.hide,
+    .list-pricing-year.hide {
+        display: none;
+    }
+
+    .list-pricing.show,
+    .list-pricing-year.show {
+        display: block;
+        animation: showList ease-in-out 0.7s;
+    }
+}

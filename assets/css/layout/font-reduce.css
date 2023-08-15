@@ -8,14 +8,14 @@
   .pb-80 {
     padding-bottom: 60px;
   }
-  .mt-60 {
-    margin-top: 40px;
-  }
   .pt-60 {
     padding-top: 40px;
   }
   .pb-60 {
     padding-bottom: 40px;
+  }
+  .mt-60 {
+    margin-top: 40px;
   }
   .mt-40 {
     margin-top: 30px;
@@ -100,13 +100,31 @@
 }
 @media (max-width: 576px) {
   .mt-80 {
-    margin-top: 50px;
+    margin-top: 40px;
+  }
+  .pt-80 {
+    padding-top: 40px;
+  }
+  .pb-80 {
+    padding-bottom: 40px;
+  }
+  .pt-60 {
+    padding-top: 32px;
+  }
+  .pb-60 {
+    padding-bottom: 32px;
   }
   .mt-60 {
     margin-top: 32px;
   }
   .mt-40 {
     margin-top: 24px;
+  }
+  .mt-28 {
+    margin-top: 20px;
+  }
+  .mt-24 {
+    margin-top: 16px;
   }
   .mt-16 {
     margin-top: 12px;
@@ -176,7 +194,7 @@
     text-transform: capitalize;
   }
   .text-button-small {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 16px;
   }
 }

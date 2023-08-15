@@ -1,0 +1,11 @@
+@media (max-width: 1200px) {
+  .section-brand .container > .row .row {
+    row-gap: 24px;
+    justify-content: center;
+  }
+}
+
+.brand-style-six .section-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}

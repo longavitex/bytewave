@@ -36,6 +36,15 @@
   animation: scroll3 20s linear infinite;
 }
 
+.section-banner.style-six {
+  background-color: var(--white);
+}
+.section-banner.style-six .heading1 {
+  color: #DDD5E1;
+  letter-spacing: 8px;
+  padding-right: 60px;
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);

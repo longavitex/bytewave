@@ -1,0 +1,15 @@
+include ../../mixins/blogItem.pug
+
+.section-news.style-two.style-four.style-six.bg-yellow-surface.pt-80.pb-80 
+    .container
+        .heading3.text-center Last News
+        .text-center.mt-8 Empowering Your Success Through Expert Consulting Services
+        .row.row-gap-24.mt-40
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'bg-white bora-20 overflow-hidden h-100 ', style:'style-four', img:'assets/images/blog/item4.png', category:'SEO Marketing', title:'Streamlining healthcare operations with cloud-based', date:'February 22, 2023'})
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'bg-white bora-20 overflow-hidden h-100 ', style:'style-four', img:'assets/images/blog/item5.png', category:'SEO Marketing', title:"Streamlining healthcare operations with cloud-based", date:'February 23, 2023'})
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'bg-white bora-20 overflow-hidden h-100 ', style:'style-four', img:'assets/images/blog/item3.png', category:'SEO Marketing', title:"Streamlining healthcare operations with cloud-based", date:'February 24, 2023'})
+            .col-12.col-lg-4.col-sm-6
+                +blogItem({classname:'bg-white bora-20 overflow-hidden h-100 display-none', style:'style-four', img:'assets/images/blog/item6.png', category:'SEO Marketing', title:"Streamlining healthcare operations with cloud-based", date:'February 25, 2023'})

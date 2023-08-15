@@ -6,6 +6,7 @@
     --yellow: #F4D118;
     --pink: #E13789;
     --green: #63E483;
+    --purple: #5B45F3;
     --white: #FFFFFF;
     --black-surface: #1A1A1A;
     --surface: #F3F5F9;
@@ -22,18 +23,21 @@
 @import './base/custom-bootstrap.scss';
 @import './base/global.scss';
 
-@import './components/section-case-studies.scss';
-@import './components/section-testimonial.scss';
-@import './components/section-service.scss';
+@import './components/section-about.scss';
 @import './components/section-banner.scss';
 @import './components/section-benefit.scss';
-@import './components/section-solution.scss';
-@import './components/section-about.scss';
+@import './components/section-brand.scss';
 @import './components/section-contact.scss';
 @import './components/section-counter.scss';
 @import './components/section-industry.scss';
-@import './components/section-portfolio.scss';
+@import './components/section-news.scss';
 @import './components/section-newsletter.scss';
+@import './components/section-pricing.scss';
+@import './components/section-portfolio.scss';
+@import './components/section-service.scss';
+@import './components/section-solution.scss';
+@import './components/section-success-stories.scss';
+@import './components/section-testimonial.scss';
 @import './components/list-social.scss';
 
 @import './layout/slider.scss';

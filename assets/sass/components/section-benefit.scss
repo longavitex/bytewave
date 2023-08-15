@@ -64,4 +64,26 @@
             }
         }
     }
+
+    &.style-six {
+        @media (max-width: 991.99px) {
+            .row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .mt-28 {
+                    margin-top: 20px;
+                }
+
+                .mt-16 {
+                    margin-top: 12px;
+                }
+
+                .mt-36 {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
 }

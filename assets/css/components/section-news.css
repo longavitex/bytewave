@@ -1,0 +1,53 @@
+.section-case-studies .container > .row:last-child {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+.section-case-studies .container > .row:last-child > div {
+  padding-left: 24px;
+  padding-right: 24px;
+  border-right: 1px solid var(--outline);
+}
+.section-case-studies .container > .row:last-child > div:nth-child(3) {
+  border-right: none;
+}
+@media (max-width: 991.99px) {
+  .section-case-studies .container > .row:last-child > div:nth-child(3) {
+    border-right: 1px solid var(--outline);
+  }
+  .section-case-studies .container > .row:last-child > div:nth-child(2), .section-case-studies .container > .row:last-child > div:last-child {
+    border-right: none;
+  }
+  .section-case-studies .container > .row:last-child > div:last-child > div {
+    display: block;
+  }
+}
+@media (max-width: 575.99px) {
+  .section-case-studies .container > .row:last-child > div {
+    border-right: none;
+  }
+}
+
+.section-news.style-two .container > .row:last-child > div {
+  border-right: none;
+}
+@media (max-width: 991.99px) {
+  .section-news.style-two .container > .row:last-child > div:last-child > div {
+    display: block;
+  }
+}
+
+.section-news.style-four .container > .row > div .bg-img {
+  position: relative;
+}
+.section-news.style-four .container > .row > div .bg-img .text-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.section-news.style-six {
+  background-color: #F7F3F9;
+}
+.section-news.style-six .bg-pink {
+  background-color: var(--purple);
+}

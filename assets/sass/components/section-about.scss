@@ -152,6 +152,38 @@
             }
         }
     }
+
+    &.style-six {
+        .row {
+            >div:last-child {
+                >.counter {
+                    .item {
+                        width: 50%;
+
+                        i {
+                            font-size: 36px;
+                            // overflow: hidden;
+                            // border-radius: 99px;
+
+                            &::before {
+                                color: var(--purple);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 575.99px) {
+                >div:last-child {
+                    >.counter {
+                        .item {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes circleScroll {
