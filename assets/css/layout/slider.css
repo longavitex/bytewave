@@ -1,5 +1,5 @@
 .slider-block.style-one {
-  padding-top: 75px;
+  padding-top: 74px;
 }
 @media (max-width: 1199.99px) {
   .slider-block.style-one .row {
@@ -10,6 +10,9 @@
   }
 }
 @media (max-width: 576px) {
+  .slider-block.style-one {
+    padding-top: 60px;
+  }
   .slider-block .block-button.mt-40 {
     margin-top: 20px;
   }

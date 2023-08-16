@@ -94,21 +94,15 @@
 
 .section-news.style-two {
     .container {
-        >.row:last-child {
-            >div {
-                border-right: none;
-            }
-        }
+        .list-news {
+            margin-left: -15px;
+            margin-right: -15px;
 
-        @media (max-width: 991.99px) {
-            >.row:last-child {
-                >div {
-                    &:last-child {
-                        >div {
-                            display: block;
-                        }
-                    }
-                }
+            .item {
+                padding-left: 15px;
+                padding-right: 15px;
+                border-right: none;
+                height: 100%;
             }
         }
     }
