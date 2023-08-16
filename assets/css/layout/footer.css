@@ -52,6 +52,9 @@
   .footer-block .row .footer-navigate {
     justify-content: space-between;
   }
+  .footer-block .row .company-contact .mt-20 {
+    margin-top: 8px;
+  }
   .footer-block .footer-bottom .nav-link {
     gap: 6px;
   }

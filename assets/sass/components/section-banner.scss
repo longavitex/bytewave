@@ -89,3 +89,11 @@
         transform: translateX(calc(((800.17px + 704.23px) * 2 + 120px * 4 + 25.3px * 4) * -0.32));
     }
 }
+
+@media (max-width: 575.99px) {
+    .section-banner {
+        .list {
+            padding: 20px 0;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 .slider-block {
     &.style-one {
+        padding-top: 75px;
+
         @media (max-width: 1199.99px) {
             .row {
                 flex-direction: column-reverse;
@@ -125,10 +127,14 @@
     }
 
     @media (max-width: 575.00px) {
-        height: calc(70vh - 44px);
+        height: calc(80vh - 44px);
 
         .slider-item {
-            height: calc(70vh - 44px);
+            height: calc(80vh - 44px);
+
+            .mt-16 {
+                margin-top: 8px !important;
+            }
         }
     }
 }

@@ -51,6 +51,10 @@
     .list-pricing,
     .list-pricing-year {
         .pricing-item {
+            .list-feature {
+                border-top: 1px solid var(--outline);
+            }
+
             cursor: pointer;
             transition: all linear 0.3s;
 

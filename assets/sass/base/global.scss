@@ -241,6 +241,11 @@
     }
 }
 
+.col-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }

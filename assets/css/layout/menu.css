@@ -1,6 +1,15 @@
 .header-menu {
   border-bottom: 1px solid var(--outline);
   position: relative;
+  transition: all linear 0.5s;
+}
+.header-menu.style-one {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 2;
 }
 .header-menu .container {
   display: flex;

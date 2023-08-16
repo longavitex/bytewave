@@ -38,6 +38,11 @@
   width: 25px;
   display: inline-block;
 }
+@media (max-width: 575.99px) {
+  .section-benefit.style-five .row .mt-24 {
+    margin-top: 12px;
+  }
+}
 @media (max-width: 991.99px) {
   .section-benefit.style-six .row {
     display: flex;

@@ -4,12 +4,12 @@ include ../../mixins/blogItem.pug
     .container
         .heading3.text-center Last News
         .text-center.mt-8 Empowering Your Success Through Expert Consulting Services
-        .row.row-gap-24.mt-40
-            .col-12.col-lg-4.col-sm-6
-                +blogItem({classname:'bg-white h-100 ', style:'style-four', img:'assets/images/blog/item4.png', category:'Healthcare', title:'Navigating Success: Insights from Business Consulting Experts', desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 22, 2023'})
-            .col-12.col-lg-4.col-sm-6
-                +blogItem({classname:'bg-white h-100 ', style:'style-four', img:'assets/images/blog/item5.png', category:'E-commerce & Retail', title:"Strategies for Thriving: Unveiling Business Consulting's Impact", desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 23, 2023'})
-            .col-12.col-lg-4.col-sm-6
-                +blogItem({classname:'bg-white h-100 ', style:'style-four', img:'assets/images/blog/item3.png', category:'Finance & Banking', title:'Elevating Business Performance: Exploring the World of Consulting', desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 24, 2023'})
-            .col-12.col-lg-4.col-sm-6
-                +blogItem({classname:'bg-white h-100 display-none', style:'style-four', img:'assets/images/blog/item6.png', category:'Techlonogy', title:'Optimizing database system', desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 25, 2023'})
+        .list-news.mt-40
+            .item
+                +blogItem({classname:'bg-white h-100 ', style:'style-four', img:'assets/images/blog/item4.png', category:'Healthcare', title:'Navigating Success: Insights from Business Consulting Experts', date:'February 22, 2023'})
+            .item
+                +blogItem({classname:'bg-white h-100 ', style:'style-four', img:'assets/images/blog/item5.png', category:'E-commerce & Retail', title:"Strategies for Thriving: Unveiling Business Consulting's Impact", date:'February 23, 2023'})
+            .item
+                +blogItem({classname:'bg-white h-100 ', style:'style-four', img:'assets/images/blog/item3.png', category:'Finance & Banking', title:'Elevating Business Performance: Exploring the World of Consulting', date:'February 24, 2023'})
+            .item
+                +blogItem({classname:'bg-white h-100', style:'style-four', img:'assets/images/blog/item6.png', category:'Techlonogy', title:'Onlineization and Virtualization Trends Driving Tech Breakthroughs.', date:'February 25, 2023'})

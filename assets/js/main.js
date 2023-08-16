@@ -1,7 +1,9 @@
 // header menu sticky when scroll
 window.addEventListener('scroll', () => {
     let headerMenu = document.querySelector('.header-menu.style-two')
-    headerMenu.classList.toggle('sticky', window.scrollY > 100)
+    if (headerMenu) {
+        headerMenu.classList.toggle('sticky', window.scrollY > 100);
+    }
 })
 
 // slider
@@ -121,9 +123,9 @@ $(".section-testimonial.style-two .container .list-comment").slick({
 // circle box about home3
 const textBoxCircle = document.querySelector('.section-about .text-box-circle .text-label')
 
-if(textBoxCircle) {
+if (textBoxCircle) {
     textBoxCircle.innerHTML = textBoxCircle.innerText.split('').map(
-        (char, i) => `<span style="transform: rotate(${i*10.5}deg);">${char}</span>`
+        (char, i) => `<span style="transform: rotate(${i * 10.5}deg);">${char}</span>`
     ).join('')
 }
 
@@ -175,35 +177,35 @@ const listPricingMonth = document.querySelector('.list-pricing')
 const listPricingYear = document.querySelector('.list-pricing-year')
 
 if (switchBtn) {
-  switchBtn.addEventListener('click', () => {
-    switchBtn.classList.toggle('enable')
+    switchBtn.addEventListener('click', () => {
+        switchBtn.classList.toggle('enable')
 
-    let text = switchBtn.parentElement.querySelectorAll('.text-title')
+        let text = switchBtn.parentElement.querySelectorAll('.text-title')
 
-    text.forEach(item => {
-      if (item.classList.contains('text-on-surface-variant1')) {
-        item.classList.remove('text-on-surface-variant1')
-      }
-      else {
-        item.classList.add('text-on-surface-variant1')
-      }
+        text.forEach(item => {
+            if (item.classList.contains('text-on-surface-variant1')) {
+                item.classList.remove('text-on-surface-variant1')
+            }
+            else {
+                item.classList.add('text-on-surface-variant1')
+            }
+        })
+
+        if (switchBtn.classList.contains('enable')) {
+            listPricingMonth.classList.remove('show')
+            listPricingMonth.classList.add('hide')
+            listPricingYear.classList.remove('hide')
+            listPricingYear.classList.add('show')
+        } else {
+            if (listPricingYear.classList.contains('show')) {
+                listPricingYear.classList.remove('show')
+            }
+            listPricingYear.classList.add('hide')
+
+            if (listPricingMonth.classList.contains('hide')) {
+                listPricingMonth.classList.remove('hide')
+            }
+            listPricingMonth.classList.add('show')
+        }
     })
-
-    if (switchBtn.classList.contains('enable')) {
-      listPricingMonth.classList.remove('show')
-      listPricingMonth.classList.add('hide')
-      listPricingYear.classList.remove('hide')
-      listPricingYear.classList.add('show')
-    } else {
-      if (listPricingYear.classList.contains('show')) {
-        listPricingYear.classList.remove('show')
-      }
-      listPricingYear.classList.add('hide')
-
-      if (listPricingMonth.classList.contains('hide')) {
-        listPricingMonth.classList.remove('hide')
-      }
-      listPricingMonth.classList.add('show')
-    }
-  })
 }

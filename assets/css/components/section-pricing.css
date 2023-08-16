@@ -40,6 +40,10 @@
   cursor: pointer;
   transition: all linear 0.3s;
 }
+.section-pricing .list-pricing .pricing-item .list-feature,
+.section-pricing .list-pricing-year .pricing-item .list-feature {
+  border-top: 1px solid var(--outline);
+}
 .section-pricing .list-pricing .pricing-item .price,
 .section-pricing .list-pricing-year .pricing-item .price {
   display: flex;

@@ -102,6 +102,12 @@
                         }
                     }
                 }
+
+                @media (max-width: 992px) {
+                    .text-box-circle {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -162,8 +168,6 @@
 
                         i {
                             font-size: 36px;
-                            // overflow: hidden;
-                            // border-radius: 99px;
 
                             &::before {
                                 color: var(--purple);
