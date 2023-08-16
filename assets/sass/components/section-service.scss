@@ -1,6 +1,27 @@
-@media (max-width: 767.99px) {
-    .section-service {
-        .container {
+.section-service {
+    .container {
+        @media (min-width: 1024px) {
+            .service-item {
+                transition: 0.3s;
+
+                .heading6,
+                i {
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    padding-left: 32px;
+                    background-color: var(--blue);
+
+                    .heading6,
+                    i {
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 767.99px) {
             .row:first-child {
                 >div:last-child {
                     text-align: left !important;

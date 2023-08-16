@@ -52,6 +52,12 @@
     }
 
     &.style-two {
+        a.text-button-small {
+            &:hover {
+                color: var(--blue);
+            }
+        }
+
         .cta-block {
             @media (max-width: 767.99px) {
                 .row {

@@ -200,7 +200,7 @@
 
         .menu-main ul li {
             a {
-                color: var(--on-surface) !important;
+                color: var(--on-surface);
                 transition: all linear 0.5s;
             }
         }
@@ -211,12 +211,12 @@
                 backdrop-filter: blur(4px);
 
                 span {
-                    color: var(--on-surface) !important;
+                    color: var(--on-surface);
                 }
             }
 
             >div i {
-                color: var(--on-surface) !important;
+                color: var(--on-surface);
             }
         }
     }
@@ -344,6 +344,7 @@
                 i {
                     background-color: transparent;
                     font-size: 20px;
+                    color: var(--white);
                 }
 
                 &::before,

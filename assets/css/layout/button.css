@@ -1,0 +1,64 @@
+.button,
+[class^=button-],
+[class*=" button-"] {
+  position: relative;
+  overflow: hidden;
+}
+.button span,
+[class^=button-] span,
+[class*=" button-"] span {
+  transition: all linear 0.5s;
+  z-index: 2;
+}
+
+.button::before,
+[class^=button-]::before,
+[class*=" button-"]::before {
+  position: absolute;
+  content: "";
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--blue);
+  transition: all linear 0.4s;
+  z-index: 1;
+}
+
+.button:hover span {
+  color: var(--white);
+}
+.button:hover::before {
+  width: 500px;
+  height: 400px;
+}
+
+.button.bg-blue::before {
+  background-color: var(--secondary);
+}
+
+a.border-underline-white-2px {
+  position: relative;
+}
+a.border-underline-white-2px::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--blue);
+  transition: all linear 0.3s;
+}
+a.border-underline-white-2px:hover::before {
+  width: 100%;
+}
+
+a.border-underline-blue {
+  transition: all linear 0.3s;
+}
+a.border-underline-blue:hover {
+  color: var(--blue);
+}

@@ -1,3 +1,9 @@
+.section-benefit .benefit-item .block-icon i {
+  transition: all linear 0.3s;
+}
+.section-benefit .benefit-item:hover .block-icon i {
+  transform: rotateY(360deg);
+}
 @media (max-width: 1169.99px) {
   .section-benefit.style-four .container > .row > div {
     display: flex;

@@ -1,0 +1,79 @@
+.hover-button {
+  position: relative;
+  overflow: hidden;
+}
+.hover-button span {
+  transition: all linear 0.4s;
+  z-index: 2;
+}
+
+.hover-button::before {
+  position: absolute;
+  content: "";
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--blue);
+  transition: all linear 0.3s;
+  z-index: 1;
+}
+
+.hover-button:hover i,
+.hover-button:hover span {
+  color: var(--white);
+}
+.hover-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.hover-button.bg-blue::before {
+  background-color: var(--secondary);
+}
+.hover-button.bg-blue:hover::before {
+  width: 500px;
+}
+
+a.border-underline-white-2px,
+a.border-underline-on-surface-2px {
+  position: relative;
+}
+a.border-underline-white-2px::before,
+a.border-underline-on-surface-2px::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--blue);
+  transition: all linear 0.3s;
+}
+a.border-underline-white-2px:hover::before,
+a.border-underline-on-surface-2px:hover::before {
+  width: 100%;
+}
+
+a.border-underline-blue {
+  transition: all linear 0.3s;
+}
+a.border-underline-blue:hover {
+  color: var(--blue);
+}
+
+a.border-underline-green-2px {
+  transition: all linear 0.3s;
+}
+a.border-underline-green-2px:hover {
+  color: var(--green);
+}
+
+a.border-underline-purple-2px {
+  transition: all linear 0.3s;
+}
+a.border-underline-purple-2px:hover {
+  color: var(--purple);
+}

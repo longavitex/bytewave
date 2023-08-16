@@ -152,7 +152,7 @@
   transition: all linear 0.5s;
 }
 .menu-style-two .header-menu.sticky .menu-main ul li a {
-  color: var(--on-surface) !important;
+  color: var(--on-surface);
   transition: all linear 0.5s;
 }
 .menu-style-two .header-menu.sticky .right-block .call-block {
@@ -160,10 +160,10 @@
   backdrop-filter: blur(4px);
 }
 .menu-style-two .header-menu.sticky .right-block .call-block span {
-  color: var(--on-surface) !important;
+  color: var(--on-surface);
 }
 .menu-style-two .header-menu.sticky .right-block > div i {
-  color: var(--on-surface) !important;
+  color: var(--on-surface);
 }
 @media (min-width: 1850px) {
   .menu-style-two .header-menu .logo {
@@ -249,6 +249,7 @@
 .menu-style-five .header-menu .right-block .call-block i {
   background-color: transparent;
   font-size: 20px;
+  color: var(--white);
 }
 .menu-style-five .header-menu .right-block .call-block::before, .menu-style-five .header-menu .right-block .call-block::after {
   content: "";

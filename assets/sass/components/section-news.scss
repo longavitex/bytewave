@@ -1,6 +1,19 @@
 .section-case-studies,
 .section-news {
     .container {
+        .cursor {
+            background-color: #111;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            transition: all linear 0.2s;
+            width: 70px;
+            height: 70px;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2;
+        }
+
         .list-news {
             margin-left: -24px;
             margin-right: -23px;
@@ -9,6 +22,11 @@
                 padding-left: 24px;
                 padding-right: 24px;
                 border-right: 1px solid var(--outline);
+                cursor: none;
+
+                .main-item {
+                    cursor: none;
+                }
             }
         }
 
@@ -103,6 +121,26 @@
                 padding-right: 15px;
                 border-right: none;
                 height: 100%;
+            }
+        }
+    }
+}
+
+.section-news.style-three {
+    .blog-item-main {
+        &:hover {
+            .heading4 {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .list-blog-related {
+        a {
+            &:hover {
+                .heading6 {
+                    text-decoration: underline;
+                }
             }
         }
     }

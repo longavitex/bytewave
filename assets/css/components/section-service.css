@@ -1,3 +1,20 @@
+@media (min-width: 1024px) {
+  .section-service .container .service-item {
+    transition: 0.3s;
+  }
+  .section-service .container .service-item .heading6,
+  .section-service .container .service-item i {
+    transition: 0.3s;
+  }
+  .section-service .container .service-item:hover {
+    padding-left: 32px;
+    background-color: var(--blue);
+  }
+  .section-service .container .service-item:hover .heading6,
+  .section-service .container .service-item:hover i {
+    color: var(--white);
+  }
+}
 @media (max-width: 767.99px) {
   .section-service .container .row:first-child > div:last-child {
     text-align: left !important;

@@ -162,6 +162,10 @@
     color: var(--purple);
 }
 
+.text-white {
+    color: var(--white);
+}
+
 .text-on-surface {
     color: var(--on-surface);
 }
@@ -820,6 +824,10 @@
     border: none;
 }
 
+.border-transparent {
+    border: 1px solid transparent;
+}
+
 .border-outline {
     border: 1px solid var(--outline);
 }
@@ -840,6 +848,10 @@
     border-bottom: 2px solid var(--on-surface);
 }
 
+.border-underline-white-2px {
+    border-bottom: 2px solid var(--white);
+}
+
 .border-underline-pink-2px {
     border-bottom: 2px solid var(--pink);
 }
@@ -856,6 +868,18 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+.hover-boxshadow {
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+    }
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .object-fit-cover {

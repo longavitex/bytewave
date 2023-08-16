@@ -1,6 +1,6 @@
 mixin benefitItem(props = {})
     -var {classname = '', icon, title, desc} = props
-    div(class=`benefit-item hover-box-shadow ${classname}`)
+    div(class=`benefit-item ${classname}`)
         .block-icon 
             i(class=`${icon}`)
         .heading6.mt-8!= title

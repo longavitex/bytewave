@@ -1,3 +1,28 @@
+.section-solution .solution-item {
+  transition: 0.3s;
+}
+.section-solution .solution-item .heading5,
+.section-solution .solution-item .text-on-surface-variant1 {
+  transition: 0.3s;
+}
+.section-solution .solution-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+}
+.section-solution .solution-item:hover .heading5 {
+  color: var(--blue);
+}
+.section-solution .solution-item:hover .text-on-surface-variant1 {
+  text-decoration: underline;
+}
+.section-solution.style-three .solution-item:hover {
+  box-shadow: none;
+}
+.section-solution.style-three .solution-item:hover .heading5 {
+  color: var(--yellow);
+}
+.section-solution.style-four .solution-item:hover .heading5 {
+  color: var(--pink);
+}
 .section-solution.style-five .container > .row {
   margin-left: 0;
   margin-right: 0;
@@ -37,10 +62,19 @@
   color: var(--green);
   text-decoration: underline;
 }
+.section-solution.style-five .container > .row > div:hover .solution-item .text-on-surface-variant1 {
+  text-decoration: none;
+}
 .section-solution.style-six .row > div .solution-item {
   border-right: 1px solid var(--outline);
   transition: all linear 0.3s;
 }
 .section-solution.style-six .row > div .solution-item:hover {
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
+}
+.section-solution.style-six .row > div .solution-item:hover .heading5 {
+  color: var(--purple);
+}
+.section-solution.style-six .row > div .solution-item:hover .text-on-surface-variant1 {
+  text-decoration: none;
 }

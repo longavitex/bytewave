@@ -6,6 +6,21 @@ window.addEventListener('scroll', () => {
     }
 })
 
+// Button hover
+const btnMain = document.querySelectorAll('.hover-button')
+
+if (btnMain) {
+    btnMain.forEach(btn => {
+        btn.onmousemove = (e) => {
+            let x = e.pageX - btn.offsetLeft
+            let y = e.pageY - btn.offsetTop
+
+            btn.style.setProperty('--x', x + 'px')
+            btn.style.setProperty('--y', y + 'px')
+        }
+    })
+}
+
 // slider
 $(".slider-block .list-slider").slick({
     dots: false,
@@ -41,7 +56,7 @@ $(".section-news .container .list-news").slick({
     dots: true,
     arrows: false,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 4,
     touchThreshold: 100,
     swipe: true,
     swipeToSlide: true,
@@ -76,6 +91,34 @@ $(".section-news .container .list-news").slick({
         },
     ]
 });
+
+// Change cursor
+const listNews = document.querySelector('.section-news .list-news .slick-list')
+const mouseCursor = document.querySelector('.cursor')
+
+if (listNews) {
+    listNews.addEventListener('mousemove', (e) => {
+        mouseCursor.style.top = e.pageY + 'px'
+        mouseCursor.style.left = e.pageX + 'px'
+        mouseCursor.style.opacity = '1'
+    })
+
+    listNews.addEventListener('mouseout', (e) => {
+        mouseCursor.style.opacity = '0'
+    })
+
+    listNews.addEventListener('mousedown', () => {
+        mouseCursor.style.width = '60px'
+        mouseCursor.style.height = '60px'
+        mouseCursor.style.gap = '4px'
+    })
+
+    listNews.addEventListener('mouseup', () => {
+        mouseCursor.style.width = '70px'
+        mouseCursor.style.height = '70px'
+        mouseCursor.style.gap = '12px'
+    })
+}
 
 
 // testimonial home2
@@ -169,6 +212,33 @@ $(".section-industry .row").slick({
         },
     ]
 });
+
+// Change cursor home3
+const listIndustry = document.querySelector('.section-industry .list-industry .slick-list')
+
+if (listIndustry) {
+    listIndustry.addEventListener('mousemove', (e) => {
+        mouseCursor.style.top = e.pageY + 'px'
+        mouseCursor.style.left = e.pageX + 'px'
+        mouseCursor.style.opacity = '1'
+    })
+
+    listIndustry.addEventListener('mouseout', (e) => {
+        mouseCursor.style.opacity = '0'
+    })
+
+    listIndustry.addEventListener('mousedown', () => {
+        mouseCursor.style.width = '60px'
+        mouseCursor.style.height = '60px'
+        mouseCursor.style.gap = '4px'
+    })
+
+    listIndustry.addEventListener('mouseup', () => {
+        mouseCursor.style.width = '70px'
+        mouseCursor.style.height = '70px'
+        mouseCursor.style.gap = '12px'
+    })
+}
 
 
 // change switch btn pricing home6

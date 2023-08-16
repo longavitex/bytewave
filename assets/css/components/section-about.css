@@ -35,6 +35,9 @@
     padding-top: 32px;
   }
 }
+.section-about.style-two a.text-button-small:hover {
+  color: var(--blue);
+}
 @media (max-width: 767.99px) {
   .section-about.style-two .cta-block .row > div {
     text-align: center !important;

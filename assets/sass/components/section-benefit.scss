@@ -1,4 +1,20 @@
 .section-benefit {
+    .benefit-item {
+        .block-icon {
+            i {
+                transition: all linear 0.3s;
+            }
+        }
+
+        &:hover {
+            .block-icon {
+                i {
+                    transform: rotateY(360deg);
+                }
+            }
+        }
+    }
+
     &.style-four {
         @media (max-width: 1169.99px) {
             .container {

@@ -1,0 +1,24 @@
+.list-social {
+    a {
+        transition: all linear 0.3s;
+
+        i.icon-linkedin {
+            margin-bottom: 2px;
+            margin-left: 2px;
+        }
+
+        i.icon-twitter,
+        i.icon-youtube {
+            margin-left: 1px;
+        }
+
+        &:hover {
+            background-color: var(--blue);
+            border: none;
+
+            i {
+                color: var(--white);
+            }
+        }
+    }
+}

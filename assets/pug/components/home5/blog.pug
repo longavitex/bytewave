@@ -2,9 +2,12 @@ include ../../mixins/blogItem.pug
 
 .section-case-studies.section-news.bg-linear.pt-80.pb-80 
     .container
-        .col-xl-5.col-md-4.col-12.text-center
+        .cursor.flex-center.gap-12
+            i.ph.ph-caret-left.text-white
+            i.ph.ph-caret-right.text-white
+        .heading.text-center
             .text-label.pt-4.pb-4.pl-12.pr-12.bg-green.bora-2.display-inline-block Our Blog
-            .heading3.mt-8 Recent posts
+            .heading3.text-center.mt-8 Recent posts
         .list-news.mt-40
             .item.col-4.h-100
                 +blogItem({classname:'', style:'style-five', img:'assets/images/blog/item11.png', category:'Performance Enhancement', title:'Mastering Financial Success: Insights from Finance Consulting', date:'February 25, 2023'})
@@ -14,4 +17,4 @@ include ../../mixins/blogItem.pug
                 +blogItem({classname:'', style:'style-five', img:'assets/images/blog/item3.png', category:'Application Development', title:'Empowering Your Finances: Exploring the World of Financial', date:'February 24, 2023'})
             .item.col-4.h-100
                 +blogItem({classname:'', style:'style-five', img:'assets/images/blog/item13.png', category:'Finance & Banking', title:'Digital Banking Innovations Reshaping the Future of Finance.', date:'February 23, 2023'})
-            
+        
