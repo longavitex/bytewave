@@ -279,3 +279,93 @@ if (switchBtn) {
         }
     })
 }
+
+
+// testimonial home7
+$(".section-testimonial.style-seven .container .list-comment").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    touchThreshold: 100,
+    swipe: true,
+    swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+    infinite: true,
+    responsive: [
+        {
+            breakpoint: 1170,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+    ]
+});
+
+
+// Video modal Home7
+const videoModal = document.querySelector('.js-video-modal')
+const videoModalContainer = document.querySelector('.js-video-modal-container')
+const closeVideo = document.querySelector('.js-modal-close')
+const playBtn = document.querySelector('.video-block i.ph-play')
+
+//Show modal video
+function showVideo() {
+  if (videoModal) {
+    videoModal.classList.add('open')
+  }
+}
+
+//Close modal video
+function removeVideoModal() {
+  if (videoModal) {
+    videoModal.classList.remove('open')
+  }
+}
+
+//Listen click
+if (playBtn) {
+  playBtn.addEventListener('click', showVideo)
+}
+
+if (playBtn) {
+  playBtn.addEventListener('click', () => {
+    videoModal.classList.add('open')
+  })
+}
+
+//Listen click and close modal video
+if (closeVideo) {
+  closeVideo.addEventListener('click', removeVideoModal)
+}
+
+//Listen click outside modal-container and close modal video
+if (videoModal) {
+  videoModal.addEventListener('click', removeVideoModal)
+}
+
+if (videoModalContainer) {
+  videoModalContainer.addEventListener('click', function (event) {
+    event.stopPropagation()
+  })
+}

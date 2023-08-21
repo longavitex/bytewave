@@ -1,3 +1,6 @@
+/*
+*** Section Solution Home1,2: Start
+*/
 .section-solution {
     .solution-item {
         transition: 0.3s;
@@ -19,101 +22,96 @@
             }
         }
     }
+}
 
-    &.style-three {
-        .solution-item {
-            &:hover {
-                box-shadow: none;
+/*
+*** Section Solution Home1,2: End
+*/
+/*
+*** Section Solution Home3: Start
+*/
+.section-solution.style-three {
+    .solution-item {
+        &:hover {
+            box-shadow: none;
 
-                .heading5 {
-                    color: var(--yellow);
-                }
+            .heading5 {
+                color: var(--yellow);
             }
         }
     }
+}
 
-    &.style-four {
-        .solution-item {
-            &:hover {
-                .heading5 {
-                    color: var(--pink);
-                }
+/*
+*** Section Solution Home3: End
+*/
+/*
+*** Section Solution Home4: Start
+*/
+.section-solution.style-four {
+    .solution-item {
+        &:hover {
+            .heading5 {
+                color: var(--pink);
             }
         }
     }
+}
 
-    &.style-five {
-        .container {
-            >.row {
-                margin-left: 0;
-                margin-right: 0;
+/*
+*** Section Solution Home4: End
+*/
+/*
+*** Section Solution Home5: Start
+*/
+.section-solution.style-five {
+    .container {
+        >.row {
+            margin-left: 0;
+            margin-right: 0;
 
-                >div {
-                    position: relative;
-                    padding-left: 0;
-                    padding-right: 0;
-                    border-right: 1px solid var(--outline);
+            >div {
+                position: relative;
+                padding-left: 0;
+                padding-right: 0;
+                border-right: 1px solid var(--outline);
 
-                    &:last-child {
-                        border-right: none;
+                &:last-child {
+                    border-right: none;
+                }
+
+                .double-slash {
+                    position: absolute;
+                    top: -16px;
+                    right: 30px;
+                    transition: all linear 0.3s;
+                    opacity: 0;
+
+                    i {
+                        font-size: 46px;
+                        width: 25px;
+                        display: inline-block;
                     }
+                }
+
+                .solution-item {
+                    .heading5 {
+                        transition: all linear 0.3s;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
 
                     .double-slash {
-                        position: absolute;
-                        top: -16px;
-                        right: 30px;
-                        transition: all linear 0.3s;
-                        opacity: 0;
-
-                        i {
-                            font-size: 46px;
-                            width: 25px;
-                            display: inline-block;
-                        }
+                        opacity: 1;
+                        right: 40px;
                     }
 
                     .solution-item {
                         .heading5 {
-                            transition: all linear 0.3s;
-                        }
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-
-                        .double-slash {
-                            opacity: 1;
-                            right: 40px;
-                        }
-
-                        .solution-item {
-                            .heading5 {
-                                color: var(--green);
-                                text-decoration: underline;
-                            }
-
-                            .text-on-surface-variant1 {
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-six {
-        .row {
-            >div {
-                .solution-item {
-                    border-right: 1px solid var(--outline);
-                    transition: all linear 0.3s;
-
-                    &:hover {
-                        box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
-
-                        .heading5 {
-                            color: var(--purple);
+                            color: var(--green);
+                            text-decoration: underline;
                         }
 
                         .text-on-surface-variant1 {
@@ -125,3 +123,85 @@
         }
     }
 }
+
+/*
+*** Section Solution Home5: End
+*/
+/*
+*** Section Solution Home6: Start
+*/
+.section-solution.style-six {
+    .row {
+        >div {
+            .solution-item {
+                border-right: 1px solid var(--outline);
+                transition: all linear 0.3s;
+
+                &:hover {
+                    box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
+
+                    .heading5 {
+                        color: var(--purple);
+                    }
+
+                    .text-on-surface-variant1 {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section Solution Home6: End
+*/
+
+/*
+*** Section Solution Home7: Start
+*/
+.section-solution.style-seven {
+    .solution-item {
+        .heading5 {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                opacity: 0;
+                background-color: var(--on-surface);
+                transition: all ease 0.2s;
+            }
+        }
+
+        &:hover {
+            .heading5 {
+                color: var(--on-surface);
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            .text-on-surface-variant1 {
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media (max-width: 1199.99px) {
+        .container {
+            >.row {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+/*
+*** Section Solution Home7: End
+*/

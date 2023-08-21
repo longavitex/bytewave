@@ -1,3 +1,6 @@
+/*
+*** Section Service Home1: Start
+*/
 @media (min-width: 1024px) {
   .section-service .container .service-item {
     transition: 0.3s;
@@ -20,3 +23,7 @@
     text-align: left !important;
   }
 }
+
+/*
+*** Section Service Home1: End
+*/

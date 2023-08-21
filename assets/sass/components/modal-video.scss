@@ -1,0 +1,68 @@
+/*
+Modal Video: Start
+*/
+.js-video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    transition: all ease 0.5s;
+    z-index: -1;
+
+    .js-video-modal-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 900px;
+        height: 500px;
+        padding-left: 32px;
+        padding-right: 32px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .video-block {
+            width: 100%;
+            height: 100%;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+
+        @media (max-width:767.99px) {
+            height: 400px;
+        }
+
+        @media (max-width:576.99px) {
+            height: 320px;
+        }
+
+        @media (max-width:479.99px) {
+            height: 250px;
+        }
+
+        @media (max-width:400.99px) {
+            height: 200px;
+        }
+    }
+}
+
+.js-video-modal.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+}
+/*
+Modal Video: End
+*/

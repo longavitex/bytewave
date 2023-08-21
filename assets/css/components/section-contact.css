@@ -1,3 +1,9 @@
+/*
+*** Section Contact: Start
+*/
+/*
+*** Section Contact main: Start
+*/
 .section-contact .container .form-block .row > div:nth-child(1) {
   padding-right: 6px;
 }
@@ -21,9 +27,23 @@
     padding-left: calc(var(--bs-gutter-x) * 0.5);
   }
 }
+
+/*
+*** Section Contact main: End
+*/
+/*
+*** Section Contact Home3: Start
+*/
 .section-contact.style-three .list-infor a {
   text-decoration: underline;
 }
+
+/*
+*** Section Contact Home3: End
+*/
+/*
+*** Section Contact Home5: Start
+*/
 .section-contact.style-five {
   position: relative;
 }
@@ -74,3 +94,10 @@
     margin-top: 12px !important;
   }
 }
+
+/*
+*** Section Contact Home5: End
+*/
+/*
+*** Section Contact: End
+*/

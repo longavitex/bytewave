@@ -1,3 +1,6 @@
+/*
+*** Section Portfolio Home6: Start
+*/
 .section-pricing .heading .switch .bg-white {
   display: block;
   width: 80px;
@@ -80,3 +83,37 @@
   display: block;
   animation: showList ease-in-out 0.7s;
 }
+
+/*
+*** Section Portfolio Home6: End
+*/
+/*
+*** Section Portfolio Home7: Start
+*/
+.section-pricing.style-seven .container > .row .switch .bg-white::before {
+  background-color: var(--blue);
+}
+.section-pricing.style-seven .container > .row .switch.enable .bg-white {
+  background-color: var(--blue);
+}
+.section-pricing.style-seven .container > .row .switch.enable .bg-white::before {
+  left: 42px;
+  background-color: var(--white);
+}
+.section-pricing.style-seven .container > .row .list-pricing .pricing-item a.button:hover,
+.section-pricing.style-seven .container > .row .list-pricing-year .pricing-item a.button:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+.section-pricing.style-seven .container > .row > div:last-child {
+  padding-left: 0;
+}
+@media (max-width: 1199.99px) {
+  .section-pricing.style-seven .container > .row > div:last-child {
+    padding-left: 15px;
+  }
+}
+
+/*
+*** Section Portfolio Home7: End
+*/

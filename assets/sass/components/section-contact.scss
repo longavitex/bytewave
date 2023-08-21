@@ -1,3 +1,10 @@
+/*
+*** Section Contact: Start
+*/
+
+/*
+*** Section Contact main: Start
+*/
 .section-contact {
     .container {
         .form-block {
@@ -33,69 +40,89 @@
             }
         }
     }
+}
 
-    &.style-three {
-        .list-infor {
-            a {
-                text-decoration: underline;
-            }
+/*
+*** Section Contact main: End
+*/
+/*
+*** Section Contact Home3: Start
+*/
+.section-contact.style-three {
+    .list-infor {
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+/*
+*** Section Contact Home3: End
+*/
+/*
+*** Section Contact Home5: Start
+*/
+.section-contact.style-five {
+    position: relative;
+
+    >.bg-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
     }
 
-    &.style-five {
+    .container {
+        z-index: 1;
         position: relative;
 
-        >.bg-img {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            width: 50%;
-            z-index: 0;
+        form {
+            z-index: 1;
+        }
+    }
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
+    @media (max-width: 991.99px) {
+        padding-top: 0;
+
+        >.bg-img {
+            width: 100%;
+            position: relative;
         }
 
         .container {
-            z-index: 1;
-            position: relative;
-
-            form {
-                z-index: 1;
-            }
+            background-color: var(--yellow-surface);
+            padding-top: 60px;
+            margin-top: -100px;
         }
+    }
 
-        @media (max-width: 991.99px) {
-            padding-top: 0;
+    @media (max-width: 575.99px) {
+        padding-bottom: 32px;
 
-            >.bg-img {
-                width: 100%;
-                position: relative;
-            }
+        .container {
+            padding-top: 32px;
+            margin-top: -40px;
 
-            .container {
-                background-color: var(--yellow-surface);
-                padding-top: 60px;
-                margin-top: -100px;
-            }
-        }
-
-        @media (max-width: 575.99px) {
-            padding-bottom: 32px;
-
-            .container {
-                padding-top: 32px;
-                margin-top: -40px;
-
-                .heading3.mt-12 {
-                    margin-top: 12px !important;
-                }
+            .heading3.mt-12 {
+                margin-top: 12px !important;
             }
         }
     }
 }
+
+/*
+*** Section Contact Home5: End
+*/
+
+/*
+*** Section Contact: End
+*/

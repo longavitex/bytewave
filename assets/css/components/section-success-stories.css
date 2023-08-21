@@ -1,3 +1,6 @@
+/*
+*** Section Success Stories Home6: Start
+*/
 .section-success-stories .row > div .item {
   position: relative;
 }
@@ -9,3 +12,7 @@
   background: rgba(247, 243, 249, 0.7);
   backdrop-filter: blur(4px);
 }
+
+/*
+*** Section Success Stories Home6: End
+*/

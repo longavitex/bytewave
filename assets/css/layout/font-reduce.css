@@ -1,3 +1,6 @@
+/*
+*** Font Reduce Tablet: Start
+*/
 @media (max-width: 992px) {
   .mt-80 {
     margin-top: 60px;
@@ -128,7 +131,13 @@
     line-height: 16px;
   }
 }
-@media (max-width: 576px) {
+/*
+*** Font Reduce Tablet: End
+*/
+/*
+*** Font Reduce Mobile: Start
+*/
+@media (max-width: 767.99px) {
   .mt-80 {
     margin-top: 40px;
   }
@@ -281,3 +290,6 @@
     line-height: 24px;
   }
 }
+/*
+*** Font Reduce Mobile: End
+*/

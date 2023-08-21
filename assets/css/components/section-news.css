@@ -1,3 +1,9 @@
+/*
+*** Section Case Study, News, Blog: Start
+*/
+/*
+*** Section Case Study, News, Blog Main: Start
+*/
 .section-case-studies .container .cursor,
 .section-news .container .cursor {
   background-color: #111;
@@ -100,6 +106,12 @@
   }
 }
 
+/*
+*** Section Case Study, News, Blog Main: End
+*/
+/*
+*** Section News Home2: Start
+*/
 .section-news.style-two .container .list-news {
   margin-left: -15px;
   margin-right: -15px;
@@ -111,6 +123,12 @@
   height: 100%;
 }
 
+/*
+*** Section News Home2: End
+*/
+/*
+*** Section News Home3: Start
+*/
 .section-news.style-three .blog-item-main:hover .heading4 {
   text-decoration: underline;
 }
@@ -118,6 +136,12 @@
   text-decoration: underline;
 }
 
+/*
+*** Section News Home3: End
+*/
+/*
+*** Section News Home4: Start
+*/
 .section-news.style-four .container .list-news {
   margin-left: -15px;
   margin-right: -15px;
@@ -137,9 +161,22 @@
   bottom: 0;
 }
 
+/*
+*** Section News Home4: End
+*/
+/*
+*** Section News Home6: Start
+*/
 .section-news.style-six {
   background-color: #F7F3F9;
 }
 .section-news.style-six .bg-pink {
   background-color: var(--purple);
 }
+
+/*
+*** Section News Home6: End
+*/
+/*
+*** Section Case Study, News, Blog: End
+*/

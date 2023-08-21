@@ -1,3 +1,6 @@
+/*
+*** Section Testimonial Home1: Start
+*/
 .section-testimonial .row > div .testimonial-item {
   display: flex;
   align-items: center;
@@ -78,6 +81,13 @@
   background-color: var(--on-surface);
   border: 1px solid var(--on-surface);
 }
+
+/*
+*** Section Testimonial Home1: End
+*/
+/*
+*** Section Testimonial Home2: Start
+*/
 .section-testimonial.style-two .list-comment .slick-list {
   margin-left: -15px;
   margin-right: -15px;
@@ -105,6 +115,26 @@
 .section-testimonial.style-two .list-comment .slick-dots {
   margin-top: 0;
 }
+
+/*
+*** Section Testimonial Home2: End
+*/
+/*
+*** Section Testimonial Home3: Start
+*/
+.testimonial-style-three .section-testimonial {
+  background-color: var(--yellow-surface);
+}
+.testimonial-style-three .section-testimonial .col .item .star i.ph-star {
+  color: var(--yellow);
+}
+
+/*
+*** Section Testimonial Home3: End
+*/
+/*
+*** Section Testimonial Home5: Start
+*/
 .section-testimonial.style-five .row {
   position: relative;
   width: 100%;
@@ -158,6 +188,13 @@
     margin-top: 12px;
   }
 }
+
+/*
+*** Section Testimonial Home5: End
+*/
+/*
+*** Section Testimonial Home6: Start
+*/
 .section-testimonial.style-six .list-comment .slick-list {
   overflow: unset;
 }
@@ -184,9 +221,14 @@
   opacity: 1;
 }
 
-.testimonial-style-three .section-testimonial {
-  background-color: var(--yellow-surface);
+/*
+*** Section Testimonial Home6: End
+*/
+.section-testimonial.style-seven .list-comment .slick-list {
+  margin-left: -15px;
+  margin-right: -15px;
 }
-.testimonial-style-three .section-testimonial .col .item .star i.ph-star {
-  color: var(--yellow);
+.section-testimonial.style-seven .list-comment .slick-list .slick-track > div {
+  padding-left: 15px;
+  padding-right: 15px;
 }

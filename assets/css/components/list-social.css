@@ -1,3 +1,6 @@
+/*
+*** List social: Start
+*/
 .list-social a {
   transition: all linear 0.3s;
 }
@@ -16,3 +19,7 @@
 .list-social a:hover i {
   color: var(--white);
 }
+
+/*
+*** List social: End
+*/

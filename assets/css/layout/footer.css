@@ -1,3 +1,9 @@
+/*
+*** Section Footer: Start
+*/
+/*
+*** Section Footer main: Start
+*/
 .footer-block .row .footer-navigate {
   display: flex;
   align-items: center;
@@ -62,6 +68,12 @@
     font-size: 12px;
   }
 }
+/*
+*** Section Footer main: End
+*/
+/*
+*** Section Footer Home3: Start
+*/
 .footer-style-three .footer-block {
   background-color: var(--on-surface);
   color: var(--on-surface-variant2);
@@ -93,6 +105,12 @@
   color: var(--white);
 }
 
+/*
+*** Section Footer Home3: End
+*/
+/*
+*** Section Footer Home4: Start
+*/
 .footer-style-four .footer-block {
   background-color: var(--black-surface);
 }
@@ -109,3 +127,10 @@
 .footer-style-four .footer-block .footer-bottom .list-social a i::before {
   color: var(--white);
 }
+
+/*
+*** Section Footer Home4: End
+*/
+/*
+*** Section Footer: End
+*/

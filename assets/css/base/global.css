@@ -1,3 +1,6 @@
+/*
+*** Main class used in ByteWave: Start
+*/
 .heading1 {
   color: var(--on-surface);
   font-family: "Instrument Sans", sans-serif;
@@ -196,6 +199,10 @@
 
 .bg-purple {
   background-color: var(--purple);
+}
+
+.bg-black-10percents {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .bg-linear {
@@ -878,3 +885,7 @@
 .object-fit-cover {
   object-fit: cover;
 }
+
+/*
+*** Main class used in ByteWave: End
+*/

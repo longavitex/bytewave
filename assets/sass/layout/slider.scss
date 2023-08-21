@@ -1,3 +1,6 @@
+/*
+*** Section Slider Home1: Start
+*/
 .slider-block {
     &.style-one {
         padding-top: 74px;
@@ -26,6 +29,13 @@
     }
 }
 
+/*
+*** Section Slider Home1: End
+*/
+
+/*
+*** Section Slider Home2: Start
+*/
 .slider-block.style-two {
     width: 100%;
     height: calc(100vh - 44px);
@@ -143,6 +153,13 @@
     }
 }
 
+/*
+*** Section Slider Home2: End
+*/
+
+/*
+*** Section Slider Home4: Start
+*/
 .slider-block.style-four {
     height: 100vh;
 
@@ -173,6 +190,13 @@
     }
 }
 
+/*
+*** Section Slider Home4: End
+*/
+
+/*
+*** Section Slider Home5: Start
+*/
 .slider-block.style-five {
     height: 100vh;
 
@@ -205,6 +229,12 @@
     }
 }
 
+/*
+*** Section Slider Home5: End
+*/
+/*
+*** Section Slider Home6: Start
+*/
 .slider-block.style-six {
     height: 90vh;
     background: linear-gradient(180deg, #EDDEF4 0%, rgba(255, 255, 255, 0.50) 100%);
@@ -474,3 +504,34 @@
         transform: translateY(-20px);
     }
 }
+
+/*
+*** Section Slider Home6: End
+*/
+
+/*
+*** Section Slider Home7: Start
+*/
+.slider-block.style-seven {
+    position: relative;
+    background-color: var(--yellow-surface);
+
+    .slider-item {
+        .row {
+            justify-content: end;
+
+            >div:first-child {
+                position: absolute;
+                left: 65px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            >div:last-child {}
+        }
+    }
+}
+
+/*
+*** Section Slider Home7: End
+*/

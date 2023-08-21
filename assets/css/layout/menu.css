@@ -1,3 +1,6 @@
+/*
+*** Section Menu Header Home1: Start
+*/
 .header-menu {
   border-bottom: 1px solid var(--outline);
   position: relative;
@@ -127,12 +130,19 @@
   }
 }
 
+/*
+*** Section Menu Header Home1: End
+*/
+/*
+*** Section Menu Header Home2: Start
+*/
 .menu-style-two .header-menu {
   position: absolute;
   left: 0;
   right: 0;
   z-index: 10;
   transition: all linear 0.5s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .menu-style-two .header-menu .right-block .call-block {
   background: rgba(255, 255, 255, 0.1);
@@ -146,6 +156,7 @@
   position: fixed;
   background-color: #fff;
   color: var(--on-surface);
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
 .menu-style-two .header-menu.sticky .logo svg path {
   fill: var(--on-surface);
@@ -187,6 +198,12 @@
   }
 }
 
+/*
+*** Section Menu Header Home2: End
+*/
+/*
+*** Section Menu Header Home3: Start
+*/
 .menu-style-three .header-menu .container {
   justify-content: space-between;
 }
@@ -210,6 +227,12 @@
   background-color: var(--yellow);
 }
 
+/*
+*** Section Menu Header Home3: End
+*/
+/*
+*** Section Menu Header Home4: Start
+*/
 .menu-style-four .header-menu .container {
   justify-content: center;
 }
@@ -242,6 +265,12 @@
   }
 }
 
+/*
+*** Section Menu Header Home4: End
+*/
+/*
+*** Section Menu Header Home5: Start
+*/
 .menu-style-five .header-menu .right-block .call-block {
   background-color: transparent;
   position: relative;
@@ -271,3 +300,17 @@
 .menu-style-five .header-menu.sticky .container .right-block a {
   background-color: var(--green);
 }
+
+/*
+*** Section Menu Header Home5: End
+*/
+/*
+*** Section Menu Header Home7: Start
+*/
+.menu-style-seven .header-menu .container {
+  justify-content: space-between;
+}
+
+/*
+*** Section Menu Header Home7: End
+*/

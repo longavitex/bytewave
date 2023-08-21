@@ -1,3 +1,10 @@
+/*
+*** Section About: Start
+*/
+
+/*
+*** Section About Main: Start
+*/
 .section-about {
     .content {
         padding: 40px;
@@ -50,145 +57,175 @@
             }
         }
     }
+}
 
-    &.style-two {
-        a.text-button-small {
-            &:hover {
-                color: var(--blue);
-            }
+/*
+*** Section About Main: End
+*/
+/*
+*** Section About Home2: Start
+*/
+.section-about.style-two {
+    a.text-button-small {
+        &:hover {
+            color: var(--blue);
         }
+    }
 
-        .cta-block {
-            @media (max-width: 767.99px) {
-                .row {
-                    >div {
-                        text-align: center !important;
-                    }
+    .cta-block {
+        @media (max-width: 767.99px) {
+            .row {
+                >div {
+                    text-align: center !important;
                 }
             }
         }
     }
+}
 
-    &.style-three {
-        .row {
-            >div:last-child {
-                position: relative;
+/*
+*** Section About Home2: End
+*/
+/*
+*** Section About Home3: Start
+*/
+.section-about.style-three {
+    .row {
+        >div:last-child {
+            position: relative;
 
-                .text-box-circle {
+            .text-box-circle {
+                position: absolute;
+                bottom: 42px;
+                left: 0;
+                border-radius: 50%;
+                width: 152px;
+                height: 152px;
+
+                i {
+                    font-size: 36px;
                     position: absolute;
-                    bottom: 42px;
-                    left: 0;
-                    border-radius: 50%;
-                    width: 152px;
-                    height: 152px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    &::before {
+                        color: var(--on-surface);
+                    }
+                }
+
+                .text-label {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    animation: circleScroll 30s linear infinite;
+
+                    span {
+                        position: absolute;
+                        left: 50%;
+                        transform-origin: 0 76px;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            @media (max-width: 992px) {
+                .text-box-circle {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section About Home3: End
+*/
+/*
+*** Section About Home4: Start
+*/
+.section-about.style-four {
+    position: relative;
+
+    .bg-img {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*
+*** Section About Home4: End
+*/
+/*
+*** Section About Home5: Start
+*/
+.section-about.style-five {
+    .row {
+        .counter {
+            .item {
+                i.icon-slash {
+                    font-size: 36px;
+                }
+            }
+        }
+
+        >div:last-child {
+            position: relative;
+
+            .double-slash {
+                position: absolute;
+                top: -16px;
+                right: 115px;
+
+                i {
+                    font-size: 46px;
+                    width: 25px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section About Home5: End
+*/
+/*
+*** Section About Home6: Start
+*/
+.section-about.style-six {
+    .row {
+        >div:last-child {
+            >.counter {
+                .item {
+                    width: 50%;
 
                     i {
                         font-size: 36px;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
 
                         &::before {
-                            color: var(--on-surface);
-                        }
-                    }
-
-                    .text-label {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        animation: circleScroll 30s linear infinite;
-
-                        span {
-                            position: absolute;
-                            left: 50%;
-                            transform-origin: 0 76px;
-                            font-size: 10px;
+                            color: var(--purple);
                         }
                     }
                 }
-
-                @media (max-width: 992px) {
-                    .text-box-circle {
-                        display: none;
-                    }
-                }
             }
         }
-    }
 
-    &.style-four {
-        position: relative;
-
-        .bg-img {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &.style-five {
-        .row {
-            .counter {
-                .item {
-                    i.icon-slash {
-                        font-size: 36px;
-                    }
-                }
-            }
-
-            >div:last-child {
-                position: relative;
-
-                .double-slash {
-                    position: absolute;
-                    top: -16px;
-                    right: 115px;
-
-                    i {
-                        font-size: 46px;
-                        width: 25px;
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-six {
-        .row {
+        @media (max-width: 575.99px) {
             >div:last-child {
                 >.counter {
                     .item {
-                        width: 50%;
-
-                        i {
-                            font-size: 36px;
-
-                            &::before {
-                                color: var(--purple);
-                            }
-                        }
-                    }
-                }
-            }
-
-            @media (max-width: 575.99px) {
-                >div:last-child {
-                    >.counter {
-                        .item {
-                            padding-left: 0;
-                        }
+                        padding-left: 0;
                     }
                 }
             }
@@ -196,6 +233,9 @@
     }
 }
 
+/*
+*** Section About Home6: End
+*/
 @keyframes circleScroll {
     0% {
         transform: rotate(0);
@@ -205,3 +245,115 @@
         transform: rotate(360deg);
     }
 }
+
+/*
+*** Section About Home7: Start
+*/
+/*
+*** Section About Home7 - First : Start
+*/
+.section-about.style-seven-first {
+    .container {
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+            background: #F8EEEF;
+            border-radius: 40px;
+
+            >div:first-child {
+                padding-left: 0;
+
+                .bg-img {
+                    position: relative;
+                    border-radius: 20px;
+                    overflow: hidden;
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 60px;
+                        height: 60px;
+                        cursor: pointer;
+                        transition: all ease 0.3s;
+
+                        &:hover {
+                            background-color: var(--error);
+                            color: var(--white);
+                        }
+                    }
+
+                    .text-title {
+                        position: absolute;
+                        left: 20px;
+                        bottom: 20px;
+                    }
+                }
+            }
+
+            >div:last-child {
+                padding-right: 0;
+
+                .content {
+                    background: #fff;
+                    border-radius: 20px;
+                }
+            }
+
+            @media (max-width: 1199.99px) {
+                >div:first-child {
+                    padding-right: 0;
+                }
+
+                >div:last-child {
+                    padding-left: 0;
+                }
+            }
+
+            @media (max-width: 575.99px) {
+                border-radius: 12px;
+                padding: 20px;
+
+                >div:first-child {
+                    .bg-img {
+                        border-radius: 12px;
+                    }
+                }
+
+                >div:last-child {
+                    .content {
+                        border-radius: 12px;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section About Home7 - First : End
+*/
+
+/*
+*** Section About Home7 - Second : Start
+*/
+.section-about.style-seven-second {
+    @media (max-width: 991.99px) {
+        .row {
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+    }
+}
+/*
+*** Section About Home7 - Second : End
+*/
+/*
+*** Section About Home7: End
+*/
+
+/*
+*** Section About: End
+*/

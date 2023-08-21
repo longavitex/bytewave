@@ -1,3 +1,6 @@
+/*
+*** Section Newsletter Home4: Start
+*/
 .section-newsletter .row .block-input input {
   border-radius: 4px 0 0 4px;
   height: 48px;
@@ -16,6 +19,13 @@
     width: 100px;
   }
 }
+
+/*
+*** Section Newsletter Home4: End
+*/
+/*
+*** Section Newsletter Home5: Start
+*/
 .section-newsletter.style-five .double-slash i {
   font-size: 46px;
   width: 25px;
@@ -32,3 +42,17 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+/*
+*** Section Newsletter Home5: End
+*/
+/*
+*** Section Newsletter Home7: Start
+*/
+.section-newsletter.style-seven {
+  background-color: #0D0F44;
+}
+
+/*
+*** Section Newsletter Home7: End
+*/

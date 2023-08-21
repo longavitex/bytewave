@@ -1,3 +1,10 @@
+/*
+*** Section Banner: Start
+*/
+
+/*
+*** Section Banner Main: Start
+*/
 .section-banner {
     background-color: var(--blue);
 
@@ -12,16 +19,46 @@
             margin: 0 60px;
             white-space: nowrap;
         }
+    } 
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
     }
 
-    &.style-two {
-        .list {
-            width: calc((253.89px + 562.78px + 546px) * 2 + 120px * 6 + 25.3px * 6);
-            animation: scroll2 20s linear infinite;
-        }
+    to {
+        transform: translateX(calc(((603px + 435.5px) * 2 + 120px * 4 + 25.3px * 4) * -0.32));
+    }
+}
+/*
+*** Section Banner Main: End
+*/
+/*
+*** Section Banner Home2: Start
+*/
+.section-banner.style-two {
+    .list {
+        width: calc((253.89px + 562.78px + 546px) * 2 + 120px * 6 + 25.3px * 6);
+        animation: scroll2 20s linear infinite;
     }
 }
 
+@keyframes scroll2 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(((253.89px + 562.78px + 546px) * 2 + 120px * 6 + 25.3px * 6) * -0.32));
+    }
+}
+/*
+*** Section Banner Home2: End
+*/
+/*
+*** Section Banner Home3: Start
+*/
 .banner-style-three {
     .section-banner {
         background-color: var(--yellow);
@@ -39,6 +76,21 @@
     }
 }
 
+@keyframes scroll3 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(((800.17px + 704.23px) * 2 + 120px * 4 + 25.3px * 4) * -0.32));
+    }
+}
+/*
+*** Section Banner Home3: End
+*/
+/*
+*** Section Banner Home4: Start
+*/
 .banner-style-four {
     .section-banner {
         background-color: var(--pink);
@@ -49,7 +101,12 @@
         }
     }
 }
-
+/*
+*** Section Banner Home4: End
+*/
+/*
+*** Section Banner Home5: Start
+*/
 .section-banner.style-six {
     background-color: var(--white);
 
@@ -59,36 +116,9 @@
         padding-right: 60px;
     }
 }
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(calc(((603px + 435.5px) * 2 + 120px * 4 + 25.3px * 4) * -0.32));
-    }
-}
-
-@keyframes scroll2 {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(calc(((253.89px + 562.78px + 546px) * 2 + 120px * 6 + 25.3px * 6) * -0.32));
-    }
-}
-
-@keyframes scroll3 {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(calc(((800.17px + 704.23px) * 2 + 120px * 4 + 25.3px * 4) * -0.32));
-    }
-}
+/*
+*** Section Banner Home5: End
+*/
 
 @media (max-width: 575.99px) {
     .section-banner {
@@ -97,3 +127,6 @@
         }
     }
 }
+/*
+*** Section Banner: End
+*/

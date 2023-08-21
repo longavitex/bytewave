@@ -19,6 +19,9 @@
   --on-surface-variant2: #AAB1B8;
 }
 
+/*
+*** Reset CSS: Start
+*/
 * {
   margin: 0;
   padding: 0;
@@ -81,6 +84,12 @@ select {
   -webkit-appearance: none;
 }
 
+/*
+*** Reset CSS: End
+*/
+/*
+*** Custom Boostrap(container, row): Start
+*/
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -109,6 +118,12 @@ select {
   padding-right: 15px;
 }
 
+/*
+*** Custom Boostrap(container, row): End
+*/
+/*
+*** Main class used in ByteWave: Start
+*/
 .heading1 {
   color: var(--on-surface);
   font-family: "Instrument Sans", sans-serif;
@@ -307,6 +322,10 @@ select {
 
 .bg-purple {
   background-color: var(--purple);
+}
+
+.bg-black-10percents {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .bg-linear {
@@ -990,6 +1009,15 @@ select {
   object-fit: cover;
 }
 
+/*
+*** Main class used in ByteWave: End
+*/
+/*
+*** Section About: Start
+*/
+/*
+*** Section About Main: Start
+*/
 .section-about .content {
   padding: 40px;
   border-radius: 16px;
@@ -1027,6 +1055,13 @@ select {
     padding-top: 32px;
   }
 }
+
+/*
+*** Section About Main: End
+*/
+/*
+*** Section About Home2: Start
+*/
 .section-about.style-two a.text-button-small:hover {
   color: var(--blue);
 }
@@ -1035,6 +1070,13 @@ select {
     text-align: center !important;
   }
 }
+
+/*
+*** Section About Home2: End
+*/
+/*
+*** Section About Home3: Start
+*/
 .section-about.style-three .row > div:last-child {
   position: relative;
 }
@@ -1073,6 +1115,13 @@ select {
     display: none;
   }
 }
+
+/*
+*** Section About Home3: End
+*/
+/*
+*** Section About Home4: Start
+*/
 .section-about.style-four {
   position: relative;
 }
@@ -1089,6 +1138,13 @@ select {
   height: 100%;
   object-fit: cover;
 }
+
+/*
+*** Section About Home4: End
+*/
+/*
+*** Section About Home5: Start
+*/
 .section-about.style-five .row .counter .item i.icon-slash {
   font-size: 36px;
 }
@@ -1105,6 +1161,13 @@ select {
   width: 25px;
   display: inline-block;
 }
+
+/*
+*** Section About Home5: End
+*/
+/*
+*** Section About Home6: Start
+*/
 .section-about.style-six .row > div:last-child > .counter .item {
   width: 50%;
 }
@@ -1120,6 +1183,9 @@ select {
   }
 }
 
+/*
+*** Section About Home6: End
+*/
 @keyframes circleScroll {
   0% {
     transform: rotate(0);
@@ -1128,6 +1194,102 @@ select {
     transform: rotate(360deg);
   }
 }
+/*
+*** Section About Home7: Start
+*/
+/*
+*** Section About Home7 - First : Start
+*/
+.section-about.style-seven-first .container .row {
+  margin-left: 0;
+  margin-right: 0;
+  background: #F8EEEF;
+  border-radius: 40px;
+}
+.section-about.style-seven-first .container .row > div:first-child {
+  padding-left: 0;
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img i:hover {
+  background-color: var(--error);
+  color: var(--white);
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img .text-title {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.section-about.style-seven-first .container .row > div:last-child {
+  padding-right: 0;
+}
+.section-about.style-seven-first .container .row > div:last-child .content {
+  background: #fff;
+  border-radius: 20px;
+}
+@media (max-width: 1199.99px) {
+  .section-about.style-seven-first .container .row > div:first-child {
+    padding-right: 0;
+  }
+  .section-about.style-seven-first .container .row > div:last-child {
+    padding-left: 0;
+  }
+}
+@media (max-width: 575.99px) {
+  .section-about.style-seven-first .container .row {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .section-about.style-seven-first .container .row > div:first-child .bg-img {
+    border-radius: 12px;
+  }
+  .section-about.style-seven-first .container .row > div:last-child .content {
+    border-radius: 12px;
+    padding: 20px;
+  }
+}
+
+/*
+*** Section About Home7 - First : End
+*/
+/*
+*** Section About Home7 - Second : Start
+*/
+@media (max-width: 991.99px) {
+  .section-about.style-seven-second .row {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+/*
+*** Section About Home7 - Second : End
+*/
+/*
+*** Section About Home7: End
+*/
+/*
+*** Section About: End
+*/
+/*
+*** Section Banner: Start
+*/
+/*
+*** Section Banner Main: Start
+*/
 .section-banner {
   background-color: var(--blue);
 }
@@ -1142,11 +1304,40 @@ select {
   margin: 0 60px;
   white-space: nowrap;
 }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-850.624px);
+  }
+}
+/*
+*** Section Banner Main: End
+*/
+/*
+*** Section Banner Home2: Start
+*/
 .section-banner.style-two .list {
   width: 3597.14px;
   animation: scroll2 20s linear infinite;
 }
 
+@keyframes scroll2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1151.0848px);
+  }
+}
+/*
+*** Section Banner Home2: End
+*/
+/*
+*** Section Banner Home3: Start
+*/
 .banner-style-three .section-banner {
   background-color: var(--yellow);
 }
@@ -1158,6 +1349,20 @@ select {
   color: var(--on-surface);
 }
 
+@keyframes scroll3 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1148.8px);
+  }
+}
+/*
+*** Section Banner Home3: End
+*/
+/*
+*** Section Banner Home4: Start
+*/
 .banner-style-four .section-banner {
   background-color: var(--pink);
 }
@@ -1166,6 +1371,12 @@ select {
   animation: scroll3 20s linear infinite;
 }
 
+/*
+*** Section Banner Home4: End
+*/
+/*
+*** Section Banner Home5: Start
+*/
 .section-banner.style-six {
   background-color: var(--white);
 }
@@ -1175,41 +1386,36 @@ select {
   padding-right: 60px;
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-850.624px);
-  }
-}
-@keyframes scroll2 {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-1151.0848px);
-  }
-}
-@keyframes scroll3 {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-1148.8px);
-  }
-}
+/*
+*** Section Banner Home5: End
+*/
 @media (max-width: 575.99px) {
   .section-banner .list {
     padding: 20px 0;
   }
 }
+/*
+*** Section Banner: End
+*/
+/*
+*** Section Benefit: Start
+*/
+/*
+*** Section Benefit Main: Start
+*/
 .section-benefit .benefit-item .block-icon i {
   transition: all linear 0.3s;
 }
 .section-benefit .benefit-item:hover .block-icon i {
   transform: rotateY(360deg);
 }
+
+/*
+*** Section Benefit Main: End
+*/
+/*
+*** Section Benefit Home4: Start
+*/
 @media (max-width: 1169.99px) {
   .section-benefit.style-four .container > .row > div {
     display: flex;
@@ -1237,6 +1443,13 @@ select {
     text-align: center !important;
   }
 }
+
+/*
+*** Section Benefit Home4: End
+*/
+/*
+*** Section Benefit Home5: Start
+*/
 .section-benefit.style-five .row .bg-img {
   position: relative;
 }
@@ -1255,6 +1468,13 @@ select {
     margin-top: 12px;
   }
 }
+
+/*
+*** Section Benefit Home5: End
+*/
+/*
+*** Section Benefit Home6: Start
+*/
 @media (max-width: 991.99px) {
   .section-benefit.style-six .row {
     display: flex;
@@ -1272,6 +1492,15 @@ select {
   }
 }
 
+/*
+*** Section Benefit Home6: End
+*/
+/*
+*** Section Benefit: End
+*/
+/*
+*** Section Brand: Start
+*/
 @media (max-width: 1200px) {
   .section-brand .container > .row .row {
     row-gap: 24px;
@@ -1284,6 +1513,15 @@ select {
   padding-bottom: 0;
 }
 
+/*
+*** Section Brand: End
+*/
+/*
+*** Section Contact: Start
+*/
+/*
+*** Section Contact main: Start
+*/
 .section-contact .container .form-block .row > div:nth-child(1) {
   padding-right: 6px;
 }
@@ -1307,9 +1545,23 @@ select {
     padding-left: calc(var(--bs-gutter-x) * 0.5);
   }
 }
+
+/*
+*** Section Contact main: End
+*/
+/*
+*** Section Contact Home3: Start
+*/
 .section-contact.style-three .list-infor a {
   text-decoration: underline;
 }
+
+/*
+*** Section Contact Home3: End
+*/
+/*
+*** Section Contact Home5: Start
+*/
 .section-contact.style-five {
   position: relative;
 }
@@ -1361,6 +1613,15 @@ select {
   }
 }
 
+/*
+*** Section Contact Home5: End
+*/
+/*
+*** Section Contact: End
+*/
+/*
+*** Section Counter: Start
+*/
 .section-couter {
   position: relative;
 }
@@ -1402,6 +1663,12 @@ select {
   }
 }
 
+/*
+*** Section Counter: End
+*/
+/*
+*** Section Industry Home4: Start
+*/
 .section-industry .cursor {
   background-color: #111;
   border-radius: 50%;
@@ -1497,6 +1764,12 @@ select {
   border: 1px solid var(--white);
 }
 
+/*
+*** Section Industry Home4: End
+*/
+/*
+*** Section Industry Home5: Start
+*/
 .section-industry-five {
   background-attachment: fixed;
   background-image: url(../images/component/industry5.png);
@@ -1570,6 +1843,15 @@ select {
   background-image: url(../images/component/industry5-below.png);
 }
 
+/*
+*** Section Industry Home5: End
+*/
+/*
+*** Section Case Study, News, Blog: Start
+*/
+/*
+*** Section Case Study, News, Blog Main: Start
+*/
 .section-case-studies .container .cursor,
 .section-news .container .cursor {
   background-color: #111;
@@ -1672,6 +1954,12 @@ select {
   }
 }
 
+/*
+*** Section Case Study, News, Blog Main: End
+*/
+/*
+*** Section News Home2: Start
+*/
 .section-news.style-two .container .list-news {
   margin-left: -15px;
   margin-right: -15px;
@@ -1683,6 +1971,12 @@ select {
   height: 100%;
 }
 
+/*
+*** Section News Home2: End
+*/
+/*
+*** Section News Home3: Start
+*/
 .section-news.style-three .blog-item-main:hover .heading4 {
   text-decoration: underline;
 }
@@ -1690,6 +1984,12 @@ select {
   text-decoration: underline;
 }
 
+/*
+*** Section News Home3: End
+*/
+/*
+*** Section News Home4: Start
+*/
 .section-news.style-four .container .list-news {
   margin-left: -15px;
   margin-right: -15px;
@@ -1709,6 +2009,12 @@ select {
   bottom: 0;
 }
 
+/*
+*** Section News Home4: End
+*/
+/*
+*** Section News Home6: Start
+*/
 .section-news.style-six {
   background-color: #F7F3F9;
 }
@@ -1716,6 +2022,15 @@ select {
   background-color: var(--purple);
 }
 
+/*
+*** Section News Home6: End
+*/
+/*
+*** Section Case Study, News, Blog: End
+*/
+/*
+*** Section Newsletter Home4: Start
+*/
 .section-newsletter .row .block-input input {
   border-radius: 4px 0 0 4px;
   height: 48px;
@@ -1734,6 +2049,13 @@ select {
     width: 100px;
   }
 }
+
+/*
+*** Section Newsletter Home4: End
+*/
+/*
+*** Section Newsletter Home5: Start
+*/
 .section-newsletter.style-five .double-slash i {
   font-size: 46px;
   width: 25px;
@@ -1751,6 +2073,22 @@ select {
   cursor: pointer;
 }
 
+/*
+*** Section Newsletter Home5: End
+*/
+/*
+*** Section Newsletter Home7: Start
+*/
+.section-newsletter.style-seven {
+  background-color: #0D0F44;
+}
+
+/*
+*** Section Newsletter Home7: End
+*/
+/*
+*** Section Portfolio Home6: Start
+*/
 .section-pricing .heading .switch .bg-white {
   display: block;
   width: 80px;
@@ -1834,6 +2172,42 @@ select {
   animation: showList ease-in-out 0.7s;
 }
 
+/*
+*** Section Portfolio Home6: End
+*/
+/*
+*** Section Portfolio Home7: Start
+*/
+.section-pricing.style-seven .container > .row .switch .bg-white::before {
+  background-color: var(--blue);
+}
+.section-pricing.style-seven .container > .row .switch.enable .bg-white {
+  background-color: var(--blue);
+}
+.section-pricing.style-seven .container > .row .switch.enable .bg-white::before {
+  left: 42px;
+  background-color: var(--white);
+}
+.section-pricing.style-seven .container > .row .list-pricing .pricing-item a.button:hover,
+.section-pricing.style-seven .container > .row .list-pricing-year .pricing-item a.button:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+.section-pricing.style-seven .container > .row > div:last-child {
+  padding-left: 0;
+}
+@media (max-width: 1199.99px) {
+  .section-pricing.style-seven .container > .row > div:last-child {
+    padding-left: 15px;
+  }
+}
+
+/*
+*** Section Portfolio Home7: End
+*/
+/*
+*** Section Portfolio Home4: Start
+*/
 .section-portfolio .row {
   margin-left: 0;
   margin-right: 0;
@@ -1872,6 +2246,12 @@ select {
   bottom: 20px;
 }
 
+/*
+*** Section Portfolio Home4: End
+*/
+/*
+*** Section Service Home1: Start
+*/
 @media (min-width: 1024px) {
   .section-service .container .service-item {
     transition: 0.3s;
@@ -1895,6 +2275,12 @@ select {
   }
 }
 
+/*
+*** Section Service Home1: End
+*/
+/*
+*** Section Solution Home1,2: Start
+*/
 .section-solution .solution-item {
   transition: 0.3s;
 }
@@ -1911,15 +2297,36 @@ select {
 .section-solution .solution-item:hover .text-on-surface-variant1 {
   text-decoration: underline;
 }
+
+/*
+*** Section Solution Home1,2: End
+*/
+/*
+*** Section Solution Home3: Start
+*/
 .section-solution.style-three .solution-item:hover {
   box-shadow: none;
 }
 .section-solution.style-three .solution-item:hover .heading5 {
   color: var(--yellow);
 }
+
+/*
+*** Section Solution Home3: End
+*/
+/*
+*** Section Solution Home4: Start
+*/
 .section-solution.style-four .solution-item:hover .heading5 {
   color: var(--pink);
 }
+
+/*
+*** Section Solution Home4: End
+*/
+/*
+*** Section Solution Home5: Start
+*/
 .section-solution.style-five .container > .row {
   margin-left: 0;
   margin-right: 0;
@@ -1962,6 +2369,13 @@ select {
 .section-solution.style-five .container > .row > div:hover .solution-item .text-on-surface-variant1 {
   text-decoration: none;
 }
+
+/*
+*** Section Solution Home5: End
+*/
+/*
+*** Section Solution Home6: Start
+*/
 .section-solution.style-six .row > div .solution-item {
   border-right: 1px solid var(--outline);
   transition: all linear 0.3s;
@@ -1976,6 +2390,47 @@ select {
   text-decoration: none;
 }
 
+/*
+*** Section Solution Home6: End
+*/
+/*
+*** Section Solution Home7: Start
+*/
+.section-solution.style-seven .solution-item .heading5 {
+  position: relative;
+}
+.section-solution.style-seven .solution-item .heading5::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+  background-color: var(--on-surface);
+  transition: all ease 0.2s;
+}
+.section-solution.style-seven .solution-item:hover .heading5 {
+  color: var(--on-surface);
+}
+.section-solution.style-seven .solution-item:hover .heading5::before {
+  opacity: 1;
+}
+.section-solution.style-seven .solution-item:hover .text-on-surface-variant1 {
+  text-decoration: none;
+}
+@media (max-width: 1199.99px) {
+  .section-solution.style-seven .container > .row {
+    justify-content: center;
+  }
+}
+
+/*
+*** Section Solution Home7: End
+*/
+/*
+*** Section Success Stories Home6: Start
+*/
 .section-success-stories .row > div .item {
   position: relative;
 }
@@ -1988,6 +2443,12 @@ select {
   backdrop-filter: blur(4px);
 }
 
+/*
+*** Section Success Stories Home6: End
+*/
+/*
+*** Section Testimonial Home1: Start
+*/
 .section-testimonial .row > div .testimonial-item {
   display: flex;
   align-items: center;
@@ -2068,6 +2529,13 @@ select {
   background-color: var(--on-surface);
   border: 1px solid var(--on-surface);
 }
+
+/*
+*** Section Testimonial Home1: End
+*/
+/*
+*** Section Testimonial Home2: Start
+*/
 .section-testimonial.style-two .list-comment .slick-list {
   margin-left: -15px;
   margin-right: -15px;
@@ -2095,6 +2563,26 @@ select {
 .section-testimonial.style-two .list-comment .slick-dots {
   margin-top: 0;
 }
+
+/*
+*** Section Testimonial Home2: End
+*/
+/*
+*** Section Testimonial Home3: Start
+*/
+.testimonial-style-three .section-testimonial {
+  background-color: var(--yellow-surface);
+}
+.testimonial-style-three .section-testimonial .col .item .star i.ph-star {
+  color: var(--yellow);
+}
+
+/*
+*** Section Testimonial Home3: End
+*/
+/*
+*** Section Testimonial Home5: Start
+*/
 .section-testimonial.style-five .row {
   position: relative;
   width: 100%;
@@ -2148,6 +2636,13 @@ select {
     margin-top: 12px;
   }
 }
+
+/*
+*** Section Testimonial Home5: End
+*/
+/*
+*** Section Testimonial Home6: Start
+*/
 .section-testimonial.style-six .list-comment .slick-list {
   overflow: unset;
 }
@@ -2174,13 +2669,21 @@ select {
   opacity: 1;
 }
 
-.testimonial-style-three .section-testimonial {
-  background-color: var(--yellow-surface);
+/*
+*** Section Testimonial Home6: End
+*/
+.section-testimonial.style-seven .list-comment .slick-list {
+  margin-left: -15px;
+  margin-right: -15px;
 }
-.testimonial-style-three .section-testimonial .col .item .star i.ph-star {
-  color: var(--yellow);
+.section-testimonial.style-seven .list-comment .slick-list .slick-track > div {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
+/*
+*** List social: Start
+*/
 .list-social a {
   transition: all linear 0.3s;
 }
@@ -2200,6 +2703,82 @@ select {
   color: var(--white);
 }
 
+/*
+*** List social: End
+*/
+/*
+Modal Video: Start
+*/
+.js-video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all ease 0.5s;
+  z-index: -1;
+}
+.js-video-modal .js-video-modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.js-video-modal .js-video-modal-container .video-block {
+  width: 100%;
+  height: 100%;
+}
+.js-video-modal .js-video-modal-container .video-block iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+@media (max-width: 767.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 400px;
+  }
+}
+@media (max-width: 576.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 320px;
+  }
+}
+@media (max-width: 479.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 250px;
+  }
+}
+@media (max-width: 400.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 200px;
+  }
+}
+
+.js-video-modal.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+/*
+Modal Video: End
+*/
+/*
+*** Hover button animation: Start
+*/
 .hover-button {
   position: relative;
   overflow: hidden;
@@ -2280,6 +2859,12 @@ a.border-underline-purple-2px:hover {
   color: var(--purple);
 }
 
+/*
+*** Hover button animation: End
+*/
+/*
+*** Section Slider Home1: Start
+*/
 .slider-block.style-one {
   padding-top: 74px;
 }
@@ -2300,6 +2885,12 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Slider Home1: End
+*/
+/*
+*** Section Slider Home2: Start
+*/
 .slider-block.style-two {
   width: 100%;
   height: calc(100vh - 44px);
@@ -2398,6 +2989,12 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Slider Home2: End
+*/
+/*
+*** Section Slider Home4: Start
+*/
 .slider-block.style-four {
   height: 100vh;
 }
@@ -2424,6 +3021,12 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Slider Home4: End
+*/
+/*
+*** Section Slider Home5: Start
+*/
 .slider-block.style-five {
   height: 100vh;
 }
@@ -2452,6 +3055,12 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Slider Home5: End
+*/
+/*
+*** Section Slider Home6: Start
+*/
 .slider-block.style-six {
   height: 90vh;
   background: linear-gradient(180deg, #EDDEF4 0%, rgba(255, 255, 255, 0.5) 100%);
@@ -2661,6 +3270,31 @@ a.border-underline-purple-2px:hover {
     transform: translateY(-20px);
   }
 }
+/*
+*** Section Slider Home6: End
+*/
+/*
+*** Section Slider Home7: Start
+*/
+.slider-block.style-seven {
+  position: relative;
+  background-color: var(--yellow-surface);
+}
+.slider-block.style-seven .slider-item .row {
+  justify-content: end;
+}
+.slider-block.style-seven .slider-item .row > div:first-child {
+  position: absolute;
+  left: 65px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*
+*** Section Slider Home7: End
+*/
+/*
+*** Section Topnav Header Main: Start
+*/
 .top-nav {
   height: 44px;
   position: relative;
@@ -2745,6 +3379,12 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Topnav Header Main: End
+*/
+/*
+*** Section Topnav Header Home3: Start
+*/
 .top-nav.style-three .container .left {
   margin-left: 0;
   left: 0;
@@ -2779,6 +3419,12 @@ a.border-underline-purple-2px:hover {
   position: relative;
 }
 
+/*
+*** Section Topnav Header Home3: End
+*/
+/*
+*** Section Menu Header Home1: Start
+*/
 .header-menu {
   border-bottom: 1px solid var(--outline);
   position: relative;
@@ -2908,12 +3554,19 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Menu Header Home1: End
+*/
+/*
+*** Section Menu Header Home2: Start
+*/
 .menu-style-two .header-menu {
   position: absolute;
   left: 0;
   right: 0;
   z-index: 10;
   transition: all linear 0.5s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .menu-style-two .header-menu .right-block .call-block {
   background: rgba(255, 255, 255, 0.1);
@@ -2927,6 +3580,7 @@ a.border-underline-purple-2px:hover {
   position: fixed;
   background-color: #fff;
   color: var(--on-surface);
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
 .menu-style-two .header-menu.sticky .logo svg path {
   fill: var(--on-surface);
@@ -2968,6 +3622,12 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Menu Header Home2: End
+*/
+/*
+*** Section Menu Header Home3: Start
+*/
 .menu-style-three .header-menu .container {
   justify-content: space-between;
 }
@@ -2991,6 +3651,12 @@ a.border-underline-purple-2px:hover {
   background-color: var(--yellow);
 }
 
+/*
+*** Section Menu Header Home3: End
+*/
+/*
+*** Section Menu Header Home4: Start
+*/
 .menu-style-four .header-menu .container {
   justify-content: center;
 }
@@ -3023,6 +3689,12 @@ a.border-underline-purple-2px:hover {
   }
 }
 
+/*
+*** Section Menu Header Home4: End
+*/
+/*
+*** Section Menu Header Home5: Start
+*/
 .menu-style-five .header-menu .right-block .call-block {
   background-color: transparent;
   position: relative;
@@ -3053,6 +3725,25 @@ a.border-underline-purple-2px:hover {
   background-color: var(--green);
 }
 
+/*
+*** Section Menu Header Home5: End
+*/
+/*
+*** Section Menu Header Home7: Start
+*/
+.menu-style-seven .header-menu .container {
+  justify-content: space-between;
+}
+
+/*
+*** Section Menu Header Home7: End
+*/
+/*
+*** Section Footer: Start
+*/
+/*
+*** Section Footer main: Start
+*/
 .footer-block .row .footer-navigate {
   display: flex;
   align-items: center;
@@ -3117,6 +3808,12 @@ a.border-underline-purple-2px:hover {
     font-size: 12px;
   }
 }
+/*
+*** Section Footer main: End
+*/
+/*
+*** Section Footer Home3: Start
+*/
 .footer-style-three .footer-block {
   background-color: var(--on-surface);
   color: var(--on-surface-variant2);
@@ -3148,6 +3845,12 @@ a.border-underline-purple-2px:hover {
   color: var(--white);
 }
 
+/*
+*** Section Footer Home3: End
+*/
+/*
+*** Section Footer Home4: Start
+*/
 .footer-style-four .footer-block {
   background-color: var(--black-surface);
 }
@@ -3165,6 +3868,15 @@ a.border-underline-purple-2px:hover {
   color: var(--white);
 }
 
+/*
+*** Section Footer Home4: End
+*/
+/*
+*** Section Footer: End
+*/
+/*
+*** Font Reduce Tablet: Start
+*/
 @media (max-width: 992px) {
   .mt-80 {
     margin-top: 60px;
@@ -3295,7 +4007,13 @@ a.border-underline-purple-2px:hover {
     line-height: 16px;
   }
 }
-@media (max-width: 576px) {
+/*
+*** Font Reduce Tablet: End
+*/
+/*
+*** Font Reduce Mobile: Start
+*/
+@media (max-width: 767.99px) {
   .mt-80 {
     margin-top: 40px;
   }
@@ -3448,3 +4166,6 @@ a.border-underline-purple-2px:hover {
     line-height: 24px;
   }
 }
+/*
+*** Font Reduce Mobile: End
+*/

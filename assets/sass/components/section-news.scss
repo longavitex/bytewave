@@ -1,3 +1,10 @@
+/*
+*** Section Case Study, News, Blog: Start
+*/
+
+/*
+*** Section Case Study, News, Blog Main: Start
+*/
 .section-case-studies,
 .section-news {
     .container {
@@ -109,7 +116,12 @@
         }
     }
 }
-
+/*
+*** Section Case Study, News, Blog Main: End
+*/
+/*
+*** Section News Home2: Start
+*/
 .section-news.style-two {
     .container {
         .list-news {
@@ -125,7 +137,12 @@
         }
     }
 }
-
+/*
+*** Section News Home2: End
+*/
+/*
+*** Section News Home3: Start
+*/
 .section-news.style-three {
     .blog-item-main {
         &:hover {
@@ -145,7 +162,12 @@
         }
     }
 }
-
+/*
+*** Section News Home3: End
+*/
+/*
+*** Section News Home4: Start
+*/
 .section-news.style-four {
     .container {
         .list-news {
@@ -171,7 +193,12 @@
         }
     }
 }
-
+/*
+*** Section News Home4: End
+*/
+/*
+*** Section News Home6: Start
+*/
 .section-news.style-six {
     background-color: #F7F3F9;
 
@@ -179,3 +206,9 @@
         background-color: var(--purple);
     }
 }
+/*
+*** Section News Home6: End
+*/
+/*
+*** Section Case Study, News, Blog: End
+*/

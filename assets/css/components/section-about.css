@@ -1,3 +1,9 @@
+/*
+*** Section About: Start
+*/
+/*
+*** Section About Main: Start
+*/
 .section-about .content {
   padding: 40px;
   border-radius: 16px;
@@ -35,6 +41,13 @@
     padding-top: 32px;
   }
 }
+
+/*
+*** Section About Main: End
+*/
+/*
+*** Section About Home2: Start
+*/
 .section-about.style-two a.text-button-small:hover {
   color: var(--blue);
 }
@@ -43,6 +56,13 @@
     text-align: center !important;
   }
 }
+
+/*
+*** Section About Home2: End
+*/
+/*
+*** Section About Home3: Start
+*/
 .section-about.style-three .row > div:last-child {
   position: relative;
 }
@@ -81,6 +101,13 @@
     display: none;
   }
 }
+
+/*
+*** Section About Home3: End
+*/
+/*
+*** Section About Home4: Start
+*/
 .section-about.style-four {
   position: relative;
 }
@@ -97,6 +124,13 @@
   height: 100%;
   object-fit: cover;
 }
+
+/*
+*** Section About Home4: End
+*/
+/*
+*** Section About Home5: Start
+*/
 .section-about.style-five .row .counter .item i.icon-slash {
   font-size: 36px;
 }
@@ -113,6 +147,13 @@
   width: 25px;
   display: inline-block;
 }
+
+/*
+*** Section About Home5: End
+*/
+/*
+*** Section About Home6: Start
+*/
 .section-about.style-six .row > div:last-child > .counter .item {
   width: 50%;
 }
@@ -128,6 +169,9 @@
   }
 }
 
+/*
+*** Section About Home6: End
+*/
 @keyframes circleScroll {
   0% {
     transform: rotate(0);
@@ -136,3 +180,93 @@
     transform: rotate(360deg);
   }
 }
+/*
+*** Section About Home7: Start
+*/
+/*
+*** Section About Home7 - First : Start
+*/
+.section-about.style-seven-first .container .row {
+  margin-left: 0;
+  margin-right: 0;
+  background: #F8EEEF;
+  border-radius: 40px;
+}
+.section-about.style-seven-first .container .row > div:first-child {
+  padding-left: 0;
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img i:hover {
+  background-color: var(--error);
+  color: var(--white);
+}
+.section-about.style-seven-first .container .row > div:first-child .bg-img .text-title {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.section-about.style-seven-first .container .row > div:last-child {
+  padding-right: 0;
+}
+.section-about.style-seven-first .container .row > div:last-child .content {
+  background: #fff;
+  border-radius: 20px;
+}
+@media (max-width: 1199.99px) {
+  .section-about.style-seven-first .container .row > div:first-child {
+    padding-right: 0;
+  }
+  .section-about.style-seven-first .container .row > div:last-child {
+    padding-left: 0;
+  }
+}
+@media (max-width: 575.99px) {
+  .section-about.style-seven-first .container .row {
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .section-about.style-seven-first .container .row > div:first-child .bg-img {
+    border-radius: 12px;
+  }
+  .section-about.style-seven-first .container .row > div:last-child .content {
+    border-radius: 12px;
+    padding: 20px;
+  }
+}
+
+/*
+*** Section About Home7 - First : End
+*/
+/*
+*** Section About Home7 - Second : Start
+*/
+@media (max-width: 991.99px) {
+  .section-about.style-seven-second .row {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+/*
+*** Section About Home7 - Second : End
+*/
+/*
+*** Section About Home7: End
+*/
+/*
+*** Section About: End
+*/

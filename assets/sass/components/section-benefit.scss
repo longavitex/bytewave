@@ -1,3 +1,9 @@
+/*
+*** Section Benefit: Start
+*/
+/*
+*** Section Benefit Main: Start
+*/
 .section-benefit {
     .benefit-item {
         .block-icon {
@@ -14,98 +20,123 @@
             }
         }
     }
+}
+/*
+*** Section Benefit Main: End
+*/
 
-    &.style-four {
-        @media (max-width: 1169.99px) {
-            .container {
-                >.row {
-                    >div {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 33%;
-                    }
+/*
+*** Section Benefit Home4: Start
+*/
+.section-benefit.style-four {
+    @media (max-width: 1169.99px) {
+        .container {
+            >.row {
+                >div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 33%;
                 }
             }
         }
+    }
 
-        @media (max-width: 575.99px) {
-            .container {
-                >.row {
-                    align-items: flex-start;
+    @media (max-width: 575.99px) {
+        .container {
+            >.row {
+                align-items: flex-start;
 
+                >div {
                     >div {
-                        >div {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
 
-                            .heading6 {
-                                text-align: center;
-                            }
+                        .heading6 {
+                            text-align: center;
                         }
                     }
                 }
             }
         }
-
-        .cta-block {
-            @media (max-width: 767.99px) {
-                .row {
-                    >div {
-                        text-align: center !important;
-                    }
-                }
-            }
-        }
     }
 
-    &.style-five {
-        .row {
-            .bg-img {
-                position: relative;
-
-                .double-slash {
-                    position: absolute;
-                    top: -16px;
-                    right: 115px;
-
-                    i {
-                        font-size: 46px;
-                        width: 25px;
-                        display: inline-block;
-                    }
-                }
-            }
-
-            @media (max-width: 575.99px) {
-                .mt-24 {
-                    margin-top: 12px;
-                }
-            }
-        }
-    }
-
-    &.style-six {
-        @media (max-width: 991.99px) {
+    .cta-block {
+        @media (max-width: 767.99px) {
             .row {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                .mt-28 {
-                    margin-top: 20px;
-                }
-
-                .mt-16 {
-                    margin-top: 12px;
-                }
-
-                .mt-36 {
-                    margin-top: 24px;
+                >div {
+                    text-align: center !important;
                 }
             }
         }
     }
 }
+/*
+*** Section Benefit Home4: End
+*/
+
+/*
+*** Section Benefit Home5: Start
+*/
+.section-benefit.style-five {
+    .row {
+        .bg-img {
+            position: relative;
+
+            .double-slash {
+                position: absolute;
+                top: -16px;
+                right: 115px;
+
+                i {
+                    font-size: 46px;
+                    width: 25px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        @media (max-width: 575.99px) {
+            .mt-24 {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+/*
+*** Section Benefit Home5: End
+*/
+
+/*
+*** Section Benefit Home6: Start
+*/
+.section-benefit.style-six {
+    @media (max-width: 991.99px) {
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .mt-28 {
+                margin-top: 20px;
+            }
+
+            .mt-16 {
+                margin-top: 12px;
+            }
+
+            .mt-36 {
+                margin-top: 24px;
+            }
+        }
+    }
+}
+/*
+*** Section Benefit Home6: End
+*/
+
+/*
+*** Section Benefit: End
+*/

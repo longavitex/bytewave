@@ -1,9 +1,22 @@
+/*
+*** Section Benefit: Start
+*/
+/*
+*** Section Benefit Main: Start
+*/
 .section-benefit .benefit-item .block-icon i {
   transition: all linear 0.3s;
 }
 .section-benefit .benefit-item:hover .block-icon i {
   transform: rotateY(360deg);
 }
+
+/*
+*** Section Benefit Main: End
+*/
+/*
+*** Section Benefit Home4: Start
+*/
 @media (max-width: 1169.99px) {
   .section-benefit.style-four .container > .row > div {
     display: flex;
@@ -31,6 +44,13 @@
     text-align: center !important;
   }
 }
+
+/*
+*** Section Benefit Home4: End
+*/
+/*
+*** Section Benefit Home5: Start
+*/
 .section-benefit.style-five .row .bg-img {
   position: relative;
 }
@@ -49,6 +69,13 @@
     margin-top: 12px;
   }
 }
+
+/*
+*** Section Benefit Home5: End
+*/
+/*
+*** Section Benefit Home6: Start
+*/
 @media (max-width: 991.99px) {
   .section-benefit.style-six .row {
     display: flex;
@@ -65,3 +92,10 @@
     margin-top: 24px;
   }
 }
+
+/*
+*** Section Benefit Home6: End
+*/
+/*
+*** Section Benefit: End
+*/

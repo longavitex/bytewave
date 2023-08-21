@@ -1,3 +1,6 @@
+/*
+*** Hover button animation: Start
+*/
 .hover-button {
   position: relative;
   overflow: hidden;
@@ -77,3 +80,7 @@ a.border-underline-purple-2px {
 a.border-underline-purple-2px:hover {
   color: var(--purple);
 }
+
+/*
+*** Hover button animation: End
+*/

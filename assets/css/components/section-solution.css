@@ -1,3 +1,6 @@
+/*
+*** Section Solution Home1,2: Start
+*/
 .section-solution .solution-item {
   transition: 0.3s;
 }
@@ -14,15 +17,36 @@
 .section-solution .solution-item:hover .text-on-surface-variant1 {
   text-decoration: underline;
 }
+
+/*
+*** Section Solution Home1,2: End
+*/
+/*
+*** Section Solution Home3: Start
+*/
 .section-solution.style-three .solution-item:hover {
   box-shadow: none;
 }
 .section-solution.style-three .solution-item:hover .heading5 {
   color: var(--yellow);
 }
+
+/*
+*** Section Solution Home3: End
+*/
+/*
+*** Section Solution Home4: Start
+*/
 .section-solution.style-four .solution-item:hover .heading5 {
   color: var(--pink);
 }
+
+/*
+*** Section Solution Home4: End
+*/
+/*
+*** Section Solution Home5: Start
+*/
 .section-solution.style-five .container > .row {
   margin-left: 0;
   margin-right: 0;
@@ -65,6 +89,13 @@
 .section-solution.style-five .container > .row > div:hover .solution-item .text-on-surface-variant1 {
   text-decoration: none;
 }
+
+/*
+*** Section Solution Home5: End
+*/
+/*
+*** Section Solution Home6: Start
+*/
 .section-solution.style-six .row > div .solution-item {
   border-right: 1px solid var(--outline);
   transition: all linear 0.3s;
@@ -78,3 +109,42 @@
 .section-solution.style-six .row > div .solution-item:hover .text-on-surface-variant1 {
   text-decoration: none;
 }
+
+/*
+*** Section Solution Home6: End
+*/
+/*
+*** Section Solution Home7: Start
+*/
+.section-solution.style-seven .solution-item .heading5 {
+  position: relative;
+}
+.section-solution.style-seven .solution-item .heading5::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+  background-color: var(--on-surface);
+  transition: all ease 0.2s;
+}
+.section-solution.style-seven .solution-item:hover .heading5 {
+  color: var(--on-surface);
+}
+.section-solution.style-seven .solution-item:hover .heading5::before {
+  opacity: 1;
+}
+.section-solution.style-seven .solution-item:hover .text-on-surface-variant1 {
+  text-decoration: none;
+}
+@media (max-width: 1199.99px) {
+  .section-solution.style-seven .container > .row {
+    justify-content: center;
+  }
+}
+
+/*
+*** Section Solution Home7: End
+*/
