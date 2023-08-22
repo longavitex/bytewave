@@ -121,6 +121,67 @@ if (listNews) {
 }
 
 
+// testimonial home1
+$(".section-testimonial.style-one .container>.row .testimonial-item").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 4,
+    touchThreshold: 100,
+    swipe: true,
+    swipeToSlide: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    speed: 500,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+    infinite: true,
+});
+
+
+// Change avatar testimonial home1
+const dots = document.querySelectorAll('.section-testimonial.style-one .testimonial-item .slick-dots li')
+
+const listAvatar = document.querySelector('.section-testimonial.style-one .list-avatar')
+const avatar = document.querySelectorAll('.section-testimonial.style-one .list-avatar .bg-img')
+
+if(dots) {
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            avatar.forEach(item => {
+                let indexAvatar = item.getAttribute('data-name')
+                let testimonialCurrent = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-current')
+                let indexCmt = testimonialCurrent.getAttribute('data-slick-index')
+    
+                if (indexCmt === indexAvatar) {
+                    listAvatar.querySelector('.active').classList.remove('active')
+                    item.classList.add('active')
+                }
+            })
+        })
+    })
+}
+
+const slickList = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-list')
+
+if(slickList) {
+    slickList.addEventListener('mousemove', (e) => {
+        avatar.forEach(item => {
+            let indexAvatar = item.getAttribute('data-name')
+            let testimonialCurrent = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-current')
+            let indexCmt = testimonialCurrent.getAttribute('data-slick-index')
+    
+            if (indexCmt === indexAvatar) {
+                listAvatar.querySelector('.active').classList.remove('active')
+                item.classList.add('active')
+            }
+        })
+    })
+}
+
+
+
 // testimonial home2
 $(".section-testimonial.style-two .container .list-comment").slick({
     dots: true,
@@ -327,45 +388,39 @@ $(".section-testimonial.style-seven .container .list-comment").slick({
 const videoModal = document.querySelector('.js-video-modal')
 const videoModalContainer = document.querySelector('.js-video-modal-container')
 const closeVideo = document.querySelector('.js-modal-close')
-const playBtn = document.querySelector('.video-block i.ph-play')
+const playBtn = document.querySelector('.video-block .ph-play')
 
 //Show modal video
 function showVideo() {
-  if (videoModal) {
-    videoModal.classList.add('open')
-  }
+    if (videoModal) {
+        videoModal.classList.add('open')
+    }
 }
 
 //Close modal video
 function removeVideoModal() {
-  if (videoModal) {
-    videoModal.classList.remove('open')
-  }
+    if (videoModal) {
+        videoModal.classList.remove('open')
+    }
 }
 
 //Listen click
 if (playBtn) {
-  playBtn.addEventListener('click', showVideo)
-}
-
-if (playBtn) {
-  playBtn.addEventListener('click', () => {
-    videoModal.classList.add('open')
-  })
+    playBtn.addEventListener('click', showVideo)
 }
 
 //Listen click and close modal video
 if (closeVideo) {
-  closeVideo.addEventListener('click', removeVideoModal)
+    closeVideo.addEventListener('click', removeVideoModal)
 }
 
 //Listen click outside modal-container and close modal video
 if (videoModal) {
-  videoModal.addEventListener('click', removeVideoModal)
+    videoModal.addEventListener('click', removeVideoModal)
 }
 
 if (videoModalContainer) {
-  videoModalContainer.addEventListener('click', function (event) {
-    event.stopPropagation()
-  })
+    videoModalContainer.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
 }
