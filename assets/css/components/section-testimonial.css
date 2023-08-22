@@ -1,21 +1,21 @@
 /*
 *** Section Testimonial Home1: Start
 */
-.section-testimonial.style-one .row > .col-md-11 {
+.section-testimonial .row > .col-md-11 {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.section-testimonial.style-one .row > .col-md-11 .testimonial-item {
+.section-testimonial .row > .col-md-11 .testimonial-item {
   width: calc(100% - 12px - 40.9090909091%);
   border-radius: 32px 0 0 32px;
   overflow: hidden;
 }
-.section-testimonial.style-one .row > .col-md-11 .testimonial-item .content-main {
+.section-testimonial .row > .col-md-11 .testimonial-item .content-main {
   padding: 40px 60px 24px;
   overflow: hidden;
 }
-.section-testimonial.style-one .row > .col-md-11 .bg-img {
+.section-testimonial .row > .col-md-11 .bg-img {
   width: 40.9090909091%;
   height: 100%;
   position: absolute;
@@ -27,43 +27,43 @@
   opacity: 0;
   transition: all ease 0.5s;
 }
-.section-testimonial.style-one .row > .col-md-11 .bg-img img {
+.section-testimonial .row > .col-md-11 .bg-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.section-testimonial.style-one .row > .col-md-11 .bg-img.active {
+.section-testimonial .row > .col-md-11 .bg-img.active {
   opacity: 1;
 }
 @media (max-width: 991.99px) {
-  .section-testimonial.style-one .row > .col-md-11 .testimonial-item .content-main {
+  .section-testimonial .row > .col-md-11 .testimonial-item .content-main {
     width: 100%;
     padding: 32px 32px 24px;
   }
-  .section-testimonial.style-one .row > .col-md-11 .testimonial-item .content-main .mt-24 {
+  .section-testimonial .row > .col-md-11 .testimonial-item .content-main .mt-24 {
     margin-top: 12px;
   }
-  .section-testimonial.style-one .row > .col-md-11 .slick-dots {
+  .section-testimonial .row > .col-md-11 .slick-dots {
     padding-bottom: 24px;
     margin-left: 32px;
   }
 }
 @media (max-width: 575.99px) {
-  .section-testimonial.style-one .row > .col-md-11 {
+  .section-testimonial .row > .col-md-11 {
     display: flex;
     flex-direction: column-reverse;
   }
-  .section-testimonial.style-one .row > .col-md-11 .testimonial-item {
+  .section-testimonial .row > .col-md-11 .testimonial-item {
     border-radius: 0 0 16px 16px;
     width: 100%;
   }
-  .section-testimonial.style-one .row > .col-md-11 .testimonial-item .content-main .star i {
+  .section-testimonial .row > .col-md-11 .testimonial-item .content-main .star i {
     font-size: 16px;
   }
-  .section-testimonial.style-one .row > .col-md-11 .testimonial-item .content-main .text-on-surface-variant1 {
+  .section-testimonial .row > .col-md-11 .testimonial-item .content-main .text-on-surface-variant1 {
     font-size: 12px;
   }
-  .section-testimonial.style-one .row > .col-md-11 .bg-img {
+  .section-testimonial .row > .col-md-11 .bg-img {
     position: relative;
     visibility: hidden;
     display: none;
@@ -71,7 +71,7 @@
     right: 0;
     border-radius: 16px 16px 0 0;
   }
-  .section-testimonial.style-one .row > .col-md-11 .bg-img.active {
+  .section-testimonial .row > .col-md-11 .bg-img.active {
     visibility: visible;
     display: block;
     animation: showAvatar ease 2s;
@@ -85,7 +85,7 @@
     opacity: 1;
   }
 }
-.section-testimonial.style-one .slick-dots {
+.section-testimonial .slick-dots {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -93,7 +93,7 @@
   margin-left: 60px;
   padding-bottom: 40px;
 }
-.section-testimonial.style-one .slick-dots li {
+.section-testimonial .slick-dots li {
   position: relative;
   border: none;
   width: 16px;
@@ -105,10 +105,10 @@
   justify-content: center;
   cursor: pointer;
 }
-.section-testimonial.style-one .slick-dots li button {
+.section-testimonial .slick-dots li button {
   display: none;
 }
-.section-testimonial.style-one .slick-dots li::after {
+.section-testimonial .slick-dots li::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -117,11 +117,11 @@
   border: 1px solid #171717;
   transition: 0.5s;
 }
-.section-testimonial.style-one .slick-dots li.slick-active {
+.section-testimonial .slick-dots li.slick-active {
   border: 1px solid var(--on-surface);
   background-color: #fff;
 }
-.section-testimonial.style-one .slick-dots li.slick-active::after {
+.section-testimonial .slick-dots li.slick-active::after {
   background-color: var(--on-surface);
   border: 1px solid var(--on-surface);
 }

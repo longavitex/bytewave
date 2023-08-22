@@ -1,6 +1,11 @@
 /*
 *** Section Menu Header Home1: Start
 */
+#header {
+  position: relative;
+  z-index: 3;
+}
+
 .header-menu {
   border-bottom: 1px solid var(--outline);
   position: relative;
@@ -23,17 +28,78 @@
 .header-menu .menu-main {
   height: 100%;
 }
-.header-menu .menu-main ul {
+.header-menu .menu-main > ul {
   height: 100%;
 }
-.header-menu .menu-main ul li {
+.header-menu .menu-main > ul li {
   cursor: pointer;
+  position: relative;
+  height: 100%;
+  display: flex;
 }
-.header-menu .menu-main ul li a {
+.header-menu .menu-main > ul li a {
   padding: 24px 12px;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
+}
+.header-menu .menu-main > ul li .sub-nav {
+  position: absolute;
+  width: 260px;
+  left: -10px;
+  top: 100px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  background-color: #fff;
+  z-index: 5;
+  box-shadow: 0px 5px 25px rgba(58, 64, 67, 0.1);
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+}
+.header-menu .menu-main > ul li .sub-nav .sub-nav-item {
+  padding: 16px 24px;
+}
+.header-menu .menu-main > ul li .sub-nav .sub-nav-item a {
+  position: relative;
+  transition: all ease 0.3s;
+  padding: 0;
+  display: inline-block;
+}
+.header-menu .menu-main > ul li .sub-nav .sub-nav-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--blue);
+  border-radius: 6px;
+  transition: all ease 0.3s;
+}
+.header-menu .menu-main > ul li .sub-nav .sub-nav-item:hover a {
+  color: var(--blue);
+  padding-left: 12px;
+}
+.header-menu .menu-main > ul li .sub-nav .sub-nav-item:hover a::before {
+  width: calc(100% - 12px);
+  left: 12px;
+}
+.header-menu .menu-main > ul li .sub-nav .sub-nav-item.active a {
+  color: var(--blue);
+  padding-left: 12px;
+}
+.header-menu .menu-main > ul li .sub-nav .sub-nav-item.active a::before {
+  width: calc(100% - 12px);
+  left: 12px;
+}
+.header-menu .menu-main > ul li:hover > a {
+  color: var(--blue);
+}
+.header-menu .menu-main > ul li:hover .sub-nav {
+  top: 74px;
+  opacity: 1;
+  visibility: visible;
 }
 .header-menu .right-block {
   justify-content: right;
