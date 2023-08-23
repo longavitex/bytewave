@@ -2,24 +2,10 @@
 *** Section Industry Home4: Start
 */
 .section-industry {
-    .cursor {
-        background-color: #111;
-        border-radius: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        transition: all linear 0.2s;
-        width: 70px;
-        height: 70px;
-        opacity: 0;
-        pointer-events: none;
-        z-index: 2;
-    }
-
     .row {
         .col {
             .industry-item {
                 position: relative;
-                cursor: none;
 
                 &::before {
                     content: "";
@@ -116,6 +102,7 @@
         }
     }
 }
+
 /*
 *** Section Industry Home4: End
 */
@@ -217,6 +204,7 @@
         background-image: url(../images/component/industry5-below.png);
     }
 }
+
 /*
 *** Section Industry Home5: End
 */

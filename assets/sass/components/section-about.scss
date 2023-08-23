@@ -91,6 +91,15 @@
 */
 .section-about.style-three {
     .row {
+        .col-12.col-lg-6 {
+            a.button {
+                &:hover {
+                    background-color: var(--yellow);
+                    border-color: var(--yellow);
+                }
+            }
+        }
+
         >div:last-child {
             position: relative;
 
@@ -146,6 +155,17 @@
 */
 .section-about.style-four {
     position: relative;
+
+    .row {
+        .col-12.col-lg-6 {
+            a.button {
+                &:hover {
+                    background-color: var(--pink);
+                    color: var(--white);
+                }
+            }
+        }
+    }
 
     .bg-img {
         position: fixed;
@@ -347,6 +367,7 @@
         }
     }
 }
+
 /*
 *** Section About Home7 - Second : End
 */

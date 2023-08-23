@@ -63,6 +63,10 @@
 /*
 *** Section About Home3: Start
 */
+.section-about.style-three .row .col-12.col-lg-6 a.button:hover {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+}
 .section-about.style-three .row > div:last-child {
   position: relative;
 }
@@ -110,6 +114,10 @@
 */
 .section-about.style-four {
   position: relative;
+}
+.section-about.style-four .row .col-12.col-lg-6 a.button:hover {
+  background-color: var(--pink);
+  color: var(--white);
 }
 .section-about.style-four .bg-img {
   position: fixed;

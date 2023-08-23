@@ -21,6 +21,7 @@
         }
     }
 }
+
 /*
 *** Section Benefit Main: End
 */
@@ -29,6 +30,15 @@
 *** Section Benefit Home4: Start
 */
 .section-benefit.style-four {
+    .cta-block {
+        a.button.bg-white {
+            &:hover {
+                background-color: var(--on-surface);
+                color: var(--white);
+            }
+        }
+    }
+
     @media (max-width: 1169.99px) {
         .container {
             >.row {
@@ -73,6 +83,7 @@
         }
     }
 }
+
 /*
 *** Section Benefit Home4: End
 */
@@ -105,6 +116,7 @@
         }
     }
 }
+
 /*
 *** Section Benefit Home5: End
 */
@@ -113,6 +125,12 @@
 *** Section Benefit Home6: Start
 */
 .section-benefit.style-six {
+    a.button.bg-purple {
+        transition: all ease 0.4s;
+        &:hover {
+            background-color: #5700c9;
+        }
+    }
     @media (max-width: 991.99px) {
         .row {
             display: flex;
@@ -133,6 +151,7 @@
         }
     }
 }
+
 /*
 *** Section Benefit Home6: End
 */

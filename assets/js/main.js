@@ -2,9 +2,51 @@
 window.addEventListener('scroll', () => {
     let headerMenu = document.querySelector('.header-menu.style-two')
     if (headerMenu) {
-        headerMenu.classList.toggle('sticky', window.scrollY > 100);
+        headerMenu.classList.toggle('sticky', window.scrollY > 700);
     }
 })
+
+// mobile menu
+const mobileMenuBtn = document.querySelector('.menu-humburger')
+const menuMobile = document.querySelector('#menu-mobile-block')
+const menuMobileMain = document.querySelector('#menu-mobile-block .menu-mobile-main')
+const closeMobileBtn = document.querySelector('#menu-mobile-block .close-block')
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        menuMobile.classList.toggle('open')
+        document.querySelector('body').classList.toggle('overflow-hidden')
+    })
+}
+
+if (closeMobileBtn) {
+    closeMobileBtn.addEventListener('click', () => {
+        menuMobile.classList.remove('open')
+        document.querySelector('body').classList.remove('overflow-hidden')
+    })
+}
+
+
+// Open sub link mobile menu
+const navItems = document.querySelectorAll('#menu-mobile-block .nav-item-mobile')
+
+if (navItems) {
+    navItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('open')
+            removeOpen(index)
+        })
+    })
+}
+
+function removeOpen(index1) {
+    navItems.forEach((item2, index2) => {
+        if (index1 != index2) {
+            item2.classList.remove('open')
+        }
+    })
+}
+
 
 // Button hover
 const btnMain = document.querySelectorAll('.hover-button')
@@ -146,14 +188,14 @@ const dots = document.querySelectorAll('.section-testimonial.style-one .testimon
 const listAvatar = document.querySelector('.section-testimonial.style-one .list-avatar')
 const avatar = document.querySelectorAll('.section-testimonial.style-one .list-avatar .bg-img')
 
-if(dots) {
+if (dots) {
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
             avatar.forEach(item => {
                 let indexAvatar = item.getAttribute('data-name')
                 let testimonialCurrent = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-current')
                 let indexCmt = testimonialCurrent.getAttribute('data-slick-index')
-    
+
                 if (indexCmt === indexAvatar) {
                     listAvatar.querySelector('.active').classList.remove('active')
                     item.classList.add('active')
@@ -165,13 +207,13 @@ if(dots) {
 
 const slickList = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-list')
 
-if(slickList) {
+if (slickList) {
     slickList.addEventListener('mousemove', (e) => {
         avatar.forEach(item => {
             let indexAvatar = item.getAttribute('data-name')
             let testimonialCurrent = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-current')
             let indexCmt = testimonialCurrent.getAttribute('data-slick-index')
-    
+
             if (indexCmt === indexAvatar) {
                 listAvatar.querySelector('.active').classList.remove('active')
                 item.classList.add('active')

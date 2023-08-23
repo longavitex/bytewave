@@ -86,6 +86,22 @@
             }
         }
 
+        @media (max-width: 1023.99px) {
+            .cursor {
+                display: none;
+            }
+
+            .list-news {
+                .item {
+                    cursor: pointer;
+
+                    .main-item {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
         @media (max-width: 991.99px) {
             >.row:last-child {
                 >div {
@@ -116,6 +132,7 @@
         }
     }
 }
+
 /*
 *** Section Case Study, News, Blog Main: End
 */
@@ -137,6 +154,7 @@
         }
     }
 }
+
 /*
 *** Section News Home2: End
 */
@@ -162,6 +180,7 @@
         }
     }
 }
+
 /*
 *** Section News Home3: End
 */
@@ -193,6 +212,7 @@
         }
     }
 }
+
 /*
 *** Section News Home4: End
 */
@@ -206,6 +226,7 @@
         background-color: var(--purple);
     }
 }
+
 /*
 *** Section News Home6: End
 */

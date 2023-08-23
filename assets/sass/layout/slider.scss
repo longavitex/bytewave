@@ -3,8 +3,6 @@
 */
 .slider-block {
     &.style-one {
-        padding-top: 74px;
-
         @media (max-width: 1199.99px) {
             .row {
                 flex-direction: column-reverse;
@@ -19,10 +17,6 @@
     }
 
     @media (max-width: 576px) {
-        &.style-one {
-            padding-top: 60px;
-        }
-
         .block-button.mt-40 {
             margin-top: 20px;
         }
@@ -69,6 +63,13 @@
                 top: calc(44px + 50%);
                 left: 15px;
                 transform: translateY(-50%);
+
+                .button.bg-white {
+                    &:hover {
+                        background-color: var(--blue);
+                        color: var(--white);
+                    }
+                }
             }
         }
     }
@@ -158,6 +159,28 @@
 */
 
 /*
+*** Section Slider Home3: Start
+*/
+.slider-block.style-three {
+    .slider-item {
+        .container {
+            .row {
+                .button.bg-white {
+                    &:hover {
+                        background-color: var(--yellow);
+                        color: var(--on-surface);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section Slider Home3: End
+*/
+
+/*
 *** Section Slider Home4: Start
 */
 .slider-block.style-four {
@@ -169,6 +192,13 @@
         .container {
             .row {
                 top: calc(20px + 50%);
+
+                .button.bg-white {
+                    &:hover {
+                        background-color: var(--pink);
+                        color: var(--white);
+                    }
+                }
             }
         }
     }
@@ -208,6 +238,13 @@
                 top: unset;
                 transform: unset;
                 bottom: 80px;
+
+                .button.bg-white {
+                    &:hover {
+                        background-color: var(--green);
+                        color: var(--on-surface);
+                    }
+                }
             }
         }
     }
@@ -280,6 +317,11 @@
                 padding-left: 24px;
                 padding-right: 24px;
                 border-radius: 0 4px 4px 0;
+                transition: all ease 0.4s;
+
+                &:hover {
+                    background-color: #5700c9;
+                }
             }
         }
 
@@ -526,8 +568,33 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
+        }
+    }
 
-            >div:last-child {}
+    @media (max-width: 1465px) {
+        .slider-item {
+            height: 580px;
+            width: 100%;
+            max-width: 1320px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin: auto;
+            position: relative;
+
+            .row {
+                >div:first-child {
+                    left: 0;
+                }
+
+                >div:last-child {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 100%;
+                }
+            }
         }
     }
 }

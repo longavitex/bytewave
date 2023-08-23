@@ -1,9 +1,6 @@
 /*
 *** Section Slider Home1: Start
 */
-.slider-block.style-one {
-  padding-top: 74px;
-}
 @media (max-width: 1199.99px) {
   .slider-block.style-one .row {
     flex-direction: column-reverse;
@@ -13,9 +10,6 @@
   }
 }
 @media (max-width: 576px) {
-  .slider-block.style-one {
-    padding-top: 60px;
-  }
   .slider-block .block-button.mt-40 {
     margin-top: 20px;
   }
@@ -58,6 +52,10 @@
   top: calc(44px + 50%);
   left: 15px;
   transform: translateY(-50%);
+}
+.slider-block.style-two .slider-item .container .row .button.bg-white:hover {
+  background-color: var(--blue);
+  color: var(--white);
 }
 .slider-block.style-two .prev-arrow,
 .slider-block.style-two .next-arrow {
@@ -129,6 +127,17 @@
 *** Section Slider Home2: End
 */
 /*
+*** Section Slider Home3: Start
+*/
+.slider-block.style-three .slider-item .container .row .button.bg-white:hover {
+  background-color: var(--yellow);
+  color: var(--on-surface);
+}
+
+/*
+*** Section Slider Home3: End
+*/
+/*
 *** Section Slider Home4: Start
 */
 .slider-block.style-four {
@@ -139,6 +148,10 @@
 }
 .slider-block.style-four .slider-item .container .row {
   top: calc(20px + 50%);
+}
+.slider-block.style-four .slider-item .container .row .button.bg-white:hover {
+  background-color: var(--pink);
+  color: var(--white);
 }
 @media (max-width: 991.99px) {
   .slider-block.style-four {
@@ -173,6 +186,10 @@
   top: unset;
   transform: unset;
   bottom: 80px;
+}
+.slider-block.style-five .slider-item .container .row .button.bg-white:hover {
+  background-color: var(--green);
+  color: var(--on-surface);
 }
 @media (max-width: 991.99px) {
   .slider-block.style-five {
@@ -238,6 +255,10 @@
   padding-left: 24px;
   padding-right: 24px;
   border-radius: 0 4px 4px 0;
+  transition: all ease 0.4s;
+}
+.slider-block.style-six .slider-item .block-input button:hover {
+  background-color: #5700c9;
 }
 .slider-block.style-six .slider-item .slider-img {
   width: 100%;
@@ -425,6 +446,29 @@
   top: 50%;
   transform: translateY(-50%);
 }
+@media (max-width: 1465px) {
+  .slider-block.style-seven .slider-item {
+    height: 580px;
+    width: 100%;
+    max-width: 1320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    position: relative;
+  }
+  .slider-block.style-seven .slider-item .row > div:first-child {
+    left: 0;
+  }
+  .slider-block.style-seven .slider-item .row > div:last-child {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
 /*
 *** Section Slider Home7: End
 */

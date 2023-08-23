@@ -52,6 +52,11 @@
     .list-infor {
         a {
             text-decoration: underline;
+            transition: all ease 0.3s;
+
+            &:hover {
+                color: var(--yellow);
+            }
         }
     }
 }
@@ -64,6 +69,14 @@
 */
 .section-contact.style-five {
     position: relative;
+
+    .list-infor {
+        a {
+            &:hover {
+                color: var(--green);
+            }
+        }
+    }
 
     >.bg-img {
         position: absolute;

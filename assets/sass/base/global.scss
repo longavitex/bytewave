@@ -114,6 +114,7 @@
     font-weight: 600;
     line-height: 24px;
     text-transform: capitalize;
+    transition: all ease 0.4s;
 }
 
 .button-disabled {
@@ -129,6 +130,24 @@
 .button-blue-hover {
     &:hover {
         background: var(--secondary);
+    }
+}
+
+.button-yellow-hover {
+    &:hover {
+        background-color: #ebb41d;
+    }
+}
+
+.button-pink-hover {
+    &:hover {
+        background-color: #bd1476;
+    }
+}
+
+.button-green-hover {
+    &:hover {
+        background-color: #00ff40;
     }
 }
 
@@ -892,6 +911,7 @@
 .object-fit-cover {
     object-fit: cover;
 }
+
 /*
 *** Main class used in ByteWave: End
 */

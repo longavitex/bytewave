@@ -84,6 +84,20 @@
   background-color: var(--on-surface);
   border: 1px solid var(--on-surface);
 }
+@media (max-width: 1023.99px) {
+  .section-case-studies .container .cursor,
+  .section-news .container .cursor {
+    display: none;
+  }
+  .section-case-studies .container .list-news .item,
+  .section-news .container .list-news .item {
+    cursor: pointer;
+  }
+  .section-case-studies .container .list-news .item .main-item,
+  .section-news .container .list-news .item .main-item {
+    cursor: pointer;
+  }
+}
 @media (max-width: 991.99px) {
   .section-case-studies .container > .row:last-child > div:nth-child(3),
   .section-news .container > .row:last-child > div:nth-child(3) {

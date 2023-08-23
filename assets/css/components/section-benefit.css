@@ -17,6 +17,10 @@
 /*
 *** Section Benefit Home4: Start
 */
+.section-benefit.style-four .cta-block a.button.bg-white:hover {
+  background-color: var(--on-surface);
+  color: var(--white);
+}
 @media (max-width: 1169.99px) {
   .section-benefit.style-four .container > .row > div {
     display: flex;
@@ -76,6 +80,12 @@
 /*
 *** Section Benefit Home6: Start
 */
+.section-benefit.style-six a.button.bg-purple {
+  transition: all ease 0.4s;
+}
+.section-benefit.style-six a.button.bg-purple:hover {
+  background-color: #5700c9;
+}
 @media (max-width: 991.99px) {
   .section-benefit.style-six .row {
     display: flex;
