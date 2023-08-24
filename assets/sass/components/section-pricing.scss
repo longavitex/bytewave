@@ -76,6 +76,12 @@
                 }
             }
 
+            a.button.bg-purple {
+                &:hover {
+                    background-color: #5700c9;
+                }
+            }
+
             &:hover {
                 box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
             }
@@ -139,6 +145,12 @@
                         &:hover {
                             background-color: var(--blue);
                             border: 1px solid var(--blue);
+                        }
+                    }
+
+                    a.button.bg-blue {
+                        &:hover {
+                            background-color: var(--secondary);
                         }
                     }
                 }

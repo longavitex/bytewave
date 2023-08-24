@@ -135,30 +135,32 @@ $(".section-news .container .list-news").slick({
 });
 
 // Change cursor
-const listNews = document.querySelector('.section-news .list-news .slick-list')
+const listNews = document.querySelectorAll('.section-news .list-news .slick-list')
 const mouseCursor = document.querySelector('.cursor')
 
 if (listNews) {
-    listNews.addEventListener('mousemove', (e) => {
-        mouseCursor.style.top = e.pageY + 'px'
-        mouseCursor.style.left = e.pageX + 'px'
-        mouseCursor.style.opacity = '1'
-    })
+    listNews.forEach(listNew => {
+        listNew.addEventListener('mousemove', (e) => {
+            mouseCursor.style.top = e.pageY + 'px'
+            mouseCursor.style.left = e.pageX + 'px'
+            mouseCursor.style.opacity = '1'
+        })
 
-    listNews.addEventListener('mouseout', (e) => {
-        mouseCursor.style.opacity = '0'
-    })
-
-    listNews.addEventListener('mousedown', () => {
-        mouseCursor.style.width = '60px'
-        mouseCursor.style.height = '60px'
-        mouseCursor.style.gap = '4px'
-    })
-
-    listNews.addEventListener('mouseup', () => {
-        mouseCursor.style.width = '70px'
-        mouseCursor.style.height = '70px'
-        mouseCursor.style.gap = '12px'
+        listNew.addEventListener('mouseout', (e) => {
+            mouseCursor.style.opacity = '0'
+        })
+    
+        listNew.addEventListener('mousedown', () => {
+            mouseCursor.style.width = '60px'
+            mouseCursor.style.height = '60px'
+            mouseCursor.style.gap = '4px'
+        })
+    
+        listNew.addEventListener('mouseup', () => {
+            mouseCursor.style.width = '70px'
+            mouseCursor.style.height = '70px'
+            mouseCursor.style.gap = '12px'
+        })
     })
 }
 
@@ -342,6 +344,48 @@ if (listIndustry) {
         mouseCursor.style.gap = '12px'
     })
 }
+
+
+// section success stories home6
+$(".section-success-stories .list").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 4,
+    touchThreshold: 100,
+    swipe: true,
+    swipeToSlide: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    speed: 500,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+    infinite: true,
+    responsive: [
+        {
+            breakpoint: 1170,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        },
+    ]
+});
 
 
 // change switch btn pricing home6

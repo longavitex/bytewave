@@ -162,6 +162,14 @@
 /*
 *** Section About Home6: Start
 */
+.section-about.style-six .row > div:first-child a.button.bora-99:hover {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+.section-about.style-six .row > div:first-child a.button.bora-99:hover i,
+.section-about.style-six .row > div:first-child a.button.bora-99:hover span {
+  color: var(--white);
+}
 .section-about.style-six .row > div:last-child > .counter .item {
   width: 50%;
 }
@@ -262,6 +270,11 @@
 /*
 *** Section About Home7 - Second : Start
 */
+.section-about.style-seven-second a.button:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
 @media (max-width: 991.99px) {
   .section-about.style-seven-second .row {
     justify-content: center;

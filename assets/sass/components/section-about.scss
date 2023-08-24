@@ -225,6 +225,20 @@
 */
 .section-about.style-six {
     .row {
+        >div:first-child {
+            a.button.bora-99 {
+                &:hover {
+                    background-color: var(--purple);
+                    border-color: var(--purple);
+
+                    i,
+                    span {
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+
         >div:last-child {
             >.counter {
                 .item {
@@ -360,6 +374,14 @@
 *** Section About Home7 - Second : Start
 */
 .section-about.style-seven-second {
+    a.button {
+        &:hover {
+            background-color: var(--blue);
+            border-color: var(--blue);
+            color: var(--white);
+        }
+    }
+
     @media (max-width: 991.99px) {
         .row {
             justify-content: center;

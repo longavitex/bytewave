@@ -65,8 +65,6 @@
 
                     &.active,
                     &:hover {
-                        color: var(--blue);
-
                         &::before {
                             width: calc(100% - 24px);
                         }
@@ -114,7 +112,6 @@
 
                         &:hover {
                             a {
-                                color: var(--blue);
                                 padding-left: 12px;
 
                                 &::before {
@@ -127,7 +124,6 @@
 
                     .sub-nav-item.active {
                         a {
-                            color: var(--blue);
                             padding-left: 12px;
 
                             &::before {
@@ -139,9 +135,6 @@
                 }
 
                 &:hover {
-                    >a {
-                        color: var(--blue);
-                    }
 
                     .sub-nav {
                         top: 74px;
@@ -569,17 +562,6 @@
                         &::before {
                             background-color: var(--yellow) !important;
                         }
-
-                        &.active,
-                        &:hover {
-                            color: var(--yellow) !important;
-                        }
-                    }
-
-                    &.active {
-                        a {
-                            color: var(--yellow) !important;
-                        }
                     }
                 }
             }
@@ -646,17 +628,6 @@
                         &::before {
                             background-color: var(--pink) !important;
                         }
-
-                        &.active,
-                        &:hover {
-                            color: var(--pink) !important;
-                        }
-                    }
-
-                    &.active {
-                        a {
-                            color: var(--pink) !important;
-                        }
                     }
                 }
             }
@@ -706,17 +677,6 @@
                     a {
                         &::before {
                             background-color: var(--green) !important;
-                        }
-
-                        &.active,
-                        &:hover {
-                            color: var(--green) !important;
-                        }
-                    }
-
-                    &.active {
-                        a {
-                            color: var(--green) !important;
                         }
                     }
                 }
@@ -796,26 +756,7 @@
                         &::before {
                             background-color: var(--purple) !important;
                         }
-
-                        &.active,
-                        &:hover {
-                            color: var(--purple) !important;
-                        }
                     }
-
-                    &.active {
-                        a {
-                            color: var(--purple) !important;
-                        }
-                    }
-                }
-            }
-        }
-
-        .right-block {
-            a {
-                &:hover {
-                    background-color: #5700c9;
                 }
             }
         }
@@ -841,17 +782,6 @@
                     a {
                         &::before {
                             background-color: var(--blue) !important;
-                        }
-
-                        &.active,
-                        &:hover {
-                            color: var(--blue) !important;
-                        }
-                    }
-
-                    &.active {
-                        a {
-                            color: var(--blue) !important;
                         }
                     }
                 }
@@ -885,6 +815,26 @@
             .menu-main {
                 display: none;
             }
+
+            .right-block {
+                .menu-humburger {
+                    display: block;
+                    font-size: 20px;
+                    padding-left: 20px;
+
+                    i {
+                        color: var(--white);
+                    }
+                }
+            }
+
+            #menu-mobile-block {
+                .logo {
+                    position: relative;
+                    left: 0;
+                    margin-left: 0;
+                }
+            }
         }
 
         @media (max-width: 1465px) {
@@ -898,6 +848,16 @@
                 position: relative;
                 margin-right: 0;
                 right: 0;
+            }
+        }
+
+        @media (max-width: 1350px) {
+            .logo {
+                svg {
+                    path {
+                        fill: var(--white);
+                    }
+                }
             }
         }
     }

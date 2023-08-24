@@ -141,6 +141,10 @@
   background-color: #00ff40;
 }
 
+.button-purple-hover:hover {
+  background-color: #5700c9;
+}
+
 .text-button {
   font-size: 16px;
   font-weight: 600;
