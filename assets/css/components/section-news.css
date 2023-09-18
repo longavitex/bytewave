@@ -10,7 +10,7 @@
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  transition: all linear 0.2s;
+  transition: all linear 0.1s;
   width: 70px;
   height: 70px;
   opacity: 0;

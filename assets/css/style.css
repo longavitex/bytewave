@@ -1138,6 +1138,14 @@ select {
   }
 }
 
+@keyframes circleScroll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*
 *** Section About Home3: End
 */
@@ -1220,14 +1228,6 @@ select {
 /*
 *** Section About Home6: End
 */
-@keyframes circleScroll {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /*
 *** Section About Home7: Start
 */
@@ -1901,7 +1901,7 @@ select {
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  transition: all linear 0.2s;
+  transition: all linear 0.1s;
   width: 70px;
   height: 70px;
   opacity: 0;

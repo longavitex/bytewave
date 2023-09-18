@@ -149,13 +149,13 @@ if (listNews) {
         listNew.addEventListener('mouseout', (e) => {
             mouseCursor.style.opacity = '0'
         })
-    
+
         listNew.addEventListener('mousedown', () => {
             mouseCursor.style.width = '60px'
             mouseCursor.style.height = '60px'
             mouseCursor.style.gap = '4px'
         })
-    
+
         listNew.addEventListener('mouseup', () => {
             mouseCursor.style.width = '70px'
             mouseCursor.style.height = '70px'

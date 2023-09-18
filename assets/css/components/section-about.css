@@ -106,6 +106,14 @@
   }
 }
 
+@keyframes circleScroll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*
 *** Section About Home3: End
 */
@@ -188,14 +196,6 @@
 /*
 *** Section About Home6: End
 */
-@keyframes circleScroll {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /*
 *** Section About Home7: Start
 */
