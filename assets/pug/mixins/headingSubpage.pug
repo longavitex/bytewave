@@ -1,0 +1,21 @@
+mixin headingSubpage(props = {})
+    -var {classname = '', heading=true, headingTitle, subHeading, category, title, desc, date, img} = props
+    div(class=`content-heading ${classname}`)
+        .container
+            if(heading==true)
+                .heading.flex-column-center.pb-60
+                    .heading2.text-center.pb-16!= headingTitle
+                    .border-line
+                    .body2.text-on-surface-variant1.pt-16!= subHeading
+            .content-main
+                .row.row-gap-40.flex-between
+                    .col-lg-5.pr-32.pr-col-lg-0
+                        .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8!= category 
+                        .heading3.mt-12!= title 
+                        if(desc)
+                            .body2.text-on-surface-variant1.mt-12!= desc
+                        if(date)
+                            .text-label.text-on-surface-variant1.mt-16!= date
+                    .col-lg-7.pl-36.pl-col-lg-0 
+                        .bg-img.w-100
+                            img(src=`${img}`, alt=`${title}`).w-100.bora-20

@@ -194,6 +194,10 @@
   background-color: var(--blue);
 }
 
+.bg-blue-surface {
+  background-color: var(--blue-surface);
+}
+
 .bg-on-surface {
   background-color: var(--on-surface);
 }
@@ -498,6 +502,10 @@
   padding-right: 12px;
 }
 
+.pr-10 {
+  padding-right: 10px;
+}
+
 .pr-8 {
   padding-right: 8px;
 }
@@ -552,6 +560,10 @@
 
 .pl-12 {
   padding-left: 12px;
+}
+
+.pl-10 {
+  padding-left: 10px;
 }
 
 .pl-8 {
@@ -626,6 +638,10 @@
   padding-bottom: 8px;
 }
 
+.pb-6 {
+  padding-bottom: 6px;
+}
+
 .pb-4 {
   padding-bottom: 4px !important;
 }
@@ -676,6 +692,10 @@
 
 .pt-8 {
   padding-top: 8px;
+}
+
+.pt-6 {
+  padding-top: 6px;
 }
 
 .pt-4 {
@@ -870,6 +890,10 @@
 
 .border-underline-white-2px {
   border-bottom: 2px solid var(--white);
+}
+
+.border-underline-yellow-2px {
+  border-bottom: 2px solid var(--yellow);
 }
 
 .border-underline-pink-2px {

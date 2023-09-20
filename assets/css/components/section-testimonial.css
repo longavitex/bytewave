@@ -373,3 +373,42 @@
 /*
 *** Section Testimonial Home7: End
 */
+/*
+*** Section Testimonial Case Studies Page: Start
+*/
+.style-case-studies .section-testimonial.style-four {
+  padding: 0;
+}
+.style-case-studies .section-testimonial.style-four .container .row {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 60px;
+  border-radius: 28px;
+  background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+}
+.style-case-studies .section-testimonial.style-four .container .row > div:last-child .bg-img img {
+  width: 100%;
+  border-radius: 24px;
+}
+@media (max-width: 991.99px) {
+  .style-case-studies .section-testimonial.style-four .container .row {
+    padding: 40px;
+    border-radius: 24px;
+  }
+  .style-case-studies .section-testimonial.style-four .container .row > div:last-child .bg-img img {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 575.99px) {
+  .style-case-studies .section-testimonial.style-four .container .row {
+    padding: 32px;
+    border-radius: 20px;
+  }
+  .style-case-studies .section-testimonial.style-four .container .row > div:last-child .bg-img img {
+    border-radius: 16px;
+  }
+}
+
+/*
+*** Section Testimonial Case Studies Page: End
+*/

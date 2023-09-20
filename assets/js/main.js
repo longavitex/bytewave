@@ -1,3 +1,35 @@
+
+// Animation when scroll 
+ScrollReveal({
+    distance: '200px',
+    duration: 1000,
+    delay: 500,
+})
+
+// Scroll bottom to top 
+ScrollReveal().reveal('.scroll-bottom-to-top1', { delay: 200, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top2', { delay: 300, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top3', { delay: 400, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top4', { delay: 500, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top5', { delay: 600, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top6', { delay: 700, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top7', { delay: 800, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top8', { delay: 900, origin: 'bottom' })
+
+// Scroll left to right
+ScrollReveal().reveal('.scroll-left-to-right1', { delay: 200, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right2', { delay: 300, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right3', { delay: 400, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right4', { delay: 500, origin: 'left' })
+
+// Scroll right to left
+ScrollReveal().reveal('.scroll-right-to-left1', { delay: 200, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left2', { delay: 300, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left3', { delay: 400, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left4', { delay: 500, origin: 'right' })
+
+
+
 // header menu sticky when scroll
 window.addEventListener('scroll', () => {
     let headerMenu = document.querySelector('.header-menu.style-two')
@@ -91,6 +123,107 @@ $(".slider-block .list-slider").slick({
         },
     ]
 });
+
+
+// Listen event click prev, next Arrow
+const prevArrow = document.querySelector('.slider-block .prev-arrow')
+const nextArrow = document.querySelector('.slider-block .next-arrow')
+
+if (prevArrow) {
+    prevArrow.addEventListener('click', () => {
+        let sliderActive = document.querySelector('.slider-block .slick-list .slick-active')
+        let img = sliderActive.querySelector('.bg-img img')
+        let heading = sliderActive.querySelector('.container .heading1')
+        let subHeading = sliderActive.querySelector('.container .body2')
+        let feature = sliderActive.querySelector('.container .list-feature')
+        let button = sliderActive.querySelector('.container .block-button')
+
+        let images = document.querySelectorAll('.slider-item .bg-img img');
+        let headings = document.querySelectorAll('.slider-item .heading1');
+        let subHeadings = document.querySelectorAll('.slider-item .body2');
+        let listFeature = document.querySelectorAll('.slider-item .list-feature');
+        let buttons = document.querySelectorAll('.slider-item .block-button');
+
+        images.forEach(img => {
+            img.classList.remove("animate__animated", "animate__fadeIn", "animate__delay-0-2s");
+        })
+        headings.forEach(p => {
+            p.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-2s");
+        })
+        subHeadings.forEach(a => {
+            a.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
+        })
+        listFeature.forEach(feature => {
+            feature.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
+        })
+        buttons.forEach(btn => {
+            btn.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-8s");
+        })
+
+        img.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0-2s")
+        heading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-2s")
+        if (subHeading) {
+            subHeading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
+        }
+        if (feature) {
+            feature.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
+        }
+        button.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-8s")
+    })
+}
+
+if (nextArrow) {
+    nextArrow.addEventListener('click', () => {
+        let sliderActive = document.querySelector('.slider-block .slick-list .slick-active')
+        let img = sliderActive.querySelector('.bg-img img')
+        let heading = sliderActive.querySelector('.container .heading1')
+        let subHeading = sliderActive.querySelector('.container .body2')
+        let feature = sliderActive.querySelector('.container .list-feature')
+        let button = sliderActive.querySelector('.container .block-button')
+
+        let images = document.querySelectorAll('.slider-item .bg-img img');
+        let headings = document.querySelectorAll('.slider-item .heading1');
+        let subHeadings = document.querySelectorAll('.slider-item .body2');
+        let listFeature = document.querySelectorAll('.slider-item .list-feature');
+        let buttons = document.querySelectorAll('.slider-item .block-button');
+
+        images.forEach(img => {
+            img.classList.remove("animate__animated", "animate__fadeIn", "animate__delay-0-2s");
+        })
+        headings.forEach(p => {
+            p.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-2s");
+        })
+        subHeadings.forEach(a => {
+            a.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
+        })
+        listFeature.forEach(feature => {
+            feature.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
+        })
+        buttons.forEach(btn => {
+            btn.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-8s");
+        })
+
+        img.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0-2s")
+        heading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-2s")
+        if (subHeading) {
+            subHeading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
+        }
+        if (feature) {
+            feature.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
+        }
+        button.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-8s")
+    })
+}
+
+
+// Count number
+if (document.querySelector('.counter .count-number')) {
+    $('.counter .count-number').counterUp({
+        delay: 6,
+        time: 800,
+        scrollSpyOnce: true,
+    });
+}
 
 
 // news home1

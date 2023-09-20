@@ -613,3 +613,50 @@
 /*
 *** Section Menu Header Home7: End
 */
+/*
+*** Remove active Home: Start
+*/
+.style-subpage .header-menu .menu-main > ul li a.active::before {
+  width: 0;
+}
+.style-subpage .header-menu .menu-main > ul li .sub-nav .sub-nav-item.active a {
+  padding-left: 0;
+}
+.style-subpage .header-menu .menu-main > ul li .sub-nav .sub-nav-item.active a::before {
+  width: 0;
+  left: 0;
+}
+.style-subpage .header-menu .menu-main > ul li .sub-nav .sub-nav-item.active:hover a {
+  padding-left: 12px;
+}
+.style-subpage .header-menu .menu-main > ul li .sub-nav .sub-nav-item.active:hover a::before {
+  width: calc(100% - 12px);
+  left: 12px;
+}
+.style-subpage .header-menu .menu-main > ul li:hover > a::before {
+  width: calc(100% - 24px);
+}
+
+/*
+*** Remove active Home: Start
+*/
+/*
+*** Blog Menu Header Page: Start
+*/
+.style-blog .header-menu .menu-main > ul > li:nth-child(5) > a::before {
+  width: calc(100% - 24px);
+}
+
+/*
+*** Blog Menu Header Page: End
+*/
+/*
+*** Case Studies Menu Header Page: Start
+*/
+.style-case-studies .header-menu .menu-main > ul > li:nth-child(4) > a::before {
+  width: calc(100% - 24px);
+}
+
+/*
+*** Case Studies Menu Header Page: End
+*/

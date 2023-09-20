@@ -31,6 +31,12 @@
 *** Section Solution Home3: Start
 */
 .section-solution.style-three {
+    .heading .text-button-small {
+        &:hover {
+            color: var(--yellow);
+        }
+    }
+
     .solution-item {
         &:hover {
             box-shadow: none;

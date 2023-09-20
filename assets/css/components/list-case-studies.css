@@ -1,0 +1,23 @@
+.list-case-studies .row .item-main {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+.list-case-studies .row .item-main .bg-img {
+  position: relative;
+}
+.list-case-studies .row .item-main .infor {
+  transition: all ease 0.5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -150px;
+}
+.list-case-studies .row .item-main:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
+}
+.list-case-studies .row .item-main:hover .infor {
+  bottom: 0;
+}

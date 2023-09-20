@@ -24,6 +24,9 @@
 /*
 *** Section Solution Home3: Start
 */
+.section-solution.style-three .heading .text-button-small:hover {
+  color: var(--yellow);
+}
 .section-solution.style-three .solution-item:hover {
   box-shadow: none;
 }

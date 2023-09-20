@@ -54,7 +54,7 @@
 }
 .top-nav .container .left .select-language {
   border-right: 1px solid var(--outline);
-  padding-left: 0;
+  margin-left: -20px;
 }
 @media (min-width: 1850px) {
   .top-nav .container .left {

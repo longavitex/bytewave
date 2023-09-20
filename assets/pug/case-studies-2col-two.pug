@@ -1,0 +1,66 @@
+extends base/layout.pug
+block title
+    title Case Studies
+block header
+    div(class="style-subpage style-case-studies")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    div(class="style-case-studies")
+        +headingSubpage({classname: 'pt-60', heading:true, headingTitle:'Success Stories', subHeading:'From Clients Who Achieved Excellence with ByteWave', category:'Case Studies', title:"Triumphs and Achievements. Our Success Stories", img:'assets/images/component/bg-case-studies.png'})
+    .list-case-studies.pt-80.pb-80
+        .container
+            .row.row-gap-40
+                .col-sm-6.item
+                    .item-main 
+                        .bg-img 
+                            img(src="assets/images/blog/item13.png", alt="").w-100
+                        a(href="#!").infor.flex-column-center.bg-white.pt-24.pb-24.pl-20.pr-20
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                            .heading5.text-center.mt-12 Demystifying IT services: exploring tech trends
+                .col-sm-6.item
+                    .item-main 
+                        .bg-img 
+                            img(src="assets/images/blog/item11.png", alt="").w-100
+                        a(href="#!").infor.flex-column-center.bg-white.pt-24.pb-24.pl-20.pr-20
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                            .heading5.text-center.mt-12 Demystifying IT services: exploring tech trends
+                .col-sm-6.item
+                    .item-main 
+                        .bg-img 
+                            img(src="assets/images/blog/item1.png", alt="").w-100
+                        a(href="#!").infor.flex-column-center.bg-white.pt-24.pb-24.pl-20.pr-20
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                            .heading5.text-center.mt-12 Demystifying IT services: exploring tech trends
+                .col-sm-6.item
+                    .item-main 
+                        .bg-img 
+                            img(src="assets/images/blog/item3.png", alt="").w-100
+                        a(href="#!").infor.flex-column-center.bg-white.pt-24.pb-24.pl-20.pr-20
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                            .heading5.text-center.mt-12 Demystifying IT services: exploring tech trends
+                .col-sm-6.item
+                    .item-main 
+                        .bg-img 
+                            img(src="assets/images/blog/item5.png", alt="").w-100
+                        a(href="#!").infor.flex-column-center.bg-white.pt-24.pb-24.pl-20.pr-20
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                            .heading5.text-center.mt-12 Demystifying IT services: exploring tech trends
+                .col-sm-6.item
+                    .item-main 
+                        .bg-img 
+                            img(src="assets/images/blog/item4.png", alt="").w-100
+                        a(href="#!").infor.flex-column-center.bg-white.pt-24.pb-24.pl-20.pr-20
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                            .heading5.text-center.mt-12 Demystifying IT services: exploring tech trends
+            .list-nav-number.flex-center.mt-40
+                a(href="#!").button-blue.button-blue-hover Load More
+
+    div(class="style-case-studies pb-80")
+        include components/home4/testimonial.pug
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug
