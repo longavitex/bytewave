@@ -1,0 +1,75 @@
+extends base/layout.pug
+block title
+    title Case Studies List
+block header
+    div(class="style-subpage style-case-studies style-four")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    div(class="style-case-studies")
+        +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Success Stories', subHeading:'From Clients Who Achieved Excellence with ByteWave', category:'Case Studies', heading2:"Triumphs and Achievements. Our Success Stories", img:'assets/images/component/bg-case-studies.png'})
+    .case-studies-list-block.pt-80.pb-80
+        .container
+            .row.row-gap-40
+                .col-12.item
+                    a(href="#!").item-main 
+                        .row 
+                            .col-md-7.pr-40
+                                .bg-img 
+                                    img(src="assets/images/blog/item1.png", alt="").w-100
+                            .col-md-4.pr-0.flex-item-center
+                                .infor
+                                    .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                                    .heading4.mt-12 Demystifying IT services: exploring tech trends
+                                    .text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
+                                    .text-button-small.mt-16 Learn more
+                .col-12.item
+                    a(href="#!").item-main 
+                        .row 
+                            .col-md-7.pr-40
+                                .bg-img 
+                                    img(src="assets/images/blog/item5.png", alt="").w-100
+                            .col-md-4.pr-0.flex-item-center
+                                .infor
+                                    .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                                    .heading4.mt-12 Demystifying IT services: exploring tech trends
+                                    .text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
+                                    .text-button-small.mt-16 Learn more
+                .col-12.item
+                    a(href="#!").item-main 
+                        .row 
+                            .col-md-7.pr-40
+                                .bg-img 
+                                    img(src="assets/images/blog/item6.png", alt="").w-100
+                            .col-md-4.pr-0.flex-item-center
+                                .infor
+                                    .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                                    .heading4.mt-12 Demystifying IT services: exploring tech trends
+                                    .text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
+                                    .text-button-small.mt-16 Learn more
+                .col-12.item
+                    a(href="#!").item-main 
+                        .row 
+                            .col-md-7.pr-40
+                                .bg-img 
+                                    img(src="assets/images/blog/item11.png", alt="").w-100
+                            .col-md-4.pr-0.flex-item-center
+                                .infor
+                                    .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                                    .heading4.mt-12 Demystifying IT services: exploring tech trends
+                                    .text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
+                                    .text-button-small.mt-16 Learn more
+                   
+            .list-nav-number.flex-item-center.gap-8.mt-40
+                a(href="#!").nav-item.bora-50.flex-center.active 1
+                a(href="#!").nav-item.bora-50.flex-center 2
+                a(href="#!").nav-item.bora-50.flex-center 3
+                a(href="#!").nav-item.bora-50.flex-center
+                    i.ph.ph-caret-right
+
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

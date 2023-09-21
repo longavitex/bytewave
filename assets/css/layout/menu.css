@@ -656,6 +656,41 @@
 .style-case-studies .header-menu .menu-main > ul > li:nth-child(4) > a::before {
   width: calc(100% - 24px);
 }
+.style-case-studies.style-one .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(1) > a {
+  padding-left: 12px;
+}
+.style-case-studies.style-one .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(1) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-case-studies.style-two .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(2) > a {
+  padding-left: 12px;
+}
+.style-case-studies.style-two .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(2) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-case-studies.style-three .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(3) > a {
+  padding-left: 12px;
+}
+.style-case-studies.style-three .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(3) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-case-studies.style-four .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(4) > a {
+  padding-left: 12px;
+}
+.style-case-studies.style-four .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(4) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-case-studies.style-five .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(5) > a {
+  padding-left: 12px;
+}
+.style-case-studies.style-five .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(5) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
 
 /*
 *** Case Studies Menu Header Page: End

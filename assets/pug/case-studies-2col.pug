@@ -1,20 +1,20 @@
 extends base/layout.pug
 block title
-    title Case Studies
+    title Case Studies 2 cols - Style 1
 block header
-    div(class="style-subpage style-case-studies")
+    div(class="style-subpage style-case-studies style-two")
         include components/header/menu/menu-one.pug
 block content 
     include mixins/headingSubpage.pug
     include mixins/blogItem.pug
     .bg-subpage
     div(class="style-case-studies")
-        +headingSubpage({classname: 'pt-60', heading:true, headingTitle:'Success Stories', subHeading:'From Clients Who Achieved Excellence with ByteWave', category:'Case Studies', title:"Triumphs and Achievements. Our Success Stories", img:'assets/images/component/bg-case-studies.png'})
+        +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Success Stories', subHeading:'From Clients Who Achieved Excellence with ByteWave', category:'Case Studies', heading2:"Triumphs and Achievements. Our Success Stories", img:'assets/images/component/bg-case-studies.png'})
     .list-blog-page.section-case-studies.pt-80.pb-80
         .container
             .row.row-gap-40.list-news
                 .col-sm-6.item
-                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item12.png', category:'Healthcare', title:'Navigating Success: Insights from Business Consulting Experts', desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 22, 2023'})
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item5.png', category:'Healthcare', title:'Navigating Success: Insights from Business Consulting Experts', desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 22, 2023'})
                 .col-sm-6.item
                     +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item11.png', category:'E-commerce & Retail', title:"Strategies for Thriving: Unveiling Business Consulting's Impact", desc:'Thriving in a particular context, such as business, technology, or life....', date:'February 23, 2023'})
                 .col-sm-6.item

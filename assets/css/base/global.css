@@ -7,6 +7,7 @@
   font-size: 80px;
   font-weight: 600;
   line-height: 88px;
+  text-transform: capitalize;
 }
 
 .heading2 {
@@ -15,6 +16,7 @@
   font-size: 56px;
   font-weight: 600;
   line-height: 68px;
+  text-transform: capitalize;
 }
 
 .heading3 {
@@ -23,6 +25,7 @@
   font-size: 44px;
   font-weight: 600;
   line-height: 52px;
+  text-transform: capitalize;
 }
 
 .heading4 {
@@ -31,6 +34,7 @@
   font-size: 32px;
   font-weight: 600;
   line-height: 40px;
+  text-transform: capitalize;
 }
 
 .heading5 {
@@ -39,6 +43,7 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
+  text-transform: capitalize;
 }
 
 .heading6 {
@@ -47,6 +52,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
+  text-transform: capitalize;
 }
 
 .body1 {
@@ -462,6 +468,10 @@
   padding: 12px;
 }
 
+.pr-80 {
+  padding-right: 80px;
+}
+
 .pr-65 {
   padding-right: 65px;
 }
@@ -520,6 +530,10 @@
 
 .pl-0 {
   padding-left: 0;
+}
+
+.pl-80 {
+  padding-left: 80px;
 }
 
 .pl-65 {
@@ -820,6 +834,10 @@
 
 .bora-32 {
   border-radius: 32px;
+}
+
+.bora-28 {
+  border-radius: 28px;
 }
 
 .bora-24 {

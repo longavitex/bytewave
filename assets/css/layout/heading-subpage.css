@@ -9,7 +9,3 @@
 .content-heading .heading .border-line {
   width: 80px;
 }
-
-.style-case-studies .content-heading .row > div:nth-child(1) {
-  padding-right: 40px;
-}

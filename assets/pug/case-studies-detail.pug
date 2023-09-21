@@ -1,0 +1,137 @@
+extends base/layout.pug
+block title
+    title Case Studies Detail - Style 1
+block header
+    div(class="style-subpage style-case-studies style-five")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    div(class="style-case-studies")
+        +headingSubpage({classname: 'pt-60', style:'style-one', heading:false, category:'Performance Enhancement', heading3:"Tech insights: how IT services drive modern business", desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', img:'assets/images/component/bg-case-detail.png'})
+    .intro-block.pt-80
+        .container 
+            .row.flex-center
+                .col-sm-10.col-12.text-center  
+                    .heading3.text-center Tech Helps America Grow
+                    .heading5.fw-400.mt-24.text-center American tech companies continue to propel the nation’s economy forward. Not only has technological innovation become an integral part of the way we live, it is also important to our nation’s economic success.
+    .about-us-block.pt-80.pb-80
+        .container 
+            .row.row-gap-40.flex-between
+                .col-lg-6.pr-40.pr-col-lg-0
+                    .bg-img.w-100
+                        img(src="assets/images/blog/item12.png", alt="").w-100.bora-24
+                .col-lg-6.pl-40.pl-col-lg-0
+                    .text-content 
+                        .heading3 Boosting the American Economy
+                        .body2.text-on-surface-variant1.mt-24 Boosting the American Economy According to the US. Today, the tech sector is the second-largest and one of the fastest-growing industries powering the U.S. economy, with American tech companies growing their GDP contributions by 9.8% in 2021
+                        .row
+                            .col-xxl-6.col-lg-8.col-sm-6.col-9.more-infor.mt-24
+                                .flex-between
+                                    .heading6 Client
+                                    .body2.text-on-surface-variant1 Avitex Company
+                                .flex-between.mt-12
+                                    .heading6 Date
+                                    .body2.text-on-surface-variant1 September, 2023
+                                .flex-between.mt-12
+                                    .heading6 Author
+                                    .body2.text-on-surface-variant1 Tony Nguyen
+    .counter-block 
+        .container 
+            .content-main.bg-linear.flex-column-center.p-60.bora-28
+                .heading6.fw-400 Services Used
+                .heading3.mt-12 Innovation Solutions
+                .list-counter.row.row-gap-32.flex-between.w-100.mt-40
+                    .col-sm-3.col-6.item.flex-column-center 
+                        .heading3 15-20%
+                        .heading6.text-center.fw-400.mt-4 Revenue Growth
+                    .col-sm-3.col-6.item.flex-column-center 
+                        .heading3 +95%
+                        .heading6.text-center.fw-400.mt-4 Customer Satisfaction
+                    .col-sm-3.col-6.item.flex-column-center 
+                        .heading3 +450
+                        .heading6.text-center.fw-400.mt-4 Customer Expansion
+                    .col-sm-3.col-6.item.flex-column-center 
+                        .heading3 +90
+                        .heading6.text-center.fw-400.mt-4 Project Diversification
+    .benefit-block.pt-80 
+        .container 
+            .row.heading.flex-between.row-gap-8
+                .col-xl-5.col-lg-6
+                    .heading3 the benefits they have gained from using it
+                .col-xl-5.col-lg-6
+                    .body2.text-on-surface-variant1.text-end At ByteWave, we understand that selecting the right partner for your technology needs is a critical decision. We believe that we are the perfect fit for you, and here's why.
+            .row.flex-between.mt-40.row-gap-40
+                .col-lg-5
+                    .feature-item.flex-item-center.gap-24
+                        .icon
+                            i.ph.ph-target.text-blue.fs-36.p-16.bg-blue-surface.bora-50
+                        .infor 
+                            .heading5 Efficient Technical Support
+                            .body2.text-on-surface-variant1.mt-12 Our efficient technical support team is dedicated to being your trusted IT partner.
+                    .feature-item.flex-item-center.gap-24.mt-40
+                        .icon
+                            i.ph.ph-chart-bar.text-blue.fs-36.p-16.bg-blue-surface.bora-50
+                        .infor 
+                            .heading5 Enhanced Productivity
+                            .body2.text-on-surface-variant1.mt-12 In the fast-paced world of business, enhancing productivity is a constant challenge.
+                    .feature-item.flex-item-center.gap-24.mt-40
+                        .icon
+                            i.ph.ph-chart-line-down.text-blue.fs-36.p-16.bg-blue-surface.bora-50
+                        .infor 
+                            .heading5 Minimized Incidents
+                            .body2.text-on-surface-variant1.mt-12 Trust us for proactive monitoring, rapid incident response, and scalable solutions.
+                .col-lg-6
+                    .bg-img.bora-24.overflow-hidden
+                        img(src="assets/images/component/bg-case-detail-benefit.png", alt="").w-100
+    .feature-block.pt-80.pb-80
+        .container 
+            .row.row-gap-40
+                .col-lg-6.pr-80.pr-col-lg-0
+                    .heading3 What The Project Means For us
+                    .body2.text-on-surface-variant1.mt-20 ELM is the Employee Leave management Android and Web Application with the Connection between management and Employees. ELM system is a process by which employees apply for leaves; managers approve them and leave balances are tracked. and also work Management Application
+                .col-lg-6.pl-80.pl-col-lg-0
+                    .heading3 Features
+                    .body2.mt-20 Initially, most companies opt for a manual process that involves a lot of busywork for the HR department:
+                    .list-feature.mt-12
+                        .flex-item-center 
+                            i.ph-fill.ph-check-circle.text-blue.fs-24 
+                            .text-title.pl-12 The employee checks their leave balances
+                        .flex-item-center.mt-16
+                            i.ph-fill.ph-check-circle.text-blue.fs-24 
+                            .text-title.pl-12 The employee drops an email to their manager
+                        .flex-item-center.mt-16
+                            i.ph-fill.ph-check-circle.text-blue.fs-24 
+                            .text-title.pl-12 The manager looks through the work calendar
+                        .flex-item-center.mt-16
+                            i.ph-fill.ph-check-circle.text-blue.fs-24 
+                            .text-title.pl-12 who then adjusts the leave balances accordingly
+                        
+    div(class="style-case-studies pb-80")
+        include components/home4/testimonial.pug
+    include mixins/blogItem.pug
+    .section-case-studies.section-news.bg-linear.pt-80.pb-80 
+        .container
+            .cursor.flex-center.gap-12
+                i.ph.ph-caret-left.text-white
+                i.ph.ph-caret-right.text-white
+            .row.gy-1.flex-between
+                .col-xl-5.col-md-4.col-12
+                    .heading3.mt-12 See More Case Studies
+                .col-xl-5.col-lg-6.col-md-7.col-12
+                    .body2 Case studies that showcase the agency's approach, process, and results for specific clients.
+            .list-news.mt-40
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item1.png', category:'Performance Enhancement', title:'Demystifying IT Services: Exploring Tech Trends & Solutions', desc:'Enhanced performance for a manufacturing firm by optimizing their database structure, resulting in improved efficiency and competitiveness.', learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item7.png', category:'Cloud Solutions', title:'Unlocking Business Potential: The Role of IT Services Today', desc:"Secured sensitive data during a financial company's cloud migration by designing a hybrid solution combining cloud flexibility and on-premises control.", learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item2.png', category:'Application Development', title:'Tech Insights: How IT Services Drive Modern Business', desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item8.png', category:'Trendy Technologies', title:'Exploring Trendy Technologies Shaping the IT Landscape', desc:'Explore the trending technologies that are reshaping the IT industry, discover how they are transforming our interactions with the digital world.', learn:true})
+        
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

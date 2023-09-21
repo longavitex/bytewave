@@ -192,54 +192,5 @@
 *** Section News Home6: End
 */
 /*
-*** List Blog Page: Start
-*/
-.list-blog-page .item .blog-item .bg-img {
-  border-radius: 16px;
-  overflow: hidden;
-}
-.list-blog-page .item .blog-item .bg-img img {
-  transition: all ease 0.5s;
-}
-.list-blog-page .item .blog-item .heading5 {
-  transition: all ease 0.5s;
-}
-.list-blog-page .item .blog-item:hover .bg-img img {
-  transform: scale(1.06);
-}
-.list-blog-page .item .blog-item:hover .heading5 {
-  text-decoration: underline;
-}
-.list-blog-page .list-nav-number .nav-item {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  transition: all ease 0.2s;
-}
-.list-blog-page .list-nav-number .nav-item:hover, .list-blog-page .list-nav-number .nav-item.active {
-  color: var(--white);
-  background-color: var(--blue);
-}
-
-/*
-*** List Blog Page: End
-*/
-/*
-*** List Case Studies Page: Start
-*/
-.list-blog-page .container {
-  overflow: hidden;
-}
-.list-blog-page .container .list-news .item {
-  cursor: pointer;
-}
-.list-blog-page .container .list-news .item .main-item {
-  cursor: pointer;
-}
-
-/*
-*** List Case Studies Page: End
-*/
-/*
 *** Section Case Study, News, Blog: End
 */

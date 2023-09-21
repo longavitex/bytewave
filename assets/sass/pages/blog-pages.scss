@@ -1,0 +1,51 @@
+/*
+*** Blog Grid Page: Start
+*/
+.list-blog-page {
+    .item {
+        .blog-item {
+            .bg-img {
+                border-radius: 16px;
+                overflow: hidden;
+
+                img {
+                    transition: all ease 0.5s;
+                }
+            }
+
+            .heading5 {
+                transition: all ease 0.5s;
+            }
+
+            &:hover {
+                .bg-img {
+                    img {
+                        transform: scale(1.06);
+                    }
+                }
+
+                .heading5 {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .list-nav-number {
+        .nav-item {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            transition: all ease 0.2s;
+
+            &:hover,
+            &.active {
+                color: var(--white);
+                background-color: var(--blue);
+            }
+        }
+    }
+}
+/*
+*** Blog Grid Page: End
+*/
