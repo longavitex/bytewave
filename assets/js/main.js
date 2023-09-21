@@ -299,7 +299,7 @@ if (listNews) {
 
 
 // testimonial home1
-$(".section-testimonial.style-one .container>.row .testimonial-item").slick({
+$(".section-testimonial.style-one .testimonial-item").slick({
     dots: true,
     arrows: false,
     slidesToShow: 1,

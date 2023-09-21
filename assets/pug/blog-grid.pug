@@ -1,0 +1,41 @@
+extends base/layout.pug
+block title
+    title Blog Grid
+block header
+    div(class="style-subpage style-blog style-one")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    +headingSubpage({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'The Latest New', subHeading:'The Latest Innovations in Bytewave', category:'E-commerce & Retail', heading3:"Enhancing IT Security with Multi-Factor Authentication", desc:'Discover how multi-factor authentication (MFA) is bolstering IT security and protecting sensitive data.', date:'February 22, 2023', img:'assets/images/component/bg-blog.png'})
+    .list-blog-page.pt-80.pb-80
+        .container
+            .row.row-gap-40
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item1.png', category:'Healthcare', title:'Digital Transformation: Navigating the Future of Business', desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 22, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item3.png', category:'E-commerce & Retail', title:"Strategies for Thriving: Unveiling Business Consulting's Impact", desc:'Thriving in a particular context, such as business, technology, or life....', date:'February 23, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item5.png', category:'Finance & Banking', title:'Elevating Business Performance: Exploring the World of Consulting', desc:'An exploration of the consulting world and its potential to enhance business performance...', date:'February 24, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item7.png', category:'Techlonogy', title:'The Role of Cloud Computing in Modern Business', desc:'How the prevailing trends of onlineization and virtualization are serving as driving forces...', date:'February 25, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item6.png', category:'Healthcare', title:'Navigating Success: Insights from Business Consulting Experts', desc:'Unlocking the Power of Data Analytics for Your Business', date:'February 22, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item8.png', category:'E-commerce & Retail', title:"Cybersecurity Best Practices for Small Businesses", desc:'Evaluating Cloud Service Providers: Key Factors to Consider', date:'February 23, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item4.png', category:'Finance & Banking', title:'IoT (Internet of Things) and Its Impact on Industry 4.0', desc:'An exploration of the consulting world and its potential to enhance business performance...', date:'February 24, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item11.png', category:'Techlonogy', title:'Onlineization and Virtualization Trends Driving Tech Breakthroughs.', desc:'How the prevailing trends of onlineization and virtualization are serving as driving forces...', date:'February 25, 2023'})
+                .col-lg-4.col-sm-6.item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item12.png', category:'Techlonogy', title:'Data Backup and Recovery: Ensuring Business Continuity', desc:'How the prevailing trends of onlineization and virtualization are serving as driving forces...', date:'February 25, 2023'})
+            .list-nav-number.flex-item-center.gap-8.mt-40
+                a(href="#!").nav-item.bora-50.flex-center.active 1
+                a(href="#!").nav-item.bora-50.flex-center 2
+                a(href="#!").nav-item.bora-50.flex-center 3
+                a(href="#!").nav-item.bora-50.flex-center
+                    i.ph.ph-caret-right
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

@@ -646,6 +646,55 @@
 .style-blog .header-menu .menu-main > ul > li:nth-child(5) > a::before {
   width: calc(100% - 24px);
 }
+.style-blog.style-one .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(1) > a {
+  padding-left: 12px;
+}
+.style-blog.style-one .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(1) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-blog.style-two .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(2) > a {
+  padding-left: 12px;
+}
+.style-blog.style-two .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(2) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-blog.style-three .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(3) > a {
+  padding-left: 12px;
+}
+.style-blog.style-three .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(3) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-blog.style-four .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(4) > a {
+  padding-left: 12px;
+}
+.style-blog.style-four .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(4) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-blog.style-five .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(5) > a {
+  padding-left: 12px;
+}
+.style-blog.style-five .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(5) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-blog.style-six .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(6) > a {
+  padding-left: 12px;
+}
+.style-blog.style-six .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(6) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-blog.style-seven .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(7) > a {
+  padding-left: 12px;
+}
+.style-blog.style-seven .header-menu .menu-main > ul > li:nth-child(5) ul li:nth-child(7) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
 
 /*
 *** Blog Menu Header Page: End
@@ -688,6 +737,13 @@
   padding-left: 12px;
 }
 .style-case-studies.style-five .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(5) > a::before {
+  left: 12px;
+  width: calc(100% - 12px);
+}
+.style-case-studies.style-six .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(6) > a {
+  padding-left: 12px;
+}
+.style-case-studies.style-six .header-menu .menu-main > ul > li:nth-child(4) ul li:nth-child(6) > a::before {
   left: 12px;
   width: calc(100% - 12px);
 }

@@ -929,6 +929,139 @@
             }
         }
     }
+
+    &.style-one {
+        .header-menu .menu-main>ul {
+            >li:nth-child(5) {
+                ul {
+                    li:nth-child(1) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-two {
+        .header-menu .menu-main>ul {
+            >li:nth-child(5) {
+                ul {
+                    li:nth-child(2) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-three {
+        .header-menu .menu-main>ul {
+            >li:nth-child(5) {
+                ul {
+                    li:nth-child(3) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-four {
+        .header-menu .menu-main>ul {
+            >li:nth-child(5) {
+                ul {
+                    li:nth-child(4) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-five {
+        .header-menu .menu-main>ul {
+            >li:nth-child(5) {
+                ul {
+                    li:nth-child(5) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-six {
+        .header-menu .menu-main>ul {
+            >li:nth-child(5) {
+                ul {
+                    li:nth-child(6) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-seven {
+        .header-menu .menu-main>ul {
+            >li:nth-child(5) {
+                ul {
+                    li:nth-child(7) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*
@@ -1030,6 +1163,25 @@
             >li:nth-child(4) {
                 ul {
                     li:nth-child(5) {
+                        >a {
+                            padding-left: 12px;
+
+                            &::before {
+                                left: 12px;
+                                width: calc(100% - 12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-six {
+        .header-menu .menu-main>ul {
+            >li:nth-child(4) {
+                ul {
+                    li:nth-child(6) {
                         >a {
                             padding-left: 12px;
 

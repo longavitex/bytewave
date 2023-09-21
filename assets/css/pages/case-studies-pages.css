@@ -136,6 +136,39 @@
   }
 }
 
+.counter-block .content-main .item .heading3 {
+  white-space: nowrap;
+}
+
+.feature-block .row > div:last-child {
+  border-left: 1px solid var(--outline);
+}
+
 /*
 *** Case Studies Detail Page: End
+*/
+/*
+*** Case Studies Detail Page - Style2: Start
+*/
+.case-studies-detail-two .section-testimonial .slick-dots {
+  margin-left: 0;
+  margin-top: 24px;
+  padding-bottom: 0;
+}
+@media (max-width: 992px) {
+  .case-studies-detail-two .container .row {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 400px) {
+  .case-studies-detail-two .counter-block .content-main {
+    text-align: center;
+  }
+  .case-studies-detail-two .counter-block .content-main .list-counter {
+    flex-direction: column;
+  }
+}
+
+/*
+*** Case Studies Detail Page - Style2: End
 */

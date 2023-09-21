@@ -1,0 +1,133 @@
+extends base/layout.pug
+block title
+    title Our Blog
+block header
+    div(class="style-subpage style-blog style-four")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    +headingSubpage({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'The Latest New', subHeading:'The Latest Innovations in Bytewave', content: false})
+    .list-blog-page.style-modern.pt-20.pb-80
+        .container.flex-column-center
+            .row.row-gap-40
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item14.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
+                            .heading5.mt-12 Navigating the Future of Business
+                            .desc.text-on-surface-variant1.mt-12 Dive into the world of digital transformation and learn how it's reshaping industries...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item13.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 IT Services
+                            .heading5.mt-12 Digital Marketing Success: An E-Commerce Case Study
+                            .desc.text-on-surface-variant1.mt-12 See how we assisted an online store in achieving tremendous digital marketing success.
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item12.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Technology Solutions
+                            .heading5.mt-12 Managed IT Services vs. In-House IT: Pros and Cons
+                            .desc.text-on-surface-variant1.mt-12 Weigh the advantages and disadvantages of out sourcing IT services versus maintaining...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item11.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Managed IT Services
+                            .heading5.mt-12 Unlocking the Power of Data Analytics for Your Business
+                            .desc.text-on-surface-variant1.mt-12 Discover how data analytics can provide actionable insights, drive informed decisions...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item10.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Cybersecurity
+                            .heading5.mt-12 Cybersecurity Best Practices for Small Businesses
+                            .desc.text-on-surface-variant1.mt-12 Learn essential cybersecurity practices to protect your small business from cyber threats...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item1.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Data Analytics
+                            .heading5.mt-12 The Role of Cloud Computing in Modern Business
+                            .desc.text-on-surface-variant1.mt-12 Explore how cloud computing is revolutionizing business operations, reducing costs...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item2.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Healthcare
+                            .heading5.mt-12 The Importance of IT Strategy for Business Success
+                            .desc.text-on-surface-variant1.mt-12 Understand why a well-defined IT strategy is crucial for aligning technology with...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item7.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Cloud Services
+                            .heading5.mt-12 Cloud Service Providers: Key Factors to Consider
+                            .desc.text-on-surface-variant1.mt-12 Explore the critical criteria for selecting the right cloud service provider for your organization...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item6.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 IoT Solutions
+                            .heading5.mt-12 IoT (Internet of Things) and Its Impact on Industry 4.0
+                            .desc.text-on-surface-variant1.mt-12 Learn how IoT is driving the fourth industrial revolution and transforming manufacturing...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item5.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Data Analys
+                            .heading5.mt-12 Data Backup and Recovery: Ensuring Business Continuity
+                            .desc.text-on-surface-variant1.mt-12 Delve into the importance of data backup and recovery strategies to safeguard...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item4.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Technology Solutions
+                            .heading5.mt-12 Improving Manufacturing Efficiency with IoT Integration
+                            .desc.text-on-surface-variant1.mt-12 Discover how we integrated the Internet of Things (IoT) to enhance manufacturing ...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                .col-lg-4.col-sm-6.item
+                    a(href="blog-detail.html").main-item.bg-white.pt-28.pb-28.pl-24.pr-24.bora-12.overflow-hidden.d-block
+                        .bg-img
+                            img(src="assets/images/blog/item3.png", alt="").w-100.h-100.object-fit-cover
+                        .infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Development
+                            .heading5.mt-12 Enhancing User Experience in Mobile App Development
+                            .desc.text-on-surface-variant1.mt-12 Learn how we created an outstanding user experience in mobile app development...
+                            .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                
+            .list-nav-number.flex-item-center.gap-8.mt-40
+                a(href="#!").nav-item.bora-50.flex-center.active 1
+                a(href="#!").nav-item.bora-50.flex-center 2
+                a(href="#!").nav-item.bora-50.flex-center 3
+                a(href="#!").nav-item.bora-50.flex-center
+                    i.ph.ph-caret-right
+
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

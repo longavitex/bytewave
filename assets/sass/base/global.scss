@@ -492,6 +492,10 @@
     padding-right: 55px;
 }
 
+.pr-45 {
+    padding-right: 45px;
+}
+
 .pr-40 {
     padding-right: 40px;
 }
@@ -554,6 +558,10 @@
 
 .pl-55 {
     padding-left: 55px;
+}
+
+.pl-45 {
+    padding-left: 45px;
 }
 
 .pl-40 {
@@ -820,6 +828,14 @@
     height: 120px;
 }
 
+.w-80 {
+    width: 80px;
+}
+
+.h-80 {
+    height: 80px;
+}
+
 .w-60 {
     width: 60px;
 }
@@ -941,6 +957,24 @@
 .hover-underline {
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.hover-button-blue {
+    transition: all ease 0.3s;
+
+    &:hover {
+        background-color: var(--blue);
+        color: var(--white);
+    }
+}
+
+.hover-button-black {
+    transition: all ease 0.3s;
+
+    &:hover {
+        background-color: var(--on-surface);
+        color: var(--white);
     }
 }
 
