@@ -242,7 +242,7 @@
   background: #fff;
   border-radius: 20px;
 }
-@media (max-width: 1199.99px) {
+@media (max-width: 991.99px) {
   .section-about.style-seven-first .container .row > div:first-child {
     padding-right: 0;
   }

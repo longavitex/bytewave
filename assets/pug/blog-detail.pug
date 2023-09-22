@@ -10,12 +10,12 @@ block content
     .blog-detail-page.pt-80.pb-80
         .container 
             .row.flex-center
-                .col-md-8 
+                .col-xl-8.col-lg-9.col-md-10
                     .heading.flex-column-center 
                         .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
                         .heading3.text-center.mt-12 Navigating success: insights from business consulting experts
                         .heading6.text-center.fw-400.mt-12 Scenes from the devastation in Turkey and Syria
-                        .blog-infor.flex-item-center.mt-20
+                        .blog-infor.flex-center.flex-wrap.gap-60.row-gap-12.mt-20
                             .left.flex-item-center
                                 .avatar
                                     img(src="assets/images/avatar/blog.png", alt="").w-40.h-40
@@ -23,14 +23,14 @@ block content
                                     span.text-on-surface Avitex 
                                 i.ph.ph-calendar-blank
                                 span.pl-4 2 days ago
-                            .right.flex-item-center.pl-65
+                            .right.flex-item-center
                                 i.ph.ph-chat
                                 .caption1.pl-4 12
                                 i.ph.ph-eye.pl-16
                                 .caption1.pl-4 260.2K
                                 i.ph.ph-clock.pl-16
                                 .caption1.pl-4 5 Min Read
-                        .list-social.flex-item-center.flex-wrap.gap-12.mt-20
+                        .list-social.flex-center.flex-wrap.gap-12.mt-20
                             a(href="https://www.facebook.com/" target="_blank").item.flex-item-center.bg-white
                                 i.icon-facebook.display-block
                                 .caption1 Facebook
@@ -71,39 +71,56 @@ block content
                             .body2.d-flex.mt-8
                                 i.ph-fill.ph-dot-outline.mt-4.d-block.fs-20
                                 span.pl-8 Strong fundamentals in computer science skills.
+                            .body2.d-flex.mt-8
+                                i.ph-fill.ph-dot-outline.mt-4.d-block.fs-20
+                                span.pl-8 15+ years of industry experience designing, building, and supporting large-scale distributed systems in production, with recent experience in building large scale cloud services.
+                            .body2.d-flex.mt-8
+                                i.ph-fill.ph-dot-outline.mt-4.d-block.fs-20
+                                span.pl-8 Deep knowledge and experience with different security areas like identity and access management, cryptography, network security, etc.
+                            .body2.d-flex.mt-8
+                                i.ph-fill.ph-dot-outline.mt-4.d-block.fs-20
+                                span.pl-8 Experience with database systems and database internals, such as query engines and optimizers are a big plus.
+                            .body2.d-flex.mt-8
+                                i.ph-fill.ph-dot-outline.mt-4.d-block.fs-20
+                                span.pl-8 Advanced degree in Computer Science or related degree.
                         .body2.text-on-surface-variant1.mt-16 Curabitur aliquam ac arcu in mattis. Phasellus pulvinar erat at aliquam hendrerit. Nam ut velit dolor. Sed fermentum tempus odio, ac faucibus elit scelerisque consequat. Fusce ac malesuada elit. Nam at aliquam libero, quis lacinia erat. In hac habitasse platea dictumst. Suspendisse id dolor orci. Vivamus at aliquam tellus. Vestibulum a augue ac purus suscipit varius non eget lectus. Nam lobortis mauris luctus tristique feugiat. Nulla eleifend risus sit amet nisi feugiat, id eleifend sapien malesuada. Phasellus venenatis convallis mattis. Duis vel tempor eros. Mauris semper sollicitudin neque, imperdiet ultrices urna maximus id.
-                    .blog-tag.flex-between.mt-40.border-underline.border-line-top.flex-wrap.row-gap-24
-                        .list-tag.flex-item-center.gap-16
-                            a(href="blog.html").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.d-inline-block.transition-0-3s.hover-bg-purple.pointer Creative
-                            a(href="blog-two.html").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.d-inline-block.transition-0-3s.hover-bg-purple.pointer Business
-                            a(href="blog-three.html").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.d-inline-block.transition-0-3s.hover-bg-purple.pointer 3D
+                    .blog-tag.flex-between.mt-40.flex-wrap.gap-24
+                        .tags.flex-item-center
+                            .text-button.pr-12 Tag:
+                            .list-tag.flex-item-center.flex-wrap.gap-12
+                                a(href="blog.html").caption1.fw-700.pt-6.pb-6.pl-12.pr-12.bg-blue-surface.text-blue.bora-8.d-inline-block.hover-button-blue Healthcare
+                                a(href="blog-two.html").caption1.fw-700.pt-6.pb-6.pl-12.pr-12.bg-blue-surface.text-blue.bora-8.d-inline-block.hover-button-blue Data
+                                a(href="blog-three.html").caption1.fw-700.pt-6.pb-6.pl-12.pr-12.bg-blue-surface.text-blue.bora-8.d-inline-block.hover-button-blue IT Solutions
                         .share.flex-item-center.flex-wrap.gap-16
                             .text-button Share This Post:
-                            .list-social.flex-item-center.gap-16
-                                a(href="https://www.facebook.com/" target="_blank").item.bg-line-dark.bora-50.w-40.h-40.flex-center.hover-bg-purple
+                            .list-social.flex-item-center.gap-12
+                                a(href="https://www.facebook.com/" target="_blank").item.bg-surface.bora-50.w-40.h-40.flex-center.hover-button-blue
                                     i.icon-facebook
-                                a(href="https://www.linkedin.com/" target="_blank").item.bg-line-dark.bora-50.w-40.h-40.flex-center.hover-bg-purple
+                                a(href="https://www.linkedin.com/" target="_blank").item.bg-surface.bora-50.w-40.h-40.flex-center.hover-button-blue
                                     i.icon-linkedin.fs-14
-                                a(href="https://www.twitter.com/" target="_blank").item.bg-line-dark.bora-50.w-40.h-40.flex-center.hover-bg-purple
-                                    i.icon-twitter.fs-12
-                                a(href="https://www.instagram.com/" target="_blank").item.bg-line-dark.bora-50.w-40.h-40.flex-center.hover-bg-purple
+                                a(href="https://www.twitter.com/" target="_blank").item.bg-surface.bora-50.w-40.h-40.flex-center.hover-button-blue
+                                    i.icon-twitter.fs-14
+                                a(href="https://www.instagram.com/" target="_blank").item.bg-surface.bora-50.w-40.h-40.flex-center.hover-button-blue
                                     i.icon-instagram.fs-14
-                    .infor-below.flex-between.pt-24.pb-24
-                        .prev-block 
-                            a(href="blog-detail-one.html").text-left
-                                .text-button-uppercase.text-blue Previous
-                                .heading7.mt-4 How to choose the right customer 
-                        .line-y
-                        .next-block 
-                            a(href="blog-detail-two.html").text-right
-                                .text-button-uppercase.text-blue Next
-                                .heading7.mt-4 Starting your traveling blog with Vasco
-                    .blog-comment.mt-40
+                    .infor-below.mt-60
+                        .border-line
+                        .list-blog.flex-between.pt-24.pb-24.gap-24
+                            .prev-block
+                                a(href="blog-detail.html").text-start
+                                    .text-button.text-on-surface-variant2 Previous
+                                    .heading6.mt-4 How to choose the right customer 
+                            .line-y
+                            .next-block
+                                a(href="blog-detail-two.html").text-end
+                                    .text-button.text-on-surface-variant2 Next
+                                    .heading6.mt-4 Starting your traveling blog with Vasco
+                        .border-line
+                    .blog-comment.mt-60
                         .heading.flex-between
-                            .heading6 02 Comments 
-                            .sort.flex-item-center.gap-20
-                                .text-button-small Sort By:
-                                select(name="sort").bg-on-surface.text-white
+                            .heading5 03 Comments 
+                            .sort.flex-item-center.gap-8
+                                .text-button Sort By:
+                                select(name="sort").pt-6.pb-6.pl-8.pr-8.border-outline.bora-4
                                     option(value="Newest") Newest
                                     option(value="Oldest") Oldest
                                     option(value="Best Fit") Best Fit
@@ -111,73 +128,92 @@ block content
                             .comment-item.pb-24&attributes({"data-cmt":"cmt1"})
                                 .heading.flex-between
                                     .left.flex-item-center.gap-16
-                                        img.avatar(src="assets/images/avatar/avatar3.png", alt="")
+                                        img.avatar(src="assets/images/avatar/3.png", alt="")
                                         .infor 
-                                            .text-button Hayley Raymond
-                                            .caption1.text-placehover 1 days ago
+                                            .text-button Christina Georgina
+                                            .caption1.text-on-surface-variant2 1 days ago
                                     .right 
-                                        i.ph-fill.ph-dots-three-outline.text-placehover
+                                        i.ph-fill.ph-dots-three-outline.text-on-surface-variant1
                                 .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
                                 .comment-infor.flex-between.mt-12
                                     .left.flex-item-center.gap-16
                                         .like.flex-item-center.pointer
-                                            i.ph.ph-heart.text-white 
-                                            .text-button-small.text-placehover.pl-4 20
+                                            i.ph-light.ph-hands-clapping.fs-18
+                                            .text-button.pl-4 20
                                         .cmt.flex-item-center.pointer
-                                            i.ph.ph-chat.text-white 
-                                            .text-button-small.text-placehover.pl-4 Show Replies
-                                    .text-button-small.text-placehover.pointer Reply
+                                            i.ph.ph-chat.fs-18
+                                            .text-button.pl-4 Show Replies
+                                    .text-button.text-on-surface-variant1.pointer Reply
                             .list-reply.pl-40&attributes({"data-cmt":"cmt1"})
                                 .comment-item.pb-24
                                     .heading.flex-between
                                         .left.flex-item-center.gap-16
-                                            img.avatar(src="assets/images/avatar/avatar2.png", alt="")
+                                            img.avatar(src="assets/images/avatar/1.png", alt="")
                                             .infor 
                                                 .text-button Hayley Raymond
-                                                .caption1.text-placehover 1 days ago
+                                                .caption1.text-on-surface-variant2 1 days ago
                                         .right 
-                                            i.ph-fill.ph-dots-three-outline.text-placehover
+                                            i.ph-fill.ph-dots-three-outline.text-on-surface-variant1
                                     .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
                                     .comment-infor.flex-between.mt-12
                                         .left.flex-item-center.gap-16
                                             .like.flex-item-center.pointer
-                                                i.ph.ph-heart.text-white 
-                                                .text-button-small.text-placehover.pl-4 6
-                                        .text-button-small.text-placehover.pointer Reply
-                            .comment-item.pb-24
+                                                i.ph-light.ph-hands-clapping.fs-18
+                                                .text-button.pl-4 6
+                                        .text-button.text-on-surface-variant1.pointer Reply
+                            .border-line
+                            .comment-item.pt-24.pb-24
                                 .heading.flex-between
                                     .left.flex-item-center.gap-16
-                                        img.avatar(src="assets/images/avatar/avatar4.png", alt="")
+                                        img.avatar(src="assets/images/avatar/2.png", alt="")
                                         .infor 
-                                            .text-button Hayley Raymond
-                                            .caption1.text-placehover 1 days ago
+                                            .text-button Justin Amstrong
+                                            .caption1.text-on-surface-variant2 1 days ago
                                     .right 
-                                        i.ph-fill.ph-dots-three-outline.text-placehover
+                                        i.ph-fill.ph-dots-three-outline.text-on-surface-variant1
                                 .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
                                 .comment-infor.flex-between.mt-12
                                     .left.flex-item-center.gap-16
                                         .like.flex-item-center.pointer
-                                            i.ph.ph-heart.text-white 
-                                            .text-button-small.text-placehover.pl-4 14
-                                    .text-button-small.text-placehover.pointer Reply
-                    .blog-form-contact.mt-40
-                        .heading6 Leave a Comment
+                                            i.ph-light.ph-hands-clapping.fs-18
+                                            .text-button.pl-4 14
+                                    .text-button.text-on-surface-variant1.pointer Reply
+                            .border-line
+                    .blog-form-contact.mt-40.p-40.border-outline.bora-8
+                        .heading5 Leave a Comment
                         form
-                            .row.row-gap-20.mt-24
+                            .row.row-gap-20.mt-16
                                 .col-sm-6 
-                                    input(type="text" placeholder="Your name").p-16.bora-8.bg-line-dark.text-white.w-100
+                                    label Name
+                                    input(type="text" placeholder="Your name").p-16.bora-8.bg-white.border-outline.w-100.mt-12
                                 .col-sm-6
-                                    input(type="text" placeholder="Info.avitex@mail.com").p-16.bora-8.bg-line-dark.text-white.w-100
+                                    label Email
+                                    input(type="email" placeholder="hi.avitex@gmail.com").p-16.bora-8.bg-white.border-outline.w-100.mt-12
                                 .col-12
-                                    textarea(placeholder="Write comment").p-16.bora-8.bg-line-dark.text-white
-                            .checkbox.flex-item-center.mt-20 
+                                    label Comment
+                                    textarea(placeholder="Write comment").p-16.bora-8.bg-white.border-outline.mt-12
+                            .checkbox.d-flex.mt-20 
                                 input(type="checkbox", name="checkbox")
-                                .caption1.text-placehover.pl-8 Save my name, email, and website in this browser for the next time I comment.
-                            button.button.bg-purple.button-purple-hover.text-white.mt-32 
-                                span 
-                                    span 
-                                span.bg-purple Submit Comment
+                                .caption1.text-on-surface-variant1.pl-8 Save my name, email, and website in this browser for the next time I comment.
+                            button.button-blue.button-blue-hover.mt-32 Submit Comment
+    include mixins/blogItem.pug
+    .section-news.style-two.pb-80 
+        .container
+            .cursor.flex-center.gap-12
+                i.ph.ph-caret-left.text-white
+                i.ph.ph-caret-right.text-white
+            .heading3.text-center Recent News Articles
+            .text-center.mt-12 The Latest Innovations in Bytewave
+            .list-news.mt-40
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item11.png', category:'Healthcare', title:'Navigating Success: Insights from Business Consulting Experts', desc:'Streamlining operations with a cloud-based EMR system for XYZ Medical Center...', date:'February 22, 2023'})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item12.png', category:'E-commerce & Retail', title:"Strategies for Thriving: Unveiling Business Consulting's Impact", desc:'Thriving in a particular context, such as business, technology, or life....', date:'February 23, 2023'})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item3.png', category:'Finance & Banking', title:'Elevating Business Performance: Exploring the World of Consulting', desc:'An exploration of the consulting world and its potential to enhance business performance...', date:'February 24, 2023'})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item6.png', category:'Techlonogy', title:'Onlineization and Virtualization Trends Driving Tech Breakthroughs.', desc:'How the prevailing trends of onlineization and virtualization are serving as driving forces...', date:'February 25, 2023'})
 
 block footer 
-    div(class="style-subpage")
+    div(class="style-subpage style-blog")
         include components/footer/footer.pug

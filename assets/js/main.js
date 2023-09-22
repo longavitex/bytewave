@@ -643,3 +643,61 @@ if (videoModalContainer) {
         event.stopPropagation()
     })
 }
+
+
+// Like Blog Detail
+const comments = document.querySelectorAll('.blog-detail-page .blog-comment .comment-item .like')
+
+if (comments) {
+  comments.forEach(cmt => {
+    cmt.addEventListener('click', () => {
+      cmt.classList.toggle('liked')
+      let heartIcon = cmt.querySelector('i')
+      let numberLiked = cmt.querySelector('.text-button')
+      let number = parseFloat(numberLiked.innerHTML);
+
+      if (cmt.classList.contains('liked')) {
+        heartIcon.classList.replace('ph-light', 'ph-fill')
+        number = number + 1
+        numberLiked.innerHTML = number.toString()
+      }
+      else {
+        heartIcon.classList.replace('ph-fill', 'ph-light')
+        number = number - 1
+        numberLiked.innerHTML = number.toString()
+      }
+    })
+  })
+}
+
+
+
+// Show, hide reply Blog Detail
+const showReplyBtn = document.querySelectorAll('.blog-detail-page .blog-comment .comment-item .cmt')
+const listReply = document.querySelectorAll('.blog-detail-page .blog-comment .list-reply')
+
+if (showReplyBtn) {
+    showReplyBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const parentCmt = btn.parentElement.parentElement.parentElement
+            const dataCmt = parentCmt.getAttribute('data-cmt')
+
+            listReply.forEach(reply => {
+                const dataReply = reply.getAttribute('data-cmt')
+
+                if (dataReply == dataCmt) {
+                    reply.classList.toggle('show')
+                    btn.classList.toggle('show')
+
+                    const textShow = btn.querySelector('.text-button')
+                    if (btn.classList.contains('show')) {
+                        textShow.innerHTML = 'Hide Replies'
+                    } else {
+                        textShow.innerHTML = 'Show Replies'
+                    }
+                }
+            })
+        })
+    })
+}
+
