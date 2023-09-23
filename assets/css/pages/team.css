@@ -1,0 +1,63 @@
+/*
+*** Our Team Page: Start
+*/
+.teams-block .cta-block .heading6 {
+  text-transform: unset;
+}
+@media (max-width: 576px) {
+  .teams-block .cta-block .heading3 br {
+    display: none;
+  }
+}
+
+/*
+*** Our Team Page: End
+*/
+/*
+*** Team Detail Page: Start
+*/
+.team-detail-block .row .content-detail .list-social a {
+  background-color: transparent;
+}
+.team-detail-block .row .content-detail .list-social a i {
+  background-color: transparent;
+}
+.team-detail-block .row .content-detail .list-social a:hover i {
+  color: var(--blue);
+}
+@media (max-width: 991.99px) {
+  .team-detail-block .row {
+    position: relative;
+  }
+  .team-detail-block .row .content-detail .user-infor {
+    position: absolute;
+    left: calc(50% + 16px);
+    top: 0;
+  }
+  .team-detail-block .row .content-detail .user-desc > div:nth-child(1) {
+    margin-top: 0;
+  }
+}
+@media (max-width: 575.99px) {
+  .team-detail-block .row {
+    position: relative;
+  }
+  .team-detail-block .row .content-detail .user-infor {
+    position: relative;
+    left: 0;
+  }
+  .team-detail-block .row .content-detail .user-infor .list-social a i {
+    font-size: 16px;
+  }
+  .team-detail-block .row .content-detail .user-desc > div:nth-child(1) {
+    margin-top: 20px;
+  }
+  .team-detail-block .row .content-detail .user-desc .list-award img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/*
+*** Team Detail Page: End
+*/

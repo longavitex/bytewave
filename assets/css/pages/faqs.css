@@ -1,0 +1,48 @@
+/*
+Shared List Questions: Start
+*/
+.question-item .question-item-main i {
+  transform: rotate(0);
+  transition: all ease 0.5s;
+}
+@media (max-width: 575.99px) {
+  .question-item .question-item-main i {
+    font-size: 16px;
+  }
+}
+.question-item .content-question {
+  transition: all ease-in-out 0.5s;
+  max-height: 0;
+  overflow: hidden;
+}
+.question-item .content-question .border-line {
+  background-color: rgba(231, 231, 231, 0.8);
+}
+
+.question-item.open .content-question {
+  max-height: 150px;
+}
+
+.faqs-block-page .container .form-block .row .form-select-block {
+  position: relative;
+}
+.faqs-block-page .container .form-block .row .form-select-block i {
+  position: absolute;
+  bottom: 13px;
+  right: 26px;
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .faqs-block-page .container > .row {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .faqs-block-page .container > .row > div:nth-child(2) {
+    padding-left: 15px;
+  }
+}
+
+/*
+Shared List Questions: End
+*/

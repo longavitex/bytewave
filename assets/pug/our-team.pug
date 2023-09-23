@@ -1,0 +1,191 @@
+extends base/layout.pug
+block title
+    title Our Team
+block header
+    div(class="style-subpage style-pages style-two")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Teams', subHeading:'Get Acquainted with the Exceptional Individuals Comprising Our Talented Team.', category:'Our Teams', heading2:"Meet Our Team. The Heartbeat of ByteWave", img:'assets/images/component/bg-team.png'})
+    .section-news.section-our-leader.style-two.pt-80.pb-80 
+        .container
+            .heading3 Our Leadership
+            .list-news.list-leader.mt-40
+                .item
+                    a(href="#!").main-item
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-1.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .item
+                    a(href="#!").main-item
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-2.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 Cameron Williamson
+                                .caption1.text-on-surface-variant1.mt-4 CEM - digiNova
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .item
+                    a(href="#!").main-item
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-3.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 Floyd Miles
+                                .caption1.text-on-surface-variant1.mt-4 Photographer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .item
+                    a(href="#!").main-item
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-4.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 Chris Patt
+                                .caption1.text-on-surface-variant1.mt-4 Photographer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .item
+                    a(href="#!").main-item
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-5.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 Kathryn Murphy
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .item
+                    a(href="#!").main-item
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-6.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 Katty Perry
+                                .caption1.text-on-surface-variant1.mt-4 CEO - AIbank
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                
+    div(class="style-about-us")
+        include components/home7/about-first.pug
+    .teams-block.pt-80.pb-80
+        .container
+            .heading.text-center
+                .heading3.text-center Meet our leader
+                .text-center.mt-12 Discover exceptional experiences through testimonials from our satisfied customers.
+            .list-member.row.row-gap-32.mt-40 
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-7.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-8.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-9.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-10.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-11.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-12.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG-13.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+                .col-lg-3.col-sm-6
+                    a(href="#!").member-item 
+                        .bg-img 
+                            img(src="assets/images/avatar/IMG.png", alt="").w-100.bora-28
+                        .member-infor.mt-20.flex-between 
+                            .left 
+                                .heading5 John Smith
+                                .caption1.text-on-surface-variant1.mt-4 Graphic Designer
+                            .right 
+                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-twitter
+        .cta-block.pt-80
+            .container 
+                .content-main.bg-blue.pt-60.pb-60.pl-32.pr-32.bora-20
+                    .row.flex-center
+                        .col-xl-7.col-lg-9
+                            .heading3.text-white.text-center Join Our Team <br>Explore Exciting Opportunities
+                            .heading6.fw-400.text-white.text-center.mt-20 Empower your business with our expertise for growth and efficiency.
+                            .block-button.text-center.mt-40
+                                a(href="#!").button.bg-white.border-none Join us today!
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

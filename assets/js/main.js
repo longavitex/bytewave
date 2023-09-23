@@ -649,25 +649,25 @@ if (videoModalContainer) {
 const comments = document.querySelectorAll('.blog-detail-page .blog-comment .comment-item .like')
 
 if (comments) {
-  comments.forEach(cmt => {
-    cmt.addEventListener('click', () => {
-      cmt.classList.toggle('liked')
-      let heartIcon = cmt.querySelector('i')
-      let numberLiked = cmt.querySelector('.text-button')
-      let number = parseFloat(numberLiked.innerHTML);
+    comments.forEach(cmt => {
+        cmt.addEventListener('click', () => {
+            cmt.classList.toggle('liked')
+            let heartIcon = cmt.querySelector('i')
+            let numberLiked = cmt.querySelector('.text-button')
+            let number = parseFloat(numberLiked.innerHTML);
 
-      if (cmt.classList.contains('liked')) {
-        heartIcon.classList.replace('ph-light', 'ph-fill')
-        number = number + 1
-        numberLiked.innerHTML = number.toString()
-      }
-      else {
-        heartIcon.classList.replace('ph-fill', 'ph-light')
-        number = number - 1
-        numberLiked.innerHTML = number.toString()
-      }
+            if (cmt.classList.contains('liked')) {
+                heartIcon.classList.replace('ph-light', 'ph-fill')
+                number = number + 1
+                numberLiked.innerHTML = number.toString()
+            }
+            else {
+                heartIcon.classList.replace('ph-fill', 'ph-light')
+                number = number - 1
+                numberLiked.innerHTML = number.toString()
+            }
+        })
     })
-  })
 }
 
 
@@ -701,3 +701,44 @@ if (showReplyBtn) {
     })
 }
 
+
+// open answer faqs
+const questionItem = document.querySelectorAll('.question-item')
+
+if (questionItem) {
+    questionItem.forEach((item, index) => {
+        let titleItem = item.querySelector('.question-item-main')
+        let icon = item.querySelector('i')
+
+        titleItem.addEventListener('click', () => {
+            item.classList.toggle('open')
+
+            if (item.classList.contains('open')) {
+                setTimeout(() => {
+                    icon.classList.replace('ph-plus', 'ph-minus')
+                }, 200)
+            } else {
+                setTimeout(() => {
+                    icon.classList.replace('ph-minus', 'ph-plus')
+                }, 200)
+            }
+
+            removeOpenAnswer(index)
+        })
+
+        if (item.classList.contains('open')) {
+            icon.classList.replace('ph-plus', 'ph-minus')
+        } else {
+            icon.classList.replace('ph-minus', 'ph-plus')
+        }
+    })
+}
+
+function removeOpenAnswer(index1) {
+    questionItem.forEach((item2, index2) => {
+        if (index1 != index2) {
+            item2.classList.remove('open')
+            item2.querySelector('i').classList.replace('ph-minus', 'ph-plus')
+        }
+    })
+}

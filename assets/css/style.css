@@ -1083,6 +1083,10 @@ select {
   border: 1px solid var(--on-surface);
 }
 
+.border-underline-outline {
+  border-bottom: 1px solid var(--outline);
+}
+
 .border-underline-blue {
   border-bottom: 1px solid var(--blue);
 }
@@ -1125,6 +1129,7 @@ select {
 .hover-button-blue:hover {
   background-color: var(--blue);
   color: var(--white);
+  border-color: transparent;
 }
 
 .hover-button-black {
@@ -2206,6 +2211,19 @@ select {
 *** Section News Home6: End
 */
 /*
+*** Section Our Leader: Start
+*/
+.section-news.section-our-leader .container .list-news .item {
+  cursor: pointer;
+}
+.section-news.section-our-leader .container .list-news .item .main-item {
+  cursor: pointer;
+}
+
+/*
+*** Section Our Leader: End
+*/
+/*
 *** Section Case Study, News, Blog: End
 */
 /*
@@ -3198,6 +3216,117 @@ Modal Video: Start
 
 /*
 Modal Video: End
+*/
+/*
+Shared List Questions: Start
+*/
+.question-item .question-item-main i {
+  transform: rotate(0);
+  transition: all ease 0.5s;
+}
+@media (max-width: 575.99px) {
+  .question-item .question-item-main i {
+    font-size: 16px;
+  }
+}
+.question-item .content-question {
+  transition: all ease-in-out 0.5s;
+  max-height: 0;
+  overflow: hidden;
+}
+.question-item .content-question .border-line {
+  background-color: rgba(231, 231, 231, 0.8);
+}
+
+.question-item.open .content-question {
+  max-height: 150px;
+}
+
+.faqs-block-page .container .form-block .row .form-select-block {
+  position: relative;
+}
+.faqs-block-page .container .form-block .row .form-select-block i {
+  position: absolute;
+  bottom: 13px;
+  right: 26px;
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .faqs-block-page .container > .row {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .faqs-block-page .container > .row > div:nth-child(2) {
+    padding-left: 15px;
+  }
+}
+
+/*
+Shared List Questions: End
+*/
+/*
+*** Our Team Page: Start
+*/
+.teams-block .cta-block .heading6 {
+  text-transform: unset;
+}
+@media (max-width: 576px) {
+  .teams-block .cta-block .heading3 br {
+    display: none;
+  }
+}
+
+/*
+*** Our Team Page: End
+*/
+/*
+*** Team Detail Page: Start
+*/
+.team-detail-block .row .content-detail .list-social a {
+  background-color: transparent;
+}
+.team-detail-block .row .content-detail .list-social a i {
+  background-color: transparent;
+}
+.team-detail-block .row .content-detail .list-social a:hover i {
+  color: var(--blue);
+}
+@media (max-width: 991.99px) {
+  .team-detail-block .row {
+    position: relative;
+  }
+  .team-detail-block .row .content-detail .user-infor {
+    position: absolute;
+    left: calc(50% + 16px);
+    top: 0;
+  }
+  .team-detail-block .row .content-detail .user-desc > div:nth-child(1) {
+    margin-top: 0;
+  }
+}
+@media (max-width: 575.99px) {
+  .team-detail-block .row {
+    position: relative;
+  }
+  .team-detail-block .row .content-detail .user-infor {
+    position: relative;
+    left: 0;
+  }
+  .team-detail-block .row .content-detail .user-infor .list-social a i {
+    font-size: 16px;
+  }
+  .team-detail-block .row .content-detail .user-desc > div:nth-child(1) {
+    margin-top: 20px;
+  }
+  .team-detail-block .row .content-detail .user-desc .list-award img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/*
+*** Team Detail Page: End
 */
 .our-mission-block .counter > div .counter-item {
   border-left: 4px solid var(--blue);
@@ -5746,6 +5875,12 @@ a.border-underline-purple-2px:hover {
   }
   .mt-8 {
     margin-top: 4px;
+  }
+  .pl-32 {
+    padding-left: 24px;
+  }
+  .pr-32 {
+    padding-right: 24px;
   }
   .p-80 {
     padding: 40px;

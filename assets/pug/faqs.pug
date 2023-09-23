@@ -1,0 +1,66 @@
+extends base/layout.pug
+block title
+    title FAQs
+block header
+    div(class="style-subpage style-blog style-five")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/questionItem.pug
+    .bg-subpage
+    +headingSubpage({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'Frequently Asked Questions', subHeading:'Your Queries, Our Answers', content: false})
+    .faqs-block-page.pt-80.pb-80 
+        .container 
+            .row
+                .col-xl-4.col-sm-10
+                    .form-block.bora-16.bg-white.p-32.d-flex.flex-column
+                        form
+                            .heading
+                                .heading4 Ask Your Question
+                                .text-on-surface-variant1.mt-4 Ask Anything, We're Here to Help
+                            .row.gy-2.mt-20
+                                .col-12
+                                    label(for="").caption1.text-on-surface-variant1.pb-8 Name
+                                    input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                .col-12.mt-12
+                                    label(for="").caption1.text-on-surface-variant1.pb-8 Company Email
+                                    input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                .col-12.form-select-block.mt-12
+                                    label(for="").caption1.text-on-surface-variant1.pb-8 How can we help you?
+                                    select(name="form").w-100.bg-white.pl-16.pr-24.pt-8.pb-8.bora-4.border-outline
+                                        option(value="Financial Planning") Financial Planning
+                                        option(value="Business Planning") Business Planning
+                                        option(value="Development Planning") Development Planning
+                                    i.ph.ph-caret-down
+                                .col-12.mt-12
+                                    label(for="").caption1.text-on-surface-variant1.pb-8 Message
+                                    textarea(name="" rows="3" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline.display-block
+                            .block-button.mt-20
+                                button.button-blue.button-blue-hover.w-100 Send Request
+                .col-xl-8.col-sm-10.pl-45.pl-col-lg-0
+                    .list-faqs.bg-white.p-32.bora-16
+                        .heading4 IT solutions
+                        .list.mt-12 
+                            +questionItem({title:'Which device can I use to enter your service?', content:'You can access our service from any device with an internet connection.'})
+                            +questionItem({title:'What are your products and services?', content:'Our products and services include [describe your products/services briefly].'})
+                            +questionItem({title:'How can I contact your customer support department?', content:'You can contact our customer support department by provide contact information during our business hours.'})
+                            +questionItem({title:"Can I return items if I'm not satisfied?", content:'Yes, you can return items within [specify time frame] if you are not satisfied.'})
+                            +questionItem({title:'Do you have a customer loyalty program?', content:'Yes, we have a customer loyalty program. Earn points with each purchase and enjoy exclusive benefits.'})
+                        .heading4.mt-20  Digital Agency
+                        .list.mt-12 
+                            +questionItem({title:'What is a digital agency?', content:'You can access our service from any device with an internet connection.'})
+                            +questionItem({title:'What services does a digital agency typically offer?', content:'Our products and services include [describe your products/services briefly].'})
+                            +questionItem({title:'How do I choose the right digital agency for my business?', content:'You can contact our customer support department by provide contact information during our business hours.'})
+                            +questionItem({title:"What are the benefits of SEO services from a digital agency?", content:'Yes, you can return items within [specify time frame] if you are not satisfied.'})
+                            +questionItem({title:'Do I need a responsive website, and what is it?', content:'Yes, we have a customer loyalty program. Earn points with each purchase and enjoy exclusive benefits.'})
+                        .heading4.mt-20 Support Center
+                        .list.mt-12 
+                            +questionItem({title:'How can I contact your support department?', content:'You can access our service from any device with an internet connection.'})
+                            +questionItem({title:"What are the support department's operating hours?", content:'Our products and services include [describe your products/services briefly].'})
+                            +questionItem({title:'Where can I track the status of my support request?', content:'You can contact our customer support department by provide contact information during our business hours.'})
+                            +questionItem({title:"How do I submit a new support service request?", content:'Yes, you can return items within [specify time frame] if you are not satisfied.'})
+                            +questionItem({title:'How can I provide feedback on your support service', content:'Yes, we have a customer loyalty program. Earn points with each purchase and enjoy exclusive benefits.'})
+                        
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug

@@ -1,0 +1,105 @@
+/*
+*** Our Team Page: Start
+*/
+.teams-block {
+    .cta-block {
+        .heading6 {
+            text-transform: unset;
+        }
+
+        @media (max-width: 576px) {
+            .heading3 {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Our Team Page: End
+*/
+
+/*
+*** Team Detail Page: Start
+*/
+.team-detail-block {
+    .row {
+        .content-detail {
+            .list-social {
+                a {
+                    background-color: transparent;
+
+                    i {
+                        background-color: transparent;
+                    }
+
+                    &:hover {
+                        i {
+                            color: var(--blue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991.99px) {
+        .row {
+            position: relative;
+
+            .content-detail {
+                .user-infor {
+                    position: absolute;
+                    left: calc(50% + 16px);
+                    top: 0;
+                }
+
+                .user-desc {
+                    >div:nth-child(1) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.99px) {
+        .row {
+            position: relative;
+
+            .content-detail {
+                .user-infor {
+                    position: relative;
+                    left: 0;
+
+                    .list-social {
+                        a {
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+                .user-desc {
+                    >div:nth-child(1) {
+                        margin-top: 20px;
+                    }
+
+                    .list-award {
+                        img {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Team Detail Page: End
+*/

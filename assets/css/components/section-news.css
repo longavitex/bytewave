@@ -192,5 +192,18 @@
 *** Section News Home6: End
 */
 /*
+*** Section Our Leader: Start
+*/
+.section-news.section-our-leader .container .list-news .item {
+  cursor: pointer;
+}
+.section-news.section-our-leader .container .list-news .item .main-item {
+  cursor: pointer;
+}
+
+/*
+*** Section Our Leader: End
+*/
+/*
 *** Section Case Study, News, Blog: End
 */

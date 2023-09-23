@@ -958,6 +958,10 @@
   border: 1px solid var(--on-surface);
 }
 
+.border-underline-outline {
+  border-bottom: 1px solid var(--outline);
+}
+
 .border-underline-blue {
   border-bottom: 1px solid var(--blue);
 }
@@ -1000,6 +1004,7 @@
 .hover-button-blue:hover {
   background-color: var(--blue);
   color: var(--white);
+  border-color: transparent;
 }
 
 .hover-button-black {

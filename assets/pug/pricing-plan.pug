@@ -1,0 +1,113 @@
+extends base/layout.pug
+block title
+    title Pricing Plan
+block header
+    div(class="style-subpage style-pages style-six")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/questionItem.pug
+    .bg-subpage
+    +headingSubpage({classname: 'pt-60', style:'style-one', heading:false, category:'Performance Enhancement', heading2:"Affordable Solutions for Every Budget", desc:'At ByteWave, we offer a variety of cost-effective solutions tailored to meet diverse budgetary requirement. Our goal is to provide high-quality services without exceeding your financial limits.', img:'assets/images/component/bg-case-studies.png'})
+    .list-testimonials-block.pt-80.pb-80
+        .container 
+            .heading.text-center
+                .heading3.text-center Pricing Plan
+                .body2.text-on-surface-variant1.text-center.mt-16 Tracing the Path of Our Legacy and Growth
+            .list-pricing.mt-40.show
+                .row.row-gap-32
+                    .col-12.col-lg-4
+                        .pricing-item.bg-white.p-40.bora-20.border-outline
+                            .heading5 Silver
+                            .price.gap-8.mt-12
+                                .heading2 $99.00
+                                .caption1.text-on-surface-variant1 / per month
+                            .list-feature.mt-24.d-flex.flex-column.gap-12.pt-32
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 20 keywords
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 2,000 monthly website visitors
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 4 blogs / month
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 3 quality backlinks / month
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature Dedicated expert team
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature Monitoring & reporting
+                            a(href="#!").button.hover-button-blue.mt-24 Choose Plan
+                    .col-12.col-lg-4
+                        .pricing-item.bg-white.p-40.bora-20.bg-white.border-outline
+                            .heading5 Gold
+                            .price.gap-8.mt-20
+                                .heading2.text-blue $149.00
+                                .caption1.text-on-surface-variant1 / per month
+                            .list-feature.mt-24.d-flex.flex-column.gap-12.pt-32
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 60 keywords
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 6,000 monthly website visitors
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 8 blogs / month
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 10 quality backlinks / month
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature Dedicated expert team
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature Monitoring & reporting
+                            a(href="#!").button.bg-blue.button-blue-hover.text-white.border-transparent.mt-24 Choose Plan
+                    .col-12.col-lg-4
+                        .pricing-item.bg-white.p-40.bora-20.border-outline
+                            .heading5 Platinum
+                            .price.gap-8.mt-20
+                                .heading2 $379.00
+                                .caption1.text-on-surface-variant1 / per month
+                            .list-feature.mt-24.d-flex.flex-column.gap-12.pt-32
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 150 keywords
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 20,000 monthly website visitors
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 15 blogs / month
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature 20 quality backlinks / month
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature Dedicated expert team
+                                .item.flex-item-center.gap-8 
+                                    i.ph.ph-check.fs-24.text-blue
+                                    .feature Monitoring & reporting
+                            a(href="#!").button.hover-button-blue.mt-24 Choose Plan
+    .faqs-block.bg-linear.pt-80.pb-80
+        .container 
+            .heading.text-center 
+                .heading3.text-center Frequently Asked Questions
+                .body2.text-on-surface-variant1.text-center.mt-16 Your Queries, Our Answers
+            .row.flex-center.mt-40
+                .col-lg-8.col-sm-10
+                    +questionItem({title:'Which device can I use to enter your service?', content:'You can access our service from any device with an internet connection.'})
+                    +questionItem({classname:'open', title:'What are your products and services?', content:'Our products and services include [describe your products/services briefly].'})
+                    +questionItem({title:'How can I contact your customer support department?', content:'You can contact our customer support department by provide contact information during our business hours.'})
+                    +questionItem({title:"Can I return items if I'm not satisfied?", content:'Yes, you can return items within [specify time frame] if you are not satisfied.'})
+                    +questionItem({title:'Do you have a customer loyalty program?', content:'Yes, we have a customer loyalty program. Earn points with each purchase and enjoy exclusive benefits.'})
+
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

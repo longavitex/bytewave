@@ -1,0 +1,68 @@
+extends base/layout.pug
+block title
+    title Team Detail
+block header
+    div(class="style-subpage style-pages style-three")
+        include components/header/menu/menu-one.pug
+block content 
+    .bg-subpage
+    .team-detail-block.pt-80.pb-80
+        .container 
+            .row.row-gap-32
+                .col-sm-6
+                    .bg-img 
+                        img(src="assets/images/avatar/IMG-6.png", alt="").w-100.bora-20
+                .col-lg-6.pl-65.pl-col-lg-0
+                    .content-detail 
+                        .user-infor
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 CEO & FOUNDER
+                            .heading4.mt-20 Hi, I am
+                            .heading2.mt-4 Katty Perry
+                            .list-social.flex-item-center.flex-wrap.gap-24.mt-20
+                                a(href="https://www.facebook.com/" target="_blank").item.flex-center
+                                    i.icon-facebook.display-block.fs-24
+                                a(href="https://www.linkedin.com/" target="_blank").item.flex-center
+                                    i.icon-linkedin.display-block.fs-24
+                                a(href="https://www.twitter.com/" target="_blank").item.flex-center
+                                    i.icon-twitter.display-block.fs-24
+                        .user-desc    
+                            .body2.text-on-surface-variant1.mt-40 As our CTO, Katty Perry is the visionary leader responsible for shaping our technology strategy. With over 15 years of experience in the tech industry, she has a deep understanding of emerging technologies and how they can transform businesses. Sarah's forward-thinking approach has been instrumental in our company's growth.
+                            .body2.text-on-surface-variant1.mt-12 Her analytical mindset and ability to extract valuable insights from complex data sets empower our clients to make data-driven decisions. With Nathan's expertise, we turn data into actionable intelligence.
+                            .body2.text-on-surface-variant1.mt-12 Her innovative campaigns and strategic insights connect us with our audience and help us share our story effectively.
+                            .quote-block.bg-surface.p-32.bora-20.mt-40
+                                .heading5 “Teamwork is the ability to work together toward a common vision, the ability to direct individual accomplishments toward organizational objectives.”
+                            .award-block.mt-40
+                                .heading4 My Award
+                                .list-award.flex-between.mt-28 
+                                    .bg-img 
+                                        img(src="assets/images/award/1.png", alt="").w-120.h-120
+                                    .bg-img 
+                                        img(src="assets/images/award/2.png", alt="").w-120.h-120
+                                    .bg-img 
+                                        img(src="assets/images/award/3.png", alt="").w-120.h-120
+
+    include mixins/blogItem.pug
+    .section-case-studies.section-news.bg-linear.pt-80.pb-80 
+        .container
+            .cursor.flex-center.gap-12
+                i.ph.ph-caret-left.text-white 
+                i.ph.ph-caret-right.text-white
+            .row.gy-1.flex-between
+                .col-xl-5.col-md-4.col-12
+                    .heading3 Case Studies
+                .col-xl-5.col-lg-6.col-md-7.col-12
+                    .body2 Case studies that showcase the agency's approach, process, and results for specific clients.
+            .list-news.mt-40
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item1.png', category:'Performance Enhancement', title:'Demystifying IT Services: Exploring Tech Trends & Solutions', desc:'Enhanced performance for a manufacturing firm by optimizing their database structure, resulting in improved efficiency and competitiveness.', learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item7.png', category:'Cloud Solutions', title:'Unlocking Business Potential: The Role of IT Services Today', desc:"Secured sensitive data during a financial company's cloud migration by designing a hybrid solution combining cloud flexibility and on-premises control.", learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item2.png', category:'Application Development', title:'Tech Insights: How IT Services Drive Modern Business', desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item8.png', category:'Trendy Technologies', title:'Exploring Trendy Technologies Shaping the IT Landscape', desc:'Explore the trending technologies that are reshaping the IT industry, discover how they are transforming our interactions with the digital world.', learn:true})
+    
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug
