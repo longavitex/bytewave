@@ -1,0 +1,24 @@
+.product-item {
+  position: relative;
+}
+.product-item .main-item .bg-img {
+  position: relative;
+  padding: 40px 0;
+}
+.product-item .main-item .bg-img .text-label {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.product-item .main-item .bg-img .like-block {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.product-item .main-item .infor .name {
+  position: relative;
+  display: inline-block;
+}
+.product-item .main-item:hover .infor .name {
+  text-decoration: underline;
+}

@@ -29,6 +29,81 @@ ScrollReveal().reveal('.scroll-right-to-left3', { delay: 400, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left4', { delay: 500, origin: 'right' })
 
 
+// Pop up newsletter
+const popupNewsletterBlock = document.querySelector('#popup-newsletter-block')
+const popupNewsletterMain = document.querySelector('#popup-newsletter-block .popup-newsletter-main')
+const closePopupNewsletterBtn = document.querySelector('#popup-newsletter-block .close-block')
+
+window.onload = () => {
+  if (popupNewsletterBlock) {
+    setTimeout(() => {
+      popupNewsletterBlock.classList.add('open')
+    }, 1000)
+  }
+}
+
+if (closePopupNewsletterBtn) {
+  closePopupNewsletterBtn.addEventListener('click', () => {
+    popupNewsletterBlock.classList.remove('open')
+  })
+}
+
+// click outside mobile menu, close mobile menu
+if (popupNewsletterBlock) {
+  popupNewsletterBlock.addEventListener('click', () => {
+    popupNewsletterBlock.classList.remove('open')
+  })
+}
+
+// prevent default behavior when clicking mobile menu
+if (popupNewsletterMain) {
+  popupNewsletterMain.addEventListener('click', function (event) {
+    event.stopPropagation()
+  })
+}
+
+// Prevent Pop up
+// check for saved 'darkMode' in localStorage
+let popupNewsletter = localStorage.getItem('popupNewsletter');
+localStorage.setItem('popupNewsletter', '')
+
+const disablePopupNewsletter = () => {
+  // 1. Add the class to the body
+  document.body.classList.add('prevent-popupNewsletter');
+  // 2. Update popupNewsletter in localStorage
+  localStorage.setItem('popupNewsletter', 'prevent');
+}
+
+const enablepopupNewsletter = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove('prevent-popupNewsletter');
+  // 2. Update popupNewsletter in localStorage 
+  localStorage.setItem('popupNewsletter', null);
+}
+
+// If the user already visited and prevent popupNewsletter
+// start things off with it on
+if (popupNewsletter === 'prevent') {
+  disablePopupNewsletter();
+}
+
+// When someone clicks the button
+const preventPopupInput = document.querySelector('.prevent-popup-input')
+if (preventPopupInput) {
+  preventPopupInput.addEventListener('change', () => {
+    // get their popupNewsletter setting
+    popupNewsletter = localStorage.getItem('popupNewsletter');
+
+    // if it not current prevent, enable it
+    if (preventPopupInput.checked) {
+      disablePopupNewsletter();
+      // if it has been prevent, turn it off  
+    } else {
+      enablepopupNewsletter();
+    }
+  });
+}
+
 
 // header menu sticky when scroll
 window.addEventListener('scroll', () => {

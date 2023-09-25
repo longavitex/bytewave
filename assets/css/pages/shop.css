@@ -1,0 +1,33 @@
+/*
+*** Shop Page: Start
+*/
+.breadcrum-heading a:hover {
+  text-decoration: underline;
+}
+
+.list-products-block .top-filter .select-block {
+  position: relative;
+}
+.list-products-block .top-filter .select-block select {
+  -webkit-appearance: none;
+}
+.list-products-block .top-filter .select-block i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+}
+.list-products-block .list-nav-number .nav-item {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  transition: all ease 0.2s;
+}
+.list-products-block .list-nav-number .nav-item:hover, .list-products-block .list-nav-number .nav-item.active {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+/*
+*** Shop Page: End
+*/

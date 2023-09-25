@@ -1,0 +1,88 @@
+extends base/layout.pug
+block title
+    title Contact Us
+block header
+    div(class="style-subpage style-blog style-five")
+        include components/header/menu/menu-one.pug
+block content 
+    .bg-subpage
+    .form-contact-us.pt-80 
+        .container 
+            .row.flex-between.row-gap-32
+                .col-12.col-lg-5
+                    .infor
+                        .heading
+                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Contact Us
+                            .heading2.mt-16 We’d love to help
+                            .body2.mt-16 Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.
+                        div(class="style-contact-us")
+                            include components/list-social.pug
+                        .list-more-infor.mt-40
+                            .item.flex-item-center
+                                i.ph-bold.ph-phone.text-white.bg-blue.p-12.bora-50
+                                .body2 123 456 7890
+                            .item.flex-item-center.mt-20
+                                i.ph-bold.ph-envelope-simple.text-white.bg-blue.p-12.bora-50
+                                .body2 hi.avitex@gmail.com
+                            .item.flex-item-center.mt-20
+                                i.ph-bold.ph-map-pin.text-white.bg-blue.p-12.bora-50
+                                .body2 4140 Rd. Allentown, New Mexico 31134
+                .col-12.col-lg-5
+                    form.form-block.bg-white.bora-16.p-40
+                        .row.row-gap-24
+                            .col-12.col-sm-6
+                                input(type="text" placeholder="Name").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8
+                            .col-12.col-sm-6      
+                                input(type="text" placeholder="Subject").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8
+                            .col-12
+                                input(type="text" placeholder="Email").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8
+                            .col-12 
+                                textarea(name="messsage", cols="10", rows="4" placeholder="Your Questions...").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8
+                        .block-button.mt-40 
+                            button.button-blue.button-blue-hover Send Message
+    .our-location.pt-80.pb-80
+        .container 
+            .heading.text-center 
+                .heading3.text-center Our Locations
+                .body2.text-on-surface-variant1.text-center.mt-16 Tracing the Path of Our Legacy and Growth
+            .row.row-gap-32.mt-40 
+                .col-lg-3.col-sm-6 
+                    .content-infor.bg-linear.p-32.bora-28.h-100
+                        .heading5 Wasington DC
+                        .body2.text-on-surface-variant1.mt-20 Address:
+                        .text-title.mt-4 2972 Westheimer Rd. Santa Ana, Illinois 85486
+                        .body2.text-on-surface-variant1.mt-20 Phone Number:
+                        .text-title.mt-4 (252) 555-0126
+                        .block-button.mt-20
+                            a(href="https://www.google.com/maps" target="_blank").caption1.fw-700.mt-20 View On Map
+                .col-lg-3.col-sm-6 
+                    .content-infor.bg-linear.p-32.bora-28.h-100
+                        .heading5 NewYork
+                        .body2.text-on-surface-variant1.mt-20 Address:
+                        .text-title.mt-4 2118 Cir. Syracuse, Connecticut 35624
+                        .body2.text-on-surface-variant1.mt-20 Phone Number:
+                        .text-title.mt-4 (684) 555-0102
+                        .block-button.mt-20
+                            a(href="https://www.google.com/maps" target="_blank").caption1.fw-700.mt-20 View On Map
+                .col-lg-3.col-sm-6 
+                    .content-infor.bg-linear.p-32.bora-28.h-100
+                        .heading5 London
+                        .body2.text-on-surface-variant1.mt-20 Address:
+                        .text-title.mt-4 4517 Washington Ave, Kentucky 39495
+                        .body2.text-on-surface-variant1.mt-20 Phone Number:
+                        .text-title.mt-4 (629) 555-0129
+                        .block-button.mt-20
+                            a(href="https://www.google.com/maps" target="_blank").caption1.fw-700.mt-20 View On Map
+                .col-lg-3.col-sm-6 
+                    .content-infor.bg-linear.p-32.bora-28.h-100
+                        .heading5 Morocco
+                        .body2.text-on-surface-variant1.mt-20 Address:
+                        .text-title.mt-4 1901 Thornridge Cir. Shiloh, Hawaii 81063
+                        .body2.text-on-surface-variant1.mt-20 Phone Number:
+                        .text-title.mt-4 (480) 555-0103
+                        .block-button.mt-20
+                            a(href="https://www.google.com/maps" target="_blank").caption1.fw-700 View On Map
+                
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug

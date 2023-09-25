@@ -1,0 +1,86 @@
+extends base/layout.pug
+block title
+    title Services Detail
+block header
+    div(class="style-subpage style-pages style-four")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Service', subHeading:'Empowering Your Success Through Comprehensive Solutions', category:'IT Solution', heading2:"Manufacturing & Industry 4.0", desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', img:'assets/images/component/bg-case-detail.png'})
+    include components/home1/brand.pug
+    div(class="style-about-us")
+        include components/home7/about-first.pug
+    include components/home7/about-second.pug
+    include components/home7/about-third.pug
+    .our-value-block.bg-linear-gradient.pt-80.pb-80
+        .container 
+            .heading.text-center
+                .heading3.text-center Our Benefit
+                .text-center.mt-12 Discover exceptional experiences through testimonials from our satisfied customers.
+            .list-values.row.row-gap-32.mt-40 
+                .col-12.col-xxl-3.col-sm-6
+                    .item.bg-white.p-32.bora-20.h-100
+                        i.ph-light.ph-chart-line-up.text-blue.fs-60
+                        .heading5.fw-600.mt-24 Increased Efficiency
+                        .text-on-surface-variant1.mt-12  Industry 4.0 technologies boost production efficiency, reducing lead times and production costs.
+                .col-12.col-xxl-3.col-sm-6
+                    .item.bg-white.p-32.bora-20.h-100
+                        i.ph-light.ph-trophy.text-blue.fs-60
+                        .heading5.fw-600.mt-24 Improved Quality
+                        .text-on-surface-variant1.mt-12 We have a relentless commitment to quality. We set high standards and rigorously test and monitor our IT services to ensure they meet those standards. Quality is non-negotiable.
+                .col-12.col-xxl-3.col-sm-6
+                    .item.bg-white.p-32.bora-20.h-100
+                        i.ph-light.ph-cloud-check.text-blue.fs-60
+                        .heading5.fw-600.mt-24 Digital Twin
+                        .text-on-surface-variant1.mt-12 Staying at the forefront of manufacturing technology gives you a competitive edge in the market.
+                .col-12.col-xxl-3.col-sm-6
+                    .item.bg-white.p-32.bora-20.h-100
+                        i.ph-light.ph-piggy-bank.text-blue.fs-60
+                        .heading5.fw-600.mt-24 Cost Savings
+                        .text-on-surface-variant1.mt-12 Predictive maintenance and optimized resource allocation reduce operational costs.
+        .container.pt-80
+            .row 
+                .col-4.pr-32.pr-col-lg-0
+                    .heading4 Outstanding Customer Service Recognition
+                .col-8.pl-0.pl-col-lg-0
+                    .list-award.flex-between 
+                        .bg-img 
+                            img(src="assets/images/award/1.png", alt="").w-120.h-120
+                        .bg-img 
+                            img(src="assets/images/award/2.png", alt="").w-120.h-120
+                        .bg-img 
+                            img(src="assets/images/award/3.png", alt="").w-120.h-120
+                        .bg-img 
+                            img(src="assets/images/award/4.png", alt="").w-120.h-120
+                        .bg-img 
+                            img(src="assets/images/award/5.png", alt="").w-120.h-120
+    div(class="style-case-studies pb-80")
+        include components/home4/testimonial.pug
+    include components/home7/pricing.pug
+    include mixins/blogItem.pug
+    .section-case-studies.section-news.bg-linear.pt-80.pb-80 
+        .container
+            .cursor.flex-center.gap-12
+                i.ph.ph-caret-left.text-white
+                i.ph.ph-caret-right.text-white
+            .row.gy-1.flex-between
+                .col-xl-5.col-md-4.col-12
+                    .heading3 See More Case Studies
+                .col-xl-5.col-lg-6.col-md-7.col-12
+                    .body2 Case studies that showcase the agency's approach, process, and results for specific clients.
+            .list-news.mt-40
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item1.png', category:'Performance Enhancement', title:'Demystifying IT Services: Exploring Tech Trends & Solutions', desc:'Enhanced performance for a manufacturing firm by optimizing their database structure, resulting in improved efficiency and competitiveness.', learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item7.png', category:'Cloud Solutions', title:'Unlocking Business Potential: The Role of IT Services Today', desc:"Secured sensitive data during a financial company's cloud migration by designing a hybrid solution combining cloud flexibility and on-premises control.", learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item2.png', category:'Application Development', title:'Tech Insights: How IT Services Drive Modern Business', desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', learn:true})
+                .item
+                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item8.png', category:'Trendy Technologies', title:'Exploring Trendy Technologies Shaping the IT Landscape', desc:'Explore the trending technologies that are reshaping the IT industry, discover how they are transforming our interactions with the digital world.', learn:true})
+        
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

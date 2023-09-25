@@ -1,0 +1,98 @@
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(1) .bg-img {
+  padding: 50px 100px;
+  background-color: #F5F5F5;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(1) .bg-img img {
+  width: 100%;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .prd-quantity .quantity-block {
+  text-align: center;
+  padding: 11px 16px;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .prd-quantity .quantity-block i {
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .prd-quantity .quantity-block i.disable {
+  color: #a7a7a7;
+  cursor: unset;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .prd-quantity .quantity-block i.enable {
+  color: #000;
+  cursor: pointer;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .prd-quantity .quantity-block span {
+  padding: 0 16px;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .more-infor .right {
+  margin-top: 2px;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .more-infor .right p {
+  line-height: 24px;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .more-infor .right .list-share a i {
+  transition: all ease 0.3s;
+}
+.product-detail-heading .container > .row:nth-child(1) > div:nth-child(2) .more-infor .right .list-share a:hover i {
+  color: var(--blue);
+}
+.product-detail-heading .container > .row:nth-child(2) .heading-cate .heading6 {
+  position: relative;
+  display: inline-block;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+.product-detail-heading .container > .row:nth-child(2) .heading-cate .heading6::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--blue);
+  transition: all ease 0.4s;
+}
+.product-detail-heading .container > .row:nth-child(2) .heading-cate .heading6:hover, .product-detail-heading .container > .row:nth-child(2) .heading-cate .heading6.active {
+  color: var(--on-surface);
+}
+.product-detail-heading .container > .row:nth-child(2) .heading-cate .heading6:hover::before, .product-detail-heading .container > .row:nth-child(2) .heading-cate .heading6.active::before {
+  width: 100%;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating {
+  width: 50%;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line {
+  width: 100%;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline {
+  height: 12px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 100%;
+  background-color: var(--blue);
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline:nth-child(1)::before {
+  width: 60%;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline:nth-child(2)::before {
+  width: 20%;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline:nth-child(3)::before {
+  width: 10%;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline:nth-child(4)::before {
+  width: 7%;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline:nth-child(5)::before {
+  width: 3%;
+}

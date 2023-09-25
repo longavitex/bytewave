@@ -2,7 +2,7 @@
 :root {
     --blue: #2D4FE1;
     --secondary: #1533B4;
-    --error: #C72929;
+    --critical: #C72929;
     --tertiary: #27AE60;
     --yellow: #F4D118;
     --pink: #E13789;
@@ -42,13 +42,19 @@
 @import './components/section-testimonial.scss';
 @import './components/list-social.scss';
 @import './components/modal-video.scss';
+@import './components/product.scss';
 
+@import './pages/error-404.scss';
 @import './pages/faqs.scss';
+@import './pages/shop.scss';
+@import './pages/product-detail.scss';
+@import './pages/contact-us.scss';
 @import './pages/team.scss';
 @import './pages/about-us.scss';
 @import './pages/blog-pages.scss';
 @import './pages/case-studies-pages.scss';
 
+@import './layout/popup-newsletter.scss';
 @import './layout/button-hover.scss';
 @import './layout/slider.scss';
 @import './layout/top-nav.scss';

@@ -1,0 +1,158 @@
+.product-detail-heading {
+    .container>.row {
+        &:nth-child(1) {
+            >div:nth-child(1) {
+                .bg-img {
+                    padding: 50px 100px;
+                    background-color: #F5F5F5;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            >div:nth-child(2) {
+                .prd-quantity {
+                    .quantity-block {
+                        text-align: center;
+                        padding: 11px 16px;
+
+                        i {
+                            font-size: 20px;
+                            color: #000;
+                            cursor: pointer;
+                        }
+
+                        i.disable {
+                            color: #a7a7a7;
+                            cursor: unset;
+                        }
+
+                        i.enable {
+                            color: #000;
+                            cursor: pointer;
+                        }
+
+                        span {
+                            padding: 0 16px;
+                        }
+                    }
+                }
+
+                .more-infor {
+                    .right {
+                        margin-top: 2px;
+
+                        p {
+                            line-height: 24px;
+                        }
+
+                        .list-share {
+                            a {
+                                i {
+                                    transition: all ease 0.3s;
+                                }
+
+                                &:hover {
+                                    i {
+                                        color: var(--blue);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .heading-cate {
+                .heading6 {
+                    position: relative;
+                    display: inline-block;
+                    transition: all ease 0.3s;
+                    cursor: pointer;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--blue);
+                        transition: all ease 0.4s;
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: var(--on-surface);
+
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .rating-block {
+                .rating {
+                    width: 50%;
+
+                    .line {
+                        width: 100%;
+
+                        .bg-outline {
+                            height: 12px;
+                            width: 100%;
+                            z-index: 1;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                height: 12px;
+                                width: 100%;
+                                background-color: var(--blue);
+                            }
+
+                            &:nth-child(1) {
+                                &::before {
+                                    width: 60%;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                &::before {
+                                    width: 20%;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                &::before {
+                                    width: 10%;
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                &::before {
+                                    width: 7%;
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                &::before {
+                                    width: 3%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

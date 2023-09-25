@@ -1,0 +1,152 @@
+/*
+Popup Newsletter: Start
+*/
+#popup-newsletter-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    transition: all ease 0.5s;
+    z-index: -1;
+    transition-delay: 0.4s;
+
+    .popup-newsletter-main {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        border-radius: 24px;
+        overflow: hidden;
+        background-color: var(--white);
+        transition: all ease 0.8s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgba($color: #FFFFFF, $alpha: 1.0);
+        padding: 50px 24px;
+
+        .bg-img {
+            overflow: hidden;
+            width: calc((392px/752px)*100%);
+
+            img {
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        .content {
+            width: calc(100% - ((392px/800px)*100%));
+            padding-left: 40px;
+
+            .close-block {
+                display: inline-block;
+                position: absolute;
+                top: 24px;
+                right: 24px;
+            }
+
+            form {
+                .form-input {
+                    position: relative;
+                    overflow: hidden;
+
+                    input {
+                        border-radius: 44px;
+                        padding: 12px 64px 12px 16px;
+                        width: 100%;
+                        border: 1px solid var(--line);
+                    }
+
+                    button {
+                        position: absolute;
+                        width: 52px;
+                        height: 52px;
+                        right: 0;
+                        background-color: transparent;
+                        transition: all ease 0.4s;
+                        background-color: var(--blue);
+                        border-radius: 0 100px 100px 100px;
+
+                        i {
+                            font-size: 18px;
+                            display: block;
+                            color: var(--white);
+                        }
+
+                        &:hover {
+                            background-color: var(--secondary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .popup-newsletter-main {
+            width: 700px;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .popup-newsletter-main {
+            width: 320px;
+
+            .bg-img {
+                display: none;
+            }
+
+            .content {
+                width: 100%;
+                padding: 0;
+
+                form {
+                    .form-input {
+                        button {
+                            width: 49px;
+                            height: 49px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+#popup-newsletter-block.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+
+    .popup-newsletter-main {
+        top: 50%;
+    }
+}
+
+/*
+*** prevent Popup Newsletter
+*/
+body.prevent-popupNewsletter {
+    #popup-newsletter-block {
+        opacity: 0;
+        visibility: hidden;
+
+        .popup-newsletter-main {
+            top: 0;
+        }
+    }
+}
+
+/*
+Popup Newsletter: End
+*/

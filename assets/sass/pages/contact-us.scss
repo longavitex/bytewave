@@ -1,0 +1,85 @@
+/*
+*** contact us page: Start
+*/
+.form-contact-us {
+    .style-contact-us {
+        .list-social {
+            margin-top: 16px;
+
+            a {
+                width: 52px;
+                height: 52px;
+                background-color: var(--white);
+                border: 1px solid var(--outline);
+                border-radius: 50%;
+
+                &:nth-child(4) {
+                    display: none;
+                }
+
+                i {
+                    font-size: 20px;
+                    color: var(--text-on-surface-variant1);
+                }
+
+                &:hover {
+                    background-color: var(--blue);
+
+                    i {
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+
+    .list-more-infor .item {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 62px;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 1px;
+            background-color: var(--line);
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+        .body2 {
+            padding-left: 48px;
+        }
+    }
+
+    .form-block {
+        box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
+
+        input,
+        textarea {
+            border: 1px solid var(--outline);
+            outline: none;
+
+            &:focus {
+                border: 1px solid var(--blue);
+            }
+        }
+
+        .row {
+            margin-left: -12px;
+            margin-right: -12px;
+
+            .col-12 {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+    }
+}
+/*
+*** contact us page: End
+*/

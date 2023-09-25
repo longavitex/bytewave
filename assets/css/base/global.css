@@ -103,6 +103,7 @@
   line-height: 24px;
   text-transform: capitalize;
   transition: all ease 0.4s;
+  cursor: pointer;
 }
 
 .button {
@@ -133,6 +134,7 @@
 
 .button-blue-hover:hover {
   background: var(--secondary);
+  color: var(--white);
 }
 
 .button-yellow-hover:hover {
@@ -216,6 +218,10 @@
   background-color: var(--black-surface);
 }
 
+.bg-outline {
+  background-color: var(--outline);
+}
+
 .bg-yellow {
   background-color: var(--yellow);
 }
@@ -232,12 +238,24 @@
   background-color: var(--purple);
 }
 
+.bg-critical {
+  background-color: var(--critical);
+}
+
 .bg-black-10percents {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.bg-breadcrum {
+  background-color: #EFF0F3;
+}
+
 .bg-linear {
   background: linear-gradient(225deg, #FAF7EF 0%, #F4F6FC 100%);
+}
+
+.bg-linear-gradient {
+  background: linear-gradient(180deg, #FAF7EF 65%, #FFFFFF 100%);
 }
 
 .bg-linear-grey {
@@ -332,6 +350,10 @@
   gap: 40px;
 }
 
+.gap-32 {
+  gap: 32px;
+}
+
 .gap-24 {
   gap: 24px;
 }
@@ -354,6 +376,10 @@
 
 .gap-8 {
   gap: 8px;
+}
+
+.gap-4 {
+  gap: 4px !important;
 }
 
 .row-gap-60 {
@@ -478,6 +504,14 @@
 
 .p-12 {
   padding: 12px;
+}
+
+.p-8 {
+  padding: 8px;
+}
+
+.p-1 {
+  padding: 1px !important;
 }
 
 .pr-125 {

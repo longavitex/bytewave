@@ -1,0 +1,69 @@
+/*
+*** contact us page: Start
+*/
+.form-contact-us .style-contact-us .list-social {
+  margin-top: 16px;
+}
+.form-contact-us .style-contact-us .list-social a {
+  width: 52px;
+  height: 52px;
+  background-color: var(--white);
+  border: 1px solid var(--outline);
+  border-radius: 50%;
+}
+.form-contact-us .style-contact-us .list-social a:nth-child(4) {
+  display: none;
+}
+.form-contact-us .style-contact-us .list-social a i {
+  font-size: 20px;
+  color: var(--text-on-surface-variant1);
+}
+.form-contact-us .style-contact-us .list-social a:hover {
+  background-color: var(--blue);
+}
+.form-contact-us .style-contact-us .list-social a:hover i {
+  color: var(--white);
+}
+.form-contact-us .list-more-infor .item {
+  position: relative;
+}
+.form-contact-us .list-more-infor .item::before {
+  content: "";
+  position: absolute;
+  left: 62px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1px;
+  background-color: var(--line);
+}
+.form-contact-us .list-more-infor .item i {
+  font-size: 20px;
+}
+.form-contact-us .list-more-infor .item .body2 {
+  padding-left: 48px;
+}
+.form-contact-us .form-block {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
+}
+.form-contact-us .form-block input,
+.form-contact-us .form-block textarea {
+  border: 1px solid var(--outline);
+  outline: none;
+}
+.form-contact-us .form-block input:focus,
+.form-contact-us .form-block textarea:focus {
+  border: 1px solid var(--blue);
+}
+.form-contact-us .form-block .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.form-contact-us .form-block .row .col-12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/*
+*** contact us page: End
+*/

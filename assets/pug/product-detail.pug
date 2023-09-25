@@ -1,0 +1,128 @@
+extends base/layout.pug
+block title
+    title Our Products
+block header
+    div(class="style-subpage style-pages style-four")
+        include components/header/menu/menu-one.pug
+    include mixins/productItem.pug
+block content 
+    .breadcrum-heading.bg-breadcrum
+        .container 
+            .flex-item-center.pt-8.pb-8
+                a(href="index.html").body2.fw-500.text-on-surface-variant2 Home 
+                i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
+                .body2.fw-500.text-on-surface-variant2.pl-12 Pages 
+                i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
+                .body2.fw-500.pl-12 Product Detail
+    .product-detail-heading.pt-60.pb-60 
+        .container 
+            .row.row-gap-32 
+                .col-md-6 
+                    .bg-img.border-outline.bora-8.flex-center
+                        img(src="assets/images/product/product-detail.png", alt="product")
+                .col-md-6.pl-65 
+                    .heading4 Computer Networking: A Top-Down Approach 8th Edition
+                    .flex-item-center.mt-12
+                        .star.flex-item-center.gap-4
+                            i.ph-fill.ph-star.text-yellow
+                            i.ph-fill.ph-star.text-yellow
+                            i.ph-fill.ph-star.text-yellow
+                            i.ph-fill.ph-star.text-yellow
+                            i.ph-fill.ph-star.text-on-surface-variant1
+                        .caption1.text-on-surface-variant1.pr-12.pl-8 (234)
+                        span.text-on-surface-variant2 |
+                        .caption1.fw-600.pl-12 SKU: 
+                            span.caption1.text-on-surface-variant1 A515-56-36UT
+                    .heading4.mt-24 $89.00
+                    .text-on-surface-variant1.mt-24.pb-24 The text works its way from the application layer down toward the physical layer, motivating students by exposing them to important concepts early in their study of networking.
+                    .border-line 
+                    .prd-quantity.pt-24 
+                        p Quantity:
+                        .flex-item-center.mt-12.gap-12 
+                            .quantity-block.flex-item-center.border-outline.bora-4
+                                i.ph.ph-minus.disable
+                                span.text-button 1
+                                i.ph.ph-plus
+                            button.button-blue.button-blue-hover Add To Cart
+                            .update.w-48.h-48.bora-4.border-outline.flex-center
+                                i.ph.ph-arrows-counter-clockwise.fs-20
+                            .share.w-48.h-48.bora-4.border-outline.flex-center
+                                i.ph-fill.ph-share-network.fs-20
+                    .more-infor.mt-24.pb-24
+                        .flex-item-center.gap-8
+                            .left 
+                                .text-button Categories:
+                                .text-button.mt-8 Brand:
+                                .text-button.mt-8 Share:
+                            .right
+                                p Human, IT Solution
+                                p.mt-8 N/A
+                                .list-share.flex-item-center.gap-16.mt-8
+                                    a(href="https://www.facebook.com/" target="_blank") 
+                                        i.icon-facebook.text-on-surface-variant1
+                                    a(href="https://www.linkedin.com/" target="_blank") 
+                                        i.icon-linkedin.text-on-surface-variant1
+                                    a(href="https://www.twitter.com/" target="_blank") 
+                                        i.icon-instagram.text-on-surface-variant1
+                                    a(href="https://www.youtube.com/" target="_blank") 
+                                        i.icon-twitter.text-on-surface-variant1
+                                    a(href="https://www.instagram.com/" target="_blank") 
+                                        i.icon-youtube.text-on-surface-variant1
+                    .border-line 
+                    .get-product.pt-24
+                        .heading6 Get it today
+                        .list.mt-16 
+                            .item.d-flex.gap-12 
+                                i.ph-light.ph-truck.fs-32.d-block
+                                .desc 
+                                    .text-button Free shipping
+                                    .caption1.text-on-surface-variant1.mt-4 Free shipping on orders over $75.
+                            .item.d-flex.gap-12.mt-12 
+                                i.ph-light.ph-package.fs-32.d-block
+                                .desc 
+                                    .text-button 100 - Day Returns
+                                    .caption1.text-on-surface-variant1.mt-4 Support from 8:30AM to 10:00PM everyday
+            .row.review-block.flex-center.pt-60.pb-80
+                .col-md-10 
+                    .heading-cate.flex-item-center.gap-32.border-underline-outline
+                        .heading6.text-on-surface-variant2.pt-8.pb-8 Description
+                        .heading6.text-on-surface-variant2.pt-8.pb-8.active Review 
+                    .rating-block.flex-between.mt-32 
+                        .left.flex-column-center
+                            .heading2 4.8
+                            .star.flex-item-center.gap-4.mt-8
+                                i.ph-fill.ph-star.text-yellow.fs-24
+                                i.ph-fill.ph-star.text-yellow.fs-24
+                                i.ph-fill.ph-star.text-yellow.fs-24
+                                i.ph-fill.ph-star.text-yellow.fs-24
+                                i.ph-fill.ph-star.text-on-surface-variant1.fs-24
+                            a(href="#form-contact").text-button.text-center.mt-8 (1,968 Ratings)
+                        .rating.flex-between
+                            .number-star.d-flex.flex-column.gap-8
+                                .text-button 5
+                                .text-button 4
+                                .text-button 3
+                                .text-button 2
+                                .text-button 1
+                            .star.d-flex.flex-column.gap-8
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                            .line.d-flex.flex-column.gap-8
+                                div(class="bg-outline" style="--percent:60%;")
+                                div(class="bg-outline" style="--percent:20%;")
+                                div(class="bg-outline" style="--percent:10%;")
+                                div(class="bg-outline" style="--percent:7%;")
+                                div(class="bg-outline" style="--percent:3%;")
+                            .percent.d-flex.flex-column.gap-8
+                                div(class="caption1 fw-600") 60%
+                                div(class="caption1 fw-600") 20%
+                                div(class="caption1 fw-600") 10%
+                                div(class="caption1 fw-600") 7%
+                                div(class="caption1 fw-600") 3%
+                        .button.button-blue-hover Write a review
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug

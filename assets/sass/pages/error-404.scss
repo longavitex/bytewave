@@ -1,0 +1,15 @@
+/*
+*** Page not found: Start
+*/
+.page-not-found {
+    .row {
+        @media (max-width: 767.99px) {
+            >div {
+                padding-right: 15px;
+            }
+        }
+    }
+}
+/*
+*** Page not found: End
+*/

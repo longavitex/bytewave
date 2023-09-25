@@ -1,0 +1,67 @@
+extends base/layout.pug
+block title
+    title Our Products
+block header
+    div(class="style-subpage style-pages style-four")
+        include components/header/menu/menu-one.pug
+    include mixins/productItem.pug
+block content 
+    .breadcrum-heading.bg-breadcrum
+        .container 
+            .flex-item-center.pt-8.pb-8
+                a(href="index.html").body2.fw-500.text-on-surface-variant2 Home 
+                i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
+                .body2.fw-500.text-on-surface-variant2.pl-12 Pages 
+                i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
+                .body2.fw-500.pl-12 Shop 
+    .heading.pt-60 
+        .container.text-center
+            .heading2.text-center Our Products
+            .body2.text-on-surface-variant1.mt-16 Empowering Your Success Through Comprehensive Solutions
+    .list-products-block.pt-80.pb-80 
+        .container 
+            .top-filter.bg-breadcrum.p-16.bora-4.flex-between.gap-16.flex-wrap-reverse
+                .left.fw-600 129 
+                    span.fw-400 Products Recommended for You
+                .right.flex-item-center 
+                    .caption1.text-on-surface-variant1.pr-8 Sort by: 
+                    .select-block
+                        select(name="product").border-outline.bg-white.pt-8.pb-8.pl-12.pr-36.bora-4
+                            option(value="Best Selling") Best Selling
+                            option(value="Best Fit") Best Fit
+                            option(value="Best Price") Best Price
+                        i.ph-bold.ph-caret-down
+            .list-products.row.row-gap-32.mt-40
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/1.png', newStyle:false, discount:'-32%', name:'System Design Interview Volume 2', star:'4', sale:'764', price:'$68.00', originalPrice:'$98.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/2.png', newStyle:true, name:'the subtle art of not giving a fck', star:'5', sale:'2364', price:'$94.00', originalPrice:'$98.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/3.png', newStyle:true, name:'best self be you, only better', star:'4', sale:'2334', price:'$95.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/4.png', newStyle:false, discount:'-32%', name:'System Design Interview', star:'4', sale:'1234', price:'$95.00', originalPrice:'$98.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/5.png', newStyle:true, name:'Python Crash Course 3rd', star:'5', sale:'673', price:'$83.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/6.png', newStyle:false, name:'Algorithms (4th)', star:'5', sale:'737', price:'$91.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/7.png', newStyle:false, discount:'-32%', name:'The Algorithm Design Manual 3rd', star:'4', sale:'887', price:'$89.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/8.png', newStyle:true, name:'A Top-Down Approach 8th', star:'4', sale:'35', price:'$67.00', originalPrice:'$78.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/9.png', newStyle:false, name:'From Journeyman to Master', star:'4', sale:'565', price:'$68.00', originalPrice:'$87.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/10.png', newStyle:false, name:'Automate the Boring Stuff', star:'5', sale:'1675', price:'$35.00', originalPrice:'$46.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/11.png', newStyle:false, discount:'-32%', name:'thinking, fast and slow', star:'4', sale:'758', price:'$45.00'})
+                .col-xl-3.col-md-4.col-sm-6 
+                    +productItem({img:'assets/images/product/12.png', newStyle:false, discount:'-32%', name:'atomic habits', star:'5', sale:'542', price:'$68.00', originalPrice:'$98.00'})
+            .list-nav-number.flex-center.gap-8.mt-40
+                a(href="#!").nav-item.bora-50.flex-center.active 1
+                a(href="#!").nav-item.bora-50.flex-center 2
+                a(href="#!").nav-item.bora-50.flex-center 3
+                a(href="#!").nav-item.bora-50.flex-center
+                    i.ph.ph-caret-right
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug

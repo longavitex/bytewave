@@ -1,0 +1,23 @@
+extends base/layout.pug
+block title
+    title Error 404 Page not found
+block header
+    div(class="style-subpage style-pages style-five")
+        include components/header/menu/menu-one.pug
+block content 
+    .page-not-found.pt-80.pb-80 
+        .container 
+            .row.row-gap-24
+                .col-md-7.pr-32 
+                    .bg-img 
+                        img(src="assets/images/component/bg-404.png", alt="").w-100.animate__animated.animate__bounceInDown.animate__delay-1s
+                .col-md-5.pr-55.flex-item-center
+                    .content
+                        .heading1 404
+                        .heading3.mt-24 Something is Missing...
+                        .body2.text-on-surface-variant1.mt-24 The page you are looking for cannot be found. Take a break before trying again
+                        a(href="index.html").button-blue.button-blue-hover.mt-24 Back to Homepage
+    
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug
