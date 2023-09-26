@@ -8,6 +8,10 @@
                 border-radius: 4px 0 0 4px;
                 height: 48px;
                 width: calc(100% - 128px);
+
+                &:focus {
+                    border: 1px solid var(--pink);
+                }
             }
 
             button {
@@ -28,6 +32,7 @@
         }
     }
 }
+
 /*
 *** Section Newsletter Home4: End
 */
@@ -45,6 +50,12 @@
 
     .row {
         >div:last-child {
+            input {
+                &:focus {
+                    border: 1px solid var(--green);
+                }
+            }
+
             >div:last-child {
                 input {
                     width: 24px;
@@ -65,6 +76,7 @@
         }
     }
 }
+
 /*
 *** Section Newsletter Home5: End
 */
@@ -74,7 +86,14 @@
 */
 .section-newsletter.style-seven {
     background-color: #0D0F44;
+
+    input {
+        &:focus {
+            border: 1px solid var(--blue) !important;
+        }
+    }
 }
+
 /*
 *** Section Newsletter Home7: End
 */

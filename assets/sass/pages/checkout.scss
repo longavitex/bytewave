@@ -1,0 +1,22 @@
+.checkout-block {
+    .container>.row {
+        >div:first-child {
+            .information {
+                form {
+                    .row {
+                        >div {
+                            position: relative;
+
+                            i {
+                                position: absolute;
+                                bottom: 15px;
+                                right: 26px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -206,6 +206,10 @@
     color: var(--on-surface);
 }
 
+.text-critical {
+    color: var(--critical);
+}
+
 .text-on-surface-variant1 {
     color: var(--on-surface-variant1);
 }
@@ -414,6 +418,10 @@
     row-gap: 20px;
 }
 
+.row-gap-16 {
+    row-gap: 16px;
+}
+
 .row-gap-12 {
     row-gap: 12px;
 }
@@ -504,6 +512,10 @@
 
 .p-28 {
     padding: 28px;
+}
+
+.p-24 {
+    padding: 24px;
 }
 
 .p-20 {
@@ -858,6 +870,10 @@
 
 .mt-4 {
     margin-top: 4px !important;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
 }
 
 .display-none {

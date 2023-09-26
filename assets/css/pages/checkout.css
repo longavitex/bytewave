@@ -1,0 +1,9 @@
+.checkout-block .container > .row > div:first-child .information form .row > div {
+  position: relative;
+}
+.checkout-block .container > .row > div:first-child .information form .row > div i {
+  position: absolute;
+  bottom: 15px;
+  right: 26px;
+  font-size: 18px;
+}

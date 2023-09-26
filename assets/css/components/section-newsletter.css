@@ -6,6 +6,9 @@
   height: 48px;
   width: calc(100% - 128px);
 }
+.section-newsletter .row .block-input input:focus {
+  border: 1px solid var(--pink);
+}
 .section-newsletter .row .block-input button {
   height: 48px;
   width: 128px;
@@ -31,6 +34,9 @@
   width: 25px;
   display: inline-block;
 }
+.section-newsletter.style-five .row > div:last-child input:focus {
+  border: 1px solid var(--green);
+}
 .section-newsletter.style-five .row > div:last-child > div:last-child input {
   width: 24px;
   height: 24px;
@@ -51,6 +57,9 @@
 */
 .section-newsletter.style-seven {
   background-color: #0D0F44;
+}
+.section-newsletter.style-seven input:focus {
+  border: 1px solid var(--blue) !important;
 }
 
 /*

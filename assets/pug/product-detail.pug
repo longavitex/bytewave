@@ -14,13 +14,13 @@ block content
                 .body2.fw-500.text-on-surface-variant2.pl-12 Pages 
                 i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
                 .body2.fw-500.pl-12 Product Detail
-    .product-detail-heading.pt-60.pb-60 
+    .product-detail-heading.pt-60
         .container 
             .row.row-gap-32 
-                .col-md-6 
+                .col-lg-6 
                     .bg-img.border-outline.bora-8.flex-center
                         img(src="assets/images/product/product-detail.png", alt="product")
-                .col-md-6.pl-65 
+                .col-lg-6.pl-65.pl-col-lg-0
                     .heading4 Computer Networking: A Top-Down Approach 8th Edition
                     .flex-item-center.mt-12
                         .star.flex-item-center.gap-4
@@ -44,9 +44,9 @@ block content
                                 span.text-button 1
                                 i.ph.ph-plus
                             button.button-blue.button-blue-hover Add To Cart
-                            .update.w-48.h-48.bora-4.border-outline.flex-center
+                            .update.w-48.h-48.bora-4.border-outline.flex-center.pointer
                                 i.ph.ph-arrows-counter-clockwise.fs-20
-                            .share.w-48.h-48.bora-4.border-outline.flex-center
+                            .share.w-48.h-48.bora-4.border-outline.flex-center.pointer
                                 i.ph-fill.ph-share-network.fs-20
                     .more-infor.mt-24.pb-24
                         .flex-item-center.gap-8
@@ -83,22 +83,22 @@ block content
                                     .text-button 100 - Day Returns
                                     .caption1.text-on-surface-variant1.mt-4 Support from 8:30AM to 10:00PM everyday
             .row.review-block.flex-center.pt-60.pb-80
-                .col-md-10 
+                .col-lg-10 
                     .heading-cate.flex-item-center.gap-32.border-underline-outline
                         .heading6.text-on-surface-variant2.pt-8.pb-8 Description
                         .heading6.text-on-surface-variant2.pt-8.pb-8.active Review 
-                    .rating-block.flex-between.mt-32 
+                    .rating-block.flex-between.row-gap-24.mt-32 
                         .left.flex-column-center
                             .heading2 4.8
                             .star.flex-item-center.gap-4.mt-8
-                                i.ph-fill.ph-star.text-yellow.fs-24
-                                i.ph-fill.ph-star.text-yellow.fs-24
-                                i.ph-fill.ph-star.text-yellow.fs-24
-                                i.ph-fill.ph-star.text-yellow.fs-24
-                                i.ph-fill.ph-star.text-on-surface-variant1.fs-24
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-yellow.fs-20
+                                i.ph-fill.ph-star.text-on-surface-variant1.fs-20
                             a(href="#form-contact").text-button.text-center.mt-8 (1,968 Ratings)
-                        .rating.flex-between
-                            .number-star.d-flex.flex-column.gap-8
+                        .rating.flex-between.gap-8
+                            .number-star.d-flex.flex-column.gap-4
                                 .text-button 5
                                 .text-button 4
                                 .text-button 3
@@ -110,19 +110,130 @@ block content
                                 i.ph-fill.ph-star.text-yellow.fs-20
                                 i.ph-fill.ph-star.text-yellow.fs-20
                                 i.ph-fill.ph-star.text-yellow.fs-20
-                            .line.d-flex.flex-column.gap-8
+                            .line.d-flex.flex-column.gap-16
                                 div(class="bg-outline" style="--percent:60%;")
                                 div(class="bg-outline" style="--percent:20%;")
                                 div(class="bg-outline" style="--percent:10%;")
                                 div(class="bg-outline" style="--percent:7%;")
                                 div(class="bg-outline" style="--percent:3%;")
-                            .percent.d-flex.flex-column.gap-8
+                            .percent.d-flex.flex-column
                                 div(class="caption1 fw-600") 60%
                                 div(class="caption1 fw-600") 20%
                                 div(class="caption1 fw-600") 10%
                                 div(class="caption1 fw-600") 7%
                                 div(class="caption1 fw-600") 3%
-                        .button.button-blue-hover Write a review
+                        .block-button
+                            .button.button-blue-hover Write a review
+                    .customer-review.blog-detail-page.pt-40 
+                        .heading5 Customer reviews
+                        .blog-comment.mt-24
+                            .list-comment
+                                .comment-item.pb-24&attributes({"data-cmt":"cmt1"})
+                                    .heading.flex-between
+                                        .left.flex-item-center.gap-16
+                                            img.avatar(src="assets/images/avatar/3.png", alt="")
+                                            .infor
+                                                .flex-item-center.gap-8
+                                                    .text-button Christina Georgina
+                                                    span.text-on-surface-variant2.fs-20 - 
+                                                    .star.d-flex.flex-item-center.mt-4
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12 
+                                                .caption1.text-on-surface-variant2 1 days ago
+                                        .right 
+                                            i.ph-fill.ph-dots-three-outline.text-on-surface-variant1
+                                    .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
+                                    .comment-infor.flex-between.mt-12
+                                        .left.flex-item-center.gap-16
+                                            .like.flex-item-center.pointer
+                                                i.ph-light.ph-hands-clapping.fs-18
+                                                .text-button.pl-4 20
+                                            .cmt.flex-item-center.pointer
+                                                i.ph.ph-chat.fs-18
+                                                .text-button.pl-4 Show Replies
+                                        .text-button.text-on-surface-variant1.pointer Reply
+                                .list-reply&attributes({"data-cmt":"cmt1"})
+                                    .bg-surface.pl-24.pr-24.pt-20.mb-24.bora-8
+                                        .comment-item.pb-24
+                                            .heading.flex-between
+                                                .left.flex-item-center.gap-16
+                                                    img.avatar(src="assets/images/avatar/1.png", alt="")
+                                                    .infor 
+                                                        .flex-item-center.gap-8
+                                                            .text-button Hayley Raymond
+                                                            span.text-on-surface-variant2.fs-20 - 
+                                                            .star.d-flex.flex-item-center.mt-4
+                                                                i.ph-fill.ph-star.text-yellow.fs-12
+                                                                i.ph-fill.ph-star.text-yellow.fs-12
+                                                                i.ph-fill.ph-star.text-yellow.fs-12
+                                                                i.ph-fill.ph-star.text-yellow.fs-12
+                                                                i.ph-fill.ph-star.text-yellow.fs-12
+                                                        .caption1.text-on-surface-variant2 1 days ago
+                                                .right 
+                                                    i.ph-fill.ph-dots-three-outline.text-on-surface-variant1
+                                            .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
+                                            .comment-infor.flex-between.mt-12
+                                                .left.flex-item-center.gap-16
+                                                    .like.flex-item-center.pointer
+                                                        i.ph-light.ph-hands-clapping.fs-18
+                                                        .text-button.pl-4 6
+                                                .text-button.text-on-surface-variant1.pointer Reply
+                                .comment-item
+                                    .heading.flex-between
+                                        .left.flex-item-center.gap-16
+                                            img.avatar(src="assets/images/avatar/2.png", alt="")
+                                            .infor 
+                                                .flex-item-center.gap-8
+                                                    .text-button Justin Amstrong
+                                                    span.text-on-surface-variant2.fs-20 - 
+                                                    .star.d-flex.flex-item-center.mt-4
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                        i.ph-fill.ph-star.text-yellow.fs-12
+                                                .caption1.text-on-surface-variant2 1 days ago
+                                        .right 
+                                            i.ph-fill.ph-dots-three-outline.text-on-surface-variant1
+                                    .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
+                                    .comment-infor.flex-between.mt-12
+                                        .left.flex-item-center.gap-16
+                                            .like.flex-item-center.pointer
+                                                i.ph-light.ph-hands-clapping.fs-18
+                                                .text-button.pl-4 14
+                                        .text-button.text-on-surface-variant1.pointer Reply
+                        .blog-form-contact.mt-32
+                            .heading5 Leave a Comment
+                            form
+                                .row.row-gap-20.mt-16
+                                    .col-sm-6 
+                                        label Name
+                                        input(type="text" placeholder="Your name").p-16.bora-8.bg-white.border-outline.w-100.mt-12
+                                    .col-sm-6
+                                        label Email
+                                        input(type="email" placeholder="hi.avitex@gmail.com").p-16.bora-8.bg-white.border-outline.w-100.mt-12
+                                    .col-12
+                                        label Comment
+                                        textarea(placeholder="Write comment").p-16.bora-8.bg-white.border-outline.mt-12
+                                .checkbox.d-flex.mt-20 
+                                    input(type="checkbox", name="checkbox")
+                                    .caption1.text-on-surface-variant1.pl-8 Save my name, email, and website in this browser for the next time I comment.
+                                button.button-blue.button-blue-hover.mt-32 Submit Comment
+            .related-product.pb-80 
+                .heading4.text-center Related Products
+                .list-related.row.row-gap-32.mt-40
+                    .col-lg-3.col-sm-6 
+                        +productItem({img:'assets/images/product/1.png', newStyle:false, discount:'-32%', name:'System Design Interview Volume 2', star:'4', sale:'764', price:'$68.00', originalPrice:'$98.00'})
+                    .col-lg-3.col-sm-6 
+                        +productItem({img:'assets/images/product/2.png', newStyle:true, name:'the subtle art of not giving a fck', star:'5', sale:'2364', price:'$94.00', originalPrice:'$98.00'})
+                    .col-lg-3.col-sm-6 
+                        +productItem({img:'assets/images/product/3.png', newStyle:true, name:'best self be you, only better', star:'4', sale:'2334', price:'$95.00'})
+                    .col-lg-3.col-sm-6 
+                        +productItem({img:'assets/images/product/4.png', newStyle:false, discount:'-32%', name:'System Design Interview', star:'4', sale:'1234', price:'$95.00', originalPrice:'$98.00'})
+                    
 block footer 
     div(class="style-subpage style-blog")
         include components/footer/footer.pug

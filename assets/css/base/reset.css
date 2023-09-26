@@ -63,6 +63,10 @@ select {
   -webkit-appearance: none;
 }
 
+input:focus, textarea:focus {
+  border: 1px solid var(--blue);
+}
+
 /*
 *** Reset CSS: End
 */

@@ -41,6 +41,10 @@
 .section-contact.style-three .list-infor a:hover {
   color: var(--yellow);
 }
+.section-contact.style-three input:focus,
+.section-contact.style-three textarea:focus {
+  border: 1px solid var(--yellow);
+}
 
 /*
 *** Section Contact Home3: End
@@ -50,6 +54,10 @@
 */
 .section-contact.style-five {
   position: relative;
+}
+.section-contact.style-five input:focus,
+.section-contact.style-five textarea:focus {
+  border: 1px solid var(--green);
 }
 .section-contact.style-five .list-infor a:hover {
   color: var(--green);

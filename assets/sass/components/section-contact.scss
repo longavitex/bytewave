@@ -59,6 +59,13 @@
             }
         }
     }
+
+    input,
+    textarea {
+        &:focus {
+            border: 1px solid var(--yellow);
+        }
+    }
 }
 
 /*
@@ -69,6 +76,13 @@
 */
 .section-contact.style-five {
     position: relative;
+
+    input,
+    textarea {
+        &:focus {
+            border: 1px solid var(--green);
+        }
+    }
 
     .list-infor {
         a {

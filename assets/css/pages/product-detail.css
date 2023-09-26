@@ -1,3 +1,6 @@
+/*
+*** Produc Detail Page: Start
+*/
 .product-detail-heading .container > .row:nth-child(1) > div:nth-child(1) .bg-img {
   padding: 50px 100px;
   background-color: #F5F5F5;
@@ -62,6 +65,12 @@
 .product-detail-heading .container > .row:nth-child(2) .rating-block .rating {
   width: 50%;
 }
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .number-star .text-button {
+  text-align: right;
+}
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .star {
+  margin-top: -2px;
+}
 .product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line {
   width: 100%;
 }
@@ -96,3 +105,20 @@
 .product-detail-heading .container > .row:nth-child(2) .rating-block .rating .line .bg-outline:nth-child(5)::before {
   width: 3%;
 }
+.product-detail-heading .container > .row:nth-child(2) .rating-block .rating .percent {
+  gap: 6px;
+  margin-top: -3px;
+}
+@media (max-width: 767.99px) {
+  .product-detail-heading .container > .row:nth-child(2) .rating-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .product-detail-heading .container > .row:nth-child(2) .rating-block .rating {
+    width: 100%;
+  }
+}
+
+/*
+*** Produc Detail Page: End
+*/

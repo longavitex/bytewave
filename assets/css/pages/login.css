@@ -1,0 +1,39 @@
+/*
+*** Form Login, Register Page: Start
+*/
+.form-login-block .form > .text-on-surface-variant1 {
+  position: relative;
+}
+.form-login-block .form > .text-on-surface-variant1 span {
+  position: relative;
+  z-index: 1;
+}
+.form-login-block .form > .text-on-surface-variant1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--outline);
+  z-index: 0;
+}
+.form-login-block .form .list-login a {
+  transition: all ease 0.3s;
+}
+.form-login-block .form .list-login a i {
+  transition: all ease 0.3s;
+}
+.form-login-block .form .list-login a:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.form-login-block .form .list-login a:hover i, .form-login-block .form .list-login a:hover path {
+  color: var(--white) !important;
+  fill: var(--white) !important;
+}
+
+/*
+*** Form Login, Register Page: End
+*/

@@ -9,7 +9,8 @@ block content
     include mixins/blogItem.pug
     .bg-subpage
     +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'About Us', subHeading:'Discover our story, our mission, and our passion for creativity and innovation.', category:'About Us', heading2:"Elevating Small and Mid-Sized Companies through Tailored IT Services", img:'assets/images/component/bg-about-us.png'})
-    include components/home1/brand.pug
+    div(class="style-about-us")
+        include components/home1/brand.pug
     .our-mission-block.pb-80
         .container 
             .border-line  

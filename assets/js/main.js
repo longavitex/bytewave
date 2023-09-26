@@ -35,31 +35,31 @@ const popupNewsletterMain = document.querySelector('#popup-newsletter-block .pop
 const closePopupNewsletterBtn = document.querySelector('#popup-newsletter-block .close-block')
 
 window.onload = () => {
-  if (popupNewsletterBlock) {
-    setTimeout(() => {
-      popupNewsletterBlock.classList.add('open')
-    }, 1000)
-  }
+    if (popupNewsletterBlock) {
+        setTimeout(() => {
+            popupNewsletterBlock.classList.add('open')
+        }, 1000)
+    }
 }
 
 if (closePopupNewsletterBtn) {
-  closePopupNewsletterBtn.addEventListener('click', () => {
-    popupNewsletterBlock.classList.remove('open')
-  })
+    closePopupNewsletterBtn.addEventListener('click', () => {
+        popupNewsletterBlock.classList.remove('open')
+    })
 }
 
 // click outside mobile menu, close mobile menu
 if (popupNewsletterBlock) {
-  popupNewsletterBlock.addEventListener('click', () => {
-    popupNewsletterBlock.classList.remove('open')
-  })
+    popupNewsletterBlock.addEventListener('click', () => {
+        popupNewsletterBlock.classList.remove('open')
+    })
 }
 
 // prevent default behavior when clicking mobile menu
 if (popupNewsletterMain) {
-  popupNewsletterMain.addEventListener('click', function (event) {
-    event.stopPropagation()
-  })
+    popupNewsletterMain.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
 }
 
 // Prevent Pop up
@@ -68,40 +68,40 @@ let popupNewsletter = localStorage.getItem('popupNewsletter');
 localStorage.setItem('popupNewsletter', '')
 
 const disablePopupNewsletter = () => {
-  // 1. Add the class to the body
-  document.body.classList.add('prevent-popupNewsletter');
-  // 2. Update popupNewsletter in localStorage
-  localStorage.setItem('popupNewsletter', 'prevent');
+    // 1. Add the class to the body
+    document.body.classList.add('prevent-popupNewsletter');
+    // 2. Update popupNewsletter in localStorage
+    localStorage.setItem('popupNewsletter', 'prevent');
 }
 
 const enablepopupNewsletter = () => {
-  // 1. Remove the class from the body
-  document.body.classList.remove('prevent-popupNewsletter');
-  // 2. Update popupNewsletter in localStorage 
-  localStorage.setItem('popupNewsletter', null);
+    // 1. Remove the class from the body
+    document.body.classList.remove('prevent-popupNewsletter');
+    // 2. Update popupNewsletter in localStorage 
+    localStorage.setItem('popupNewsletter', null);
 }
 
 // If the user already visited and prevent popupNewsletter
 // start things off with it on
 if (popupNewsletter === 'prevent') {
-  disablePopupNewsletter();
+    disablePopupNewsletter();
 }
 
 // When someone clicks the button
 const preventPopupInput = document.querySelector('.prevent-popup-input')
 if (preventPopupInput) {
-  preventPopupInput.addEventListener('change', () => {
-    // get their popupNewsletter setting
-    popupNewsletter = localStorage.getItem('popupNewsletter');
+    preventPopupInput.addEventListener('change', () => {
+        // get their popupNewsletter setting
+        popupNewsletter = localStorage.getItem('popupNewsletter');
 
-    // if it not current prevent, enable it
-    if (preventPopupInput.checked) {
-      disablePopupNewsletter();
-      // if it has been prevent, turn it off  
-    } else {
-      enablepopupNewsletter();
-    }
-  });
+        // if it not current prevent, enable it
+        if (preventPopupInput.checked) {
+            disablePopupNewsletter();
+            // if it has been prevent, turn it off  
+        } else {
+            enablepopupNewsletter();
+        }
+    });
 }
 
 
@@ -817,3 +817,92 @@ function removeOpenAnswer(index1) {
         }
     })
 }
+
+// Countdown time in cart
+const min = document.querySelector('.cart-block .time .caption1 .min')
+const sec = document.querySelector('.cart-block .time .caption1 .sec')
+
+
+window.onload = () => {
+    if (min && sec) {
+        setTimeout(() => {
+            setInterval(() => {
+                let seconds = sec.innerHTML
+                let minutes = min.innerHTML
+                seconds--;
+                sec.innerHTML = seconds
+
+                if(seconds < 10) {
+                    sec.innerHTML = '0' + seconds
+                }
+
+                if(seconds == -1) {
+                    seconds = 59
+                    sec.innerHTML = seconds
+                    seconds--
+                    minutes = Number(minutes)-1
+                    min.innerHTML = '0' + minutes
+                }
+            }, 1000)
+        }, 300)
+    }
+}
+
+// Increase and reduce quantity
+// const reduceNumberCarts = document.querySelectorAll('.item-quantity .fa-chevron-left')
+// const increaseNumberCarts = document.querySelectorAll('.item-quantity .fa-chevron-right')
+
+// if (reduceNumberCarts) {
+//     increaseNumberCarts.forEach(increaseNumberCart => {
+//         let parentItem = increaseNumberCart.parentElement
+
+//         increaseNumberCart.addEventListener('click', function (e) {
+//             let quantity = parentItem.querySelector('span').innerHTML
+//             let iconLeft = parentItem.querySelector('.fa-chevron-left')
+
+//             quantity = Number(quantity) + 1
+//             parentItem.querySelector('span').innerHTML = quantity
+
+//             if (quantity > 1) {
+//                 iconLeft.classList.remove('disable')
+//                 iconLeft.classList.add('enable')
+//             }
+//         })
+//     })
+// }
+
+// if(reduceNumberCarts) {
+//     reduceNumberCarts.forEach(reduceNumberCart => {
+//         reduceNumberCart.addEventListener('click', function (e) {
+//             let parentItem = reduceNumberCart.parentElement
+//             let quantity = parentItem.querySelector('span').innerHTML
+//             let iconLeft = parentItem.querySelector('.fa-chevron-left')
+    
+//             if (quantity > 1) {
+//                 quantity = Number(quantity) - 1
+//                 parentItem.querySelector('span').innerHTML = quantity
+//             }
+//             if (quantity <= 1) {
+//                 iconLeft.classList.remove('enable')
+//                 iconLeft.classList.add('disable')
+//             }
+//         })
+//     })
+// }
+
+// // add remove wishlist
+// const heartIcons = document.querySelectorAll('.heart-icon .far')
+
+// if(heartIcons) {
+//     heartIcons.forEach(heartIcon => {
+//         heartIcon.addEventListener('click', () => {
+//             if (heartIcon.getAttribute('class') == 'far fa-heart') {
+//                 heartIcon.className = "fas fa-heart"
+//             } else {
+//                 heartIcon.className = "far fa-heart"
+//             }
+//         })
+//     })
+// }
+
+

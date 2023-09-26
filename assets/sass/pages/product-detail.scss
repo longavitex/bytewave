@@ -1,3 +1,6 @@
+/*
+*** Produc Detail Page: Start
+*/
 .product-detail-heading {
     .container>.row {
         &:nth-child(1) {
@@ -100,6 +103,16 @@
                 .rating {
                     width: 50%;
 
+                    .number-star {
+                        .text-button {
+                            text-align: right;
+                        }
+                    }
+
+                    .star {
+                        margin-top: -2px;
+                    }
+
                     .line {
                         width: 100%;
 
@@ -151,8 +164,27 @@
                             }
                         }
                     }
+
+                    .percent {
+                        gap: 6px;
+                        margin-top: -3px;
+                    }
+                }
+            }
+
+            @media (max-width: 767.99px) {
+                .rating-block {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .rating {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
 }
+/*
+*** Produc Detail Page: End
+*/

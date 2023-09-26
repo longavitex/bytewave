@@ -1,0 +1,155 @@
+extends base/layout.pug
+block title
+    title Shopping Cart
+block header
+    div(class="style-subpage style-pages style-four")
+        include components/header/menu/menu-one.pug
+block content 
+    .breadcrum-heading.bg-breadcrum
+        .container 
+            .flex-item-center.pt-8.pb-8
+                a(href="index.html").body2.fw-500.text-on-surface-variant2 Home 
+                i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
+                .body2.fw-500.pl-12 Shopping Cart 
+    .cart-block.pt-80.pb-80 
+        .container 
+            .row 
+                .col-lg-8 
+                    .time.bg-surface.pt-12.pb-12.pl-20.pr-20.flex-item-center.bora-4
+                        .heding5 🔥
+                        .caption1.pl-8 Your cart will expire in 
+                            span.min.text-critical.fw-700 04
+                            span.text-critical.fw-700 :
+                            span.sec.text-critical.fw-700 59
+                            span  minutes! Please checkout now before your items sell out!
+                    .heading.mt-20 
+                        .text Buy 
+                            span.text-button $70.00 
+                            span more to get 
+                            span.text-button freeship
+                        .tow-bar-block.mt-12
+                            .progress-line
+                    .list-product.mt-32 
+                        .heading.bg-surface.bora-4.pt-12.pb-12 
+                            .row 
+                                .col-6
+                                    .text-button.text-center Products 
+                                .col-1
+                                    .text-button.text-center Price 
+                                .col-2
+                                    .text-button.text-center Quantity 
+                                .col-2
+                                    .text-button.text-center Total Price 
+                        .list.mt-28
+                            .item.pb-16.border-underline-outline
+                                .row
+                                    .col-6
+                                        .flex-item-center 
+                                            .bg-img.pr-28.pl-28.flex-center.border-outline.bora-8
+                                                img(src="assets/images/product/1.png", alt="").w-100
+                                            .name.text-button.pl-16 System Design Interview Volume 2
+                                    .col-1.flex-center
+                                        .text-button $
+                                            span.price 60
+                                            span .00
+                                    .col-2.flex-center
+                                        .quantity-block.flex-item-center.border-outline.bora-4
+                                            i.ph.ph-minus.disable
+                                            span.text-button 1
+                                            i.ph.ph-plus
+                                    .col-2.flex-center
+                                        .text-button $
+                                            span.total 60
+                                            span .00
+                                    .col-1.flex-center 
+                                        i.ph-fill.ph-x-circle.fs-20.pointer.text-on-surface-variant1
+                            .item.pb-16.border-underline-outline.mt-16
+                                .row
+                                    .col-6
+                                        .flex-item-center 
+                                            .bg-img.pr-28.pl-28.flex-center.border-outline.bora-8
+                                                img(src="assets/images/product/2.png", alt="").w-100
+                                            .name.text-button.pl-16 the subtle art of not giving a fck
+                                    .col-1.flex-center
+                                        .text-button $
+                                            span.price 94
+                                            span .00
+                                    .col-2.flex-center
+                                        .quantity-block.flex-item-center.border-outline.bora-4
+                                            i.ph.ph-minus.disable
+                                            span.text-button 1
+                                            i.ph.ph-plus
+                                    .col-2.flex-center
+                                        .text-button $
+                                            span.total 94
+                                            span .00
+                                    .col-1.flex-center 
+                                        i.ph-fill.ph-x-circle.fs-20.pointer.text-on-surface-variant1
+                            .item.pb-16.border-underline-outline.mt-16
+                                .row
+                                    .col-6
+                                        .flex-item-center 
+                                            .bg-img.pr-28.pl-28.flex-center.border-outline.bora-8
+                                                img(src="assets/images/product/3.png", alt="").w-100
+                                            .name.text-button.pl-16 best self be you, only better
+                                    .col-1.flex-center
+                                        .text-button $
+                                            span.price 95
+                                            span .00
+                                    .col-2.flex-center
+                                        .quantity-block.flex-item-center.border-outline.bora-4
+                                            i.ph.ph-minus.disable
+                                            span.text-button 1
+                                            i.ph.ph-plus
+                                    .col-2.flex-center
+                                        .text-button $
+                                            span.total 95
+                                            span .00
+                                    .col-1.flex-center 
+                                        i.ph-fill.ph-x-circle.fs-20.pointer.text-on-surface-variant1
+                    .discount-code.mt-32
+                        input(type="text" placeholder="Add voucher discount").pt-16.pb-16.pl-20.border-outline.p-8.bora-8
+                        .text-button-small.button-blue.button-blue-hover Apply Code
+                .col-lg-4.pl-45.pl-col-lg-0
+                    .checkout-block.p-24.border-outline.bora-8
+                        .heading5 Order Summary
+                        .total-block.pt-16.pb-16.flex-between.border-underline-outline
+                            .text-button Subtotal
+                            .text-button $
+                                span.total-product 249
+                                span .00
+                        .discount-block.pt-16.pb-16.flex-between.border-underline-outline
+                            .text-button Discounts
+                            .text-button -$
+                                span.discount 9
+                                span .00
+                        .ship-block.pt-16.pb-16.flex-between.border-underline-outline
+                            .text-button Shipping
+                            .choose-type.d-flex.gap-12
+                                .left 
+                                    .type
+                                        input#shipping(type="radio", name="ship", checked)
+                                        label(for="shipping").pl-4 Free Shipping:
+                                    .type.mt-4
+                                        input#local(type="radio", name="ship")
+                                        label(for="local").text-on-surface-variant1.pl-4 Local:
+                                    .type.mt-4
+                                        input#flat(type="radio", name="ship")
+                                        label(for="flat").text-on-surface-variant1.pl-4 Flat Rate:
+                                .right 
+                                    .ship $0.00
+                                    .local.text-on-surface-variant1.mt-4 $35.00
+                                    .flat.text-on-surface-variant1.mt-4 $35.00
+                        .total-cart-block.pt-16.pb-16.flex-between 
+                            .heading5 Total
+                            .heading5 $
+                                span.total-cart 240
+                                span .00
+                        .block-button.flex-column-center.row-gap-16
+                            a(href="checkout.html").button-blue.button-blue-hover.w-100 Process To Checkout
+                            a(href="shop.html").text-button.hover-underline Continue shopping
+                        .bank.mt-16.flex-center 
+                            img(src="assets/images/component/bank.png", alt="")
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug

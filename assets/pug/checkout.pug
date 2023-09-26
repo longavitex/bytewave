@@ -1,0 +1,144 @@
+extends base/layout.pug
+block title
+    title Check out
+block header
+    div(class="style-subpage style-pages style-four")
+        include components/header/menu/menu-one.pug
+block content 
+    .breadcrum-heading.bg-breadcrum
+        .container 
+            .flex-item-center.pt-8.pb-8
+                a(href="index.html").body2.fw-500.text-on-surface-variant2 Home 
+                i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
+                .body2.fw-500.pl-12 Check out 
+    .checkout-block.pt-80.pb-80 
+        .container 
+            .row 
+                .col-lg-8 
+                    .login.bg-surface.pt-12.pb-12.pl-16.pr-16.flex-between.bora-4
+                        .left 
+                            .text-on-surface-variant1 Already have an account? 
+                                span.text-button.text-on-surface.hover-underline.pointer Login
+                        .right
+                            i.ph.ph-caret-down.fs-20.d-block.pointer
+                    .form-login-block 
+                        form.mt-16.p-20.border-outline.bora-8
+                            .row
+                                .email.col-sm-6
+                                    label(for="email") Username or email address
+                                    input#email(type="text" placeholder="Username or email").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                .pass.col-sm-6
+                                    label(for="password") Password
+                                    input#password(type="password" placeholder="Password").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                            .block-button.mt-12
+                                button.button-blue.button-blue-hover Login
+                    .information.mt-40 
+                        .heading5 Information
+                        .form-checkout.mt-16 
+                            form
+                                .row.row-gap-20
+                                    .col-sm-6
+                                        label(for="firstName") First Name
+                                        input#firstName(type="text" placeholder="First Name").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    .col-sm-6
+                                        label(for="lastName") Last Name
+                                        input#lastName(type="text" placeholder="Last Name").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    .col-sm-6
+                                        label(for="email") Your Email
+                                        input#email(type="email" placeholder="Your Email").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    .col-sm-6
+                                        label(for="phoneNumber") Phone Numbers
+                                        input#phoneNumber(type="number" placeholder="Phone Numbers").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    .col-12
+                                        label(for="country") Country/Region
+                                        select#country(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                            option(value="India") India
+                                            option(value="France") France
+                                            option(value="Singapore") Singapore
+                                        i.ph.ph-caret-down
+                                    .col-sm-6
+                                        label(for="city") Town/City
+                                        input#city(type="text" placeholder="Town/City").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    .col-sm-6
+                                        label(for="apartment") Apartment,suite,... (Optional)
+                                        input#apartment(type="text" placeholder="Street,...").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    .col-4
+                                        label(for="country") Country
+                                        select#country(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                            option(value="India") India
+                                            option(value="France") France
+                                            option(value="Singapore") Singapore
+                                        i.ph.ph-caret-down
+                                    .col-4
+                                        label(for="country") State
+                                        select#country(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                            option(value="Single") Single
+                                            option(value="Married") Married
+                                        i.ph.ph-caret-down
+                                    .col-4
+                                        label(for="postal") Postal Code*
+                                        input#postal(type="text" placeholder="ex.12345").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    .col-12
+                                        label(for="note") Note
+                                        textarea#note(name="note" cols="30" rows="3" placeholder="Write note...").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                .payment-block.mt-40 
+                                    .heading5 Choose payment Option:
+                                    .list-payment.mt-16
+                                        .type.p-20.border-outline.bora-4
+                                            input#credit(type="radio", name="payment", checked)
+                                            label(for="credit").pl-8.pointer Credit Card
+                                        .type.p-20.border-outline.bora-4.mt-20
+                                            input#delivery(type="radio", name="payment")
+                                            label(for="delivery").pl-8.pointer Cash on delivery
+                                        .type.p-20.border-outline.bora-4.mt-20
+                                            input#apple(type="radio", name="payment")
+                                            label(for="apple").pl-8.pointer Apple Pay
+                                        .type.p-20.border-outline.bora-4.mt-20
+                                            input#paypal(type="radio", name="payment")
+                                            label(for="paypal").pl-8.pointer 
+                                                img(src="assets/images/component/paypal.svg", alt="")
+                                .block-button.mt-40 
+                                    button.button-blue.button-blue-hover.w-100 Payment
+                .col-lg-4.pl-45.pl-col-lg-0
+                    .checkout-block.p-24.border-outline.bora-8
+                        .heading5 Your Order
+                        .total-block.pt-16.pb-16.flex-between.border-underline-outline
+                            .text-button Subtotal
+                            .text-button $
+                                span.total-product 249
+                                span .00
+                        .discount-block.pt-16.pb-16.flex-between.border-underline-outline
+                            .text-button Discounts
+                            .text-button -$
+                                span.discount 9
+                                span .00
+                        .ship-block.pt-16.pb-16.flex-between.border-underline-outline
+                            .text-button Shipping
+                            .choose-type.d-flex.gap-12
+                                .left 
+                                    .type
+                                        input#shipping(type="radio", name="ship", checked)
+                                        label(for="shipping").pl-4 Free Shipping:
+                                    .type.mt-4
+                                        input#local(type="radio", name="ship")
+                                        label(for="local").text-on-surface-variant1.pl-4 Local:
+                                    .type.mt-4
+                                        input#flat(type="radio", name="ship")
+                                        label(for="flat").text-on-surface-variant1.pl-4 Flat Rate:
+                                .right 
+                                    .ship $0.00
+                                    .local.text-on-surface-variant1.mt-4 $35.00
+                                    .flat.text-on-surface-variant1.mt-4 $35.00
+                        .total-cart-block.pt-16.pb-16.flex-between 
+                            .heading5 Total
+                            .heading5 $
+                                span.total-cart 240
+                                span .00
+                        .block-button.flex-column-center.row-gap-16
+                            a(href="checkout.html").button-blue.button-blue-hover.w-100 Process To Checkout
+                            a(href="shop.html").text-button.hover-underline Continue shopping
+                        .bank.mt-16.flex-center 
+                            img(src="assets/images/component/bank.png", alt="")
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug

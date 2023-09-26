@@ -49,6 +49,9 @@
   }
 }
 
+.style-about-us .section-brand.bg-white {
+  background-color: transparent;
+}
 .style-about-us .section-about.style-seven-first .container .row {
   padding: 60px;
   border-radius: 28px;

@@ -1,0 +1,42 @@
+extends base/layout.pug
+block title
+    title Login
+block header
+    div(class="style-subpage style-pages style-four")
+        include components/header/menu/menu-one.pug
+block content 
+    .breadcrum-heading.bg-breadcrum
+        .container 
+            .flex-item-center.pt-8.pb-8
+                a(href="index.html").body2.fw-500.text-on-surface-variant2 Home 
+                i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
+                .body2.fw-500.pl-12 Register 
+    .form-login-block.pt-80.pb-80
+        .container 
+            .row.flex-center 
+                .col-xl-5.col-lg-6.col-md-8.col-sm-10
+                    .heading3.text-center Create a free account
+                    .form.mt-32
+                        form
+                            .email.pb-24
+                                label Username or email address
+                                input(type="text" placeholder="Username or email").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                            .pass.pb-24
+                                label Password 
+                                input(type="password" placeholder="Password").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                            .pass.pb-24
+                                label Confirm Password 
+                                input(type="password" placeholder="Password").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                        .content-sub-input.flex-between.pb-24
+                            .sub-input-checkbox
+                                input(type="checkbox")
+                                span.text-on-surface-variant1.pl-8 I agree to the 
+                                    a(href="#!").text-button.hover-underline Terms of User
+                        .block-button
+                            a(href="index.html").button-blue.button-blue-hover.w-100 Register
+                        .navigate.flex-center.mt-24 
+                            .text-on-surface-variant1 Already have an account?
+                            a(href="login.html").text-button.pl-8.hover-underline Login Here
+block footer 
+    div(class="style-subpage style-blog")
+        include components/footer/footer.pug
