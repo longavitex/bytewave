@@ -2,7 +2,7 @@ extends base/layout.pug
 block title
     title Our Products
 block header
-    div(class="style-subpage style-pages style-four")
+    div(class="style-subpage style-pages style-six")
         include components/header/menu/menu-one.pug
     include mixins/productItem.pug
 block content 
@@ -36,18 +36,20 @@ block content
                     .heading4.mt-24 $89.00
                     .text-on-surface-variant1.mt-24.pb-24 The text works its way from the application layer down toward the physical layer, motivating students by exposing them to important concepts early in their study of networking.
                     .border-line 
-                    .prd-quantity.pt-24 
+                    .prd-quantity.list.pt-24 
                         p Quantity:
-                        .flex-item-center.mt-12.gap-12 
+                        .item.flex-item-center.mt-12.gap-12 
                             .quantity-block.flex-item-center.border-outline.bora-4
                                 i.ph.ph-minus.disable
                                 span.text-button 1
                                 i.ph.ph-plus
-                            button.button-blue.button-blue-hover Add To Cart
-                            .update.w-48.h-48.bora-4.border-outline.flex-center.pointer
-                                i.ph.ph-arrows-counter-clockwise.fs-20
-                            .share.w-48.h-48.bora-4.border-outline.flex-center.pointer
-                                i.ph-fill.ph-share-network.fs-20
+                            .block-button
+                                a(href="cart.html").button-blue.button-blue-hover Add To Cart
+                            .right.flex-item-center.gap-12 
+                                .update.w-48.h-48.bora-4.border-outline.flex-center.pointer
+                                    i.ph.ph-arrows-counter-clockwise.fs-20
+                                .share.w-48.h-48.bora-4.border-outline.flex-center.pointer
+                                    i.ph-fill.ph-share-network.fs-20
                     .more-infor.mt-24.pb-24
                         .flex-item-center.gap-8
                             .left 

@@ -554,48 +554,6 @@ if (listIndustry) {
 }
 
 
-// section success stories home6
-$(".section-success-stories .list").slick({
-    dots: true,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 4,
-    touchThreshold: 100,
-    swipe: true,
-    swipeToSlide: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    speed: 500,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    pauseOnDotsHover: false,
-    infinite: true,
-    responsive: [
-        {
-            breakpoint: 1170,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-        },
-    ]
-});
-
-
 // change switch btn pricing home6
 const switchBtn = document.querySelector('.switch')
 const listPricingMonth = document.querySelector('.list-pricing')
@@ -827,68 +785,153 @@ window.onload = () => {
     if (min && sec) {
         setTimeout(() => {
             setInterval(() => {
-                let seconds = sec.innerHTML
-                let minutes = min.innerHTML
+                var seconds = sec.innerHTML
+                var minutes = min.innerHTML
                 seconds--;
                 sec.innerHTML = seconds
 
-                if(seconds < 10) {
+                if (seconds < 10) {
                     sec.innerHTML = '0' + seconds
                 }
 
-                if(seconds == -1) {
+                if (seconds == -1) {
                     seconds = 59
                     sec.innerHTML = seconds
                     seconds--
-                    minutes = Number(minutes)-1
+                    minutes = Number(minutes) - 1
                     min.innerHTML = '0' + minutes
                 }
+
+                if (minutes <= -1) {
+                    sec.innerHTML = '00'
+                    min.innerHTML = '00'
+                }
             }, 1000)
-        }, 300)
+        }, 100)
+
+
     }
 }
 
-// Increase and reduce quantity
-// const reduceNumberCarts = document.querySelectorAll('.item-quantity .fa-chevron-left')
-// const increaseNumberCarts = document.querySelectorAll('.item-quantity .fa-chevron-right')
+// Increase and reduce quantity product in cart
+const reduceNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-minus')
+const increaseNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-plus')
 
-// if (reduceNumberCarts) {
-//     increaseNumberCarts.forEach(increaseNumberCart => {
-//         let parentItem = increaseNumberCart.parentElement
 
-//         increaseNumberCart.addEventListener('click', function (e) {
-//             let quantity = parentItem.querySelector('span').innerHTML
-//             let iconLeft = parentItem.querySelector('.fa-chevron-left')
+if (increaseNumberCarts) {
+    increaseNumberCarts.forEach(increaseNumberCart => {
+        let parentItem = increaseNumberCart.parentElement
 
-//             quantity = Number(quantity) + 1
-//             parentItem.querySelector('span').innerHTML = quantity
+        increaseNumberCart.addEventListener('click', function (e) {
+            let quantity = parentItem.querySelector('span').innerHTML
+            let iconLeft = parentItem.querySelector('.ph-minus')
 
-//             if (quantity > 1) {
-//                 iconLeft.classList.remove('disable')
-//                 iconLeft.classList.add('enable')
-//             }
-//         })
-//     })
-// }
+            quantity = Number(quantity) + 1
+            parentItem.querySelector('span').innerHTML = quantity
 
-// if(reduceNumberCarts) {
-//     reduceNumberCarts.forEach(reduceNumberCart => {
-//         reduceNumberCart.addEventListener('click', function (e) {
-//             let parentItem = reduceNumberCart.parentElement
-//             let quantity = parentItem.querySelector('span').innerHTML
-//             let iconLeft = parentItem.querySelector('.fa-chevron-left')
-    
-//             if (quantity > 1) {
-//                 quantity = Number(quantity) - 1
-//                 parentItem.querySelector('span').innerHTML = quantity
-//             }
-//             if (quantity <= 1) {
-//                 iconLeft.classList.remove('enable')
-//                 iconLeft.classList.add('disable')
-//             }
-//         })
-//     })
-// }
+            // Enable minus button
+            if (quantity > 1) {
+                iconLeft.classList.remove('disable')
+            }
+
+            // Handle total price product item
+            const productItem = parentItem.parentElement.parentElement
+            const pricePrd = productItem.querySelector('span.price').innerHTML
+            const totalPricePrdItem = productItem.querySelector('span.total')
+
+            totalPricePrdItem.innerHTML = Number(pricePrd) * quantity
+
+            // Handle total price products
+            const totalPricePrds = document.querySelector('.checkout-block span.total-product')
+            const arrayPrd = document.querySelectorAll('.list-product .list .item')
+            var totalPricePrdsNew = 0
+
+            arrayPrd.forEach(item => {
+                const total = item.querySelector('span.total')
+                totalPricePrdsNew += Number(total.innerHTML)
+            })
+            totalPricePrds.innerHTML = totalPricePrdsNew
+
+            // Handle total price carts
+            const totalPriceCart = document.querySelector('.total-cart-block span.total-cart')
+            const discountPrice = document.querySelector('.discount-block span.discount')
+            totalPriceCart.innerHTML = Number(totalPricePrds.innerHTML) - Number(discountPrice.innerHTML)
+
+            // Handle price heading (Buy ... more to get Freeship)
+            // You can change to any number
+            var totalPriceToFreeship = 500
+            const priceToFreeShip = document.querySelector('.cart-block .heading span.price')
+            priceToFreeShip.innerHTML = Number(totalPriceToFreeship) - Number(totalPricePrds.innerHTML)
+
+            if (Number(priceToFreeShip.innerHTML) <= 0) {
+                priceToFreeShip.innerHTML = '0'
+            }
+
+            // Handle progress heading
+            const progressLine = document.querySelector('.tow-bar-block .progress-line')
+            var percentProgress = ((Number(priceToFreeShip.innerHTML) / Number(totalPriceToFreeship)) * 100)
+            progressLine.style.width = 100 - Number(percentProgress) + '%'
+        })
+    })
+}
+
+if (reduceNumberCarts) {
+    reduceNumberCarts.forEach(reduceNumberCart => {
+        reduceNumberCart.addEventListener('click', function (e) {
+            let parentItem = reduceNumberCart.parentElement
+            let quantity = parentItem.querySelector('span').innerHTML
+            let iconLeft = parentItem.querySelector('.ph-minus')
+
+            if (quantity > 1) {
+                quantity = Number(quantity) - 1
+                parentItem.querySelector('span').innerHTML = quantity
+            }
+
+            // Disable minus button
+            if (quantity <= 1) {
+                iconLeft.classList.add('disable')
+            }
+
+            // Handle total price product item
+            const productItem = parentItem.parentElement.parentElement
+            const pricePrd = productItem.querySelector('span.price').innerHTML
+            const totalPricePrdItem = productItem.querySelector('span.total')
+
+            totalPricePrdItem.innerHTML = Number(pricePrd) * quantity
+
+            // Handle total price products
+            const totalPricePrds = document.querySelector('.checkout-block span.total-product')
+            const arrayPrd = document.querySelectorAll('.list-product .list .item')
+            var totalPricePrdsNew = 0
+
+            arrayPrd.forEach(item => {
+                const total = item.querySelector('span.total')
+                totalPricePrdsNew += Number(total.innerHTML)
+            })
+            totalPricePrds.innerHTML = totalPricePrdsNew
+
+            // Handle total price carts
+            const totalPriceCart = document.querySelector('.total-cart-block span.total-cart')
+            const discountPrice = document.querySelector('.discount-block span.discount')
+            totalPriceCart.innerHTML = Number(totalPricePrds.innerHTML) - Number(discountPrice.innerHTML)
+
+            // Handle price heading (Buy ... more to get Freeship)
+            // You can change to any number
+            var totalPriceToFreeship = 500
+            const priceToFreeShip = document.querySelector('.cart-block .heading span.price')
+            priceToFreeShip.innerHTML = Number(totalPriceToFreeship) - Number(totalPricePrds.innerHTML)
+
+            if (Number(priceToFreeShip.innerHTML) <= 0) {
+                priceToFreeShip.innerHTML = '0'
+            }
+
+            // Handle progress heading
+            const progressLine = document.querySelector('.tow-bar-block .progress-line')
+            var percentProgress = ((Number(priceToFreeShip.innerHTML) / Number(totalPriceToFreeship)) * 100)
+            progressLine.style.width = 100 - Number(percentProgress) + '%'
+        })
+    })
+}
 
 // // add remove wishlist
 // const heartIcons = document.querySelectorAll('.heart-icon .far')
@@ -906,3 +949,35 @@ window.onload = () => {
 // }
 
 
+// Check out page
+// Show, hide login block
+const formLoginHeading = document.querySelector('.checkout-block .form-login-block')
+const loginHeading = document.querySelector('.checkout-block .login .left span.text-button')
+const iconDownHeading = document.querySelector('.checkout-block .login .right i')
+
+if (loginHeading) {
+    loginHeading.addEventListener('click', () => {
+        formLoginHeading.classList.toggle('open')
+        iconDownHeading.classList.toggle('up')
+    })
+
+    iconDownHeading.addEventListener('click', () => {
+        formLoginHeading.classList.toggle('open')
+        iconDownHeading.classList.toggle('up')
+    })
+}
+
+// Show, hide payment type
+const paymentType = document.querySelectorAll('.payment-block .list-payment .type')
+const paymentCheckbox = document.querySelectorAll('.payment-block .list-payment .type>input')
+
+if (paymentCheckbox) {
+    paymentCheckbox.forEach(item => {
+        item.addEventListener('change', () => {
+            if (item.checked) {
+                let parentType = item.parentElement
+                parentType.classList.add('open')
+            }
+        })
+    })
+}

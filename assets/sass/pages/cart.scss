@@ -37,6 +37,7 @@
                                 aspect-ratio: 1/1;
                             }
                         }
+
                         >div:nth-child(3) {
                             .quantity-block {
                                 text-align: center;
@@ -63,6 +64,14 @@
                                 }
                             }
                         }
+
+                        >div:last-child {
+                            i {
+                                &:hover {
+                                    color: var(--critical);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -83,6 +92,12 @@
                     top: 50%;
                     transform: translateY(-50%);
                 }
+            }
+        }
+
+        >div:nth-child(2) {
+            .ship-block {
+                align-items: flex-start;
             }
         }
     }

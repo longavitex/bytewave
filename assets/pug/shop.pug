@@ -2,7 +2,7 @@ extends base/layout.pug
 block title
     title Our Products
 block header
-    div(class="style-subpage style-pages style-four")
+    div(class="style-subpage style-pages style-five")
         include components/header/menu/menu-one.pug
     include mixins/productItem.pug
 block content 
@@ -35,7 +35,7 @@ block content
                 .col-xl-3.col-md-4.col-sm-6 
                     +productItem({img:'assets/images/product/1.png', newStyle:false, discount:'-32%', name:'System Design Interview Volume 2', star:'4', sale:'764', price:'$68.00', originalPrice:'$98.00'})
                 .col-xl-3.col-md-4.col-sm-6 
-                    +productItem({img:'assets/images/product/2.png', newStyle:true, name:'the subtle art of not giving a fck', star:'5', sale:'2364', price:'$94.00', originalPrice:'$98.00'})
+                    +productItem({img:'assets/images/product/2.png', newStyle:true, name:'the subtle art of not giving a fck', star:'5', sale:'2364', price:'$95.00', originalPrice:'$98.00'})
                 .col-xl-3.col-md-4.col-sm-6 
                     +productItem({img:'assets/images/product/3.png', newStyle:true, name:'best self be you, only better', star:'4', sale:'2334', price:'$95.00'})
                 .col-xl-3.col-md-4.col-sm-6 

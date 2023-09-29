@@ -13,6 +13,17 @@
 .section-success-stories .container .list-news .item .main-item {
   position: relative;
 }
+.section-success-stories .container .list-news .item .main-item .bg-brand {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.section-success-stories .container .list-news .item .main-item .bg-img {
+  aspect-ratio: 1/1;
+}
+.section-success-stories .container .list-news .item .main-item .bg-img img {
+  object-fit: cover;
+}
 .section-success-stories .container .list-news .item .main-item .title {
   position: absolute;
   left: 20px;

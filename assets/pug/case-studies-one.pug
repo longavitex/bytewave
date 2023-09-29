@@ -1,0 +1,106 @@
+extends base/layout.pug
+block title
+    title Case Studies Style 1
+block header
+    div(class="style-subpage style-case-studies style-one")
+        include components/header/menu/menu-one.pug
+block content 
+    include mixins/headingSubpage.pug
+    include mixins/blogItem.pug
+    .bg-subpage
+    +headingSubpage({classname: 'pt-60 pb-80', style:'style-one', heading:true, headingTitle:'Success Stories', subHeading:'From Clients Who Achieved Excellence with ByteWave', category:'Case Studies', heading2:"Triumphs and Achievements. Our Success Stories", img:'assets/images/component/bg-case-studies.png'})
+    div(class="style-about-us style-case-studies")
+        include components/home1/brand.pug
+    .section-success-stories.pt-80.pb-80
+        .container
+            .heading.text-center 
+                .heading3.text-center Our Work
+                .text-on-surface-variant1.text-center.mt-12 Case studies that showcase the agency's approach, results for specific clients.
+            .row.row-gap-40.mt-40.list-news
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/van-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/success-stories/1.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +40%
+                            .heading6 Sales Revenue
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/shang-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/success-stories/2.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +50%
+                            .heading6 Website Traffic
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/spotify-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/success-stories/3.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +120%
+                            .heading6 Online Presence
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/pana-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/blog/item11.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +50%
+                            .heading6 Website Traffic
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/slack-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/blog/item1.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +40%
+                            .heading6 Sales Revenue
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/spotify-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/blog/item2.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +50%
+                            .heading6 Website Traffic
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/pana-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/blog/item7.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +120%
+                            .heading6 Online Presence
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/shang-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/blog/item14.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +50%
+                            .heading6 Website Traffic
+                .col-lg-4.col-sm-6.item
+                    a(href="case-studies-detail.html").main-item
+                        .bg-brand 
+                            img(src="assets/images/brand/van-white.svg", alt="")
+                        .bg-img.bora-20.overflow-hidden
+                            img(src="assets/images/blog/item15.png", alt="").w-100.h-100.display-block
+                        .title.flex-between.p-20.bora-16
+                            .heading4 +50%
+                            .heading6 Website Traffic
+    div(class="style-case-studies pb-80")
+        include components/home4/testimonial.pug
+    include components/home1/contact.pug
+block footer 
+    div(class="style-subpage")
+        include components/footer/footer.pug

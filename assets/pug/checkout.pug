@@ -2,7 +2,7 @@ extends base/layout.pug
 block title
     title Check out
 block header
-    div(class="style-subpage style-pages style-four")
+    div(class="style-subpage style-pages style-eight")
         include components/header/menu/menu-one.pug
 block content 
     .breadcrum-heading.bg-breadcrum
@@ -13,20 +13,20 @@ block content
                 .body2.fw-500.pl-12 Check out 
     .checkout-block.pt-80.pb-80 
         .container 
-            .row 
+            .row.row-gap-40.flex-wrap-reverse
                 .col-lg-8 
                     .login.bg-surface.pt-12.pb-12.pl-16.pr-16.flex-between.bora-4
-                        .left 
-                            .text-on-surface-variant1 Already have an account? 
-                                span.text-button.text-on-surface.hover-underline.pointer Login
+                        .left.flex-item-center
+                            span.text-on-surface-variant1.pr-4 Already have an account? 
+                            span.text-button.text-on-surface.hover-underline.pointer Login
                         .right
                             i.ph.ph-caret-down.fs-20.d-block.pointer
                     .form-login-block 
-                        form.mt-16.p-20.border-outline.bora-8
+                        form.p-20.border-outline.bora-8
                             .row
                                 .email.col-sm-6
-                                    label(for="email") Username or email address
-                                    input#email(type="text" placeholder="Username or email").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                    label(for="username") Username or email address
+                                    input#username(type="text" placeholder="Username or email").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
                                 .pass.col-sm-6
                                     label(for="password") Password
                                     input#password(type="password" placeholder="Password").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
@@ -50,8 +50,8 @@ block content
                                         label(for="phoneNumber") Phone Numbers
                                         input#phoneNumber(type="number" placeholder="Phone Numbers").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
                                     .col-12
-                                        label(for="country") Country/Region
-                                        select#country(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                        label(for="region") Country/Region
+                                        select#region(name="region").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
                                             option(value="India") India
                                             option(value="France") France
                                             option(value="Singapore") Singapore
@@ -62,20 +62,20 @@ block content
                                     .col-sm-6
                                         label(for="apartment") Apartment,suite,... (Optional)
                                         input#apartment(type="text" placeholder="Street,...").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
-                                    .col-4
+                                    .col-sm-4
                                         label(for="country") Country
                                         select#country(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
                                             option(value="India") India
                                             option(value="France") France
                                             option(value="Singapore") Singapore
                                         i.ph.ph-caret-down
-                                    .col-4
+                                    .col-sm-4
                                         label(for="country") State
-                                        select#country(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                        select#state(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
                                             option(value="Single") Single
                                             option(value="Married") Married
                                         i.ph.ph-caret-down
-                                    .col-4
+                                    .col-sm-4
                                         label(for="postal") Postal Code*
                                         input#postal(type="text" placeholder="ex.12345").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
                                     .col-12
@@ -85,34 +85,135 @@ block content
                                     .heading5 Choose payment Option:
                                     .list-payment.mt-16
                                         .type.p-20.border-outline.bora-4
-                                            input#credit(type="radio", name="payment", checked)
-                                            label(for="credit").pl-8.pointer Credit Card
+                                            input#credit(type="radio", name="payment").pointer
+                                            label(for="credit").text-button.pl-8.pointer Credit Card
+                                            .infor 
+                                                .text-on-surface-variant1.mt-4 Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.
+                                                .row 
+                                                    .col-12.mt-12 
+                                                        .bg-img
+                                                            img(src="assets/images/component/payment.png", alt="")
+                                                        label(for="") Card Numbers
+                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") Date
+                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") CCV
+                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                .flex-item-center.gap-8.mt-12
+                                                    input(type="checkbox", name="save")
+                                                    label(for="save").text-button Save Card Details
                                         .type.p-20.border-outline.bora-4.mt-20
-                                            input#delivery(type="radio", name="payment")
-                                            label(for="delivery").pl-8.pointer Cash on delivery
+                                            input#delivery(type="radio", name="payment").pointer
+                                            label(for="delivery").text-button.pl-8.pointer Cash on delivery
+                                            .infor 
+                                                .text-on-surface-variant1.mt-4 Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.
+                                                .row 
+                                                    .col-12.mt-12 
+                                                        .bg-img
+                                                            img(src="assets/images/component/payment.png", alt="")
+                                                        label(for="") Card Numbers
+                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") Date
+                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") CCV
+                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                .flex-item-center.gap-8.mt-12
+                                                    input(type="checkbox", name="save")
+                                                    label(for="").text-button Save Card Details
                                         .type.p-20.border-outline.bora-4.mt-20
-                                            input#apple(type="radio", name="payment")
-                                            label(for="apple").pl-8.pointer Apple Pay
+                                            input#apple(type="radio", name="payment").pointer
+                                            label(for="apple").text-button.pl-8.pointer Apple Pay
+                                            .infor 
+                                                .text-on-surface-variant1.mt-4 Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.
+                                                .row 
+                                                    .col-12.mt-12 
+                                                        .bg-img
+                                                            img(src="assets/images/component/payment.png", alt="")
+                                                        label(for="") Card Numbers
+                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") Date
+                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") CCV
+                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                .flex-item-center.gap-8.mt-12
+                                                    input(type="checkbox", name="save")
+                                                    label(for="save").text-button Save Card Details
                                         .type.p-20.border-outline.bora-4.mt-20
-                                            input#paypal(type="radio", name="payment")
+                                            input#paypal(type="radio", name="payment").pointer
                                             label(for="paypal").pl-8.pointer 
                                                 img(src="assets/images/component/paypal.svg", alt="")
+                                            .infor 
+                                                .text-on-surface-variant1.mt-4 Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.
+                                                .row 
+                                                    .col-12.mt-12 
+                                                        .bg-img
+                                                            img(src="assets/images/component/payment.png", alt="")
+                                                        label(for="") Card Numbers
+                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") Date
+                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                    .col-sm-6.mt-12 
+                                                        label(for="") CCV
+                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                .flex-item-center.gap-8.mt-12
+                                                    input(type="checkbox", name="save")
+                                                    label(for="save").text-button Save Card Details
                                 .block-button.mt-40 
                                     button.button-blue.button-blue-hover.w-100 Payment
                 .col-lg-4.pl-45.pl-col-lg-0
                     .checkout-block.p-24.border-outline.bora-8
                         .heading5 Your Order
-                        .total-block.pt-16.pb-16.flex-between.border-underline-outline
+                        .product.flex-between.pb-12.border-underline-outline.mt-20.gap-8
+                            .left.flex-item-center.gap-8
+                                .bg-img.flex-center.border-outline
+                                    img(src="assets/images/product/1.png", alt="")
+                                span.text-button System Design Interview Volume 2
+                            .right.flex-item-center.text-end 
+                                .quantity.text-button 1
+                                    span.pl-4 x 
+                                .price.text-button.pl-4 $
+                                    span.price 60
+                                    span .00
+                        .product.flex-between.pb-12.border-underline-outline.mt-20.gap-8
+                            .left.flex-item-center.gap-8
+                                .bg-img.flex-center.border-outline
+                                    img(src="assets/images/product/2.png", alt="")
+                                span.text-button the subtle art of not giving a fck
+                            .right.flex-item-center.text-end 
+                                .quantity.text-button 1
+                                    span.pl-4 x 
+                                .price.text-button.pl-4 $
+                                    span.price 95
+                                    span .00
+                        .product.flex-between.pb-12.border-underline-outline.mt-20.gap-8
+                            .left.flex-item-center.gap-8
+                                .bg-img.flex-center.border-outline
+                                    img(src="assets/images/product/3.png", alt="")
+                                span.text-button best self be you, only better
+                            .right.flex-item-center.text-end 
+                                .quantity.text-button 1
+                                    span.pl-4 x 
+                                .price.text-button.pl-4 $
+                                    span.price 95
+                                    span .00
+                        .total-block.pt-20.pb-20.flex-between.border-underline-outline
                             .text-button Subtotal
                             .text-button $
-                                span.total-product 249
+                                span.total-product 250
                                 span .00
-                        .discount-block.pt-16.pb-16.flex-between.border-underline-outline
+                        .discount-block.pt-20.pb-20.flex-between.border-underline-outline
                             .text-button Discounts
                             .text-button -$
-                                span.discount 9
+                                span.discount 10
                                 span .00
-                        .ship-block.pt-16.pb-16.flex-between.border-underline-outline
+                        .ship-block.pt-20.pb-20.flex-between.border-underline-outline
                             .text-button Shipping
                             .choose-type.d-flex.gap-12
                                 .left 
@@ -129,16 +230,11 @@ block content
                                     .ship $0.00
                                     .local.text-on-surface-variant1.mt-4 $35.00
                                     .flat.text-on-surface-variant1.mt-4 $35.00
-                        .total-cart-block.pt-16.pb-16.flex-between 
+                        .total-cart-block.pt-20.flex-between 
                             .heading5 Total
                             .heading5 $
                                 span.total-cart 240
                                 span .00
-                        .block-button.flex-column-center.row-gap-16
-                            a(href="checkout.html").button-blue.button-blue-hover.w-100 Process To Checkout
-                            a(href="shop.html").text-button.hover-underline Continue shopping
-                        .bank.mt-16.flex-center 
-                            img(src="assets/images/component/bank.png", alt="")
 block footer 
     div(class="style-subpage style-blog")
         include components/footer/footer.pug

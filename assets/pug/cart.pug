@@ -2,7 +2,7 @@ extends base/layout.pug
 block title
     title Shopping Cart
 block header
-    div(class="style-subpage style-pages style-four")
+    div(class="style-subpage style-pages style-seven")
         include components/header/menu/menu-one.pug
 block content 
     .breadcrum-heading.bg-breadcrum
@@ -13,7 +13,7 @@ block content
                 .body2.fw-500.pl-12 Shopping Cart 
     .cart-block.pt-80.pb-80 
         .container 
-            .row 
+            .row.row-gap-40
                 .col-lg-8 
                     .time.bg-surface.pt-12.pb-12.pl-20.pr-20.flex-item-center.bora-4
                         .heding5 🔥
@@ -24,7 +24,9 @@ block content
                             span  minutes! Please checkout now before your items sell out!
                     .heading.mt-20 
                         .text Buy 
-                            span.text-button $70.00 
+                            span.text-button $
+                                span.price 250
+                                span .00 
                             span more to get 
                             span.text-button freeship
                         .tow-bar-block.mt-12
@@ -72,7 +74,7 @@ block content
                                             .name.text-button.pl-16 the subtle art of not giving a fck
                                     .col-1.flex-center
                                         .text-button $
-                                            span.price 94
+                                            span.price 95
                                             span .00
                                     .col-2.flex-center
                                         .quantity-block.flex-item-center.border-outline.bora-4
@@ -81,7 +83,7 @@ block content
                                             i.ph.ph-plus
                                     .col-2.flex-center
                                         .text-button $
-                                            span.total 94
+                                            span.total 95
                                             span .00
                                     .col-1.flex-center 
                                         i.ph-fill.ph-x-circle.fs-20.pointer.text-on-surface-variant1
@@ -116,12 +118,12 @@ block content
                         .total-block.pt-16.pb-16.flex-between.border-underline-outline
                             .text-button Subtotal
                             .text-button $
-                                span.total-product 249
+                                span.total-product 250
                                 span .00
                         .discount-block.pt-16.pb-16.flex-between.border-underline-outline
                             .text-button Discounts
                             .text-button -$
-                                span.discount 9
+                                span.discount 10
                                 span .00
                         .ship-block.pt-16.pb-16.flex-between.border-underline-outline
                             .text-button Shipping

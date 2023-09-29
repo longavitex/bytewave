@@ -9,7 +9,8 @@ block content
     include mixins/blogItem.pug
     .bg-subpage
     +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Service', subHeading:'Empowering Your Success Through Comprehensive Solutions', category:'IT Solution', heading2:"Manufacturing & Industry 4.0", desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', img:'assets/images/component/bg-case-detail.png'})
-    include components/home1/brand.pug
+    div(class="style-about-us")
+        include components/home1/brand.pug
     div(class="style-about-us")
         include components/home7/about-first.pug
     include components/home7/about-second.pug

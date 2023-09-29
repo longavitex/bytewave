@@ -15,6 +15,59 @@
 *** Case Studies 3 cols Page: End
 */
 /*
+*** Case Studies 3 cols Page: Start
+*/
+.style-about-us.style-case-studies .section-brand {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+.style-about-us.style-case-studies .section-brand::before {
+  content: "";
+  position: absolute;
+  max-width: 1290px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--outline);
+}
+.style-about-us.style-case-studies .section-brand::after {
+  content: "";
+  position: absolute;
+  max-width: 1290px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--outline);
+}
+@media (max-width: 1290px) {
+  .style-about-us.style-case-studies .section-brand::before, .style-about-us.style-case-studies .section-brand::after {
+    left: 15px;
+    right: 15px;
+    transform: none;
+  }
+}
+@media (max-width: 992px) {
+  .style-about-us.style-case-studies .section-brand {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 767.99px) {
+  .style-about-us.style-case-studies .section-brand {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+/*
+*** Case Studies 3 cols Page: End
+*/
+/*
 *** Case Studies 2 cols - Style2 Page: Start
 */
 .list-case-studies .row .item-main {

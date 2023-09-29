@@ -39,13 +39,14 @@
         >ul {
             height: 100%;
 
-            li {
+            >li {
                 cursor: pointer;
                 position: relative;
                 height: 100%;
                 display: flex;
 
                 a {
+                    position: relative;
                     padding: 24px 12px;
                     font-size: 14px;
                     font-weight: 700;
@@ -73,73 +74,243 @@
 
                 .sub-nav {
                     position: absolute;
-                    width: 260px;
                     left: -10px;
-                    top: 100px;
-                    padding-top: 4px;
-                    padding-bottom: 8px;
+                    top: 75px;
+                    padding: 18px 20px;
                     background-color: #fff;
+                    border-radius: 0 0 16px 16px;
                     z-index: 5;
-                    box-shadow: 0px 5px 25px rgba(58, 64, 67, 0.1);
+                    box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
                     transition: all ease-in-out 0.3s;
                     opacity: 0;
                     visibility: hidden;
+                    overflow: hidden;
+                    transform: scaleY(0);
+                    transform-origin: top center;
 
                     .sub-nav-item {
-                        padding: 0 24px;
+                        border-radius: 8px;
+                        position: relative;
 
                         a {
+                            padding: 16px 20px;
                             position: relative;
                             transition: all ease 0.3s;
-                            padding: 0;
                             display: inline-block;
-                            padding: 16px 0;
-
+                            white-space: nowrap;
 
                             &::before {
                                 content: "";
                                 position: absolute;
-                                left: 0;
+                                left: 20px;
                                 bottom: 16px;
-                                transform: translateY(-50%);
                                 width: 0;
-                                height: 2px;
-                                background-color: var(--blue);
-                                border-radius: 6px;
+                                height: 1px;
+                                background-color: var(--on-surface);
                                 transition: all ease 0.3s;
                             }
                         }
 
-                        &:hover {
-                            a {
-                                padding-left: 12px;
+                        &:first-child {
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                background: transparent;
+                                width: calc(100% + 40px);
+                                top: -18px;
+                                left: -20px;
+                                bottom: 0;
+                            }
+                        }
 
+                        &.active {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            a {
                                 &::before {
-                                    width: calc(100% - 12px);
-                                    left: 12px;
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                            a {
+                                &::before {
+                                    width: calc(100% - 40px);
                                 }
                             }
                         }
                     }
 
-                    .sub-nav-item.active {
-                        a {
-                            padding-left: 12px;
-
-                            &::before {
-                                width: calc(100% - 12px);
-                                left: 12px;
-                            }
-                        }
+                    &:hover .sub-nav-item.active {
+                        background: transparent;
                     }
                 }
 
                 &:hover {
 
                     .sub-nav {
-                        top: 74px;
                         opacity: 1;
                         visibility: visible;
+                        transform: scaleY(1);
+                    }
+                }
+
+                &:nth-child(2) {
+                    position: unset;
+
+                    .sub-nav {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 75px;
+                        width: 100%;
+                        height: auto;
+                        background-color: transparent;
+                        box-shadow: unset;
+                        padding: 0;
+                        overflow: unset;
+                        z-index: -1;
+                        pointer-events: none;
+
+                        .container {
+                            max-width: 1320px;
+                            margin: 0 auto;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            width: 100%;
+                            height: auto;
+                            position: relative;
+                            z-index: 5;
+                            pointer-events: all;
+
+                            .content-main {
+                                padding: 18px 20px;
+                                background-color: var(--white);
+                                border-radius: 0 0 16px 16px;
+                                box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
+
+                                .row {
+                                    >div:first-child {
+                                        .list-service {
+                                            .row {
+                                                margin-left: 10px;
+                                                margin-right: 10px;
+                                                row-gap: 10px;
+
+                                                >div {
+                                                    padding-right: 10px;
+                                                    padding-left: 10px;
+
+                                                    .service-item {
+                                                        padding: 16px 20px;
+                                                        border-radius: 8px;
+
+                                                        &::before {
+                                                            background-color: transparent !important;
+                                                        }
+
+                                                        .text-button {
+                                                            position: relative;
+
+                                                            &::before {
+                                                                content: "";
+                                                                position: absolute;
+                                                                left: 8px;
+                                                                bottom: 0;
+                                                                width: 0;
+                                                                height: 1px;
+                                                                background-color: var(--on-surface);
+                                                                transition: all ease 0.3s;
+                                                            }
+                                                        }
+
+                                                        &:hover {
+                                                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                                                            .text-button {
+                                                                &::before {
+                                                                    width: calc(100% - 8px);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                    >div:last-child {
+                                        .content {
+                                            .block-button {
+                                                a {
+                                                    padding: 8px 24px;
+
+                                                    &::before {
+                                                        display: none;
+                                                    }
+                                                }
+                                            }
+
+                                            .list-social {
+                                                margin-top: 16px;
+                                                justify-content: space-between;
+
+                                                a {
+                                                    padding: 0;
+                                                    border: none;
+                                                    background-color: var(--white);
+
+                                                    i {
+                                                        color: var(--on-surface-variant1);
+                                                    }
+
+                                                    &::before {
+                                                        display: none;
+                                                    }
+
+                                                    &:hover {
+                                                        background-color: var(--blue);
+
+                                                        i {
+                                                            color: var(--white);
+                                                        }
+                                                    }
+                                                }
+
+                                                @media (max-width: 1290px) {
+                                                    gap: 6px;
+
+                                                    a {
+                                                        width: 30px;
+                                                        height: 30px;
+
+                                                        i {
+                                                            font-size: 12px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        >a {
+                            &::before {
+                                width: calc(100% - 24px);
+                            }
+                        }
                     }
                 }
             }
@@ -284,6 +455,7 @@
                             font-weight: 600;
 
                             i {
+                                display: inline-block;
                                 transition: all ease 0.4s;
                             }
                         }
@@ -414,7 +586,6 @@
             .menu-humburger {
                 display: block;
                 font-size: 24px;
-                padding-left: 16px;
             }
         }
     }
@@ -558,9 +729,46 @@
         .menu-main {
             ul {
                 li {
-                    a {
+                    >a {
                         &::before {
-                            background-color: var(--yellow) !important;
+                            background-color: var(--yellow);
+                        }
+                    }
+                }
+
+                >li {
+                    &:nth-child(2) {
+                        .sub-nav {
+                            .container {
+                                .content-main {
+                                    .row {
+                                        >div:last-child {
+                                            .content {
+                                                .more-infor {
+                                                    .call {
+                                                        i {
+                                                            color: var(--on-surface);
+                                                            background-color: var(--yellow);
+                                                        }
+                                                    }
+                                                }
+
+                                                .list-social {
+                                                    a {
+                                                        &:hover {
+                                                            background-color: var(--yellow);
+
+                                                            i {
+                                                                color: var(--on-surface);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -572,7 +780,7 @@
             right: 0;
             position: relative;
 
-            a {
+            a.button {
                 margin-right: 0;
 
                 &:hover {
@@ -626,7 +834,40 @@
                 li {
                     a {
                         &::before {
-                            background-color: var(--pink) !important;
+                            background-color: var(--pink);
+                        }
+                    }
+                }
+
+                >li {
+                    &:nth-child(2) {
+                        .sub-nav {
+                            .container {
+                                .content-main {
+                                    .row {
+                                        >div:last-child {
+                                            .content {
+                                                .more-infor {
+                                                    .call {
+                                                        i {
+
+                                                            background-color: var(--pink);
+                                                        }
+                                                    }
+                                                }
+
+                                                .list-social {
+                                                    a {
+                                                        &:hover {
+                                                            background-color: var(--pink);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -676,7 +917,44 @@
                 li {
                     a {
                         &::before {
-                            background-color: var(--green) !important;
+                            background-color: var(--green);
+                        }
+                    }
+                }
+
+                >li {
+                    &:nth-child(2) {
+                        .sub-nav {
+                            .container {
+                                .content-main {
+                                    .row {
+                                        >div:last-child {
+                                            .content {
+                                                .more-infor {
+                                                    .call {
+                                                        i {
+
+                                                            background-color: var(--green);
+                                                        }
+                                                    }
+                                                }
+
+                                                .list-social {
+                                                    a {
+                                                        &:hover {
+                                                            background-color: var(--green);
+
+                                                            i {
+                                                                color: var(--on-surface);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -713,7 +991,7 @@
                 }
             }
 
-            a {
+            a.button {
                 &:hover {
                     background-color: #00ff40;
                 }
@@ -754,7 +1032,40 @@
                 li {
                     a {
                         &::before {
-                            background-color: var(--purple) !important;
+                            background-color: var(--purple);
+                        }
+                    }
+                }
+
+                >li {
+                    &:nth-child(2) {
+                        .sub-nav {
+                            .container {
+                                .content-main {
+                                    .row {
+                                        >div:last-child {
+                                            .content {
+                                                .more-infor {
+                                                    .call {
+                                                        i {
+
+                                                            background-color: var(--purple);
+                                                        }
+                                                    }
+                                                }
+
+                                                .list-social {
+                                                    a {
+                                                        &:hover {
+                                                            background-color: var(--purple);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -781,7 +1092,40 @@
                 li {
                     a {
                         &::before {
-                            background-color: var(--blue) !important;
+                            background-color: var(--blue);
+                        }
+                    }
+                }
+
+                >li {
+                    &:nth-child(2) {
+                        .sub-nav {
+                            .container {
+                                .content-main {
+                                    .row {
+                                        >div:last-child {
+                                            .content {
+                                                .more-infor {
+                                                    .call {
+                                                        i {
+
+                                                            background-color: var(--blue);
+                                                        }
+                                                    }
+                                                }
+
+                                                .list-social {
+                                                    a {
+                                                        &:hover {
+                                                            background-color: var(--blue);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -859,6 +1203,24 @@
                     }
                 }
             }
+
+            #menu-mobile-block {
+                .logo {
+                    svg {
+                        path {
+                            fill: var(--on-surface);
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 992px) {
+            .right-block {
+                .menu-humburger {
+                    padding-left: 0;
+                }
+            }
         }
     }
 }
@@ -880,22 +1242,18 @@
             }
 
             .sub-nav .sub-nav-item.active {
-                a {
-                    padding-left: 0;
+                background: transparent;
 
+                a {
                     &::before {
                         width: 0;
-                        left: 0;
                     }
                 }
 
                 &:hover {
                     a {
-                        padding-left: 12px;
-
                         &::before {
-                            width: calc(100% - 12px);
-                            left: 12px;
+                            width: calc(100% - 40px);
                         }
                     }
                 }
@@ -914,6 +1272,354 @@
 
 /*
 *** Remove active Home: Start
+*/
+
+
+/*
+*** Style Company Menu Header Page: Start
+*/
+.style-company {
+    .header-menu .menu-main>ul {
+        >li:nth-child(3) {
+            >a {
+                &::before {
+                    width: calc(100% - 24px);
+                }
+            }
+        }
+    }
+
+    &.style-one {
+        .header-menu .menu-main>ul {
+            >li:nth-child(3) {
+                ul {
+                    li:nth-child(1) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(1) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-two {
+        .header-menu .menu-main>ul {
+            >li:nth-child(3) {
+                ul {
+                    li:nth-child(2) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(2) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-three {
+        .header-menu .menu-main>ul {
+            >li:nth-child(3) {
+                ul {
+                    li:nth-child(3) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(3) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-four {
+        .header-menu .menu-main>ul {
+            >li:nth-child(3) {
+                ul {
+                    li:nth-child(4) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(4) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-five {
+        .header-menu .menu-main>ul {
+            >li:nth-child(3) {
+                ul {
+                    li:nth-child(5) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(5) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Style Company Menu Header Page: End
+*/
+
+
+/*
+*** Case Studies Menu Header Page: Start
+*/
+.style-case-studies {
+    .header-menu .menu-main>ul {
+        >li:nth-child(4) {
+            >a {
+                &::before {
+                    width: calc(100% - 24px);
+                }
+            }
+        }
+    }
+
+    &.style-one {
+        .header-menu .menu-main>ul {
+            >li:nth-child(4) {
+                ul {
+                    li:nth-child(1) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(1) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-two {
+        .header-menu .menu-main>ul {
+            >li:nth-child(4) {
+                ul {
+                    li:nth-child(2) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(2) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-three {
+        .header-menu .menu-main>ul {
+            >li:nth-child(4) {
+                ul {
+                    li:nth-child(3) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(3) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-four {
+        .header-menu .menu-main>ul {
+            >li:nth-child(4) {
+                ul {
+                    li:nth-child(4) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(4) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-five {
+        .header-menu .menu-main>ul {
+            >li:nth-child(4) {
+                ul {
+                    li:nth-child(5) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(5) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-six {
+        .header-menu .menu-main>ul {
+            >li:nth-child(4) {
+                ul {
+                    li:nth-child(6) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
+                            &::before {
+                                width: calc(100% - 40px);
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(6) {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Case Studies Menu Header Page: End
 */
 
 /*
@@ -935,13 +1641,22 @@
             >li:nth-child(5) {
                 ul {
                     li:nth-child(1) {
-                        >a {
-                            padding-left: 12px;
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
                             &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                                width: calc(100% - 40px);
                             }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(1) {
+                            background: transparent;
                         }
                     }
                 }
@@ -954,13 +1669,22 @@
             >li:nth-child(5) {
                 ul {
                     li:nth-child(2) {
-                        >a {
-                            padding-left: 12px;
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
                             &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                                width: calc(100% - 40px);
                             }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(2) {
+                            background: transparent;
                         }
                     }
                 }
@@ -973,13 +1697,22 @@
             >li:nth-child(5) {
                 ul {
                     li:nth-child(3) {
-                        >a {
-                            padding-left: 12px;
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
                             &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                                width: calc(100% - 40px);
                             }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(3) {
+                            background: transparent;
                         }
                     }
                 }
@@ -992,13 +1725,22 @@
             >li:nth-child(5) {
                 ul {
                     li:nth-child(4) {
-                        >a {
-                            padding-left: 12px;
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
                             &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                                width: calc(100% - 40px);
                             }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(4) {
+                            background: transparent;
                         }
                     }
                 }
@@ -1011,13 +1753,22 @@
             >li:nth-child(5) {
                 ul {
                     li:nth-child(5) {
-                        >a {
-                            padding-left: 12px;
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
                             &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                                width: calc(100% - 40px);
                             }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(5) {
+                            background: transparent;
                         }
                     }
                 }
@@ -1030,13 +1781,22 @@
             >li:nth-child(5) {
                 ul {
                     li:nth-child(6) {
-                        >a {
-                            padding-left: 12px;
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
                             &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                                width: calc(100% - 40px);
                             }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(6) {
+                            background: transparent;
                         }
                     }
                 }
@@ -1044,18 +1804,27 @@
         }
     }
 
-    &.style-seven {
+    &.style-six {
         .header-menu .menu-main>ul {
             >li:nth-child(5) {
                 ul {
-                    li:nth-child(7) {
-                        >a {
-                            padding-left: 12px;
+                    li:nth-child(6) {
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
+                        &:hover {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                        }
+
+                        >a {
                             &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                                width: calc(100% - 40px);
                             }
+                        }
+                    }
+
+                    &:hover {
+                        li:nth-child(6) {
+                            background: transparent;
                         }
                     }
                 }
@@ -1068,142 +1837,9 @@
 *** Blog Menu Header Page: End
 */
 
-/*
-*** Case Studies Menu Header Page: Start
-*/
-.style-case-studies {
-    .header-menu .menu-main>ul {
-        >li:nth-child(4) {
-            >a {
-                &::before {
-                    width: calc(100% - 24px);
-                }
-            }
-        }
-    }
-
-    &.style-one {
-        .header-menu .menu-main>ul {
-            >li:nth-child(4) {
-                ul {
-                    li:nth-child(1) {
-                        >a {
-                            padding-left: 12px;
-
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-two {
-        .header-menu .menu-main>ul {
-            >li:nth-child(4) {
-                ul {
-                    li:nth-child(2) {
-                        >a {
-                            padding-left: 12px;
-
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-three {
-        .header-menu .menu-main>ul {
-            >li:nth-child(4) {
-                ul {
-                    li:nth-child(3) {
-                        >a {
-                            padding-left: 12px;
-
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-four {
-        .header-menu .menu-main>ul {
-            >li:nth-child(4) {
-                ul {
-                    li:nth-child(4) {
-                        >a {
-                            padding-left: 12px;
-
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-five {
-        .header-menu .menu-main>ul {
-            >li:nth-child(4) {
-                ul {
-                    li:nth-child(5) {
-                        >a {
-                            padding-left: 12px;
-
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-six {
-        .header-menu .menu-main>ul {
-            >li:nth-child(4) {
-                ul {
-                    li:nth-child(6) {
-                        >a {
-                            padding-left: 12px;
-
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 /*
-*** Case Studies Menu Header Page: End
-*/
-
-
-/*
-*** Case Studies Menu Header Page: Start
+*** Srtle Pages Menu Header Page: Start
 */
 .style-pages {
     .header-menu .menu-main>ul {
@@ -1220,13 +1856,26 @@
         .header-menu .menu-main>ul {
             >li:nth-child(6) {
                 ul {
-                    li:nth-child(1) {
-                        >a {
-                            padding-left: 12px;
+                    .left {
+                        li:nth-child(1) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .left {
+                            li:nth-child(1) {
+                                background: transparent;
                             }
                         }
                     }
@@ -1239,13 +1888,26 @@
         .header-menu .menu-main>ul {
             >li:nth-child(6) {
                 ul {
-                    li:nth-child(2) {
-                        >a {
-                            padding-left: 12px;
+                    .left {
+                        li:nth-child(2) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .left {
+                            li:nth-child(2) {
+                                background: transparent;
                             }
                         }
                     }
@@ -1258,13 +1920,26 @@
         .header-menu .menu-main>ul {
             >li:nth-child(6) {
                 ul {
-                    li:nth-child(3) {
-                        >a {
-                            padding-left: 12px;
+                    .left {
+                        li:nth-child(3) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .left {
+                            li:nth-child(3) {
+                                background: transparent;
                             }
                         }
                     }
@@ -1277,13 +1952,26 @@
         .header-menu .menu-main>ul {
             >li:nth-child(6) {
                 ul {
-                    li:nth-child(4) {
-                        >a {
-                            padding-left: 12px;
+                    .left {
+                        li:nth-child(4) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .left {
+                            li:nth-child(4) {
+                                background: transparent;
                             }
                         }
                     }
@@ -1296,13 +1984,26 @@
         .header-menu .menu-main>ul {
             >li:nth-child(6) {
                 ul {
-                    li:nth-child(5) {
-                        >a {
-                            padding-left: 12px;
+                    .right {
+                        li:nth-child(1) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .right {
+                            li:nth-child(1) {
+                                background: transparent;
                             }
                         }
                     }
@@ -1315,13 +2016,26 @@
         .header-menu .menu-main>ul {
             >li:nth-child(6) {
                 ul {
-                    li:nth-child(6) {
-                        >a {
-                            padding-left: 12px;
+                    .right {
+                        li:nth-child(2) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .right {
+                            li:nth-child(2) {
+                                background: transparent;
                             }
                         }
                     }
@@ -1334,13 +2048,58 @@
         .header-menu .menu-main>ul {
             >li:nth-child(6) {
                 ul {
-                    li:nth-child(7) {
-                        >a {
-                            padding-left: 12px;
+                    .right {
+                        li:nth-child(3) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
-                            &::before {
-                                left: 12px;
-                                width: calc(100% - 12px);
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .right {
+                            li:nth-child(3) {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.style-eight {
+        .header-menu .menu-main>ul {
+            >li:nth-child(6) {
+                ul {
+                    .right {
+                        li:nth-child(4) {
+                            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+
+                            &:hover {
+                                background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%) !important;
+                            }
+
+                            >a {
+                                &::before {
+                                    width: calc(100% - 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .right {
+                            li:nth-child(4) {
+                                background: transparent;
                             }
                         }
                     }
@@ -1351,5 +2110,5 @@
 }
 
 /*
-*** Case Studies Menu Header Page: End
+*** Srtle Pages Menu Header Page: End
 */
