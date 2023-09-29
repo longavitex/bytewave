@@ -5808,10 +5808,11 @@ a.border-underline-purple-2px:hover {
   overflow: hidden;
 }
 .header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile > a {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 .header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile > a i {
+  font-size: 14px;
   display: inline-block;
   transition: all ease 0.4s;
 }
@@ -5821,6 +5822,15 @@ a.border-underline-purple-2px:hover {
   max-height: 0;
   transition: all ease 0.8s;
 }
+.header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile:nth-child(2) ul {
+  margin-left: 12px;
+}
+.header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile:nth-child(2) ul .list-service a {
+  padding: 10px;
+}
+.header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile:nth-child(2) ul .list-social {
+  margin-top: 16px;
+}
 .header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile.open .nav-link-mobile i {
   transform: rotate(90deg);
 }
@@ -5828,6 +5838,10 @@ a.border-underline-purple-2px:hover {
   max-height: 400px;
   opacity: 1;
   visibility: visible;
+}
+.header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile.open:nth-child(2) ul {
+  margin-top: 12px;
+  max-height: 1020px;
 }
 .header-menu #menu-mobile-block .menu-mobile-main .container .menu-nav-mobile .nav-item-mobile:nth-child(1) {
   transition-delay: 0.5s;

@@ -451,10 +451,11 @@
                         overflow: hidden;
 
                         >a {
-                            font-size: 16px;
+                            font-size: 18px;
                             font-weight: 600;
 
                             i {
+                                font-size: 14px;
                                 display: inline-block;
                                 transition: all ease 0.4s;
                             }
@@ -465,6 +466,22 @@
                             visibility: hidden;
                             max-height: 0;
                             transition: all ease 0.8s;
+                        }
+
+                        &:nth-child(2) {
+                            ul {
+                                margin-left: 12px;
+
+                                .list-service {
+                                    a {
+                                        padding: 10px;
+                                    }
+                                }
+
+                                .list-social {
+                                    margin-top: 16px;
+                                }
+                            }
                         }
                     }
 
@@ -479,6 +496,13 @@
                             max-height: 400px;
                             opacity: 1;
                             visibility: visible;
+                        }
+
+                        &:nth-child(2) {
+                            ul {
+                                margin-top: 12px;
+                                max-height: 1020px;
+                            }
                         }
                     }
 
