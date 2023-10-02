@@ -6,9 +6,9 @@ mixin blogItem(props = {})
                 .bg-img.w-100.overflow-hidden
                     img(src=`${img}` alt=`${title}`).w-100.h-100.display-block
                 .infor.mt-28
-                    .text-button-small.text-blue.pt-4.pb-4.pl-12.pr-12.bg-grey.bora-8.display-inline-block!= category
-                    .heading5.mt-12!= title
-                    .text-on-surface-variant1.mt-12!= desc 
+                    .category.text-button-small.text-blue.pt-4.pb-4.pl-12.pr-12.bg-grey.bora-8.display-inline-block!= category
+                    .title.heading5.mt-12!= title
+                    .desc.text-on-surface-variant1.mt-12!= desc 
                     if(learn==true)
                         .text-button-small.mt-16 Learn more
                     if(date)
@@ -17,15 +17,15 @@ mixin blogItem(props = {})
             a(href=`${href}`).main-item
                 .bg-img.w-100.overflow-hidden
                     img(src=`${img}` alt=`${title}`).w-100.h-100.display-block
-                    .text-label.bg-pink.text-white.pt-8.pb-8.pl-12.pr-12.display-inline-block!= category
+                    .category.text-label.bg-pink.text-white.pt-8.pb-8.pl-12.pr-12.display-inline-block!= category
                 .infor.p-28
-                    .heading5!= title 
+                    .title.heading5!= title 
                     .text-label.text-on-surface-variant1.mt-16!= date
         if(style=='style-five')
             a(href=`${href}`).main-item
                 .bg-img.w-100.overflow-hidden
                     img(src=`${img}` alt=`${title}`).w-100.h-100.display-block
                 .infor.mt-28
-                    .text-label.text-on-surface-variant1.display-inline-block!= category
-                    .heading5.mt-12!= title
+                    .category.text-label.text-on-surface-variant1.display-inline-block!= category
+                    .title.heading5.mt-12!= title
                     .text-label.text-on-surface-variant1.mt-16!= date

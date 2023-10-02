@@ -63,7 +63,7 @@ if (popupNewsletterMain) {
 }
 
 // Prevent Pop up
-// check for saved 'darkMode' in localStorage
+// check for saved 'popupNewsletter' in localStorage
 let popupNewsletter = localStorage.getItem('popupNewsletter');
 localStorage.setItem('popupNewsletter', '')
 
@@ -980,4 +980,41 @@ if (paymentCheckbox) {
             }
         })
     })
+}
+
+
+// Get blog information when clicking on a blog item
+// Initialize selectedBlog in localStorage
+let selectedBlog = localStorage.getItem('selectedBlog');
+
+// Get all blog entries on the list page
+const blogItems = document.querySelectorAll('.blog-item-filter');
+
+// Handle click events for each blog entry
+if (blogItems) {
+    blogItems.forEach(blogItem => {
+        blogItem.addEventListener('click', () => {
+            // Listen for click events, get blog information, save to blogInfor
+            var blogInfor = {
+                cate: blogItem.querySelector('.category').innerHTML,
+                title: blogItem.querySelector('.title').innerHTML,
+                desc: blogItem.querySelector('.desc').innerHTML,
+                img: blogItem.querySelector('.bg-img img').getAttribute('src'),
+            }
+
+            // Save blog item information to localStorage
+            localStorage.setItem('selectedBlog', JSON.stringify(blogInfor));
+        });
+    });
+}
+
+// Extract blog item information from localStorage
+var selectedBlogInfo = JSON.parse(localStorage.getItem('selectedBlog'));
+
+// Display blog information on the blog details page
+if (document.querySelector('.blog-detail-page')) {
+    document.querySelector('.category').textContent = selectedBlogInfo.cate;
+    document.querySelector('.title').textContent = selectedBlogInfo.title;
+    document.querySelector('.desc').textContent = selectedBlogInfo.desc;
+    document.querySelector('.main-img img').src = selectedBlogInfo.img;
 }
