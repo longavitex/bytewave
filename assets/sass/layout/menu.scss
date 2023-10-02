@@ -154,6 +154,11 @@
                 }
 
                 &:hover {
+                    >a {
+                        &::before {
+                            width: calc(100% - 24px);
+                        }
+                    }
 
                     .sub-nav {
                         opacity: 1;
@@ -301,14 +306,6 @@
                                         }
                                     }
                                 }
-                            }
-                        }
-                    }
-
-                    &:hover {
-                        >a {
-                            &::before {
-                                width: calc(100% - 24px);
                             }
                         }
                     }

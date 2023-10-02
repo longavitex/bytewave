@@ -127,6 +127,9 @@
 .header-menu .menu-main > ul > li .sub-nav:hover .sub-nav-item.active {
   background: transparent;
 }
+.header-menu .menu-main > ul > li:hover > a::before {
+  width: calc(100% - 24px);
+}
 .header-menu .menu-main > ul > li:hover .sub-nav {
   opacity: 1;
   visibility: visible;
@@ -239,9 +242,6 @@
   .header-menu .menu-main > ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a i {
     font-size: 12px;
   }
-}
-.header-menu .menu-main > ul > li:nth-child(2):hover > a::before {
-  width: calc(100% - 24px);
 }
 .header-menu .right-block {
   justify-content: right;
