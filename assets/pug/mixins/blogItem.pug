@@ -4,7 +4,7 @@ mixin blogItem(props = {})
         if(style=='style-one')
             a(href=`${href}`).main-item
                 .bg-img.w-100.overflow-hidden
-                    img(src=`${img}`).w-100.h-100.display-block
+                    img(src=`${img}` alt=`${title}`).w-100.h-100.display-block
                 .infor.mt-28
                     .text-button-small.text-blue.pt-4.pb-4.pl-12.pr-12.bg-grey.bora-8.display-inline-block!= category
                     .heading5.mt-12!= title
@@ -16,7 +16,7 @@ mixin blogItem(props = {})
         if(style=='style-four')
             a(href=`${href}`).main-item
                 .bg-img.w-100.overflow-hidden
-                    img(src=`${img}`).w-100.h-100.display-block
+                    img(src=`${img}` alt=`${title}`).w-100.h-100.display-block
                     .text-label.bg-pink.text-white.pt-8.pb-8.pl-12.pr-12.display-inline-block!= category
                 .infor.p-28
                     .heading5!= title 
@@ -24,7 +24,7 @@ mixin blogItem(props = {})
         if(style=='style-five')
             a(href=`${href}`).main-item
                 .bg-img.w-100.overflow-hidden
-                    img(src=`${img}`).w-100.h-100.display-block
+                    img(src=`${img}` alt=`${title}`).w-100.h-100.display-block
                 .infor.mt-28
                     .text-label.text-on-surface-variant1.display-inline-block!= category
                     .heading5.mt-12!= title

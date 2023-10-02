@@ -43,29 +43,29 @@
                     .heading5 Schedule a free consultation
                     .row.gy-2
                         .col-12.col-sm-6 
-                            label(for="").caption1.text-on-surface-variant1.pb-8 First Name
-                            input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                            label(for="firstName").caption1.text-on-surface-variant1.pb-8 First Name
+                            input(type="text" id="firstName" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                         .col-12.col-sm-6 
-                            label(for="").caption1.text-on-surface-variant1.pb-8 Last Name
-                            input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                            label(for="lastName").caption1.text-on-surface-variant1.pb-8 Last Name
+                            input(type="text" id="lastName" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                         .col-12
-                            label(for="").caption1.text-on-surface-variant1.pb-8 Phone
-                            input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                            label(for="phone").caption1.text-on-surface-variant1.pb-8 Phone
+                            input(type="text" id="phone" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                         .col-12
-                            label(for="").caption1.text-on-surface-variant1.pb-8 Company Email
-                            input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                            label(for="companyEmail").caption1.text-on-surface-variant1.pb-8 Company Email
+                            input(type="text" id="companyEmail" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                         .col-12
-                            label(for="").caption1.text-on-surface-variant1.pb-8 Company/ Organization
-                            input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                            label(for="company").caption1.text-on-surface-variant1.pb-8 Company/ Organization
+                            input(type="text" id="company" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                         .col-12 
-                            label(for="").caption1.text-on-surface-variant1.pb-8 How can we help you?
-                            select(name="form").w-100.bg-white.pl-16.pr-24.pt-8.pb-8.bora-4.border-outline
+                            label(for="cate").caption1.text-on-surface-variant1.pb-8 How can we help you?
+                            select(name="form" id="cate").w-100.bg-white.pl-16.pr-24.pt-8.pb-8.bora-4.border-outline
                                 option(value="Financial Planning") Financial Planning
                                 option(value="Business Planning") Business Planning
                                 option(value="Development Planning") Development Planning
                             i.ph.ph-caret-down
                         .col-12 
-                            label(for="").caption1.text-on-surface-variant1.pb-8 Your message
-                            textarea(name="" rows="3" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline.display-block
+                            label(for="message").caption1.text-on-surface-variant1.pb-8 Your message
+                            textarea(name="message" rows="3" id="message" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline.display-block
                     .block-button
                         button.button-blue.button-blue-hover.w-100 Submit

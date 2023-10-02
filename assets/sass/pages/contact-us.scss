@@ -19,7 +19,7 @@
 
                 i {
                     font-size: 20px;
-                    color: var(--text-on-surface-variant1);
+                    color: var(--on-surface-variant1);
                 }
 
                 &:hover {
@@ -76,6 +76,25 @@
             .col-12 {
                 padding-left: 12px;
                 padding-right: 12px;
+            }
+        }
+    }
+}
+
+.our-location {
+    .block-button {
+        a {
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: var(--on-surface);
             }
         }
     }
