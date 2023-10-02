@@ -313,7 +313,7 @@
                         transition: all ease 0.3s;
 
                         &:hover {
-                            background-color: var(--error);
+                            background-color: var(--critical);
                             color: var(--white);
                         }
                     }

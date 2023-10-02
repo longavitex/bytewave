@@ -1,3 +1,6 @@
+/*
+*** About Us Page : Start
+*/
 .our-mission-block .counter > div .counter-item {
   border-left: 4px solid var(--blue);
   padding-left: 20px;
@@ -72,3 +75,7 @@
 .style-about-us .section-testimonial {
   background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 }
+
+/*
+*** About Us Page : End
+*/

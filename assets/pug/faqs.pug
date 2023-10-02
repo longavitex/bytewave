@@ -9,7 +9,7 @@ block content
     include mixins/questionItem.pug
     .bg-subpage
     +headingSubpage({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'Frequently Asked Questions', subHeading:'Your Queries, Our Answers', content: false})
-    .faqs-block-page.pt-80.pb-80 
+    .faqs-block-page.pt-20.pb-80 
         .container 
             .row
                 .col-xl-4.col-sm-10
@@ -20,21 +20,21 @@ block content
                                 .text-on-surface-variant1.mt-4 Ask Anything, We're Here to Help
                             .row.gy-2.mt-20
                                 .col-12
-                                    label(for="").caption1.text-on-surface-variant1.pb-8 Name
-                                    input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                    label(for="name").caption1.text-on-surface-variant1.pb-8 Name
+                                    input(type="text" id="name" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                                 .col-12.mt-12
-                                    label(for="").caption1.text-on-surface-variant1.pb-8 Company Email
-                                    input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                    label(for="companyEmail").caption1.text-on-surface-variant1.pb-8 Company Email
+                                    input(type="text" id="companyEmail" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                                 .col-12.form-select-block.mt-12
-                                    label(for="").caption1.text-on-surface-variant1.pb-8 How can we help you?
-                                    select(name="form").w-100.bg-white.pl-16.pr-24.pt-8.pb-8.bora-4.border-outline
+                                    label(for="cate").caption1.text-on-surface-variant1.pb-8 How can we help you?
+                                    select(name="form" id="cate").w-100.bg-white.pl-16.pr-24.pt-8.pb-8.bora-4.border-outline
                                         option(value="Financial Planning") Financial Planning
                                         option(value="Business Planning") Business Planning
                                         option(value="Development Planning") Development Planning
                                     i.ph.ph-caret-down
                                 .col-12.mt-12
-                                    label(for="").caption1.text-on-surface-variant1.pb-8 Message
-                                    textarea(name="" rows="3" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline.display-block
+                                    label(for="message").caption1.text-on-surface-variant1.pb-8 Message
+                                    textarea(name="message" id="message" rows="3" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline.display-block
                             .block-button.mt-20
                                 button.button-blue.button-blue-hover.w-100 Send Request
                 .col-xl-8.col-sm-10.pl-45.pl-col-lg-0

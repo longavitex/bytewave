@@ -38,6 +38,8 @@
                     &:focus,
                     &:active {
                         background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid var(--blue);
                     }
                 }
 
@@ -54,6 +56,14 @@
                         font-size: 20px;
                         color: var(--on-surface);
                         background-color: transparent;
+                        padding: 8px;
+                        border-radius: 50%;
+                        transition: all ease 0.4s;
+
+                        &:hover {
+                            background-color: var(--blue);
+                            color: var(--white);
+                        }
                     }
                 }
             }
@@ -95,6 +105,7 @@
         }
     }
 }
+
 /*
 *** Section Footer main: End
 */
@@ -134,6 +145,15 @@
         .list-social {
             .item {
                 border: 1px solid var(--on-surface-variant2);
+
+                &:hover {
+                    background-color: var(--yellow);
+                    border: none;
+
+                    i {
+                        color: var(--black-surface);
+                    }
+                }
             }
         }
 
@@ -143,11 +163,21 @@
                     input {
                         color: var(--white);
                         border-bottom: 1px solid var(--white);
+
+                        &:focus,
+                        &:active {
+                            border-bottom: 1px solid var(--yellow);
+                        }
                     }
 
                     button {
                         i {
                             color: var(--white);
+
+                            &:hover {
+                                background-color: var(--yellow);
+                                color: var(--on-surface);
+                            }
                         }
                     }
                 }
@@ -171,13 +201,20 @@
                 .footer-navigate {
                     align-items: flex-start;
                 }
+
+                .list-infor {
+                    .flex-item-center {
+                        display: inline-flex;
+                        border-bottom: 1px solid var(--pink);
+                    }
+                }
             }
         }
 
         .footer-bottom {
             .list-social {
                 margin-top: 0;
-                gap: 0;
+                gap: 4px;
 
                 a {
                     border: none;
@@ -186,6 +223,10 @@
                         &::before {
                             color: var(--white);
                         }
+                    }
+
+                    &:hover {
+                        background-color: var(--pink);
                     }
                 }
             }
@@ -198,6 +239,111 @@
 */
 
 /*
+*** Section Footer Home5: Start
+*/
+.footer-style-four.footer-style-five {
+    .footer-block {
+        .container {
+            >.row {
+                .list-infor {
+                    .flex-item-center {
+                        border-bottom: 1px solid var(--green);
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            .list-social {
+                a {
+                    &:hover {
+                        background-color: var(--green);
+
+                        i {
+                            &::before {
+                                color: var(--on-surface);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section Footer Home5: End
+*/
+
+/*
+*** Section Footer Home6: Start
+*/
+.footer-style-four.footer-style-six {
+    .footer-block {
+        .container {
+            >.row {
+                .list-infor {
+                    .flex-item-center {
+                        border-bottom: 1px solid var(--purple);
+                    }
+                }
+            }
+        }
+
+        .footer-bottom {
+            .list-social {
+                a {
+                    &:hover {
+                        background-color: var(--purple);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section Footer Home6: End
+*/
+
+/*
+*** Section Footer Home7: Start
+*/
+.footer-style-four.footer-style-seven {
+    .footer-block {
+        background: #0C1228;
+
+        .container {
+            >.row {
+                .list-infor {
+                    .flex-item-center {
+                        border-bottom: 1px solid var(--blue);
+                    }
+                }
+            }
+        }
+
+        .bg-black-surface {
+            background: #0C1228;
+        }
+
+        .footer-bottom {
+            .list-social {
+                a {
+                    &:hover {
+                        background-color: var(--blue);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section Footer Home7: End
+*/
+
+/*
 *** Section Footer Style Blog: Start
 */
 #footer {
@@ -205,6 +351,7 @@
         border-top: 1px solid var(--outline);
     }
 }
+
 /*
 *** Section Footer Style Blog: End
 */

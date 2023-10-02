@@ -105,10 +105,17 @@
   height: 80px;
   border-radius: 50%;
   background-color: var(--green);
+  transition: all ease 0.3s;
+}
+.section-industry-five .container > .row > div:first-child .play-block:hover {
+  background-color: var(--white);
+}
+.section-industry-five .container > .row > div:first-child .play-block:hover i {
+  color: var(--green);
 }
 .section-industry-five .container > .row > div:last-child .nav-item a {
   position: relative;
-  transition: all linear 0.3s;
+  transition: all ease 0.3s;
 }
 .section-industry-five .container > .row > div:last-child .nav-item a::before {
   position: absolute;
@@ -118,7 +125,7 @@
   background-color: var(--green);
   height: 2px;
   width: 0;
-  transition: all linear 0.3s;
+  transition: all ease 0.3s;
 }
 .section-industry-five .container > .row > div:last-child .nav-item:hover a {
   color: var(--on-surface);

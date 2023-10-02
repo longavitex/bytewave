@@ -227,7 +227,7 @@
   transition: all ease 0.3s;
 }
 .section-about.style-seven-first .container .row > div:first-child .bg-img i:hover {
-  background-color: var(--error);
+  background-color: var(--critical);
   color: var(--white);
 }
 .section-about.style-seven-first .container .row > div:first-child .bg-img .text-title {

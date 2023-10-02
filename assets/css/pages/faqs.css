@@ -23,6 +23,9 @@ Shared List Questions: Start
   max-height: 150px;
 }
 
+.faqs-block-page .container .form-block {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
+}
 .faqs-block-page .container .form-block .row .form-select-block {
   position: relative;
 }
@@ -31,6 +34,12 @@ Shared List Questions: Start
   bottom: 13px;
   right: 26px;
   font-size: 18px;
+}
+.faqs-block-page .container .list-faqs {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
+}
+.faqs-block-page .container .list-faqs .list > div:nth-child(5) {
+  border: none;
 }
 @media (max-width: 1200px) {
   .faqs-block-page .container > .row {

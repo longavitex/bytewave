@@ -636,7 +636,7 @@ $(".section-testimonial.style-seven .container .list-comment").slick({
 });
 
 
-// Video modal Home7
+// Video modal Home5, Home7
 const videoModal = document.querySelector('.js-video-modal')
 const videoModalContainer = document.querySelector('.js-video-modal-container')
 const closeVideo = document.querySelector('.js-modal-close')

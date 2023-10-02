@@ -27,6 +27,9 @@
 .section-solution.style-three .heading .text-button-small:hover {
   color: var(--yellow);
 }
+.section-solution.style-three .heading .text-button-small:hover::before {
+  background-color: var(--yellow);
+}
 .section-solution.style-three .solution-item:hover {
   box-shadow: none;
 }
@@ -40,6 +43,12 @@
 /*
 *** Section Solution Home4: Start
 */
+.section-solution.style-four .heading a {
+  transition: all ease 0.4s;
+}
+.section-solution.style-four .heading a:hover {
+  color: var(--pink);
+}
 .section-solution.style-four .solution-item:hover .heading5 {
   color: var(--pink);
 }

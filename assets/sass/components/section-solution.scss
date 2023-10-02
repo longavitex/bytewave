@@ -34,6 +34,10 @@
     .heading .text-button-small {
         &:hover {
             color: var(--yellow);
+
+            &::before {
+                background-color: var(--yellow);
+            }
         }
     }
 
@@ -55,6 +59,16 @@
 *** Section Solution Home4: Start
 */
 .section-solution.style-four {
+    .heading {
+        a {
+            transition: all ease 0.4s;
+
+            &:hover {
+                color: var(--pink);
+            }
+        }
+    }
+
     .solution-item {
         &:hover {
             .heading5 {

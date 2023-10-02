@@ -70,8 +70,8 @@ block content
                                             option(value="Singapore") Singapore
                                         i.ph.ph-caret-down
                                     .col-sm-4
-                                        label(for="country") State
-                                        select#state(name="country").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
+                                        label(for="state") State
+                                        select#state(name="state").mt-12.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4
                                             option(value="Single") Single
                                             option(value="Married") Married
                                         i.ph.ph-caret-down
@@ -85,7 +85,7 @@ block content
                                     .heading5 Choose payment Option:
                                     .list-payment.mt-16
                                         .type.p-20.border-outline.bora-4
-                                            input#credit(type="radio", name="payment").pointer
+                                            input(type="radio", id="credit" name="payment").pointer
                                             label(for="credit").text-button.pl-8.pointer Credit Card
                                             .infor 
                                                 .text-on-surface-variant1.mt-4 Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.
@@ -93,19 +93,19 @@ block content
                                                     .col-12.mt-12 
                                                         .bg-img
                                                             img(src="assets/images/component/payment.png", alt="")
-                                                        label(for="") Card Numbers
-                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="cardNumberCredit") Card Numbers
+                                                        input(type="text", id="cardNumberCredit" placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") Date
-                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="dateCredit") Date
+                                                        input(type="date", id="dateCredit" name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") CCV
-                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="ccvCredit") CCV
+                                                        input(type="text", id="ccvCredit" placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                 .flex-item-center.gap-8.mt-12
-                                                    input(type="checkbox", name="save")
-                                                    label(for="save").text-button Save Card Details
+                                                    input(type="checkbox", id="saveCredit" name="save")
+                                                    label(for="saveCredit").text-button Save Card Details
                                         .type.p-20.border-outline.bora-4.mt-20
-                                            input#delivery(type="radio", name="payment").pointer
+                                            input(type="radio", id="delivery" name="payment").pointer
                                             label(for="delivery").text-button.pl-8.pointer Cash on delivery
                                             .infor 
                                                 .text-on-surface-variant1.mt-4 Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.
@@ -113,19 +113,19 @@ block content
                                                     .col-12.mt-12 
                                                         .bg-img
                                                             img(src="assets/images/component/payment.png", alt="")
-                                                        label(for="") Card Numbers
-                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="cardNumberDelivery") Card Numbers
+                                                        input(type="text", id="cardNumberDelivery" placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") Date
-                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="dateDelivery") Date
+                                                        input(type="date", id="dateDelivery" name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") CCV
-                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="ccvDelivery") CCV
+                                                        input(type="text", id="ccvDelivery" placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                 .flex-item-center.gap-8.mt-12
-                                                    input(type="checkbox", name="save")
-                                                    label(for="").text-button Save Card Details
+                                                    input(type="checkbox", id="saveDelivery" name="save")
+                                                    label(for="saveDelivery").text-button Save Card Details
                                         .type.p-20.border-outline.bora-4.mt-20
-                                            input#apple(type="radio", name="payment").pointer
+                                            input(type="radio", id="apple" name="payment").pointer
                                             label(for="apple").text-button.pl-8.pointer Apple Pay
                                             .infor 
                                                 .text-on-surface-variant1.mt-4 Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.
@@ -133,19 +133,19 @@ block content
                                                     .col-12.mt-12 
                                                         .bg-img
                                                             img(src="assets/images/component/payment.png", alt="")
-                                                        label(for="") Card Numbers
-                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="cardNumberApple") Card Numbers
+                                                        input(type="text", id="cardNumberApple" placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") Date
-                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="cardNumberApple") Date
+                                                        input(type="date", id="cardNumberApple" name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") CCV
-                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="ccvAppleccv") CCV
+                                                        input(type="text", id="ccvApple" placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                 .flex-item-center.gap-8.mt-12
-                                                    input(type="checkbox", name="save")
-                                                    label(for="save").text-button Save Card Details
+                                                    input(type="checkbox", id="saveApple" name="save")
+                                                    label(for="saveApple").text-button Save Card Details
                                         .type.p-20.border-outline.bora-4.mt-20
-                                            input#paypal(type="radio", name="payment").pointer
+                                            input(type="radio", id="paypal" name="payment").pointer
                                             label(for="paypal").pl-8.pointer 
                                                 img(src="assets/images/component/paypal.svg", alt="")
                                             .infor 
@@ -154,17 +154,17 @@ block content
                                                     .col-12.mt-12 
                                                         .bg-img
                                                             img(src="assets/images/component/payment.png", alt="")
-                                                        label(for="") Card Numbers
-                                                        input(type="input", placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="cardNumberPaypal") Card Numbers
+                                                        input(type="text", id="cardNumberPaypal" placeholder="ex.1234567890").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") Date
-                                                        input(type="date", name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="datePaypal") Date
+                                                        input(type="date", id="datePaypal" name="date").border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                     .col-sm-6.mt-12 
-                                                        label(for="") CCV
-                                                        input(type="input", placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
+                                                        label(for="ccvPaypal") CCV
+                                                        input(type="text", id="ccvPaypal" placeholder="****").pointer.border-outline.pl-16.pr-16.pt-12.pb-12.w-100.bora-4.mt-8
                                                 .flex-item-center.gap-8.mt-12
-                                                    input(type="checkbox", name="save")
-                                                    label(for="save").text-button Save Card Details
+                                                    input(type="checkbox", id="savePaypal" name="save")
+                                                    label(for="savePaypal").text-button Save Card Details
                                 .block-button.mt-40 
                                     button.button-blue.button-blue-hover.w-100 Payment
                 .col-lg-4.pl-45.pl-col-lg-0

@@ -37,6 +37,8 @@ Shared List Questions: Start
 .faqs-block-page {
     .container {
         .form-block {
+            box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
+
             .row {
                 .form-select-block {
                     position: relative;
@@ -51,7 +53,17 @@ Shared List Questions: Start
             }
         }
 
-        @media (max-width: 1200px ) {
+        .list-faqs {
+            box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
+
+            .list {
+                >div:nth-child(5) {
+                    border: none;
+                }
+            }
+        }
+
+        @media (max-width: 1200px) {
             >.row {
                 flex-direction: column-reverse;
                 align-items: center;

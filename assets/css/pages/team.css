@@ -1,8 +1,43 @@
 /*
 *** Our Team Page: Start
 */
+.teams-block .list-member .member-item .bg-img {
+  overflow: hidden;
+  border-radius: 28px;
+  display: block;
+}
+.teams-block .list-member .member-item .bg-img img {
+  transition: all ease 0.3s;
+}
+.teams-block .list-member .member-item .heading5 {
+  display: inline-block;
+  position: relative;
+}
+.teams-block .list-member .member-item .heading5::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--on-surface);
+  transition: all ease 0.3s;
+}
+.teams-block .list-member .member-item:hover .bg-img img {
+  transform: scale(1.04);
+}
+.teams-block .list-member .member-item:hover .heading5::before {
+  width: 100%;
+}
 .teams-block .cta-block .heading6 {
   text-transform: unset;
+}
+.teams-block .cta-block a.button {
+  transition: all ease 0.4s;
+}
+.teams-block .cta-block a.button:hover {
+  background-color: var(--on-surface);
+  color: var(--white);
 }
 @media (max-width: 576px) {
   .teams-block .cta-block .heading3 br {

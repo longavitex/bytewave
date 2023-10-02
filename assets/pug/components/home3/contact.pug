@@ -18,24 +18,24 @@
                     a(href="https://www.google.com/maps" target="_blank").mt-8.display-inline-block Open map
                 
             .col-12.col-xl-4
-                form(action="") 
+                form(action="form") 
                     .form.bora-16.bg-white.pt-24.pb-24.pl-28.pr-28.d-flex.flex-column.gap-20
                         .heading5 Schedule a free consultation
                         .row.gy-2
                             .col-12
-                                label(for="").caption1.text-on-surface-variant1.pb-8 Name
-                                input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                label(for="name").caption1.text-on-surface-variant1.pb-8 Name
+                                input(type="text" id="name" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                             .col-12
-                                label(for="").caption1.text-on-surface-variant1.pb-8 Phone
-                                input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                label(for="phone").caption1.text-on-surface-variant1.pb-8 Phone
+                                input(type="number" id="phone" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                             .col-12
-                                label(for="").caption1.text-on-surface-variant1.pb-8 Company Email
-                                input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                label(for="companyEmail").caption1.text-on-surface-variant1.pb-8 Company Email
+                                input(type="email" id="companyEmail" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                             .col-12
-                                label(for="").caption1.text-on-surface-variant1.pb-8 Company/ Organization
-                                input(type="text" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
+                                label(for="company").caption1.text-on-surface-variant1.pb-8 Company/ Organization
+                                input(type="text" id="company" placeholder="").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline
                             .col-12 
-                                label(for="").caption1.text-on-surface-variant1.pb-8 How can we help you?
-                                textarea(name="" rows="3" placeholder="Your message").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline.display-block
+                                label(for="message").caption1.text-on-surface-variant1.pb-8 How can we help you?
+                                textarea(name="message" rows="3" id="message" placeholder="Your message").w-100.bg-white.pl-16.pr-16.pt-8.pb-8.bora-4.border-outline.display-block
                         .block-button
                             button.button.bg-yellow.button-yellow-hover.border-none.w-100 Submit

@@ -32,6 +32,8 @@
 }
 .footer-block .row .company-contact .send-block input:focus, .footer-block .row .company-contact .send-block input:active {
   background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--blue);
 }
 .footer-block .row .company-contact .send-block button {
   padding: 0;
@@ -46,6 +48,13 @@
   font-size: 20px;
   color: var(--on-surface);
   background-color: transparent;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+.footer-block .row .company-contact .send-block button i:hover {
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 @media (max-width: 767.99px) {
@@ -97,12 +106,26 @@
 .footer-style-three .footer-block .list-social .item {
   border: 1px solid var(--on-surface-variant2);
 }
+.footer-style-three .footer-block .list-social .item:hover {
+  background-color: var(--yellow);
+  border: none;
+}
+.footer-style-three .footer-block .list-social .item:hover i {
+  color: var(--black-surface);
+}
 .footer-style-three .footer-block .row .company-contact .send-block input {
   color: var(--white);
   border-bottom: 1px solid var(--white);
 }
+.footer-style-three .footer-block .row .company-contact .send-block input:focus, .footer-style-three .footer-block .row .company-contact .send-block input:active {
+  border-bottom: 1px solid var(--yellow);
+}
 .footer-style-three .footer-block .row .company-contact .send-block button i {
   color: var(--white);
+}
+.footer-style-three .footer-block .row .company-contact .send-block button i:hover {
+  background-color: var(--yellow);
+  color: var(--on-surface);
 }
 
 /*
@@ -117,9 +140,13 @@
 .footer-style-four .footer-block .container > .row .footer-navigate {
   align-items: flex-start;
 }
+.footer-style-four .footer-block .container > .row .list-infor .flex-item-center {
+  display: inline-flex;
+  border-bottom: 1px solid var(--pink);
+}
 .footer-style-four .footer-block .footer-bottom .list-social {
   margin-top: 0;
-  gap: 0;
+  gap: 4px;
 }
 .footer-style-four .footer-block .footer-bottom .list-social a {
   border: none;
@@ -127,9 +154,60 @@
 .footer-style-four .footer-block .footer-bottom .list-social a i::before {
   color: var(--white);
 }
+.footer-style-four .footer-block .footer-bottom .list-social a:hover {
+  background-color: var(--pink);
+}
 
 /*
 *** Section Footer Home4: End
+*/
+/*
+*** Section Footer Home5: Start
+*/
+.footer-style-four.footer-style-five .footer-block .container > .row .list-infor .flex-item-center {
+  border-bottom: 1px solid var(--green);
+}
+.footer-style-four.footer-style-five .footer-block .footer-bottom .list-social a:hover {
+  background-color: var(--green);
+}
+.footer-style-four.footer-style-five .footer-block .footer-bottom .list-social a:hover i::before {
+  color: var(--on-surface);
+}
+
+/*
+*** Section Footer Home5: End
+*/
+/*
+*** Section Footer Home6: Start
+*/
+.footer-style-four.footer-style-six .footer-block .container > .row .list-infor .flex-item-center {
+  border-bottom: 1px solid var(--purple);
+}
+.footer-style-four.footer-style-six .footer-block .footer-bottom .list-social a:hover {
+  background-color: var(--purple);
+}
+
+/*
+*** Section Footer Home6: End
+*/
+/*
+*** Section Footer Home7: Start
+*/
+.footer-style-four.footer-style-seven .footer-block {
+  background: #0C1228;
+}
+.footer-style-four.footer-style-seven .footer-block .container > .row .list-infor .flex-item-center {
+  border-bottom: 1px solid var(--blue);
+}
+.footer-style-four.footer-style-seven .footer-block .bg-black-surface {
+  background: #0C1228;
+}
+.footer-style-four.footer-style-seven .footer-block .footer-bottom .list-social a:hover {
+  background-color: var(--blue);
+}
+
+/*
+*** Section Footer Home7: End
 */
 /*
 *** Section Footer Style Blog: Start
