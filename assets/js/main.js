@@ -999,10 +999,6 @@ const reduceNumberCarts = document.querySelectorAll('.list .item .quantity-block
 const increaseNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-plus')
 const addToCartBtn = document.querySelector('.prd-quantity .block-button a')
 
-// Initialize cartStore in localStorage
-let cartStore = localStorage.getItem('cartStore');
-// localStorage.setItem('cartStore', JSON.stringify([]));
-
 
 if (addToCartBtn) {
     // Increase quantity product in product detail
@@ -1043,6 +1039,10 @@ if (addToCartBtn) {
         })
     })
 
+    // Initialize cartStore in localStorage
+    let cartStore = localStorage.getItem('cartStore');
+    localStorage.setItem('cartStore', JSON.stringify([]));
+
     // Handle add product to cart
     addToCartBtn.addEventListener('click', () => {
         // Get product infor
@@ -1075,6 +1075,9 @@ if (addToCartBtn) {
 }
 
 
+
+
+
 // Display list product in cart on the shopping cart page
 if (document.querySelector('.cart-block')) {
     // Extract product item information from localStorage
@@ -1082,7 +1085,7 @@ if (document.querySelector('.cart-block')) {
     console.log(listProductStorage);
 
     const listProduct = document.querySelector('.cart-block .list-product .list')
-    
+
     listProductStorage.forEach(list => {
         const productItem = document.createElement('div')
         productItem.classList.add('item', 'pt-20', 'pb-16', 'border-underline-outline')
