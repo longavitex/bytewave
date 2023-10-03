@@ -2,7 +2,7 @@ extends base/layout.pug
 block title
     title Team Detail
 block header
-    div(class="style-subpage style-company style-four")
+    div(class="style-subpage style-company style-three")
         include components/header/menu/menu-one.pug
 block content 
     .bg-subpage
@@ -10,14 +10,14 @@ block content
         .container 
             .row.row-gap-32
                 .col-sm-6
-                    .bg-img 
+                    .bg-img.member-img 
                         img(src="assets/images/avatar/IMG-6.png", alt="").w-100.bora-20
                 .col-lg-6.pl-65.pl-col-lg-0
                     .content-detail 
                         .user-infor
-                            .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 CEO & FOUNDER
+                            .member-position.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 CEO & FOUNDER
                             .heading4.mt-20 Hi, I am
-                            .heading2.mt-4 Katty Perry
+                            .member-name.heading2.mt-4 Katty Perry
                             .list-social.flex-item-center.flex-wrap.gap-24.mt-20
                                 a(href="https://www.facebook.com/" target="_blank").item.flex-center
                                     i.icon-facebook.display-block.fs-24
@@ -26,7 +26,7 @@ block content
                                 a(href="https://www.twitter.com/" target="_blank").item.flex-center
                                     i.icon-twitter.display-block.fs-24
                         .user-desc    
-                            .body2.text-on-surface-variant1.mt-40 As our CTO, Katty Perry is the visionary leader responsible for shaping our technology strategy. With over 15 years of experience in the tech industry, she has a deep understanding of emerging technologies and how they can transform businesses. Sarah's forward-thinking approach has been instrumental in our company's growth.
+                            .body2.text-on-surface-variant1.mt-40 As the company's CTO, I am a visionary leader responsible for shaping our company's technology strategy. With over 15 years of experience in the tech industry, she has a deep understanding of emerging technologies and how they can transform businesses. Sarah's forward-thinking approach has been instrumental in our company's growth.
                             .body2.text-on-surface-variant1.mt-12 Her analytical mindset and ability to extract valuable insights from complex data sets empower our clients to make data-driven decisions. With Nathan's expertise, we turn data into actionable intelligence.
                             .body2.text-on-surface-variant1.mt-12 Her innovative campaigns and strategic insights connect us with our audience and help us share our story effectively.
                             .quote-block.bg-surface.p-32.bora-20.mt-40

@@ -3,7 +3,10 @@
 }
 .product-item .main-item .bg-img {
   position: relative;
-  padding: 40px 0;
+  padding: 40px 70px;
+}
+.product-item .main-item .bg-img img {
+  width: 100%;
 }
 .product-item .main-item .bg-img .text-label {
   position: absolute;

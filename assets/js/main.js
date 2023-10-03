@@ -113,6 +113,88 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
+// Fix error when clicking on nav item, background will jump to current item.
+const subNavItem = document.querySelectorAll('.sub-nav-item');
+
+if (subNavItem) {
+    subNavItem.forEach(item => {
+        item.addEventListener('click', () => {
+            subNavItem.forEach(otherItem => {
+                otherItem.style.background = 'transparent'
+            })
+        })
+    })
+}
+
+
+// Change the active of nav items in the submenu when switching pages.
+// Get the list of nav items in the submenu.
+const submenuItems = document.querySelectorAll('.nav-item-main');
+
+// Initialize the menu item nav variable that will be active in the submenu in localStorage
+let navMenuActive = localStorage.getItem('navMenuActive');
+
+// Loop through each nav menu item and add a "click" event
+if (submenuItems) {
+    submenuItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            // Get service data from data-item attribute
+            let selectedNavItem = item.getAttribute("data-item");
+
+            // Save data from data-item to localStorage
+            localStorage.setItem('navMenuActive', selectedNavItem)
+        })
+
+        // Get data saved in localStorage
+        navMenuActive = localStorage.getItem('navMenuActive')
+
+        // Add the active class to the nav item whose data-item matches the data in localStorage
+        if (navMenuActive === item.getAttribute("data-item")) {
+            item.classList.add('active')
+        }
+    });
+}
+
+
+
+// Get service detail when clicking on a service item
+// Get all service item on the list solution in header menu
+const serviceItems = document.querySelectorAll('.sub-nav-solution .service-item');
+
+// Handle click events for each service entry
+if (serviceItems) {
+    // Initialize selectedService in localStorage
+    var selectedService = localStorage.getItem('selectedService');
+    serviceItems.forEach(serviceItem => {
+        serviceItem.addEventListener('click', (e) => {
+            let serviceCate = serviceItem.parentElement.parentElement.parentElement.parentElement
+
+            // Listen for click events, get service information, save to serviceInfor
+            var serviceInfor = {
+                category: serviceCate.querySelector('.service-cate').innerHTML,
+                name: serviceItem.querySelector('.service-name').innerHTML,
+            }
+
+            // Save service item information to localStorage
+            localStorage.setItem('selectedService', JSON.stringify(serviceInfor));
+        });
+    });
+}
+
+
+// Display service information on the service details page
+if (document.querySelector('.style-service-detail-block')) {
+    // Extract service item information from localStorage
+    var selectedServiceInfo = JSON.parse(localStorage.getItem('selectedService'));
+
+    if (document.querySelector('.category') && document.querySelector('.name')) {
+        document.querySelector('.category').textContent = selectedServiceInfo.category;
+        document.querySelector('.name').textContent = selectedServiceInfo.name;
+    }
+}
+
+
 // mobile menu
 const mobileMenuBtn = document.querySelector('.menu-humburger')
 const menuMobile = document.querySelector('#menu-mobile-block')
@@ -678,62 +760,6 @@ if (videoModalContainer) {
 }
 
 
-// Like Blog Detail
-const comments = document.querySelectorAll('.blog-detail-page .blog-comment .comment-item .like')
-
-if (comments) {
-    comments.forEach(cmt => {
-        cmt.addEventListener('click', () => {
-            cmt.classList.toggle('liked')
-            let heartIcon = cmt.querySelector('i')
-            let numberLiked = cmt.querySelector('.text-button')
-            let number = parseFloat(numberLiked.innerHTML);
-
-            if (cmt.classList.contains('liked')) {
-                heartIcon.classList.replace('ph-light', 'ph-fill')
-                number = number + 1
-                numberLiked.innerHTML = number.toString()
-            }
-            else {
-                heartIcon.classList.replace('ph-fill', 'ph-light')
-                number = number - 1
-                numberLiked.innerHTML = number.toString()
-            }
-        })
-    })
-}
-
-
-
-// Show, hide reply Blog Detail
-const showReplyBtn = document.querySelectorAll('.blog-detail-page .blog-comment .comment-item .cmt')
-const listReply = document.querySelectorAll('.blog-detail-page .blog-comment .list-reply')
-
-if (showReplyBtn) {
-    showReplyBtn.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const parentCmt = btn.parentElement.parentElement.parentElement
-            const dataCmt = parentCmt.getAttribute('data-cmt')
-
-            listReply.forEach(reply => {
-                const dataReply = reply.getAttribute('data-cmt')
-
-                if (dataReply == dataCmt) {
-                    reply.classList.toggle('show')
-                    btn.classList.toggle('show')
-
-                    const textShow = btn.querySelector('.text-button')
-                    if (btn.classList.contains('show')) {
-                        textShow.innerHTML = 'Hide Replies'
-                    } else {
-                        textShow.innerHTML = 'Show Replies'
-                    }
-                }
-            })
-        })
-    })
-}
-
 
 // open answer faqs
 const questionItem = document.querySelectorAll('.question-item')
@@ -776,6 +802,321 @@ function removeOpenAnswer(index1) {
     })
 }
 
+
+// Get member information when click on a member item
+// Initialize selectedMember in localStorage
+let selectedMember = localStorage.getItem('selectedMember');
+
+// Get all member entries on the list member
+const memberItems = document.querySelectorAll('.member-item');
+
+// Handle click events for each member entry
+if (memberItems) {
+    memberItems.forEach(memberItem => {
+        memberItem.addEventListener('click', () => {
+            // Listen for click events, get member information, save to memberInfor
+            const memberInfor = {
+                name: memberItem.querySelector('.name').innerHTML,
+                position: memberItem.querySelector('.position').innerHTML,
+                img: memberItem.querySelector('.bg-img img').getAttribute('src'),
+            }
+
+            // Save member item information to localStorage
+            localStorage.setItem('selectedMember', JSON.stringify(memberInfor));
+        });
+    });
+}
+
+// Extract member item information from localStorage
+let selectedMemberInfo = JSON.parse(localStorage.getItem('selectedMember'));
+
+// Display member information on the member details page
+if (document.querySelector('.team-detail-block')) {
+    if (document.querySelector('.member-img img') && document.querySelector('.member-position') && document.querySelector('.member-name')) {
+        document.querySelector('.member-name').textContent = selectedMemberInfo.name;
+        document.querySelector('.member-position').textContent = selectedMemberInfo.position;
+        document.querySelector('.member-img img').src = selectedMemberInfo.img;
+    }
+}
+
+
+
+// Get blog information when click on a blog item
+// Initialize selectedBlog in localStorage
+let selectedBlog = localStorage.getItem('selectedBlog');
+
+// Get all blog entries on the list page
+const blogItems = document.querySelectorAll('.blog-item-filter');
+
+// Handle click events for each blog entry
+if (blogItems) {
+    blogItems.forEach(blogItem => {
+        blogItem.addEventListener('click', () => {
+            // Listen for click events, get blog information, save to blogInfor
+            const blogInfor = {
+                cate: blogItem.querySelector('.category').innerHTML,
+                title: blogItem.querySelector('.title').innerHTML,
+                desc: blogItem.querySelector('.desc').innerHTML,
+                img: blogItem.querySelector('.bg-img img').getAttribute('src'),
+            }
+
+            // Save blog item information to localStorage
+            localStorage.setItem('selectedBlog', JSON.stringify(blogInfor));
+        });
+    });
+}
+
+// Extract blog item information from localStorage
+let selectedBlogInfo = JSON.parse(localStorage.getItem('selectedBlog'));
+
+// Display blog information on the blog details page
+if (document.querySelector('.blog-detail-page')) {
+    if (document.querySelector('.category') && document.querySelector('.title') && document.querySelector('.desc') && document.querySelector('.main-img img')) {
+        document.querySelector('.category').textContent = selectedBlogInfo.cate;
+        document.querySelector('.title').textContent = selectedBlogInfo.title;
+        document.querySelector('.desc').textContent = selectedBlogInfo.desc;
+        document.querySelector('.main-img img').src = selectedBlogInfo.img;
+    }
+}
+
+
+// Like Blog Detail
+const comments = document.querySelectorAll('.blog-detail-page .blog-comment .comment-item .like')
+
+if (comments) {
+    comments.forEach(cmt => {
+        cmt.addEventListener('click', () => {
+            cmt.classList.toggle('liked')
+            let heartIcon = cmt.querySelector('i')
+            let numberLiked = cmt.querySelector('.text-button')
+            let number = parseFloat(numberLiked.innerHTML);
+
+            if (cmt.classList.contains('liked')) {
+                heartIcon.classList.replace('ph-light', 'ph-fill')
+                number = number + 1
+                numberLiked.innerHTML = number.toString()
+            }
+            else {
+                heartIcon.classList.replace('ph-fill', 'ph-light')
+                number = number - 1
+                numberLiked.innerHTML = number.toString()
+            }
+        })
+    })
+}
+
+
+// Show, hide reply Blog Detail
+const showReplyBtn = document.querySelectorAll('.blog-detail-page .blog-comment .comment-item .cmt')
+const listReply = document.querySelectorAll('.blog-detail-page .blog-comment .list-reply')
+
+if (showReplyBtn) {
+    showReplyBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const parentCmt = btn.parentElement.parentElement.parentElement
+            const dataCmt = parentCmt.getAttribute('data-cmt')
+
+            listReply.forEach(reply => {
+                const dataReply = reply.getAttribute('data-cmt')
+
+                if (dataReply == dataCmt) {
+                    reply.classList.toggle('show')
+                    btn.classList.toggle('show')
+
+                    const textShow = btn.querySelector('.text-button')
+                    if (btn.classList.contains('show')) {
+                        textShow.innerHTML = 'Hide Replies'
+                    } else {
+                        textShow.innerHTML = 'Show Replies'
+                    }
+                }
+            })
+        })
+    })
+}
+
+
+// // add remove wishlist product in shop
+const likeBlocks = document.querySelectorAll('.like-block')
+
+if (likeBlocks) {
+    likeBlocks.forEach(likeBlock => {
+        likeBlock.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (likeBlock.classList.contains('liked')) {
+                likeBlock.querySelector('i').classList.replace('ph-fill', 'ph-bold')
+            } else {
+                likeBlock.querySelector('i').classList.replace('ph-bold', 'ph-fill')
+            }
+
+            likeBlock.classList.toggle('liked')
+        })
+    })
+}
+
+
+// Get product information when clicking on a product item
+// Get all product entries on the list page
+const productItems = document.querySelectorAll('.product-item');
+
+// Initialize selectedproduct in localStorage
+let selectedProduct = localStorage.getItem('selectedProduct');
+
+// Handle click events for each product entry
+if (productItems) {
+    productItems.forEach(productItem => {
+        productItem.addEventListener('click', () => {
+            // Listen for click events, get product information, save to productInfor
+            var productInfor = {
+                name: productItem.querySelector('.name').innerHTML,
+                price: productItem.querySelector('.price').innerHTML,
+                star: productItem.querySelector('.star').innerHTML,
+                img: productItem.querySelector('.bg-img img').getAttribute('src'),
+            }
+
+            // Save product item information to localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(productInfor));
+        });
+    });
+}
+
+// Display product information on the product details page
+if (document.querySelector('.product-detail-heading')) {
+    // Extract product item information from localStorage
+    let selectedProductInfo = JSON.parse(localStorage.getItem('selectedProduct'));
+
+    if (document.querySelector('.name') && document.querySelector('.price') && document.querySelector('.star') && document.querySelector('.bg-img img')) {
+        document.querySelector('.name').textContent = selectedProductInfo.name;
+        document.querySelector('.price').textContent = selectedProductInfo.price;
+        document.querySelector('.star').innerHTML = selectedProductInfo.star;
+        document.querySelector('.bg-img img').src = selectedProductInfo.img;
+    }
+}
+
+
+// Add product to cart in product detail
+const reduceNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-minus')
+const increaseNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-plus')
+const addToCartBtn = document.querySelector('.prd-quantity .block-button a')
+
+// Initialize cartStore in localStorage
+let cartStore = localStorage.getItem('cartStore');
+// localStorage.setItem('cartStore', JSON.stringify([]));
+
+
+if (addToCartBtn) {
+    // Increase quantity product in product detail
+    increaseNumberCarts.forEach(increaseNumberCart => {
+        let parentItem = increaseNumberCart.parentElement
+
+        increaseNumberCart.addEventListener('click', function () {
+            let quantity = parentItem.querySelector('span').innerHTML
+            let iconLeft = parentItem.querySelector('.ph-minus')
+
+            quantity = Number(quantity) + 1
+            parentItem.querySelector('span').innerHTML = quantity
+
+            // Enable minus button
+            if (quantity > 1) {
+                iconLeft.classList.remove('disable')
+            }
+        })
+    })
+
+    // Reduce quantity product in product detail
+    reduceNumberCarts.forEach(reduceNumberCart => {
+        let parentItem = reduceNumberCart.parentElement
+
+        reduceNumberCart.addEventListener('click', function (e) {
+            let quantity = parentItem.querySelector('span').innerHTML
+            let iconLeft = parentItem.querySelector('.ph-minus')
+
+            if (quantity > 1) {
+                quantity = Number(quantity) - 1
+                parentItem.querySelector('span').innerHTML = quantity
+            }
+
+            // Disable minus button
+            if (quantity <= 1) {
+                iconLeft.classList.add('disable')
+            }
+        })
+    })
+
+    // Handle add product to cart
+    addToCartBtn.addEventListener('click', () => {
+        // Get product infor
+        const prdName = document.querySelector('.name').innerHTML
+        const prdPrice = document.querySelector('.price').innerHTML
+        const prdImg = document.querySelector('.bg-img img').getAttribute('src')
+        const prdQuantity = document.querySelector('.prd-quantity .quantity-block span').innerHTML
+        // Removes all characters that are not numbers or periods from the product price string. 
+        // Then we convert it to a floating point number (parseFloat()) to perform the calculation.
+        const totalPrdPrice = Number(prdQuantity) * parseFloat(prdPrice.replace(/[^0-9.]/g, ''))
+
+        // Lưu thông tin sản phẩm vào productDetailInfor
+        var productDetailInfor = {
+            prdName: prdName,
+            prdPrice: prdPrice,
+            prdImg: prdImg,
+            prdQuantity: prdQuantity,
+            totalPrdPrice: totalPrdPrice,
+        };
+
+        // Lấy giỏ hàng từ localStorage
+        cartStore = JSON.parse(localStorage.getItem('cartStore'));
+
+        // Thêm sản phẩm vào giỏ hàng
+        cartStore.push(productDetailInfor);
+
+        // Lưu giỏ hàng vào localStorage
+        localStorage.setItem('cartStore', JSON.stringify(cartStore));
+    })
+}
+
+
+// Display list product in cart on the shopping cart page
+if (document.querySelector('.cart-block')) {
+    // Extract product item information from localStorage
+    let listProductStorage = JSON.parse(localStorage.getItem('cartStore'));
+    console.log(listProductStorage);
+
+    const listProduct = document.querySelector('.cart-block .list-product .list')
+    
+    listProductStorage.forEach(list => {
+        const productItem = document.createElement('div')
+        productItem.classList.add('item', 'pt-20', 'pb-16', 'border-underline-outline')
+        productItem.innerHTML = `
+            <div class="row">
+                <div class="col-6">
+                    <div class="flex-item-center"> 
+                        <div class="bg-img pr-28 pl-28 flex-center border-outline bora-8">
+                            <img class="w-100" src="${list.prdImg}" alt="${list.prdName}"/>
+                        </div>
+                        <div class="name text-button pl-16">${list.prdName}</div>
+                    </div>
+                </div>
+                <div class="col-1 flex-center">
+                    <div class="text-button">${list.prdPrice}</div>
+                </div>
+                <div class="col-2 flex-center">
+                    <div class="quantity-block flex-item-center border-outline bora-4">
+                    <i class="ph ph-minus disable"></i>
+                    <span class="text-button">${list.prdQuantity}</span>
+                    <i class="ph ph-plus"></i></div>
+                </div>
+                <div class="col-2 flex-center">
+                    <div class="text-button">$${list.totalPrdPrice}.00</div>
+                </div>
+                <div class="col-1 flex-center"> <i class="ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i></div>
+            </div>
+        `
+        listProduct.appendChild(productItem)
+    })
+
+}
+
+
 // Countdown time in cart
 const min = document.querySelector('.cart-block .time .caption1 .min')
 const sec = document.querySelector('.cart-block .time .caption1 .sec')
@@ -813,12 +1154,9 @@ window.onload = () => {
     }
 }
 
+
 // Increase and reduce quantity product in cart
-const reduceNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-minus')
-const increaseNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-plus')
-
-
-if (increaseNumberCarts) {
+if (increaseNumberCarts && document.querySelector('.cart-block')) {
     increaseNumberCarts.forEach(increaseNumberCart => {
         let parentItem = increaseNumberCart.parentElement
 
@@ -875,10 +1213,11 @@ if (increaseNumberCarts) {
     })
 }
 
-if (reduceNumberCarts) {
+if (reduceNumberCarts && document.querySelector('.cart-block')) {
     reduceNumberCarts.forEach(reduceNumberCart => {
+        let parentItem = reduceNumberCart.parentElement
+
         reduceNumberCart.addEventListener('click', function (e) {
-            let parentItem = reduceNumberCart.parentElement
             let quantity = parentItem.querySelector('span').innerHTML
             let iconLeft = parentItem.querySelector('.ph-minus')
 
@@ -933,24 +1272,9 @@ if (reduceNumberCarts) {
     })
 }
 
-// // add remove wishlist
-// const heartIcons = document.querySelectorAll('.heart-icon .far')
-
-// if(heartIcons) {
-//     heartIcons.forEach(heartIcon => {
-//         heartIcon.addEventListener('click', () => {
-//             if (heartIcon.getAttribute('class') == 'far fa-heart') {
-//                 heartIcon.className = "fas fa-heart"
-//             } else {
-//                 heartIcon.className = "far fa-heart"
-//             }
-//         })
-//     })
-// }
-
 
 // Check out page
-// Show, hide login block
+// Show, hide login block in checkout
 const formLoginHeading = document.querySelector('.checkout-block .form-login-block')
 const loginHeading = document.querySelector('.checkout-block .login .left span.text-button')
 const iconDownHeading = document.querySelector('.checkout-block .login .right i')
@@ -967,7 +1291,7 @@ if (loginHeading) {
     })
 }
 
-// Show, hide payment type
+// Show, hide payment type in checkout
 const paymentType = document.querySelectorAll('.payment-block .list-payment .type')
 const paymentCheckbox = document.querySelectorAll('.payment-block .list-payment .type>input')
 
@@ -980,41 +1304,4 @@ if (paymentCheckbox) {
             }
         })
     })
-}
-
-
-// Get blog information when clicking on a blog item
-// Initialize selectedBlog in localStorage
-let selectedBlog = localStorage.getItem('selectedBlog');
-
-// Get all blog entries on the list page
-const blogItems = document.querySelectorAll('.blog-item-filter');
-
-// Handle click events for each blog entry
-if (blogItems) {
-    blogItems.forEach(blogItem => {
-        blogItem.addEventListener('click', () => {
-            // Listen for click events, get blog information, save to blogInfor
-            var blogInfor = {
-                cate: blogItem.querySelector('.category').innerHTML,
-                title: blogItem.querySelector('.title').innerHTML,
-                desc: blogItem.querySelector('.desc').innerHTML,
-                img: blogItem.querySelector('.bg-img img').getAttribute('src'),
-            }
-
-            // Save blog item information to localStorage
-            localStorage.setItem('selectedBlog', JSON.stringify(blogInfor));
-        });
-    });
-}
-
-// Extract blog item information from localStorage
-var selectedBlogInfo = JSON.parse(localStorage.getItem('selectedBlog'));
-
-// Display blog information on the blog details page
-if (document.querySelector('.blog-detail-page')) {
-    document.querySelector('.category').textContent = selectedBlogInfo.cate;
-    document.querySelector('.title').textContent = selectedBlogInfo.title;
-    document.querySelector('.desc').textContent = selectedBlogInfo.desc;
-    document.querySelector('.main-img img').src = selectedBlogInfo.img;
 }

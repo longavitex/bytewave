@@ -1,21 +1,5 @@
 /*
-*** Case Studies 3 cols Page: Start
-*/
-.list-blog-page.section-case-studies .container {
-  overflow: hidden;
-}
-.list-blog-page.section-case-studies .container .list-news .item {
-  cursor: pointer;
-}
-.list-blog-page.section-case-studies .container .list-news .item .main-item {
-  cursor: pointer;
-}
-
-/*
-*** Case Studies 3 cols Page: End
-*/
-/*
-*** Case Studies 3 cols Page: Start
+*** Case Studies - Style 1: Start
 */
 .style-about-us.style-case-studies .section-brand {
   padding-top: 60px;
@@ -64,11 +48,27 @@
   }
 }
 
+.section-success-stories .container .list-news .item .main-item .bg-img {
+  overflow: hidden;
+}
+.section-success-stories .container .list-news .item .main-item .bg-img img {
+  transition: all ease 0.4s;
+}
+.section-success-stories .container .list-news .item .main-item .title {
+  transition: all ease 0.4s;
+}
+.section-success-stories .container .list-news .item .main-item:hover .bg-img img {
+  transform: scale(1.06);
+}
+.section-success-stories .container .list-news .item .main-item:hover .title {
+  background: var(--white);
+}
+
 /*
-*** Case Studies 3 cols Page: End
+*** Case Studies - Style 1: End
 */
 /*
-*** Case Studies 2 cols - Style2 Page: Start
+*** Case Studies - Style 2: Start
 */
 .list-case-studies .row .item-main {
   position: relative;
@@ -101,10 +101,26 @@
 }
 
 /*
-*** Case Studies 2 cols - Style2 Page: End
+*** Case Studies - Style 2: End
 */
 /*
-*** Case Studies List Page: Start
+*** Case Studies - Style 3: Start
+*/
+.list-blog-page.section-case-studies .container {
+  overflow: hidden;
+}
+.list-blog-page.section-case-studies .container .list-news .item {
+  cursor: pointer;
+}
+.list-blog-page.section-case-studies .container .list-news .item .main-item {
+  cursor: pointer;
+}
+
+/*
+*** Case Studies - Style 3: End
+*/
+/*
+*** Case Studies - Style 4: Start
 */
 .case-studies-list-block .item .item-main {
   border-radius: 20px;
@@ -178,7 +194,7 @@
 }
 
 /*
-*** Case Studies List Page: End
+*** Case Studies - Style 4: End
 */
 /*
 *** Case Studies Detail Page: Start

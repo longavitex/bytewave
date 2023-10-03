@@ -2747,6 +2747,7 @@ input:focus, textarea:focus {
   position: absolute;
   top: 20px;
   left: 20px;
+  z-index: 1;
 }
 .section-success-stories .container .list-news .item .main-item .bg-img {
   aspect-ratio: 1/1;
@@ -3324,7 +3325,10 @@ Modal Video: End
 }
 .product-item .main-item .bg-img {
   position: relative;
-  padding: 40px 0;
+  padding: 40px 70px;
+}
+.product-item .main-item .bg-img img {
+  width: 100%;
 }
 .product-item .main-item .bg-img .text-label {
   position: absolute;
@@ -4312,23 +4316,7 @@ Shared List Questions: End
 *** Blog Detail Page Style 2: End
 */
 /*
-*** Case Studies 3 cols Page: Start
-*/
-.list-blog-page.section-case-studies .container {
-  overflow: hidden;
-}
-.list-blog-page.section-case-studies .container .list-news .item {
-  cursor: pointer;
-}
-.list-blog-page.section-case-studies .container .list-news .item .main-item {
-  cursor: pointer;
-}
-
-/*
-*** Case Studies 3 cols Page: End
-*/
-/*
-*** Case Studies 3 cols Page: Start
+*** Case Studies - Style 1: Start
 */
 .style-about-us.style-case-studies .section-brand {
   padding-top: 60px;
@@ -4377,11 +4365,27 @@ Shared List Questions: End
   }
 }
 
+.section-success-stories .container .list-news .item .main-item .bg-img {
+  overflow: hidden;
+}
+.section-success-stories .container .list-news .item .main-item .bg-img img {
+  transition: all ease 0.4s;
+}
+.section-success-stories .container .list-news .item .main-item .title {
+  transition: all ease 0.4s;
+}
+.section-success-stories .container .list-news .item .main-item:hover .bg-img img {
+  transform: scale(1.06);
+}
+.section-success-stories .container .list-news .item .main-item:hover .title {
+  background: var(--white);
+}
+
 /*
-*** Case Studies 3 cols Page: End
+*** Case Studies - Style 1: End
 */
 /*
-*** Case Studies 2 cols - Style2 Page: Start
+*** Case Studies - Style 2: Start
 */
 .list-case-studies .row .item-main {
   position: relative;
@@ -4414,10 +4418,26 @@ Shared List Questions: End
 }
 
 /*
-*** Case Studies 2 cols - Style2 Page: End
+*** Case Studies - Style 2: End
 */
 /*
-*** Case Studies List Page: Start
+*** Case Studies - Style 3: Start
+*/
+.list-blog-page.section-case-studies .container {
+  overflow: hidden;
+}
+.list-blog-page.section-case-studies .container .list-news .item {
+  cursor: pointer;
+}
+.list-blog-page.section-case-studies .container .list-news .item .main-item {
+  cursor: pointer;
+}
+
+/*
+*** Case Studies - Style 3: End
+*/
+/*
+*** Case Studies - Style 4: Start
 */
 .case-studies-list-block .item .item-main {
   border-radius: 20px;
@@ -4491,7 +4511,7 @@ Shared List Questions: End
 }
 
 /*
-*** Case Studies List Page: End
+*** Case Studies - Style 4: End
 */
 /*
 *** Case Studies Detail Page: Start
@@ -6275,6 +6295,25 @@ a.border-underline-purple-2px:hover {
 *** Remove active Home: Start
 */
 /*
+*** Style Solution Menu Header Page: Start
+*/
+.style-service .header-menu .menu-main > ul > li:nth-child(2) > a::before {
+  width: calc(100% - 24px);
+}
+.style-service .header-menu .menu-main .sub-nav .row > div:first-child .item .list-service .row > div .service-item.active {
+  background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+}
+.style-service .header-menu .menu-main .sub-nav .row > div:first-child .item .list-service .row > div .service-item.active .text-button::before {
+  width: calc(100% - 8px);
+}
+.style-service .header-menu .menu-main .sub-nav .row > div:first-child:hover .item .list-service .row > div .service-item {
+  background: transparent;
+}
+
+/*
+*** Style Solution Menu Header Page: End
+*/
+/*
 *** Style Company Menu Header Page: Start
 */
 .style-company .header-menu .menu-main > ul > li:nth-child(3) > a::before {
@@ -7174,6 +7213,12 @@ a.border-underline-purple-2px:hover {
   }
   .fs-36 {
     font-size: 28px;
+  }
+  .w-48 {
+    width: 40px;
+  }
+  .h-48 {
+    height: 40px;
   }
   [class^=button-],
   [class*=" button-"] {

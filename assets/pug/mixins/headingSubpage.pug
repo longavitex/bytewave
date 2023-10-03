@@ -12,11 +12,11 @@ mixin headingSubpage(props = {})
                     .content-main
                         .row.row-gap-40.flex-between
                             .col-lg-5.pr-32.pr-col-lg-0
-                                .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8!= category 
+                                .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8!= category 
                                 if(heading2)
-                                    .heading2.mt-12!= heading2 
+                                    .name.heading2.mt-12!= heading2 
                                 if(heading3)
-                                    .heading3.mt-12!= heading3 
+                                    .name.heading3.mt-12!= heading3 
                                 if(desc)
                                     .body2.text-on-surface-variant1.mt-12!= desc
                                 if(date)
@@ -38,11 +38,11 @@ mixin headingSubpage(props = {})
                                 .bg-img.w-100
                                     img(src=`${img}`, alt=`${title}`).w-100.bora-20
                             .col-lg-5.pl-32.pl-col-lg-0
-                                .caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8!= category 
+                                .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8!= category 
                                 if(heading2)
-                                    .heading2.mt-12!= heading2 
+                                    .name.heading2.mt-12!= heading2 
                                 if(heading3)
-                                    .heading3.mt-12!= heading3 
+                                    .name.heading3.mt-12!= heading3 
                                 if(desc)
                                     .body2.text-on-surface-variant1.mt-12!= desc
                                 if(date)

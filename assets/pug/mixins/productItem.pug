@@ -7,8 +7,8 @@ mixin productItem(props = {})
                 if(newStyle==true)
                     .text-label.pl-8.pr-8.bg-yellow New
                 if(discount)
-                    .text-label.pl-8.pr-8.bg-critical.text-white!= discount
-                .like-block  
+                    .discount.text-label.pl-8.pr-8.bg-critical.text-white!= discount
+                .like-block
                     i.ph-bold.ph-heart.text-on-surface-variant1.p-8.bora-50.border-outline
             .infor.mt-16.flex-column-center 
                 .name.text-button.text-center!= name 
@@ -26,9 +26,9 @@ mixin productItem(props = {})
                             i.ph-fill.ph-star.text-yellow
                             i.ph-fill.ph-star.text-yellow
                             i.ph-fill.ph-star.text-yellow
-                    .caption1.text-on-surface-variant1!= `(${sale})`
+                    .sale.caption1.text-on-surface-variant1!= `(${sale})`
                 .list-price.flex-item-center.gap-12.mt-8
-                    .heading6!= price
+                    .price.heading6!= price
                     if(originalPrice)
-                        .text-decoration-line-through.text-on-surface-variant1!= originalPrice
+                        .original-price.text-decoration-line-through.text-on-surface-variant1!= originalPrice
                 

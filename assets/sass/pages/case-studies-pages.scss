@@ -1,28 +1,5 @@
 /*
-*** Case Studies 3 cols Page: Start
-*/
-.list-blog-page.section-case-studies {
-    .container {
-        overflow: hidden;
-
-        .list-news {
-            .item {
-                cursor: pointer;
-
-                .main-item {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-}
-
-/*
-*** Case Studies 3 cols Page: End
-*/
-
-/*
-*** Case Studies 3 cols Page: Start
+*** Case Studies - Style 1: Start
 */
 .style-about-us.style-case-studies {
     .section-brand {
@@ -76,12 +53,41 @@
     }
 }
 
+
+.section-success-stories .container .list-news .item {
+    .main-item {
+        .bg-img {
+            overflow: hidden;
+
+            img {
+                transition: all ease 0.4s;
+            }
+        }
+
+        .title {
+            transition: all ease 0.4s;
+        }
+
+        &:hover {
+            .bg-img {
+                img {
+                    transform: scale(1.06);
+                }
+            }
+
+            .title {
+                background: var(--white);
+            }
+        }
+    }
+}
+
 /*
-*** Case Studies 3 cols Page: End
+*** Case Studies - Style 1: End
 */
 
 /*
-*** Case Studies 2 cols - Style2 Page: Start
+*** Case Studies - Style 2: Start
 */
 .list-case-studies {
     .row {
@@ -126,11 +132,34 @@
 }
 
 /*
-*** Case Studies 2 cols - Style2 Page: End
+*** Case Studies - Style 2: End
 */
 
 /*
-*** Case Studies List Page: Start
+*** Case Studies - Style 3: Start
+*/
+.list-blog-page.section-case-studies {
+    .container {
+        overflow: hidden;
+
+        .list-news {
+            .item {
+                cursor: pointer;
+
+                .main-item {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Case Studies - Style 3: End
+*/
+
+/*
+*** Case Studies - Style 4: Start
 */
 .case-studies-list-block {
     .item {
@@ -244,7 +273,7 @@
 }
 
 /*
-*** Case Studies List Page: End
+*** Case Studies - Style 4: End
 */
 
 
