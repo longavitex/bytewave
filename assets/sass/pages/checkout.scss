@@ -1,4 +1,4 @@
-.checkout-block {
+.checkout-block-main {
     .container>.row {
         >div:first-child {
             .login {
@@ -90,11 +90,16 @@
                         width: 30px;
                     }
                 }
+
+                .right {
+                    .quantity {
+                        white-space: nowrap;
+                    }
+                }
             }
 
             .ship-block {
                 align-items: flex-start;
-
             }
         }
     }

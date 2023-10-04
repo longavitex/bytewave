@@ -171,7 +171,7 @@
             </div>
             <div class="right-block flex-item-center">
               <div class="call-block flex-item-center"><i class="ph ph-phone-call"></i><span>123 456 7890</span></div><a class="button hover-button bg-blue text-white border-none text-button-small" href="contact-us.html"> <span>Contact</span></a>
-              <div class="search-icon"> <i class="ph ph-magnifying-glass"></i></div><a class="bag-icon" href="cart.html"> <i class="ph ph-handbag"></i><span class="bg-blue">0</span></a>
+              <div class="search-icon"> <i class="ph ph-magnifying-glass"></i></div><a class="bag-icon" href="#!"> <i class="ph ph-handbag"></i><span class="bg-blue">0</span></a>
               <div class="menu-humburger"><i class="ph ph-list"></i></div>
             </div>
           </div>
@@ -312,7 +312,7 @@
           </div>
         </div>
       </div>
-      <div class="checkout-block pt-80 pb-80"> 
+      <div class="checkout-block-main pt-80 pb-80"> 
         <div class="container"> 
           <div class="row row-gap-40 flex-wrap-reverse">
             <div class="col-lg-8"> 
@@ -517,36 +517,10 @@
             <div class="col-lg-4 pl-45 pl-col-lg-0">
               <div class="checkout-block p-24 border-outline bora-8">
                 <div class="heading5">Your Order</div>
-                <div class="product flex-between pb-12 border-underline-outline mt-20 gap-8">
-                  <div class="left flex-item-center gap-8">
-                    <div class="bg-img flex-center border-outline"><img src="assets/images/product/1.png" alt=""/></div><span class="text-button">System Design Interview Volume 2</span>
-                  </div>
-                  <div class="right flex-item-center text-end"> 
-                    <div class="quantity text-button">1<span class="pl-4">x </span></div>
-                    <div class="price text-button pl-4">$<span class="price">60</span><span>.00</span></div>
-                  </div>
-                </div>
-                <div class="product flex-between pb-12 border-underline-outline mt-20 gap-8">
-                  <div class="left flex-item-center gap-8">
-                    <div class="bg-img flex-center border-outline"><img src="assets/images/product/2.png" alt=""/></div><span class="text-button">the subtle art of not giving a fck</span>
-                  </div>
-                  <div class="right flex-item-center text-end"> 
-                    <div class="quantity text-button">1<span class="pl-4">x </span></div>
-                    <div class="price text-button pl-4">$<span class="price">95</span><span>.00</span></div>
-                  </div>
-                </div>
-                <div class="product flex-between pb-12 border-underline-outline mt-20 gap-8">
-                  <div class="left flex-item-center gap-8">
-                    <div class="bg-img flex-center border-outline"><img src="assets/images/product/3.png" alt=""/></div><span class="text-button">best self be you, only better</span>
-                  </div>
-                  <div class="right flex-item-center text-end"> 
-                    <div class="quantity text-button">1<span class="pl-4">x </span></div>
-                    <div class="price text-button pl-4">$<span class="price">95</span><span>.00</span></div>
-                  </div>
-                </div>
+                <div class="list-product-checkout"></div>
                 <div class="total-block pt-20 pb-20 flex-between border-underline-outline">
                   <div class="text-button">Subtotal</div>
-                  <div class="text-button">$<span class="total-product">250</span><span>.00</span></div>
+                  <div class="text-button total-product">$250.00</div>
                 </div>
                 <div class="discount-block pt-20 pb-20 flex-between border-underline-outline">
                   <div class="text-button">Discounts</div>
@@ -578,7 +552,7 @@
                 </div>
                 <div class="total-cart-block pt-20 flex-between"> 
                   <div class="heading5">Total</div>
-                  <div class="heading5">$<span class="total-cart">240</span><span>.00</span></div>
+                  <div class="heading5 total-cart">$240.00</div>
                 </div>
               </div>
             </div>
@@ -659,6 +633,22 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-modal js-cart-modal">
+      <div class="cart-modal-container js-cart-modal-container">
+        <div class="cart-modal-header"> 
+          <div class="header-title">Shopping Cart</div>
+          <div class="header-close js-modal-close">Close </div>
+        </div>
+        <div class="cart-modal-list"> </div>
+        <div class="cart-modal-footer"> 
+          <div class="footer-heading"> 
+            <div class="heading-title">Subtotal</div>
+            <div class="heading-price">$30.0</div>
+          </div>
+          <div class="footer-btn-block"> <a class="view-cart-btn" href="cart.html"> View cart</a><a class="check-out-btn" href="checkout.html"> Checkout</a></div>
         </div>
       </div>
     </div>

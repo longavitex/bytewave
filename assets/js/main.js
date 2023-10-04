@@ -936,7 +936,7 @@ if (showReplyBtn) {
 }
 
 
-// // add remove wishlist product in shop
+// add remove wishlist product in shop
 const likeBlocks = document.querySelectorAll('.like-block')
 
 if (likeBlocks) {
@@ -955,7 +955,8 @@ if (likeBlocks) {
 }
 
 
-// Get product information when clicking on a product item
+
+// Get product information when click on a product item
 // Get all product entries on the list page
 const productItems = document.querySelectorAll('.product-item');
 
@@ -985,13 +986,119 @@ if (document.querySelector('.product-detail-heading')) {
     // Extract product item information from localStorage
     let selectedProductInfo = JSON.parse(localStorage.getItem('selectedProduct'));
 
-    if (document.querySelector('.name') && document.querySelector('.price') && document.querySelector('.star') && document.querySelector('.bg-img img')) {
-        document.querySelector('.name').textContent = selectedProductInfo.name;
-        document.querySelector('.price').textContent = selectedProductInfo.price;
-        document.querySelector('.star').innerHTML = selectedProductInfo.star;
-        document.querySelector('.bg-img img').src = selectedProductInfo.img;
+    if (selectedProductInfo !== null) {
+        if (document.querySelector('.name') && document.querySelector('.price') && document.querySelector('.star') && document.querySelector('.bg-img img')) {
+            document.querySelector('.name').textContent = selectedProductInfo.name;
+            document.querySelector('.price').textContent = selectedProductInfo.price;
+            document.querySelector('.star').innerHTML = selectedProductInfo.star;
+            document.querySelector('.bg-img img').src = selectedProductInfo.img;
+        }
     }
 }
+
+
+// cart modal
+const cartBtns = document.querySelector('.header-menu .bag-icon')
+const cartModal = document.querySelector('.js-cart-modal')
+const cartModalContainer = document.querySelector('.js-cart-modal-container')
+const closeCart = document.querySelector('.js-modal-close')
+
+//Function show modal cart
+function showCartModal() {
+    cartModal.classList.add('open')
+    document.querySelector('body').style.overflow = 'hidden'
+}
+
+//Function close modal cart
+function removeCartModal() {
+    cartModal.classList.remove('open')
+    document.querySelector('body').style.overflow = 'unset'
+}
+
+// listen event click bag icon on header menu
+if (cartBtns) {
+    cartBtns.addEventListener('click', showCartModal)
+}
+
+//listen event click and close modal cart
+closeCart.addEventListener('click', removeCartModal)
+
+//listen event click outside modal-container and close modal cart
+cartModal.addEventListener('click', removeCartModal)
+
+//Stop prevent default when click on container modal cart
+cartModalContainer.addEventListener('click', function (event) {
+    event.stopPropagation()
+})
+
+
+// Initialize cartStore in localStorage
+// Get cartStore from localStorage.
+let cartStore = JSON.parse(localStorage.getItem('cartStore'));
+
+// Check if 'cartStore' already exists in localStorage.
+if (localStorage.getItem('cartStore') === null) {
+    // If it does not exist, initialize 'cartStore' with default value (empty array).
+    localStorage.setItem('cartStore', JSON.stringify([]));
+}
+
+// Set the quantity in the shopping cart on header menu
+const numberIconBag = document.querySelector('.header-menu .bag-icon span')
+if (cartStore) {
+    numberIconBag.innerHTML = cartStore.length
+}
+
+
+// Display list product in cart on the modal cart
+const showProductToCart = () => {
+    if (cartModal) {
+        const listProductModalCart = document.querySelector('.cart-modal .cart-modal-list')
+        listProductModalCart.innerHTML = ``
+
+        if (cartStore && cartStore.length > 0) {
+            // Total money cart
+            var totalModalCart = 0
+
+            cartStore.forEach(list => {
+                const productItem = document.createElement('div')
+                productItem.classList.add('main-item', 'pt-24', 'pb-24')
+                productItem.innerHTML = `
+                    <img class="item-img" src="${list.prdImg}" alt="${list.prdName}"/>
+                    <div class="item-infor"> 
+                        <div class="item-name text-button-small">${list.prdName}</div>
+                        <div class="item-price caption1">Price: 
+                            <span>${list.prdPrice}</span>
+                        </div>
+                        <div class="quantity-block"> 
+                            <span class="caption1">Quantity: 
+                                <span class="quantity">${list.prdQuantity}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item-remove"> 
+                        <i class="ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i>
+                    </div>
+                `;
+                listProductModalCart.appendChild(productItem)
+                if (list.prdQuantity > 1) {
+                    document.querySelector('.list .item .quantity-block .ph-minus')
+                }
+
+                // Total money cart
+                totalModalCart += list.totalPrdPrice
+            })
+
+            // Set total money cart
+            document.querySelector('.cart-modal .footer-heading .heading-price').innerHTML = `$${totalModalCart}.00`
+        }
+        else {
+            listProductModalCart.innerHTML = `<div class="text-button pt-16">No product in your shopping cart!</div>`
+            document.querySelector('.cart-modal .footer-heading .heading-price').innerHTML = `$0`
+        }
+    }
+}
+
+showProductToCart()
 
 
 // Add product to cart in product detail
@@ -999,13 +1106,11 @@ const reduceNumberCarts = document.querySelectorAll('.list .item .quantity-block
 const increaseNumberCarts = document.querySelectorAll('.list .item .quantity-block .ph-plus')
 const addToCartBtn = document.querySelector('.prd-quantity .block-button a')
 
-
 if (addToCartBtn) {
     // Increase quantity product in product detail
     increaseNumberCarts.forEach(increaseNumberCart => {
-        let parentItem = increaseNumberCart.parentElement
-
         increaseNumberCart.addEventListener('click', function () {
+            let parentItem = increaseNumberCart.parentElement
             let quantity = parentItem.querySelector('span').innerHTML
             let iconLeft = parentItem.querySelector('.ph-minus')
 
@@ -1021,9 +1126,8 @@ if (addToCartBtn) {
 
     // Reduce quantity product in product detail
     reduceNumberCarts.forEach(reduceNumberCart => {
-        let parentItem = reduceNumberCart.parentElement
-
-        reduceNumberCart.addEventListener('click', function (e) {
+        reduceNumberCart.addEventListener('click', function () {
+            let parentItem = reduceNumberCart.parentElement
             let quantity = parentItem.querySelector('span').innerHTML
             let iconLeft = parentItem.querySelector('.ph-minus')
 
@@ -1039,9 +1143,6 @@ if (addToCartBtn) {
         })
     })
 
-    // Initialize cartStore in localStorage
-    let cartStore = localStorage.getItem('cartStore');
-    localStorage.setItem('cartStore', JSON.stringify([]));
 
     // Handle add product to cart
     addToCartBtn.addEventListener('click', () => {
@@ -1054,7 +1155,7 @@ if (addToCartBtn) {
         // Then we convert it to a floating point number (parseFloat()) to perform the calculation.
         const totalPrdPrice = Number(prdQuantity) * parseFloat(prdPrice.replace(/[^0-9.]/g, ''))
 
-        // Lưu thông tin sản phẩm vào productDetailInfor
+        // Save product infor to productDetailInfor
         var productDetailInfor = {
             prdName: prdName,
             prdPrice: prdPrice,
@@ -1063,67 +1164,180 @@ if (addToCartBtn) {
             totalPrdPrice: totalPrdPrice,
         };
 
-        // Lấy giỏ hàng từ localStorage
-        cartStore = JSON.parse(localStorage.getItem('cartStore'));
-
-        // Thêm sản phẩm vào giỏ hàng
+        // Add product to cartStore
         cartStore.push(productDetailInfor);
 
-        // Lưu giỏ hàng vào localStorage
+        // Save cartStore to localStorage
         localStorage.setItem('cartStore', JSON.stringify(cartStore));
+
+        // Increase the quantity in the shopping cart on header menu
+        numberIconBag.innerHTML = cartStore.length
+        showCartModal()
+        showProductToCart()
     })
 }
 
 
 
-
-
 // Display list product in cart on the shopping cart page
 if (document.querySelector('.cart-block')) {
-    // Extract product item information from localStorage
-    let listProductStorage = JSON.parse(localStorage.getItem('cartStore'));
-    console.log(listProductStorage);
-
     const listProduct = document.querySelector('.cart-block .list-product .list')
 
-    listProductStorage.forEach(list => {
-        const productItem = document.createElement('div')
-        productItem.classList.add('item', 'pt-20', 'pb-16', 'border-underline-outline')
-        productItem.innerHTML = `
-            <div class="row">
-                <div class="col-6">
-                    <div class="flex-item-center"> 
-                        <div class="bg-img pr-28 pl-28 flex-center border-outline bora-8">
-                            <img class="w-100" src="${list.prdImg}" alt="${list.prdName}"/>
+    if (cartStore && cartStore.length > 0) {
+        cartStore.forEach(list => {
+            const productItem = document.createElement('div')
+            productItem.classList.add('item', 'pt-20', 'pb-16', 'border-underline-outline')
+            productItem.innerHTML = `
+                <div class="row">
+                    <div class="col-6">
+                        <div class="flex-item-center"> 
+                            <div class="bg-img pr-28 pl-28 flex-center border-outline bora-8">
+                                <img class="w-100" src="${list.prdImg}" alt="${list.prdName}"/>
+                            </div>
+                            <div class="name text-button pl-16">${list.prdName}</div>
                         </div>
-                        <div class="name text-button pl-16">${list.prdName}</div>
                     </div>
+                    <div class="col-1 flex-center">
+                        <div class="text-button price">${list.prdPrice}</div>
+                    </div>
+                    <div class="col-2 flex-center">
+                        <div class="quantity-block flex-item-center border-outline bora-4">
+                            ${list.prdQuantity > 1
+                    ? `
+                                        <i class="ph ph-minus"></i>
+                                    `
+                    : `
+                                        <i class="ph ph-minus disable"></i>
+                                    `
+                }
+                            <span class="text-button quantity">${list.prdQuantity}</span>
+                            <i class="ph ph-plus"></i>
+                        </div>
+                    </div>
+                    <div class="col-2 flex-center">
+                        <div class="text-button total">$${list.totalPrdPrice}.00</div>
+                    </div>
+                    <div class="col-1 flex-center"> <i class="ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i></div>
                 </div>
-                <div class="col-1 flex-center">
-                    <div class="text-button">${list.prdPrice}</div>
-                </div>
-                <div class="col-2 flex-center">
-                    <div class="quantity-block flex-item-center border-outline bora-4">
-                    <i class="ph ph-minus disable"></i>
-                    <span class="text-button">${list.prdQuantity}</span>
-                    <i class="ph ph-plus"></i></div>
-                </div>
-                <div class="col-2 flex-center">
-                    <div class="text-button">$${list.totalPrdPrice}.00</div>
-                </div>
-                <div class="col-1 flex-center"> <i class="ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i></div>
-            </div>
-        `
-        listProduct.appendChild(productItem)
+            `;
+            listProduct.appendChild(productItem)
+        })
+    } else {
+        listProduct.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
+        document.querySelector('.discount-block span.discount').innerHTML = `0`
+        document.querySelector('.discount-block >div:last-child span:first-child').innerHTML = `$`
+    }
+
+
+    // Function handle progress, total money 
+    const handleShoppingCartPage = () => {
+        // Handle total price list products
+        const totalPricePrds = document.querySelector('.checkout-block span.total-product')
+        const arrayPrd = document.querySelectorAll('.list-product .list .item')
+        var totalPricePrdsNew = 0
+
+        arrayPrd.forEach(item => {
+            const total = item.querySelector('.total')
+            totalPricePrdsNew += parseFloat(total.innerHTML.replace(/[^0-9.]/g, ''))
+        })
+        totalPricePrds.innerHTML = totalPricePrdsNew
+
+
+        // Handle total price carts
+        const totalPriceCart = document.querySelector('.total-cart-block span.total-cart')
+        const discountPrice = document.querySelector('.discount-block span.discount')
+        totalPriceCart.innerHTML = Number(totalPricePrds.innerHTML) - Number(discountPrice.innerHTML)
+
+
+        // Handle price heading (Buy ... more to get Freeship)
+        // You can change to any number
+        var totalPriceToFreeship = 1000
+        const priceToFreeShip = document.querySelector('.cart-block .heading span.price')
+        priceToFreeShip.innerHTML = Number(totalPriceToFreeship) - Number(totalPricePrds.innerHTML)
+
+        if (Number(priceToFreeShip.innerHTML) <= 0) {
+            priceToFreeShip.innerHTML = '0'
+        }
+
+        // Handle progress heading
+        const progressLine = document.querySelector('.tow-bar-block .progress-line')
+        var percentProgress = ((Number(priceToFreeShip.innerHTML) / Number(totalPriceToFreeship)) * 100)
+        progressLine.style.width = 100 - Number(percentProgress) + '%'
+    }
+
+    handleShoppingCartPage()
+
+
+    // increaseQuantity, reduceQuantity button
+    const increaseQuantity = document.querySelectorAll('.item .quantity-block .ph-plus')
+    const reduceQuantity = document.querySelectorAll('.item .quantity-block .ph-minus')
+    const quantityBlock = document.querySelectorAll('.item .quantity-block')
+
+    quantityBlock.forEach(item => {
+        if (Number(item.querySelector('.quantity').innerHTML) == 1) {
+            item.querySelector('.ph-minus').style.pointerEvents = "none"
+        }
     })
 
+
+    increaseQuantity.forEach(increaseIcon => {
+        increaseIcon.addEventListener('click', function () {
+            let parentItem = increaseIcon.parentElement
+            let quantity = parentItem.querySelector('span').innerHTML
+            let iconLeft = parentItem.querySelector('.ph-minus')
+
+            quantity = Number(quantity) + 1
+            parentItem.querySelector('span').innerHTML = quantity
+
+            // Enable minus button
+            if (quantity > 1) {
+                iconLeft.classList.remove('disable')
+                iconLeft.style.pointerEvents = "unset"
+            }
+
+            // Handle total price product item
+            const productItem = parentItem.parentElement.parentElement.parentElement
+            const pricePrd = productItem.querySelector('.price').innerHTML
+            const totalPricePrdItem = productItem.querySelector('.total')
+
+            totalPricePrdItem.innerHTML = `$${parseFloat(pricePrd.replace(/[^0-9.]/g, '')) * quantity}.00`
+
+            handleShoppingCartPage()
+        })
+    })
+
+
+    reduceQuantity.forEach(reduceIcon => {
+        reduceIcon.addEventListener('click', function () {
+            let parentItem = reduceIcon.parentElement
+            let quantity = parentItem.querySelector('span').innerHTML
+            let iconLeft = parentItem.querySelector('.ph-minus')
+
+            quantity = Number(quantity) - 1
+            parentItem.querySelector('span').innerHTML = quantity
+
+            // Enable minus button
+            if (quantity <= 1) {
+                iconLeft.classList.add('disable')
+                iconLeft.style.pointerEvents = "none";
+            }
+
+            // Handle total price product item
+            const productItem = parentItem.parentElement.parentElement.parentElement
+            const pricePrd = productItem.querySelector('.price').innerHTML
+            const totalPricePrdItem = productItem.querySelector('.total')
+
+            totalPricePrdItem.innerHTML = `$${parseFloat(pricePrd.replace(/[^0-9.]/g, '')) * quantity}.00`
+
+            handleShoppingCartPage()
+        })
+    })
 }
 
 
 // Countdown time in cart
 const min = document.querySelector('.cart-block .time .caption1 .min')
 const sec = document.querySelector('.cart-block .time .caption1 .sec')
-
 
 window.onload = () => {
     if (min && sec) {
@@ -1152,128 +1366,10 @@ window.onload = () => {
                 }
             }, 1000)
         }, 100)
-
-
     }
 }
 
 
-// Increase and reduce quantity product in cart
-if (increaseNumberCarts && document.querySelector('.cart-block')) {
-    increaseNumberCarts.forEach(increaseNumberCart => {
-        let parentItem = increaseNumberCart.parentElement
-
-        increaseNumberCart.addEventListener('click', function (e) {
-            let quantity = parentItem.querySelector('span').innerHTML
-            let iconLeft = parentItem.querySelector('.ph-minus')
-
-            quantity = Number(quantity) + 1
-            parentItem.querySelector('span').innerHTML = quantity
-
-            // Enable minus button
-            if (quantity > 1) {
-                iconLeft.classList.remove('disable')
-            }
-
-            // Handle total price product item
-            const productItem = parentItem.parentElement.parentElement
-            const pricePrd = productItem.querySelector('span.price').innerHTML
-            const totalPricePrdItem = productItem.querySelector('span.total')
-
-            totalPricePrdItem.innerHTML = Number(pricePrd) * quantity
-
-            // Handle total price products
-            const totalPricePrds = document.querySelector('.checkout-block span.total-product')
-            const arrayPrd = document.querySelectorAll('.list-product .list .item')
-            var totalPricePrdsNew = 0
-
-            arrayPrd.forEach(item => {
-                const total = item.querySelector('span.total')
-                totalPricePrdsNew += Number(total.innerHTML)
-            })
-            totalPricePrds.innerHTML = totalPricePrdsNew
-
-            // Handle total price carts
-            const totalPriceCart = document.querySelector('.total-cart-block span.total-cart')
-            const discountPrice = document.querySelector('.discount-block span.discount')
-            totalPriceCart.innerHTML = Number(totalPricePrds.innerHTML) - Number(discountPrice.innerHTML)
-
-            // Handle price heading (Buy ... more to get Freeship)
-            // You can change to any number
-            var totalPriceToFreeship = 500
-            const priceToFreeShip = document.querySelector('.cart-block .heading span.price')
-            priceToFreeShip.innerHTML = Number(totalPriceToFreeship) - Number(totalPricePrds.innerHTML)
-
-            if (Number(priceToFreeShip.innerHTML) <= 0) {
-                priceToFreeShip.innerHTML = '0'
-            }
-
-            // Handle progress heading
-            const progressLine = document.querySelector('.tow-bar-block .progress-line')
-            var percentProgress = ((Number(priceToFreeShip.innerHTML) / Number(totalPriceToFreeship)) * 100)
-            progressLine.style.width = 100 - Number(percentProgress) + '%'
-        })
-    })
-}
-
-if (reduceNumberCarts && document.querySelector('.cart-block')) {
-    reduceNumberCarts.forEach(reduceNumberCart => {
-        let parentItem = reduceNumberCart.parentElement
-
-        reduceNumberCart.addEventListener('click', function (e) {
-            let quantity = parentItem.querySelector('span').innerHTML
-            let iconLeft = parentItem.querySelector('.ph-minus')
-
-            if (quantity > 1) {
-                quantity = Number(quantity) - 1
-                parentItem.querySelector('span').innerHTML = quantity
-            }
-
-            // Disable minus button
-            if (quantity <= 1) {
-                iconLeft.classList.add('disable')
-            }
-
-            // Handle total price product item
-            const productItem = parentItem.parentElement.parentElement
-            const pricePrd = productItem.querySelector('span.price').innerHTML
-            const totalPricePrdItem = productItem.querySelector('span.total')
-
-            totalPricePrdItem.innerHTML = Number(pricePrd) * quantity
-
-            // Handle total price products
-            const totalPricePrds = document.querySelector('.checkout-block span.total-product')
-            const arrayPrd = document.querySelectorAll('.list-product .list .item')
-            var totalPricePrdsNew = 0
-
-            arrayPrd.forEach(item => {
-                const total = item.querySelector('span.total')
-                totalPricePrdsNew += Number(total.innerHTML)
-            })
-            totalPricePrds.innerHTML = totalPricePrdsNew
-
-            // Handle total price carts
-            const totalPriceCart = document.querySelector('.total-cart-block span.total-cart')
-            const discountPrice = document.querySelector('.discount-block span.discount')
-            totalPriceCart.innerHTML = Number(totalPricePrds.innerHTML) - Number(discountPrice.innerHTML)
-
-            // Handle price heading (Buy ... more to get Freeship)
-            // You can change to any number
-            var totalPriceToFreeship = 500
-            const priceToFreeShip = document.querySelector('.cart-block .heading span.price')
-            priceToFreeShip.innerHTML = Number(totalPriceToFreeship) - Number(totalPricePrds.innerHTML)
-
-            if (Number(priceToFreeShip.innerHTML) <= 0) {
-                priceToFreeShip.innerHTML = '0'
-            }
-
-            // Handle progress heading
-            const progressLine = document.querySelector('.tow-bar-block .progress-line')
-            var percentProgress = ((Number(priceToFreeShip.innerHTML) / Number(totalPriceToFreeship)) * 100)
-            progressLine.style.width = 100 - Number(percentProgress) + '%'
-        })
-    })
-}
 
 
 // Check out page
@@ -1307,4 +1403,46 @@ if (paymentCheckbox) {
             }
         })
     })
+}
+
+
+if (document.querySelector('.checkout-block-main')) {
+    const listProductCheckout = document.querySelector('.checkout-block-main .checkout-block .list-product-checkout')
+
+    if (cartStore && cartStore.length > 0) {
+        // Total money cart
+        var totalCheckOut = 0
+
+        cartStore.forEach(list => {
+            const productItem = document.createElement('div')
+            productItem.classList.add('product', 'flex-between', 'pb-12', 'border-underline-outline', 'mt-20', 'gap-8')
+            productItem.innerHTML = `
+                <div class="left flex-item-center gap-8">
+                    <div class="bg-img flex-center border-outline">
+                        <img src="${list.prdImg}" alt="${list.prdName}"/>
+                    </div>
+                    <span class="text-button">${list.prdName}</span>
+                </div>
+                <div class="right flex-item-center text-end"> 
+                    <div class="quantity text-button">${list.prdQuantity} x 
+                    </div>
+                    <div class="text-button pl-4 price">${list.prdPrice}</div>
+            </div>
+            `;
+            listProductCheckout.appendChild(productItem)
+
+            // Set total money cart
+            totalCheckOut += list.totalPrdPrice
+        })
+
+        // Handle total price cart
+        document.querySelector('.total-block .total-product').innerHTML = `$${totalCheckOut}.00`
+        const discountCheckout = document.querySelector('.discount-block span.discount').innerHTML
+        
+        document.querySelector('.total-cart-block .total-cart').innerHTML = `$${Number(totalCheckOut - discountCheckout)}.00`
+    } else {
+        listProductCheckout.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
+        // document.querySelector('.discount-block span.discount').innerHTML = `0`
+        // document.querySelector('.discount-block >div:last-child span:first-child').innerHTML = `$`
+    }
 }

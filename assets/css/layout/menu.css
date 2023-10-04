@@ -834,7 +834,7 @@
   background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 }
 .style-service .header-menu .menu-main .sub-nav .row > div:first-child .item .list-service .row > div .service-item.active .text-button::before {
-  width: calc(100% - 8px);
+  width: calc(100% - 8px) !important;
 }
 .style-service .header-menu .menu-main .sub-nav .row > div:first-child:hover .item .list-service .row > div .service-item {
   background: transparent;

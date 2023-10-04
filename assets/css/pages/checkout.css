@@ -1,10 +1,10 @@
-.checkout-block .container > .row > div:first-child .login .right i {
+.checkout-block-main .container > .row > div:first-child .login .right i {
   transition: all linear 0.4s;
 }
-.checkout-block .container > .row > div:first-child .login .right i.up {
+.checkout-block-main .container > .row > div:first-child .login .right i.up {
   transform: rotate(180deg);
 }
-.checkout-block .container > .row > div:first-child .form-login-block {
+.checkout-block-main .container > .row > div:first-child .form-login-block {
   opacity: 0;
   visibility: hidden;
   max-height: 0;
@@ -12,53 +12,56 @@
   overflow: hidden;
   transition: all linear 0.4s;
 }
-.checkout-block .container > .row > div:first-child .form-login-block.open {
+.checkout-block-main .container > .row > div:first-child .form-login-block.open {
   opacity: 1;
   visibility: visible;
   max-height: 250px;
   margin-top: 16px;
 }
-.checkout-block .container > .row > div:first-child .information form .row > div {
+.checkout-block-main .container > .row > div:first-child .information form .row > div {
   position: relative;
 }
-.checkout-block .container > .row > div:first-child .information form .row > div i {
+.checkout-block-main .container > .row > div:first-child .information form .row > div i {
   position: absolute;
   bottom: 15px;
   right: 26px;
   font-size: 18px;
 }
-.checkout-block .container > .row > div:first-child .information .list-payment .type {
+.checkout-block-main .container > .row > div:first-child .information .list-payment .type {
   transition: all linear 0.4s;
 }
-.checkout-block .container > .row > div:first-child .information .list-payment .type .infor {
+.checkout-block-main .container > .row > div:first-child .information .list-payment .type .infor {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
   max-height: 0;
   transition: all linear 0.4s;
 }
-.checkout-block .container > .row > div:first-child .information .list-payment .type .infor .row > div {
+.checkout-block-main .container > .row > div:first-child .information .list-payment .type .infor .row > div {
   position: relative;
 }
-.checkout-block .container > .row > div:first-child .information .list-payment .type .infor .bg-img {
+.checkout-block-main .container > .row > div:first-child .information .list-payment .type .infor .bg-img {
   position: absolute;
   bottom: 16px;
   right: 32px;
 }
-.checkout-block .container > .row > div:first-child .information .list-payment .type.open {
+.checkout-block-main .container > .row > div:first-child .information .list-payment .type.open {
   background-color: #EFF0F3;
 }
-.checkout-block .container > .row > div:first-child .information .list-payment .type.open .infor {
+.checkout-block-main .container > .row > div:first-child .information .list-payment .type.open .infor {
   opacity: 1;
   visibility: visible;
   max-height: 450px;
 }
-.checkout-block .container > .row > div:last-child .product .bg-img {
+.checkout-block-main .container > .row > div:last-child .product .bg-img {
   padding: 8px 15px;
 }
-.checkout-block .container > .row > div:last-child .product .bg-img img {
+.checkout-block-main .container > .row > div:last-child .product .bg-img img {
   width: 30px;
 }
-.checkout-block .container > .row > div:last-child .ship-block {
+.checkout-block-main .container > .row > div:last-child .product .right .quantity {
+  white-space: nowrap;
+}
+.checkout-block-main .container > .row > div:last-child .ship-block {
   align-items: flex-start;
 }

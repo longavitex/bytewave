@@ -11,7 +11,7 @@ block content
                 a(href="index.html").body2.fw-500.text-on-surface-variant2 Home 
                 i.ph-fill.ph-dot-outline.text-on-surface-variant2.pl-12
                 .body2.fw-500.pl-12 Check out 
-    .checkout-block.pt-80.pb-80 
+    .checkout-block-main.pt-80.pb-80 
         .container 
             .row.row-gap-40.flex-wrap-reverse
                 .col-lg-8 
@@ -170,44 +170,11 @@ block content
                 .col-lg-4.pl-45.pl-col-lg-0
                     .checkout-block.p-24.border-outline.bora-8
                         .heading5 Your Order
-                        .product.flex-between.pb-12.border-underline-outline.mt-20.gap-8
-                            .left.flex-item-center.gap-8
-                                .bg-img.flex-center.border-outline
-                                    img(src="assets/images/product/1.png", alt="")
-                                span.text-button System Design Interview Volume 2
-                            .right.flex-item-center.text-end 
-                                .quantity.text-button 1
-                                    span.pl-4 x 
-                                .price.text-button.pl-4 $
-                                    span.price 60
-                                    span .00
-                        .product.flex-between.pb-12.border-underline-outline.mt-20.gap-8
-                            .left.flex-item-center.gap-8
-                                .bg-img.flex-center.border-outline
-                                    img(src="assets/images/product/2.png", alt="")
-                                span.text-button the subtle art of not giving a fck
-                            .right.flex-item-center.text-end 
-                                .quantity.text-button 1
-                                    span.pl-4 x 
-                                .price.text-button.pl-4 $
-                                    span.price 95
-                                    span .00
-                        .product.flex-between.pb-12.border-underline-outline.mt-20.gap-8
-                            .left.flex-item-center.gap-8
-                                .bg-img.flex-center.border-outline
-                                    img(src="assets/images/product/3.png", alt="")
-                                span.text-button best self be you, only better
-                            .right.flex-item-center.text-end 
-                                .quantity.text-button 1
-                                    span.pl-4 x 
-                                .price.text-button.pl-4 $
-                                    span.price 95
-                                    span .00
+                        .list-product-checkout
+                        
                         .total-block.pt-20.pb-20.flex-between.border-underline-outline
                             .text-button Subtotal
-                            .text-button $
-                                span.total-product 250
-                                span .00
+                            .text-button.total-product $250.00
                         .discount-block.pt-20.pb-20.flex-between.border-underline-outline
                             .text-button Discounts
                             .text-button -$
@@ -232,9 +199,7 @@ block content
                                     .flat.text-on-surface-variant1.mt-4 $35.00
                         .total-cart-block.pt-20.flex-between 
                             .heading5 Total
-                            .heading5 $
-                                span.total-cart 240
-                                span .00
+                            .heading5.total-cart $240.00
 block footer 
     div(class="style-subpage style-blog")
         include components/footer/footer.pug
