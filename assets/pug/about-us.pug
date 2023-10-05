@@ -5,10 +5,12 @@ block header
     div(class="style-subpage style-company style-one")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingContent.pug
+    include mixins/headingTitle.pug
     include mixins/blogItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'About Us', subHeading:'Discover our story, our mission, and our passion for creativity and innovation.', category:'About Us', heading2:"Elevating Small and Mid-Sized Companies through Tailored IT Services", img:'assets/images/component/bg-about-us.png'})
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'About Us', desc:'Discover our story, our mission, and our passion for creativity and innovation'})
+    +headingContent({classname: 'pt-60', style:'style-one', category:'About Us', title:'Elevating Small and Mid-Sized Companies through Tailored IT Services', img:'assets/images/component/bg-team.png'})
     div(class="style-about-us")
         include components/home1/brand.pug
     .our-mission-block.pb-80
@@ -165,8 +167,8 @@ block content
                                 .name.heading5 John Smith
                                 .position.caption1.text-on-surface-variant1.mt-4 Graphic Designer
                             .right 
-                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-twitter
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-4.col-sm-6
                     .member-item
                         a(href="team-detail.html").bg-img 
@@ -176,8 +178,8 @@ block content
                                 .name.heading5 Lucas William
                                 .position.caption1.text-on-surface-variant1.mt-4 CEM - digiNova
                             .right 
-                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-twitter
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-4.col-sm-6
                     .member-item
                         a(href="team-detail.html").bg-img 
@@ -187,8 +189,8 @@ block content
                                 .name.heading5 Floyd Miles
                                 .position.caption1.text-on-surface-variant1.mt-4 Photographer
                             .right 
-                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-twitter
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-4.col-sm-6
                     .member-item
                         a(href="team-detail.html").bg-img 
@@ -198,8 +200,8 @@ block content
                                 .name.heading5 Chris Patt
                                 .position.caption1.text-on-surface-variant1.mt-4 Photographer
                             .right 
-                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-twitter
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-4.col-sm-6
                     .member-item
                         a(href="team-detail.html").bg-img 
@@ -209,8 +211,8 @@ block content
                                 .name.heading5 Kathryn Murphy
                                 .position.caption1.text-on-surface-variant1.mt-4 Graphic Designer
                             .right 
-                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-twitter
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-4.col-sm-6
                     .member-item
                         a(href="team-detail.html").bg-img 
@@ -220,12 +222,13 @@ block content
                                 .name.heading5 Katty Perry
                                 .position.caption1.text-on-surface-variant1.mt-4 CEO - AIbank
                             .right 
-                                a(href="https://twitter.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-twitter
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 
     div(class="style-about-us")
         include components/home6/testimonial.pug
     include components/home1/contact.pug
+    include components/modal-video.pug
 block footer 
     div(class="style-subpage")
         include components/footer/footer.pug

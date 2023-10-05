@@ -5,10 +5,10 @@ block header
     div(class="style-subpage style-pages style-two")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingContent.pug
     include mixins/questionItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'Frequently Asked Questions', subHeading:'Your Queries, Our Answers', content: false})
+    +headingContent({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'Frequently Asked Questions', subHeading:'Your Queries, Our Answers', content: false})
     .faqs-block-page.pt-20.pb-80 
         .container 
             .row

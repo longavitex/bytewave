@@ -5,10 +5,12 @@ block header
     div(class="style-subpage style-blog style-one")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingContent.pug
+    include mixins/headingTitle.pug
     include mixins/blogItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'The Latest New', subHeading:'The Latest Innovations in Bytewave', category:'E-commerce & Retail', heading3:"Enhancing IT Security with Multi-Factor Authentication", desc:'Discover how multi-factor authentication (MFA) is bolstering IT security and protecting sensitive data.', date:'February 22, 2023', img:'assets/images/component/bg-blog.png'})
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'The Latest New', desc:'The Latest Innovations in Bytewave'})
+    +headingContent({classname: 'pt-60', style:'style-three', category:'E-commerce & Retail', title:'Enhancing IT Security with Multi-Factor Authentication', desc:"Discover how multi-factor authentication (MFA) is bolstering IT security and protecting sensitive data.", date:'February 22, 2023', img:'assets/images/component/bg-blog.png'})
     .list-blog-page.pt-80.pb-80
         .container
             .row.row-gap-40

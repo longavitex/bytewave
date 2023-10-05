@@ -1,0 +1,10 @@
+mixin headingTitle(props = {})
+    -var {classname = '', style, cate, title, desc} = props
+    div(class=`heading-title ${classname}`)
+        .container.text-center 
+            if(style=='style-cate')
+                .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8!= cate 
+                .title.heading2.text-center.mt-12!= title
+            if(style=='style-desc')
+                .title.heading2.text-center!= title
+                .body2.text-on-surface-variant1.mt-12!= desc

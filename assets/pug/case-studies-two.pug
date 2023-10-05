@@ -5,10 +5,12 @@ block header
     div(class="style-subpage style-case-studies style-two")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingContent.pug
+    include mixins/headingTitle.pug
     include mixins/blogItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Success Stories', subHeading:'From Clients Who Achieved Excellence with ByteWave', category:'Case Studies', heading2:"Triumphs and Achievements. Our Success Stories", img:'assets/images/component/bg-about-us.png'})
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'Success Stories', desc:'From Clients Who Achieved Excellence with ByteWave'})
+    +headingContent({classname: 'pt-60', style:'style-one', category:'Case Studies', title:'Real Results, Real Success', desc:"These real-world examples showcase how we've helped clients overcome challenges, achieve their goals, and drive measurable success through our services.", img:'assets/images/component/bg-blog.png'})
     .list-case-studies.pt-80.pb-80
         .container
             .row.row-gap-40

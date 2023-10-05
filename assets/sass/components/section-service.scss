@@ -3,23 +3,29 @@
 */
 .section-service {
     .container {
-        @media (min-width: 1024px) {
-            .service-item {
+        .service-item {
+            transition: 0.3s;
+
+            .heading6,
+            i {
                 transition: 0.3s;
+            }
+
+            &:hover {
+                background-color: var(--blue);
 
                 .heading6,
                 i {
-                    transition: 0.3s;
+                    color: var(--white);
                 }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .service-item {
 
                 &:hover {
                     padding-left: 32px;
-                    background-color: var(--blue);
-
-                    .heading6,
-                    i {
-                        color: var(--white);
-                    }
                 }
             }
         }
@@ -33,6 +39,7 @@
         }
     }
 }
+
 /*
 *** Section Service Home1: End
 */

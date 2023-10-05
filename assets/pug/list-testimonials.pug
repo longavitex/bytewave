@@ -5,10 +5,12 @@ block header
     div(class="style-subpage style-company style-five")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingTitle.pug
+    include mixins/headingContent.pug
     include mixins/blogItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Reviews', subHeading:'Feedback from Our Valued Clients', category:'Testimonials', heading3:"Words from Our Satisfied Clients", desc:'These testimonials from our satisfied clients are more than just words; they are a testament to our unwavering commitment to excellence.', img:'assets/images/component/bg-case-detail.png'})
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'Our Work Speaks for Itself', desc:'Feedback from Our Valued Clients'})
+    +headingContent({classname: 'pt-60', style:'style-one', category:'Testimonials', title:'Words from Our Satisfied Clients', desc:'These testimonials from our satisfied clients are more than just words; they are a testament to our unwavering commitment to excellence.', img:'assets/images/component/bg-case-detail.png'})
     .list-testimonials-block.pt-80.pb-80
         .container 
             .heading3.text-center  Our Work Speaks for Itself
@@ -103,96 +105,102 @@ block content
                                 .user.pl-12
                                     .text-title Wade Warren
                                     .caption1.text-on-surface-variant1 Leader FPRO
-                .col-lg-4.col-sm-6
-                    .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
-                        .content
-                            .star.flex-item-center.gap-1
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                            .body2.mt-12 Their team's expertise and commitment to excellence are unmatched. They delivered our project ahead of schedule and exceeded our expectations. We're thrilled with the results and look forward to future collaborations.
-                            .infor.flex-item-center.mt-24
-                                img(src="assets/images/avatar/IMG-7.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
-                                .user.pl-12
-                                    .text-title Albert Flores
-                                    .caption1.text-on-surface-variant1 Designer Lode
-                .col-lg-4.col-sm-6
-                    .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
-                        .content
-                            .star.flex-item-center.gap-1
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                            .body2.mt-12 “From the initial consultation to project completion, demonstrated exceptional professionalism and attention to detail. They understood our unique needs and tailored their solutions to perfection. Their customer-centric approach is truly commendable."
-                            .infor.flex-item-center.mt-24
-                                img(src="assets/images/avatar/IMG-8.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
-                                .user.pl-12
-                                    .text-title Guy Hawkins
-                                    .caption1.text-on-surface-variant1 CEO Square
-                .col-lg-4.col-sm-6
-                    .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
-                        .content
-                            .star.flex-item-center.gap-1
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                            .body2.mt-12 I can't express how satisfied I am with the services provided by ByteWare. They not only delivered a cutting-edge website but also provided ongoing support that has been invaluable to our business. Their dedication to our success is evident in every interaction.
-                            .infor.flex-item-center.mt-24
-                                img(src="assets/images/avatar/IMG-9.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
-                                .user.pl-12
-                                    .text-title Dianne Russell
-                                    .caption1.text-on-surface-variant1 DevOps Digital Avitex
-                .col-lg-4.col-sm-6
-                    .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
-                        .content
-                            .star.flex-item-center.gap-1
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                            .body2.mt-12 Bytewave consistently goes above and beyond. They have a knack for turning complex concepts into user-friendly solutions. Their team is responsive, innovative, and a pleasure to work with. I highly recommend them to anyone seeking top-tier IT services."
-                            .infor.flex-item-center.mt-24
-                                img(src="assets/images/avatar/IMG-10.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
-                                .user.pl-12
-                                    .text-title Ralph Edwards
-                                    .caption1.text-on-surface-variant1 CEO Hunix
-                .col-lg-4.col-sm-6
-                    .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
-                        .content
-                            .star.flex-item-center.gap-1
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                            .body2.mt-12 We've been partnering with Byteware for several years, and they continue to impress us with their expertise and reliability. Their IT solutions have streamlined our operations and contributed to our growth. They are an indispensable part of our success.
-                            .infor.flex-item-center.mt-24
-                                img(src="assets/images/avatar/IMG-11.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
-                                .user.pl-12
-                                    .text-title Jacob Jones
-                                    .caption1.text-on-surface-variant1 Leader Avitex
-                .col-lg-4.col-sm-6
-                    .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
-                        .content
-                            .star.flex-item-center.gap-1
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                                i.ph-fill.ph-star.fs-20.text-yellow
-                            .body2.mt-12 Byteware stands out for their technical prowess and dedication to excellence. Their team's ability to adapt to our evolving needs is commendable. They have consistently delivered on time and within budget. We consider them a valuable extension of our team.
-                            .infor.flex-item-center.mt-24
-                                img(src="assets/images/avatar/IMG-12.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
-                                .user.pl-12
-                                    .text-title Arlene McCoy
-                                    .caption1.text-on-surface-variant1 CEO FPTU
+            .list-more.mt-32    
+                .load-more-btn.text-center 
+                    button.button-blue.button-blue-hover 
+                        span Load more
+                        i.ph.ph-circle-notch.text-white.fs-20
+                .row.row-gap-32.list
+                    .col-lg-4.col-sm-6
+                        .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
+                            .content
+                                .star.flex-item-center.gap-1
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                .body2.mt-12 Their team's expertise and commitment to excellence are unmatched. They delivered our project ahead of schedule and exceeded our expectations. We're thrilled with the results and look forward to future collaborations.
+                                .infor.flex-item-center.mt-24
+                                    img(src="assets/images/avatar/IMG-7.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
+                                    .user.pl-12
+                                        .text-title Albert Flores
+                                        .caption1.text-on-surface-variant1 Designer Lode
+                    .col-lg-4.col-sm-6
+                        .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
+                            .content
+                                .star.flex-item-center.gap-1
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                .body2.mt-12 “From the initial consultation to project completion, demonstrated exceptional professionalism and attention to detail. They understood our unique needs and tailored their solutions to perfection. Their customer-centric approach is truly commendable."
+                                .infor.flex-item-center.mt-24
+                                    img(src="assets/images/avatar/IMG-8.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
+                                    .user.pl-12
+                                        .text-title Guy Hawkins
+                                        .caption1.text-on-surface-variant1 CEO Square
+                    .col-lg-4.col-sm-6
+                        .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
+                            .content
+                                .star.flex-item-center.gap-1
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                .body2.mt-12 I can't express how satisfied I am with the services provided by ByteWare. They not only delivered a cutting-edge website but also provided ongoing support that has been invaluable to our business. Their dedication to our success is evident in every interaction.
+                                .infor.flex-item-center.mt-24
+                                    img(src="assets/images/avatar/IMG-9.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
+                                    .user.pl-12
+                                        .text-title Dianne Russell
+                                        .caption1.text-on-surface-variant1 DevOps Digital Avitex
+                    .col-lg-4.col-sm-6
+                        .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
+                            .content
+                                .star.flex-item-center.gap-1
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                .body2.mt-12 Bytewave consistently goes above and beyond. They have a knack for turning complex concepts into user-friendly solutions. Their team is responsive, innovative, and a pleasure to work with. I highly recommend them to anyone seeking top-tier IT services."
+                                .infor.flex-item-center.mt-24
+                                    img(src="assets/images/avatar/IMG-10.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
+                                    .user.pl-12
+                                        .text-title Ralph Edwards
+                                        .caption1.text-on-surface-variant1 CEO Hunix
+                    .col-lg-4.col-sm-6
+                        .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
+                            .content
+                                .star.flex-item-center.gap-1
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                .body2.mt-12 We've been partnering with Byteware for several years, and they continue to impress us with their expertise and reliability. Their IT solutions have streamlined our operations and contributed to our growth. They are an indispensable part of our success.
+                                .infor.flex-item-center.mt-24
+                                    img(src="assets/images/avatar/IMG-11.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
+                                    .user.pl-12
+                                        .text-title Jacob Jones
+                                        .caption1.text-on-surface-variant1 Leader Avitex
+                    .col-lg-4.col-sm-6
+                        .item.pl-32.pr-32.pt-40.pb-40.bg-white.bora-16.flex-item-center.gap-20.border-outline.h-100
+                            .content
+                                .star.flex-item-center.gap-1
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                    i.ph-fill.ph-star.fs-20.text-yellow
+                                .body2.mt-12 Byteware stands out for their technical prowess and dedication to excellence. Their team's ability to adapt to our evolving needs is commendable. They have consistently delivered on time and within budget. We consider them a valuable extension of our team.
+                                .infor.flex-item-center.mt-24
+                                    img(src="assets/images/avatar/IMG-12.png", alt="").bora-50.w-60.h-60.object-fit-cover.display-block
+                                    .user.pl-12
+                                        .text-title Arlene McCoy
+                                        .caption1.text-on-surface-variant1 CEO FPTU
                 
     include components/home1/contact.pug
 block footer 

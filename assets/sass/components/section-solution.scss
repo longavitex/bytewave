@@ -5,20 +5,28 @@
     .solution-item {
         transition: 0.3s;
 
-        .heading5,
-        .text-on-surface-variant1 {
-            transition: 0.3s;
+        .heading5 {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: var(--on-surface);
+                transition: 0.3s;
+            }
         }
 
         &:hover {
             box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 
             .heading5 {
-                color: var(--blue);
-            }
-
-            .text-on-surface-variant1 {
-                text-decoration: underline;
+                &::before {
+                    width: 100%;
+                }
             }
         }
     }

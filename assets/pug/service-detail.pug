@@ -5,11 +5,11 @@ block header
     div(class="style-subpage style-service style-one")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingContent.pug
     include mixins/blogItem.pug
     .bg-subpage
     div(class="style-service-detail-block")
-        +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Service', subHeading:'Empowering Your Success Through Comprehensive Solutions', category:'IT Solution', heading2:"Manufacturing & Industry 4.0", desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', img:'assets/images/component/bg-case-detail.png'})
+        +headingContent({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Service', subHeading:'Empowering Your Success Through Comprehensive Solutions', category:'IT Solution', heading2:"Manufacturing & Industry 4.0", desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', img:'assets/images/component/bg-case-detail.png'})
     div(class="style-about-us")
         include components/home1/brand.pug
     div(class="style-about-us")

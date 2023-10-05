@@ -593,7 +593,7 @@
         }
 
         .right-block {
-            a {
+            a.button {
                 display: none;
             }
 
@@ -607,6 +607,7 @@
             .menu-humburger {
                 display: block;
                 font-size: 24px;
+                padding-left: 18px;
             }
         }
     }
@@ -614,6 +615,12 @@
     @media (max-width: 576px) {
         .container {
             height: 60px;
+
+            .logo {
+                svg {
+                    width: 120px;
+                }
+            }
         }
 
         .right-block {
@@ -1237,14 +1244,6 @@
                             fill: var(--on-surface);
                         }
                     }
-                }
-            }
-        }
-
-        @media (max-width: 992px) {
-            .right-block {
-                .menu-humburger {
-                    padding-left: 0;
                 }
             }
         }

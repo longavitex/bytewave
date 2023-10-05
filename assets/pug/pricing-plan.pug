@@ -5,11 +5,13 @@ block header
     div(class="style-subpage style-company style-four")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingTitle.pug
+    include mixins/headingContent.pug
     include mixins/questionItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-one', heading:false, category:'Performance Enhancement', heading2:"Affordable Solutions for Every Budget", desc:'At ByteWave, we offer a variety of cost-effective solutions tailored to meet diverse budgetary requirement. Our goal is to provide high-quality services without exceeding your financial limits.', img:'assets/images/component/bg-case-studies.png'})
-    .list-testimonials-block.pt-80.pb-80
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'Our Flexible Pricing Plans', desc:'Choose the perfect pricing plan to fit your needs and budget'})
+    +headingContent({classname: 'pt-60', style:'style-one', category:'Performance Enhancement', title:'Affordable Solutions for Every Budget', desc:'We offer a variety of cost-effective solutions tailored to meet diverse budgetary requirement. Our goal is to provide high-quality services without exceeding your financial limits.', img:'assets/images/component/bg-case-studies.png'})
+    .pricing-plan-block.section-pricing.style-seven.pt-80.pb-80
         .container 
             .heading.text-center
                 .heading3.text-center Pricing Plan
@@ -19,7 +21,7 @@ block content
                     .col-12.col-lg-4
                         .pricing-item.bg-white.p-40.bora-20.border-outline
                             .heading5 Silver
-                            .price.gap-8.mt-12
+                            .price.gap-8.mt-20
                                 .heading2 $99.00
                                 .caption1.text-on-surface-variant1 / per month
                             .list-feature.mt-24.d-flex.flex-column.gap-12.pt-32

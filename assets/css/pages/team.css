@@ -39,9 +39,24 @@
   background-color: var(--on-surface);
   color: var(--white);
 }
-@media (max-width: 576px) {
-  .teams-block .cta-block .heading3 br {
-    display: none;
+@media (max-width: 992px) {
+  .teams-block .cta-block .content-main {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 767.99px) {
+  .teams-block .cta-block .content-main {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 24px;
+  }
+  .teams-block .cta-block .content-main .row {
+    flex-direction: column;
+  }
+  .teams-block .cta-block .content-main .row > div {
+    text-align: center !important;
   }
 }
 

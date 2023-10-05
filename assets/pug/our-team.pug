@@ -5,13 +5,15 @@ block header
     div(class="style-subpage style-company style-two")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingTitle.pug
+    include mixins/headingContent.pug
     include mixins/blogItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Teams', subHeading:'Get Acquainted with the Exceptional Individuals Comprising Our Talented Team.', category:'Our Teams', heading2:"Meet Our Team. The Heartbeat of ByteWave", img:'assets/images/component/bg-team.png'})
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'Meet Our Team', desc:'Get Acquainted with the Exceptional Individuals Comprising Our Talented Team.'})
+    +headingContent({classname: 'pt-60', style:'style-two', desc:'American tech companies continue to propel the nation’s economy forward. Not only has technological innovation become an integral part of the way we live, it is also important to our nation’s economic success.', img:'assets/images/component/bg-heading-style2.png'})
     .teams-block.section-news.section-our-leader.style-two.pt-80.pb-80 
         .container
-            .heading3 Our Leadership
+            .heading3.text-center Our Leadership
             .list-member.list-news.list-leader.mt-40
                 .item.member-item
                     .main-item
@@ -119,8 +121,8 @@ block content
                                 .name.heading5 Alexander Pato
                                 .position.caption1.text-on-surface-variant1.mt-4 Graphic Designer
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-3.col-sm-6
                     .member-item 
                         a(href="team-detail.html").bg-img 
@@ -130,8 +132,8 @@ block content
                                 .name.heading5 Georgina Rodriguez
                                 .position.caption1.text-on-surface-variant1.mt-4 Photographer
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-3.col-sm-6
                     .member-item 
                         a(href="team-detail.html").bg-img 
@@ -141,8 +143,8 @@ block content
                                 .name.heading5 Christina Pavard
                                 .position.caption1.text-on-surface-variant1.mt-4 Graphic Designer
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-3.col-sm-6
                     .member-item 
                         a(href="team-detail.html").bg-img 
@@ -152,8 +154,8 @@ block content
                                 .name.heading5 Laura Diana
                                 .position.caption1.text-on-surface-variant1.mt-4 DevOps
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-3.col-sm-6
                     .member-item 
                         a(href="team-detail.html").bg-img 
@@ -163,8 +165,8 @@ block content
                                 .name.heading5 Antonio Silva
                                 .position.caption1.text-on-surface-variant1.mt-4 Developer
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-3.col-sm-6
                     .member-item 
                         a(href="team-detail.html").bg-img 
@@ -174,8 +176,8 @@ block content
                                 .name.heading5 Bella Smith
                                 .position.caption1.text-on-surface-variant1.mt-4 Accountant
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-3.col-sm-6
                     .member-item 
                         a(href="team-detail.html").bg-img 
@@ -185,8 +187,8 @@ block content
                                 .name.heading5 Eirlys Rodriguez
                                 .position.caption1.text-on-surface-variant1.mt-4 Photographer
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
                 .col-lg-3.col-sm-6
                     .member-item 
                         a(href="team-detail.html").bg-img 
@@ -196,17 +198,17 @@ block content
                                 .name.heading5 Mason Roberto
                                 .position.caption1.text-on-surface-variant1.mt-4 Graphic Designer
                             .right 
-                                a(href="https://facebook.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
-                                    i.icon-facebook
+                                a(href="https://linkedin.com/" target="_blank").icon.w-48.h-48.bora-50.bg-surface.flex-center.hover-button-blue
+                                    i.icon-linkedin
         .cta-block.pt-80
             .container 
-                .content-main.bg-blue.pt-60.pb-60.pl-32.pr-32.bora-20
-                    .row.flex-center
-                        .col-xl-7.col-lg-9
-                            .heading3.text-white.text-center Join Our Team <br>Explore Exciting Opportunities
-                            .heading6.fw-400.text-white.text-center.mt-20 Empower your business with our expertise for growth and efficiency.
-                            .block-button.text-center.mt-40
-                                a(href="contact-us.html").button.bg-white.border-none Join us today!
+                .content-main.bg-blue.pt-40.pb-40.pl-60.pr-60.bora-20
+                    .row.row-gap-32.flex-between
+                        .col-lg-7.col-md-8.text-content
+                            .heading3.text-white Join Our Team Explore Exciting Opportunities
+                            .heading6.fw-400.text-white.mt-20 Empower your business with our expertise for growth and efficiency.
+                        .col-lg-3.col-md-4.block-button.text-end
+                            a(href="contact-us.html").button.bg-white.border-none Join us today!
     include components/home1/contact.pug
     include components/modal-video.pug
 block footer 

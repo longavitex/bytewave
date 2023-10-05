@@ -52,23 +52,31 @@
   display: flex;
   align-items: end;
 }
+.section-pricing .list-pricing .pricing-item .price .heading2,
+.section-pricing .list-pricing-year .pricing-item .price .heading2 {
+  transition: all ease 0.3s;
+}
+.section-pricing .list-pricing .pricing-item:hover,
+.section-pricing .list-pricing-year .pricing-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+}
+.section-pricing .list-pricing .pricing-item:hover .price .heading2,
+.section-pricing .list-pricing-year .pricing-item:hover .price .heading2 {
+  color: var(--purple);
+}
+.section-pricing .list-pricing .pricing-item:hover a.button,
+.section-pricing .list-pricing-year .pricing-item:hover a.button {
+  border-color: var(--purple);
+  background-color: var(--purple);
+  color: var(--white);
+}
 .section-pricing .list-pricing .pricing-item a.button,
 .section-pricing .list-pricing-year .pricing-item a.button {
   transition: all ease 0.3s;
 }
 .section-pricing .list-pricing .pricing-item a.button:hover,
 .section-pricing .list-pricing-year .pricing-item a.button:hover {
-  background-color: var(--purple);
-  color: var(--white);
-  border: 1px solid var(--purple);
-}
-.section-pricing .list-pricing .pricing-item a.button.bg-purple:hover,
-.section-pricing .list-pricing-year .pricing-item a.button.bg-purple:hover {
   background-color: #5700c9;
-}
-.section-pricing .list-pricing .pricing-item:hover,
-.section-pricing .list-pricing-year .pricing-item:hover {
-  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
 @keyframes showList {
   from {
@@ -94,30 +102,43 @@
 /*
 *** Section Portfolio Home7: Start
 */
-.section-pricing.style-seven .container > .row .switch .bg-white::before {
+.section-pricing.style-seven .container .switch .bg-white::before {
   background-color: var(--blue);
 }
-.section-pricing.style-seven .container > .row .switch.enable .bg-white {
+.section-pricing.style-seven .container .switch.enable .bg-white {
   background-color: var(--blue);
 }
-.section-pricing.style-seven .container > .row .switch.enable .bg-white::before {
+.section-pricing.style-seven .container .switch.enable .bg-white::before {
   left: 42px;
   background-color: var(--white);
 }
-.section-pricing.style-seven .container > .row .list-pricing .pricing-item a.button:hover,
-.section-pricing.style-seven .container > .row .list-pricing-year .pricing-item a.button:hover {
-  background-color: var(--blue);
-  border: 1px solid var(--blue);
+.section-pricing.style-seven .container .list-pricing .pricing-item:hover,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
-.section-pricing.style-seven .container > .row .list-pricing .pricing-item a.button.bg-blue:hover,
-.section-pricing.style-seven .container > .row .list-pricing-year .pricing-item a.button.bg-blue:hover {
+.section-pricing.style-seven .container .list-pricing .pricing-item:hover .price .heading2,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item:hover .price .heading2 {
+  color: var(--blue);
+}
+.section-pricing.style-seven .container .list-pricing .pricing-item:hover a.button,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item:hover a.button {
+  border-color: var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+}
+.section-pricing.style-seven .container .list-pricing .pricing-item a.button,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item a.button {
+  transition: all ease 0.3s;
+}
+.section-pricing.style-seven .container .list-pricing .pricing-item a.button:hover,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item a.button:hover {
   background-color: var(--secondary);
 }
-.section-pricing.style-seven .container > .row > div:last-child {
+.section-pricing.style-seven .container .col-xl-7.col-12 {
   padding-left: 0;
 }
 @media (max-width: 1199.99px) {
-  .section-pricing.style-seven .container > .row > div:last-child {
+  .section-pricing.style-seven .container .col-xl-7.col-12 {
     padding-left: 15px;
   }
 }

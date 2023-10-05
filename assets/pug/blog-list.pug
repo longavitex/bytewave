@@ -5,10 +5,12 @@ block header
     div(class="style-subpage style-blog style-two")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingSubpage.pug
+    include mixins/headingContent.pug
+    include mixins/headingTitle.pug
     include mixins/blogItem.pug
     .bg-subpage
-    +headingSubpage({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'The Latest New', subHeading:'The Latest Innovations in Bytewave', category:'E-commerce & Retail', heading3:"Enhancing IT Security with Multi-Factor Authentication", desc:'Discover how multi-factor authentication (MFA) is bolstering IT security and protecting sensitive data.', date:'February 22, 2023', img:'assets/images/component/bg-blog.png'})
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'The Latest New', desc:'The Latest Innovations in Bytewave'})
+    +headingContent({classname: 'pt-60', style:'style-three', category:'E-commerce & Retail', title:'Enhancing IT Security with Multi-Factor Authentication', desc:"Discover how multi-factor authentication (MFA) is bolstering IT security and protecting sensitive data.", date:'February 22, 2023', img:'assets/images/component/bg-blog.png'})
     .blog-list-page.pt-80.pb-80
         .container 
             .row.row-gap-40
@@ -21,9 +23,9 @@ block content
                             .col-md-6.flex-item-center
                                 .infor
                                     .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
-                                    .title.heading5.mt-12 Demystifying IT services: exploring tech trends
-                                    .desc.text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
-                                    .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                                    .title.heading5.mt-12 Digital Transformation: Navigating the Future of Business
+                                    .desc.text-on-surface-variant1.mt-12 Dive into the world of digital transformation and learn how it's reshaping industries and customer experiences.
+                                    .date.text-label.text-on-surface-variant1.mt-16 February 28, 2023
                     a(href="blog-detail.html").blog-item-filter.item-main.bora-16.overflow-hidden.display-block.border-outline.mt-40
                         .row 
                             .col-md-6
@@ -31,10 +33,10 @@ block content
                                     img(src="assets/images/blog/item6.png", alt="").w-100.h-100.display-block.object-fit-cover
                             .col-md-6.flex-item-center
                                 .infor
-                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
-                                    .title.heading5.mt-12 Demystifying IT services: exploring tech trends
-                                    .desc.text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
-                                    .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Technology Solutions
+                                    .title.heading5.mt-12 Managed IT Services vs. In-House IT: Pros and Cons
+                                    .desc.text-on-surface-variant1.mt-12 Weigh the advantages and disadvantages of outsourcing IT services versus maintaining an in-house IT department.
+                                    .date.text-label.text-on-surface-variant1.mt-16 February 22, 2023
                     a(href="blog-detail.html").blog-item-filter.item-main.bora-16.overflow-hidden.display-block.border-outline.mt-40
                         .row 
                             .col-md-6
@@ -42,10 +44,10 @@ block content
                                     img(src="assets/images/blog/item11.png", alt="").w-100.h-100.display-block.object-fit-cover
                             .col-md-6.flex-item-center
                                 .infor
-                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
-                                    .title.heading5.mt-12 Demystifying IT services: exploring tech trends
-                                    .desc.text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
-                                    .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Managed IT Services
+                                    .title.heading5.mt-12 Unlocking the Power of Data Analytics for Your Business
+                                    .desc.text-on-surface-variant1.mt-12 Discover how data analytics can provide actionable insights, drive informed decisions, and boost business growth.
+                                    .date.text-label.text-on-surface-variant1.mt-16 February 20, 2023
                     a(href="blog-detail.html").blog-item-filter.item-main.bora-16.overflow-hidden.display-block.border-outline.mt-40
                         .row 
                             .col-md-6
@@ -53,10 +55,10 @@ block content
                                     img(src="assets/images/blog/item12.png", alt="").w-100.h-100.display-block.object-fit-cover
                             .col-md-6.flex-item-center
                                 .infor
-                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
-                                    .title.heading5.mt-12 Demystifying IT services: exploring tech trends
-                                    .desc.text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
-                                    .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Cybersecurity
+                                    .title.heading5.mt-12 Cybersecurity Best Practices for Small Businesses
+                                    .desc.text-on-surface-variant1.mt-12 Learn essential cybersecurity practices to protect your small business from cyber threats and data breaches.
+                                    .date.text-label.text-on-surface-variant1.mt-16 February 18, 2023
                     a(href="blog-detail.html").blog-item-filter.item-main.bora-16.overflow-hidden.display-block.border-outline.mt-40
                         .row 
                             .col-md-6
@@ -64,10 +66,10 @@ block content
                                     img(src="assets/images/blog/item13.png", alt="").w-100.h-100.display-block.object-fit-cover
                             .col-md-6.flex-item-center
                                 .infor
-                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Performance Enhancement
-                                    .title.heading5.mt-12 Demystifying IT services: exploring tech trends
-                                    .desc.text-on-surface-variant1.mt-12 Enhanced performance for a manufacturing firm by optimizing their database structure...
-                                    .text-label.text-on-surface-variant1.mt-16 February 22, 2023
+                                    .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-10.pr-10.bora-8 Data Analytics
+                                    .title.heading5.mt-12 The Role of Cloud Computing in Modern Business
+                                    .desc.text-on-surface-variant1.mt-12 Explore how cloud computing is revolutionizing business operations, reducing costs, and enhancing scalability.
+                                    .date.text-label.text-on-surface-variant1.mt-16 February 12, 2023
                     .list-nav-number.flex-item-center.gap-8.mt-40
                         a(href="#!").nav-item.bora-50.flex-center.active 1
                         a(href="#!").nav-item.bora-50.flex-center 2

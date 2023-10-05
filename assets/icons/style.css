@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?g5j0pj');
-  src:  url('fonts/icomoon.eot?g5j0pj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?g5j0pj') format('truetype'),
-    url('fonts/icomoon.woff?g5j0pj') format('woff'),
-    url('fonts/icomoon.svg?g5j0pj#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?3pgiup');
+  src:  url('fonts/icomoon.eot?3pgiup#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3pgiup') format('truetype'),
+    url('fonts/icomoon.woff?3pgiup') format('woff'),
+    url('fonts/icomoon.svg?3pgiup#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-icon-logo:before {
+  content: "\e919";
+}
 .icon-slash-bora:before {
   content: "\e918";
   color: #5b45f3;
@@ -53,6 +56,9 @@
 }
 .icon-coin-user:before {
   content: "\e902";
+}
+.icon-Group-34991:before {
+  content: "\e91a";
 }
 .icon-target-chart:before {
   content: "\e903";

@@ -4,17 +4,17 @@ mixin solutionItem(props = {})
         if(style=='solution-one')
             a(href=`${href}`).main-item.flex-column-item-center
                 i(class=`${icon}`)
-                .heading5.text-center.mt-24!= title
-                .text-on-surface-variant1.text-center.mt-12!= desc
+                .service-name.heading5.text-center.mt-24!= title
+                .service-desc.text-on-surface-variant1.text-center.mt-12!= desc
         if(style=='solution-two')
             a(href=`${href}`).main-item.d-flex.gap-24
                 i(class=`${icon}`)
                 .desc.text-start
-                    .heading5!= title
-                    .text-on-surface-variant1.mt-12!= desc
+                    .service-name.heading5!= title
+                    .service-desc.text-on-surface-variant1.mt-12!= desc
         if(style=='solution-three')
             a(href=`${href}`).main-item
                 i(class=`${icon} display-block text-start`)
                 .desc.text-start.mt-24
-                    .heading5!= title
-                    .text-on-surface-variant1.mt-12!= desc
+                    .service-name.heading5!= title
+                    .service-desc.text-on-surface-variant1.mt-12!= desc

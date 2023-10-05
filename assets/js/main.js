@@ -157,23 +157,30 @@ if (submenuItems) {
 }
 
 
-
 // Get service detail when clicking on a service item
 // Get all service item on the list solution in header menu
 const serviceItems = document.querySelectorAll('.sub-nav-solution .service-item');
 
+// Initialize selectedService in localStorage
+let selectedService = localStorage.getItem('selectedService');
+
+if (selectedService == null) {
+    localStorage.setItem('selectedService', JSON.stringify([]));
+}
+
 // Handle click events for each service entry
 if (serviceItems) {
-    // Initialize selectedService in localStorage
-    var selectedService = localStorage.getItem('selectedService');
     serviceItems.forEach(serviceItem => {
-        serviceItem.addEventListener('click', (e) => {
+        serviceItem.addEventListener('click', () => {
             let serviceCate = serviceItem.parentElement.parentElement.parentElement.parentElement
+            let serviceDesc = serviceItem.getAttribute('data-desc')
+            console.log(serviceDesc);
 
             // Listen for click events, get service information, save to serviceInfor
             var serviceInfor = {
                 category: serviceCate.querySelector('.service-cate').innerHTML,
                 name: serviceItem.querySelector('.service-name').innerHTML,
+                desc: serviceDesc,
             }
 
             // Save service item information to localStorage
@@ -188,9 +195,12 @@ if (document.querySelector('.style-service-detail-block')) {
     // Extract service item information from localStorage
     var selectedServiceInfo = JSON.parse(localStorage.getItem('selectedService'));
 
-    if (document.querySelector('.category') && document.querySelector('.name')) {
-        document.querySelector('.category').textContent = selectedServiceInfo.category;
-        document.querySelector('.name').textContent = selectedServiceInfo.name;
+    if(selectedServiceInfo !== null) {
+        if (document.querySelector('.category') && document.querySelector('.name')) {
+            document.querySelector('.category').textContent = selectedServiceInfo.category;
+            document.querySelector('.name').textContent = selectedServiceInfo.name;
+            document.querySelector('.desc').textContent = selectedServiceInfo.desc;
+        }
     }
 }
 
@@ -266,8 +276,8 @@ $(".slider-block .list-slider").slick({
     swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 4000,
+    fade: true,
     speed: 800,
-    // fade: true,
     pauseOnFocus: false,
     pauseOnHover: false,
     pauseOnDotsHover: false,
@@ -281,6 +291,48 @@ $(".slider-block .list-slider").slick({
     ]
 });
 
+// Animate slider
+const animateTextSlider = () => {
+    let sliderActive = document.querySelector('.slider-block .slick-list .slick-active')
+    let img = sliderActive.querySelector('.bg-img img')
+    let heading = sliderActive.querySelector('.container .heading1')
+    let subHeading = sliderActive.querySelector('.container .body2')
+    let feature = sliderActive.querySelector('.container .list-feature')
+    let button = sliderActive.querySelector('.container .block-button')
+
+    let images = document.querySelectorAll('.slider-item .bg-img img');
+    let headings = document.querySelectorAll('.slider-item .heading1');
+    let subHeadings = document.querySelectorAll('.slider-item .body2');
+    let listFeature = document.querySelectorAll('.slider-item .list-feature');
+    let buttons = document.querySelectorAll('.slider-item .block-button');
+
+    images.forEach(img => {
+        img.classList.remove("animate__animated", "animate__fadeIn", "animate__delay-0-2s");
+    })
+    headings.forEach(p => {
+        p.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-2s");
+    })
+    subHeadings.forEach(a => {
+        a.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
+    })
+    listFeature.forEach(feature => {
+        feature.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
+    })
+    buttons.forEach(btn => {
+        btn.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-8s");
+    })
+
+    img.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0-2s")
+    heading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-2s")
+    if (subHeading) {
+        subHeading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
+    }
+    if (feature) {
+        feature.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
+    }
+    button.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-8s")
+}
+
 
 // Listen event click prev, next Arrow
 const prevArrow = document.querySelector('.slider-block .prev-arrow')
@@ -288,87 +340,17 @@ const nextArrow = document.querySelector('.slider-block .next-arrow')
 
 if (prevArrow) {
     prevArrow.addEventListener('click', () => {
-        let sliderActive = document.querySelector('.slider-block .slick-list .slick-active')
-        let img = sliderActive.querySelector('.bg-img img')
-        let heading = sliderActive.querySelector('.container .heading1')
-        let subHeading = sliderActive.querySelector('.container .body2')
-        let feature = sliderActive.querySelector('.container .list-feature')
-        let button = sliderActive.querySelector('.container .block-button')
-
-        let images = document.querySelectorAll('.slider-item .bg-img img');
-        let headings = document.querySelectorAll('.slider-item .heading1');
-        let subHeadings = document.querySelectorAll('.slider-item .body2');
-        let listFeature = document.querySelectorAll('.slider-item .list-feature');
-        let buttons = document.querySelectorAll('.slider-item .block-button');
-
-        images.forEach(img => {
-            img.classList.remove("animate__animated", "animate__fadeIn", "animate__delay-0-2s");
-        })
-        headings.forEach(p => {
-            p.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-2s");
-        })
-        subHeadings.forEach(a => {
-            a.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
-        })
-        listFeature.forEach(feature => {
-            feature.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
-        })
-        buttons.forEach(btn => {
-            btn.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-8s");
-        })
-
-        img.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0-2s")
-        heading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-2s")
-        if (subHeading) {
-            subHeading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
-        }
-        if (feature) {
-            feature.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
-        }
-        button.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-8s")
+        animateTextSlider()
     })
+
+    setInterval(() => {
+        animateTextSlider()
+    }, 100)
 }
 
 if (nextArrow) {
     nextArrow.addEventListener('click', () => {
-        let sliderActive = document.querySelector('.slider-block .slick-list .slick-active')
-        let img = sliderActive.querySelector('.bg-img img')
-        let heading = sliderActive.querySelector('.container .heading1')
-        let subHeading = sliderActive.querySelector('.container .body2')
-        let feature = sliderActive.querySelector('.container .list-feature')
-        let button = sliderActive.querySelector('.container .block-button')
-
-        let images = document.querySelectorAll('.slider-item .bg-img img');
-        let headings = document.querySelectorAll('.slider-item .heading1');
-        let subHeadings = document.querySelectorAll('.slider-item .body2');
-        let listFeature = document.querySelectorAll('.slider-item .list-feature');
-        let buttons = document.querySelectorAll('.slider-item .block-button');
-
-        images.forEach(img => {
-            img.classList.remove("animate__animated", "animate__fadeIn", "animate__delay-0-2s");
-        })
-        headings.forEach(p => {
-            p.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-2s");
-        })
-        subHeadings.forEach(a => {
-            a.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
-        })
-        listFeature.forEach(feature => {
-            feature.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-5s");
-        })
-        buttons.forEach(btn => {
-            btn.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-0-8s");
-        })
-
-        img.classList.add("animate__animated", "animate__fadeIn", "animate__delay-0-2s")
-        heading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-2s")
-        if (subHeading) {
-            subHeading.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
-        }
-        if (feature) {
-            feature.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-5s")
-        }
-        button.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-0-8s")
+        animateTextSlider()
     })
 }
 
@@ -425,31 +407,39 @@ $(".section-news .container .list-news").slick({
 });
 
 // Change cursor
-const listNews = document.querySelectorAll('.section-news .list-news .slick-list')
-const mouseCursor = document.querySelector('.cursor')
+const listSlideItem = document.querySelectorAll('.section-news .slick-list')
+const mouseCursor = document.querySelectorAll('.cursor')
 
-if (listNews) {
-    listNews.forEach(listNew => {
-        listNew.addEventListener('mousemove', (e) => {
-            mouseCursor.style.top = e.pageY + 'px'
-            mouseCursor.style.left = e.pageX + 'px'
-            mouseCursor.style.opacity = '1'
+if (listSlideItem && mouseCursor) {
+    listSlideItem.forEach(listItem => {
+        listItem.addEventListener('mousemove', (e) => {
+            mouseCursor.forEach(item => {
+                item.style.top = e.pageY + 'px'
+                item.style.left = e.pageX + 'px'
+                item.style.opacity = '1'
+            })
         })
 
-        listNew.addEventListener('mouseout', (e) => {
-            mouseCursor.style.opacity = '0'
+        listItem.addEventListener('mouseout', () => {
+            mouseCursor.forEach(item => {
+                item.style.opacity = '0'
+            })
         })
 
-        listNew.addEventListener('mousedown', () => {
-            mouseCursor.style.width = '60px'
-            mouseCursor.style.height = '60px'
-            mouseCursor.style.gap = '4px'
+        listItem.addEventListener('mousedown', () => {
+            mouseCursor.forEach(item => {
+                item.style.width = '60px'
+                item.style.height = '60px'
+                item.style.gap = '4px'
+            })
         })
 
-        listNew.addEventListener('mouseup', () => {
-            mouseCursor.style.width = '70px'
-            mouseCursor.style.height = '70px'
-            mouseCursor.style.gap = '12px'
+        listItem.addEventListener('mouseup', () => {
+            mouseCursor.forEach(item => {
+                item.style.width = '70px'
+                item.style.height = '70px'
+                item.style.gap = '12px'
+            })
         })
     })
 }
@@ -480,19 +470,23 @@ const dots = document.querySelectorAll('.section-testimonial.style-one .testimon
 const listAvatar = document.querySelector('.section-testimonial.style-one .list-avatar')
 const avatar = document.querySelectorAll('.section-testimonial.style-one .list-avatar .bg-img')
 
+const changeAvatarTestimonial = () => {
+    avatar.forEach(item => {
+        let indexAvatar = item.getAttribute('data-name')
+        let testimonialCurrent = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-current')
+        let indexCmt = testimonialCurrent.getAttribute('data-slick-index')
+
+        if (indexCmt === indexAvatar) {
+            listAvatar.querySelector('.active').classList.remove('active')
+            item.classList.add('active')
+        }
+    })
+}
+
 if (dots) {
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
-            avatar.forEach(item => {
-                let indexAvatar = item.getAttribute('data-name')
-                let testimonialCurrent = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-current')
-                let indexCmt = testimonialCurrent.getAttribute('data-slick-index')
-
-                if (indexCmt === indexAvatar) {
-                    listAvatar.querySelector('.active').classList.remove('active')
-                    item.classList.add('active')
-                }
-            })
+            changeAvatarTestimonial()
         })
     })
 }
@@ -500,17 +494,8 @@ if (dots) {
 const slickList = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-list')
 
 if (slickList) {
-    slickList.addEventListener('mousemove', (e) => {
-        avatar.forEach(item => {
-            let indexAvatar = item.getAttribute('data-name')
-            let testimonialCurrent = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-current')
-            let indexCmt = testimonialCurrent.getAttribute('data-slick-index')
-
-            if (indexCmt === indexAvatar) {
-                listAvatar.querySelector('.active').classList.remove('active')
-                item.classList.add('active')
-            }
-        })
+    slickList.addEventListener('mousemove', () => {
+        changeAvatarTestimonial()
     })
 }
 
@@ -608,32 +593,6 @@ $(".section-industry .row").slick({
     ]
 });
 
-// Change cursor home3
-const listIndustry = document.querySelector('.section-industry .list-industry .slick-list')
-
-if (listIndustry) {
-    listIndustry.addEventListener('mousemove', (e) => {
-        mouseCursor.style.top = e.pageY + 'px'
-        mouseCursor.style.left = e.pageX + 'px'
-        mouseCursor.style.opacity = '1'
-    })
-
-    listIndustry.addEventListener('mouseout', (e) => {
-        mouseCursor.style.opacity = '0'
-    })
-
-    listIndustry.addEventListener('mousedown', () => {
-        mouseCursor.style.width = '60px'
-        mouseCursor.style.height = '60px'
-        mouseCursor.style.gap = '4px'
-    })
-
-    listIndustry.addEventListener('mouseup', () => {
-        mouseCursor.style.width = '70px'
-        mouseCursor.style.height = '70px'
-        mouseCursor.style.gap = '12px'
-    })
-}
 
 
 // change switch btn pricing home6
@@ -832,13 +791,33 @@ let selectedMemberInfo = JSON.parse(localStorage.getItem('selectedMember'));
 
 // Display member information on the member details page
 if (document.querySelector('.team-detail-block')) {
-    if (document.querySelector('.member-img img') && document.querySelector('.member-position') && document.querySelector('.member-name')) {
-        document.querySelector('.member-name').textContent = selectedMemberInfo.name;
-        document.querySelector('.member-position').textContent = selectedMemberInfo.position;
-        document.querySelector('.member-img img').src = selectedMemberInfo.img;
+    if(selectedMemberInfo !== null) {
+        if (document.querySelector('.member-img img') && document.querySelector('.member-position') && document.querySelector('.member-name')) {
+            document.querySelector('.member-name').textContent = selectedMemberInfo.name;
+            document.querySelector('.member-position').textContent = selectedMemberInfo.position;
+            document.querySelector('.member-img img').src = selectedMemberInfo.img;
+        }
     }
 }
 
+
+// Show more list testimonials page
+const listTestimonialBlock = document.querySelector('.list-testimonials-block')
+const loadMoreBtn = document.querySelector('.load-more-btn')
+const listMore = document.querySelector('.list-more .list')
+
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+        loadMoreBtn.querySelector('button span').style.opacity = '0'
+        loadMoreBtn.querySelector('button i').style.display = 'block'
+        
+        setTimeout(() => {
+            listMore.classList.add('open')
+            loadMoreBtn.style.display = 'none'
+            listTestimonialBlock.style.paddingBottom = '80px'
+        }, 800)
+    })
+}
 
 
 // Get blog information when click on a blog item
@@ -856,7 +835,7 @@ if (blogItems) {
             const blogInfor = {
                 cate: blogItem.querySelector('.category').innerHTML,
                 title: blogItem.querySelector('.title').innerHTML,
-                desc: blogItem.querySelector('.desc').innerHTML,
+                date: blogItem.querySelector('.date').innerHTML,
                 img: blogItem.querySelector('.bg-img img').getAttribute('src'),
             }
 
@@ -871,11 +850,13 @@ let selectedBlogInfo = JSON.parse(localStorage.getItem('selectedBlog'));
 
 // Display blog information on the blog details page
 if (document.querySelector('.blog-detail-page')) {
-    if (document.querySelector('.category') && document.querySelector('.title') && document.querySelector('.desc') && document.querySelector('.main-img img')) {
-        document.querySelector('.category').textContent = selectedBlogInfo.cate;
-        document.querySelector('.title').textContent = selectedBlogInfo.title;
-        document.querySelector('.desc').textContent = selectedBlogInfo.desc;
-        document.querySelector('.main-img img').src = selectedBlogInfo.img;
+    if(selectedBlogInfo !== null) {
+        if (document.querySelector('.category') && document.querySelector('.title') && document.querySelector('.main-img img')) {
+            document.querySelector('.category').textContent = selectedBlogInfo.cate;
+            document.querySelector('.title').textContent = selectedBlogInfo.title;
+            document.querySelector('.date').textContent = selectedBlogInfo.date;
+            document.querySelector('.main-img img').src = selectedBlogInfo.img;
+        }
     }
 }
 
@@ -1438,11 +1419,9 @@ if (document.querySelector('.checkout-block-main')) {
         // Handle total price cart
         document.querySelector('.total-block .total-product').innerHTML = `$${totalCheckOut}.00`
         const discountCheckout = document.querySelector('.discount-block span.discount').innerHTML
-        
+
         document.querySelector('.total-cart-block .total-cart').innerHTML = `$${Number(totalCheckOut - discountCheckout)}.00`
     } else {
         listProductCheckout.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
-        // document.querySelector('.discount-block span.discount').innerHTML = `0`
-        // document.querySelector('.discount-block >div:last-child span:first-child').innerHTML = `$`
     }
 }

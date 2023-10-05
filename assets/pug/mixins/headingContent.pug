@@ -1,0 +1,43 @@
+mixin headingContent(props = {})
+    -var {classname = '', style, category, title, desc, date, img} = props
+    div(class=`heading-content ${classname}`)
+        if(style=='style-one')
+            .container
+                .content-main.style-one.bg-white.bora-24.overflow-hidden
+                    .row.row-gap-40.flex-between
+                        .col-lg-6.pr-40.pr-col-lg-0.flex-center 
+                            .text-content.pl-80.pt-80.pb-80
+                                .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-12.pr-12.bora-4!= category 
+                                .name.heading3.mt-16!= title 
+                                if(desc)
+                                    .desc.body2.text-on-surface-variant1.mt-16!= desc
+                                if(date)
+                                    .text-label.text-on-surface-variant1.mt-16!= date
+                        .col-lg-6
+                            .bg-img
+                                img(src=`${img}`, alt=`${title}`).w-100.h-100.object-fit-cover
+        if(style=='style-two')
+            .container
+                .content-main.style-two
+                    .row.row-gap-40.flex-column-center
+                        .col-12
+                            .bg-img.w-100
+                                img(src=`${img}`, alt=`img`).w-100.h-100.object-fit-cover.bora-20
+                        .col-md-10
+                            .heading5.fw-400.text-center!= desc
+        if(style=='style-three')
+            .container
+                .content-main.style-three.bg-white.bora-24.overflow-hidden
+                    .row.row-gap-40.flex-between
+                        .col-lg-6
+                            .bg-img
+                                img(src=`${img}`, alt=`${title}`).w-100.h-100.object-fit-cover
+                        .col-lg-6.pl-40.pl-col-lg-0.flex-center 
+                            .text-content.pr-80.pt-80.pb-80
+                                .category.caption1.fw-700.text-blue.bg-blue-surface.display-inline-block.pt-4.pb-4.pl-12.pr-12.bora-4!= category 
+                                .name.heading3.mt-16!= title 
+                                if(desc)
+                                    .desc.body2.text-on-surface-variant1.mt-16!= desc
+                                if(date)
+                                    .text-label.text-on-surface-variant1.mt-16!= date
+                        

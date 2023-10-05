@@ -456,7 +456,7 @@
   .header-menu .menu-main {
     display: none;
   }
-  .header-menu .right-block a {
+  .header-menu .right-block a.button {
     display: none;
   }
   .header-menu .right-block .search-icon i,
@@ -466,11 +466,15 @@
   .header-menu .right-block .menu-humburger {
     display: block;
     font-size: 24px;
+    padding-left: 18px;
   }
 }
 @media (max-width: 576px) {
   .header-menu .container {
     height: 60px;
+  }
+  .header-menu .container .logo svg {
+    width: 120px;
   }
   .header-menu .right-block .search-icon i,
   .header-menu .right-block .bag-icon i {
@@ -791,11 +795,6 @@
   }
   .menu-style-seven .header-menu #menu-mobile-block .logo svg path {
     fill: var(--on-surface);
-  }
-}
-@media (max-width: 992px) {
-  .menu-style-seven .header-menu .right-block .menu-humburger {
-    padding-left: 0;
   }
 }
 

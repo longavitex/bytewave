@@ -5,6 +5,12 @@ Shared List Questions: Start
   transform: rotate(0);
   transition: all ease 0.5s;
 }
+.question-item .question-item-main i.ph-plus {
+  opacity: 1;
+}
+.question-item .question-item-main i.ph-minus {
+  opacity: 0;
+}
 @media (max-width: 575.99px) {
   .question-item .question-item-main i {
     font-size: 16px;
@@ -19,6 +25,12 @@ Shared List Questions: Start
   background-color: rgba(231, 231, 231, 0.8);
 }
 
+.question-item.open .question-item-main i.ph-plus {
+  opacity: 0;
+}
+.question-item.open .question-item-main i.ph-minus {
+  opacity: 1;
+}
 .question-item.open .content-question {
   max-height: 150px;
 }

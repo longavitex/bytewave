@@ -60,10 +60,26 @@
             }
         }
 
-        @media (max-width: 576px) {
-            .heading3 {
-                br {
-                    display: none;
+        @media (max-width: 992px) {
+            .content-main {
+                padding-left: 45px;
+                padding-right: 45px;
+                padding-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 767.99px) {
+            .content-main {
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 24px;
+
+                .row {
+                    flex-direction: column;
+
+                    >div {
+                        text-align: center !important;
+                    }
                 }
             }
         }

@@ -671,6 +671,10 @@ input:focus, textarea:focus {
   padding-right: 65px;
 }
 
+.pr-60 {
+  padding-right: 60px;
+}
+
 .pr-55 {
   padding-right: 55px;
 }
@@ -741,6 +745,10 @@ input:focus, textarea:focus {
 
 .pl-65 {
   padding-left: 65px;
+}
+
+.pl-60 {
+  padding-left: 60px;
 }
 
 .pl-55 {
@@ -2420,23 +2428,31 @@ input:focus, textarea:focus {
   display: flex;
   align-items: end;
 }
+.section-pricing .list-pricing .pricing-item .price .heading2,
+.section-pricing .list-pricing-year .pricing-item .price .heading2 {
+  transition: all ease 0.3s;
+}
+.section-pricing .list-pricing .pricing-item:hover,
+.section-pricing .list-pricing-year .pricing-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+}
+.section-pricing .list-pricing .pricing-item:hover .price .heading2,
+.section-pricing .list-pricing-year .pricing-item:hover .price .heading2 {
+  color: var(--purple);
+}
+.section-pricing .list-pricing .pricing-item:hover a.button,
+.section-pricing .list-pricing-year .pricing-item:hover a.button {
+  border-color: var(--purple);
+  background-color: var(--purple);
+  color: var(--white);
+}
 .section-pricing .list-pricing .pricing-item a.button,
 .section-pricing .list-pricing-year .pricing-item a.button {
   transition: all ease 0.3s;
 }
 .section-pricing .list-pricing .pricing-item a.button:hover,
 .section-pricing .list-pricing-year .pricing-item a.button:hover {
-  background-color: var(--purple);
-  color: var(--white);
-  border: 1px solid var(--purple);
-}
-.section-pricing .list-pricing .pricing-item a.button.bg-purple:hover,
-.section-pricing .list-pricing-year .pricing-item a.button.bg-purple:hover {
   background-color: #5700c9;
-}
-.section-pricing .list-pricing .pricing-item:hover,
-.section-pricing .list-pricing-year .pricing-item:hover {
-  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
 @keyframes showList {
   from {
@@ -2462,30 +2478,43 @@ input:focus, textarea:focus {
 /*
 *** Section Portfolio Home7: Start
 */
-.section-pricing.style-seven .container > .row .switch .bg-white::before {
+.section-pricing.style-seven .container .switch .bg-white::before {
   background-color: var(--blue);
 }
-.section-pricing.style-seven .container > .row .switch.enable .bg-white {
+.section-pricing.style-seven .container .switch.enable .bg-white {
   background-color: var(--blue);
 }
-.section-pricing.style-seven .container > .row .switch.enable .bg-white::before {
+.section-pricing.style-seven .container .switch.enable .bg-white::before {
   left: 42px;
   background-color: var(--white);
 }
-.section-pricing.style-seven .container > .row .list-pricing .pricing-item a.button:hover,
-.section-pricing.style-seven .container > .row .list-pricing-year .pricing-item a.button:hover {
-  background-color: var(--blue);
-  border: 1px solid var(--blue);
+.section-pricing.style-seven .container .list-pricing .pricing-item:hover,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
-.section-pricing.style-seven .container > .row .list-pricing .pricing-item a.button.bg-blue:hover,
-.section-pricing.style-seven .container > .row .list-pricing-year .pricing-item a.button.bg-blue:hover {
+.section-pricing.style-seven .container .list-pricing .pricing-item:hover .price .heading2,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item:hover .price .heading2 {
+  color: var(--blue);
+}
+.section-pricing.style-seven .container .list-pricing .pricing-item:hover a.button,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item:hover a.button {
+  border-color: var(--blue);
+  background-color: var(--blue);
+  color: var(--white);
+}
+.section-pricing.style-seven .container .list-pricing .pricing-item a.button,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item a.button {
+  transition: all ease 0.3s;
+}
+.section-pricing.style-seven .container .list-pricing .pricing-item a.button:hover,
+.section-pricing.style-seven .container .list-pricing-year .pricing-item a.button:hover {
   background-color: var(--secondary);
 }
-.section-pricing.style-seven .container > .row > div:last-child {
+.section-pricing.style-seven .container .col-xl-7.col-12 {
   padding-left: 0;
 }
 @media (max-width: 1199.99px) {
-  .section-pricing.style-seven .container > .row > div:last-child {
+  .section-pricing.style-seven .container .col-xl-7.col-12 {
     padding-left: 15px;
   }
 }
@@ -2540,21 +2569,23 @@ input:focus, textarea:focus {
 /*
 *** Section Service Home1: Start
 */
+.section-service .container .service-item {
+  transition: 0.3s;
+}
+.section-service .container .service-item .heading6,
+.section-service .container .service-item i {
+  transition: 0.3s;
+}
+.section-service .container .service-item:hover {
+  background-color: var(--blue);
+}
+.section-service .container .service-item:hover .heading6,
+.section-service .container .service-item:hover i {
+  color: var(--white);
+}
 @media (min-width: 1024px) {
-  .section-service .container .service-item {
-    transition: 0.3s;
-  }
-  .section-service .container .service-item .heading6,
-  .section-service .container .service-item i {
-    transition: 0.3s;
-  }
   .section-service .container .service-item:hover {
     padding-left: 32px;
-    background-color: var(--blue);
-  }
-  .section-service .container .service-item:hover .heading6,
-  .section-service .container .service-item:hover i {
-    color: var(--white);
   }
 }
 @media (max-width: 767.99px) {
@@ -2572,18 +2603,24 @@ input:focus, textarea:focus {
 .section-solution .solution-item {
   transition: 0.3s;
 }
-.section-solution .solution-item .heading5,
-.section-solution .solution-item .text-on-surface-variant1 {
+.section-solution .solution-item .heading5 {
+  position: relative;
+}
+.section-solution .solution-item .heading5::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--on-surface);
   transition: 0.3s;
 }
 .section-solution .solution-item:hover {
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
-.section-solution .solution-item:hover .heading5 {
-  color: var(--blue);
-}
-.section-solution .solution-item:hover .text-on-surface-variant1 {
-  text-decoration: underline;
+.section-solution .solution-item:hover .heading5::before {
+  width: 100%;
 }
 
 /*
@@ -3754,6 +3791,12 @@ Shared List Questions: Start
   transform: rotate(0);
   transition: all ease 0.5s;
 }
+.question-item .question-item-main i.ph-plus {
+  opacity: 1;
+}
+.question-item .question-item-main i.ph-minus {
+  opacity: 0;
+}
 @media (max-width: 575.99px) {
   .question-item .question-item-main i {
     font-size: 16px;
@@ -3768,6 +3811,12 @@ Shared List Questions: Start
   background-color: rgba(231, 231, 231, 0.8);
 }
 
+.question-item.open .question-item-main i.ph-plus {
+  opacity: 0;
+}
+.question-item.open .question-item-main i.ph-minus {
+  opacity: 1;
+}
 .question-item.open .content-question {
   max-height: 150px;
 }
@@ -4119,9 +4168,24 @@ Shared List Questions: End
   background-color: var(--on-surface);
   color: var(--white);
 }
-@media (max-width: 576px) {
-  .teams-block .cta-block .heading3 br {
-    display: none;
+@media (max-width: 992px) {
+  .teams-block .cta-block .content-main {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 767.99px) {
+  .teams-block .cta-block .content-main {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 24px;
+  }
+  .teams-block .cta-block .content-main .row {
+    flex-direction: column;
+  }
+  .teams-block .cta-block .content-main .row > div {
+    text-align: center !important;
   }
 }
 
@@ -4176,6 +4240,54 @@ Shared List Questions: End
 /*
 *** Team Detail Page: End
 */
+.list-testimonials-block {
+  padding-bottom: 140px;
+}
+.list-testimonials-block .container .list-more {
+  position: relative;
+}
+.list-testimonials-block .container .list-more button {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.list-testimonials-block .container .list-more button i {
+  animation: circleScroll 0.7s linear infinite;
+  position: absolute;
+  display: none;
+}
+.list-testimonials-block .container .list-more .row {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.5s;
+}
+.list-testimonials-block .container .list-more .row.open {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .list-testimonials-block.pb-80 {
+    padding-bottom: 120px;
+  }
+}
+@media (max-width: 767.99px) {
+  .list-testimonials-block.pb-80 {
+    padding-bottom: 100px;
+  }
+}
+
+@keyframes spinAroundCenter {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 /*
 *** About Us Page : Start
 */
@@ -4534,20 +4646,9 @@ Shared List Questions: End
 *** Case Studies - Style 1: Start
 */
 .style-about-us.style-case-studies .section-brand {
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 60px;
   position: relative;
-}
-.style-about-us.style-case-studies .section-brand::before {
-  content: "";
-  position: absolute;
-  max-width: 1290px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--outline);
 }
 .style-about-us.style-case-studies .section-brand::after {
   content: "";
@@ -6141,7 +6242,7 @@ a.border-underline-purple-2px:hover {
   .header-menu .menu-main {
     display: none;
   }
-  .header-menu .right-block a {
+  .header-menu .right-block a.button {
     display: none;
   }
   .header-menu .right-block .search-icon i,
@@ -6151,11 +6252,15 @@ a.border-underline-purple-2px:hover {
   .header-menu .right-block .menu-humburger {
     display: block;
     font-size: 24px;
+    padding-left: 18px;
   }
 }
 @media (max-width: 576px) {
   .header-menu .container {
     height: 60px;
+  }
+  .header-menu .container .logo svg {
+    width: 120px;
   }
   .header-menu .right-block .search-icon i,
   .header-menu .right-block .bag-icon i {
@@ -6476,11 +6581,6 @@ a.border-underline-purple-2px:hover {
   }
   .menu-style-seven .header-menu #menu-mobile-block .logo svg path {
     fill: var(--on-surface);
-  }
-}
-@media (max-width: 992px) {
-  .menu-style-seven .header-menu .right-block .menu-humburger {
-    padding-left: 0;
   }
 }
 
@@ -6883,13 +6983,72 @@ a.border-underline-purple-2px:hover {
 .bg-subpage {
   position: absolute;
   width: 100%;
-  height: 600px;
+  height: 750px;
   background: linear-gradient(0deg, #FFF 0%, #E5EAFF 100%);
   z-index: -1;
 }
 
-.content-heading .heading .border-line {
-  width: 80px;
+.heading-content .content-main.style-one .row {
+  position: relative;
+}
+.heading-content .content-main.style-one .row > div:last-child .bg-img {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  width: calc(50% - 30px);
+}
+.heading-content .content-main.style-two .bg-img {
+  height: 420px;
+}
+.heading-content .content-main.style-two .heading5.fw-400 {
+  text-transform: unset;
+  line-height: 36px;
+}
+.heading-content .content-main.style-three .row {
+  position: relative;
+}
+.heading-content .content-main.style-three .row > div:first-child .bg-img {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  bottom: 0;
+  width: calc(50% - 30px);
+}
+@media (max-width: 991.99px) {
+  .heading-content .content-main.style-one .row > div:first-child .text-content {
+    padding: 32px 32px 0 32px;
+  }
+  .heading-content .content-main.style-one .row > div:last-child .bg-img {
+    position: relative;
+    width: 100%;
+    right: unset;
+  }
+  .heading-content .content-main.style-two .bg-img {
+    height: 360px;
+  }
+  .heading-content .content-main.style-two .heading5.fw-400 {
+    line-height: 32px;
+  }
+  .heading-content .content-main.style-three .row {
+    flex-direction: column-reverse;
+  }
+  .heading-content .content-main.style-three .row > div:first-child .bg-img {
+    position: relative;
+    width: 100%;
+    left: unset;
+  }
+  .heading-content .content-main.style-three .row > div:last-child .text-content {
+    padding: 32px 32px 0 32px;
+  }
+}
+@media (max-width: 575.99px) {
+  .heading-content .content-main.style-two .bg-img {
+    height: 250px;
+  }
+  .heading-content .content-main.style-two .heading5.fw-400 {
+    line-height: 28px;
+  }
 }
 
 /*

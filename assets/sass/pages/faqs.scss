@@ -8,6 +8,14 @@ Shared List Questions: Start
             transition: all ease 0.5s;
         }
 
+        i.ph-plus {
+            opacity: 1;
+        }
+
+        i.ph-minus {
+            opacity: 0;
+        }
+
         @media (max-width: 575.99px) {
             i {
                 font-size: 16px;
@@ -28,6 +36,16 @@ Shared List Questions: Start
 }
 
 .question-item.open {
+    .question-item-main {
+        i.ph-plus {
+            opacity: 0;
+        }
+
+        i.ph-minus {
+            opacity: 1;
+        }
+    }
+
     .content-question {
         max-height: 150px;
     }
