@@ -1,6 +1,6 @@
 mixin blogItem(props = {})
-    -var {classname = '', style, href='#!', img, category, title, desc, learn=false, date} = props
-    div(class=`blog-item hover-box-shadow ${classname}`)
+    -var {classname = '', style, href='blog-detail.html', img, category, title, desc, learn=false, date} = props
+    div(class=`blog-item blog-item-filter hover-box-shadow ${classname}`)
         if(style=='style-one')
             a(href=`${href}`).main-item
                 .bg-img.w-100.overflow-hidden

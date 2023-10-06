@@ -4,23 +4,23 @@ include ../../mixins/solutionItem.pug
     .container.text-center
         .heading.flex-between 
             .heading3.text-center Our solutions
-            a(href="#!").text-button-small.display-inline-block.border-underline-on-surface-2px View All Solutions
-        .row.row-gap-32.mt-40
+            a(href="service-detail.html").text-button-small.display-inline-block.border-underline-on-surface-2px View All Solutions
+        .row.row-gap-32.mt-40.sub-nav-solution
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'h-100', style:'solution-three', icon: 'icon-phone-sync fs-60', title: 'Managed IT Services', desc: 'Outsourcing IT management and maintenance, including network monitoring, data backup, cybersecurity, help desk support.'})
+                +solutionItem({classname:'service-item nav-item-main h-100', style:'solution-three', dataCate:'IT Solutions', dataItem:'solution1', icon: 'icon-phone-sync fs-60', title: 'Managed IT Services', desc: 'Outsourcing IT management and maintenance, including network monitoring, data backup, cybersecurity, help desk support.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'h-100', style:'solution-three', icon: 'icon-user-sync fs-60', title: 'IT Consulting', desc: 'Strategic guidance on IT strategy, digital transformation, software implementation, and project management.'})
+                +solutionItem({classname:'service-item nav-item-main h-100', style:'solution-three', dataCate:'IT Solutions', dataItem:'solution2', icon: 'icon-user-sync fs-60', title: 'IT Consulting', desc: 'Strategic guidance on IT strategy, digital transformation, software implementation, and project management.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'h-100', style:'solution-three', icon: 'icon-device-cloud fs-60', title: 'Cloud Computing', desc: 'Access to remote servers and infrastructure for data storage, application hosting, and scalable resources.'})
+                +solutionItem({classname:'service-item nav-item-main h-100', style:'solution-three', dataCate:'IT Solutions', dataItem:'solution3', icon: 'icon-device-cloud fs-60', title: 'Cloud Computing', desc: 'Access to remote servers and infrastructure for data storage, application hosting, and scalable resources.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'h-100', style:'solution-three', icon: 'icon-cloud-dots fs-60', title: 'Cybersecurity Solutions', desc: 'Protecting businesses from cyber threats through measures like network security, encryption, and training.'})
+                +solutionItem({classname:'service-item nav-item-main h-100', style:'solution-three', dataCate:'IT Solutions', dataItem:'solution4', icon: 'icon-cloud-dots fs-60', title: 'Cybersecurity Solutions', desc: 'Protecting businesses from cyber threats through measures like network security, encryption, and training.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'h-100', style:'solution-three', icon: 'icon-phone-cloud fs-60', title: 'Data Analytics', desc: 'Services for data storage, backup, integration, governance, and analytics to drive insights and informed decisions.'})
+                +solutionItem({classname:'service-item nav-item-main h-100', style:'solution-three', dataCate:'IT Solutions', dataItem:'solution5', icon: 'icon-phone-cloud fs-60', title: 'Data Analytics', desc: 'Services for data storage, backup, integration, governance, and analytics to drive insights and informed decisions.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'h-100', style:'solution-three', icon: 'icon-device-sync fs-60', title: 'Software Development', desc: ' Custom software development and integration services to meet specific business needs.'})
+                +solutionItem({classname:'service-item nav-item-main h-100', style:'solution-three', dataCate:'IT Solutions', dataItem:'solution6', icon: 'icon-device-sync fs-60', title: 'Software Development', desc: ' Custom software development and integration services to meet specific business needs.'})
         .cta-block.bg-linear-grey.pl-40.pr-40.pt-28.pb-28.mt-40
             .row.flex-between.row-gap-20
                 .col-12.col-md-8.text-start
                     .text-white.heading4 Do you want visionary IOT?
                 .col-12.col-md-4.text-end
-                    a(href="#!").button.bg-yellow.button-yellow-hover.border-none.bora-4 Get a free Quote
+                    a(href="contact-us.html").button.bg-yellow.button-yellow-hover.border-none.bora-4 Get a free Quote

@@ -5,7 +5,8 @@
 *** Section Case Study, News, Blog Main: Start
 */
 .section-case-studies .container .cursor,
-.section-news .container .cursor {
+.section-news .container .cursor,
+.section-slide-shared .container .cursor {
   background-color: #111;
   border-radius: 50%;
   position: absolute;
@@ -18,23 +19,27 @@
   z-index: 2;
 }
 .section-case-studies .container .list-news,
-.section-news .container .list-news {
+.section-news .container .list-news,
+.section-slide-shared .container .list-news {
   margin-left: -24px;
   margin-right: -23px;
 }
 .section-case-studies .container .list-news .item,
-.section-news .container .list-news .item {
+.section-news .container .list-news .item,
+.section-slide-shared .container .list-news .item {
   padding-left: 24px;
   padding-right: 24px;
   border-right: 1px solid var(--outline);
   cursor: none;
 }
 .section-case-studies .container .list-news .item .main-item,
-.section-news .container .list-news .item .main-item {
+.section-news .container .list-news .item .main-item,
+.section-slide-shared .container .list-news .item .main-item {
   cursor: none;
 }
 .section-case-studies .container .slick-dots,
-.section-news .container .slick-dots {
+.section-news .container .slick-dots,
+.section-slide-shared .container .slick-dots {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,12 +48,14 @@
 }
 @media (max-width: 767.99px) {
   .section-case-studies .container .slick-dots,
-  .section-news .container .slick-dots {
+  .section-news .container .slick-dots,
+  .section-slide-shared .container .slick-dots {
     margin-top: 30px;
   }
 }
 .section-case-studies .container .slick-dots li,
-.section-news .container .slick-dots li {
+.section-news .container .slick-dots li,
+.section-slide-shared .container .slick-dots li {
   position: relative;
   border: none;
   width: 16px;
@@ -61,11 +68,13 @@
   cursor: pointer;
 }
 .section-case-studies .container .slick-dots li button,
-.section-news .container .slick-dots li button {
+.section-news .container .slick-dots li button,
+.section-slide-shared .container .slick-dots li button {
   display: none;
 }
 .section-case-studies .container .slick-dots li::after,
-.section-news .container .slick-dots li::after {
+.section-news .container .slick-dots li::after,
+.section-slide-shared .container .slick-dots li::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -75,47 +84,57 @@
   transition: 0.5s;
 }
 .section-case-studies .container .slick-dots li.slick-active,
-.section-news .container .slick-dots li.slick-active {
+.section-news .container .slick-dots li.slick-active,
+.section-slide-shared .container .slick-dots li.slick-active {
   border: 1px solid var(--on-surface);
   background-color: #fff;
 }
 .section-case-studies .container .slick-dots li.slick-active::after,
-.section-news .container .slick-dots li.slick-active::after {
+.section-news .container .slick-dots li.slick-active::after,
+.section-slide-shared .container .slick-dots li.slick-active::after {
   background-color: var(--on-surface);
   border: 1px solid var(--on-surface);
 }
 @media (max-width: 1023.99px) {
   .section-case-studies .container .cursor,
-  .section-news .container .cursor {
+  .section-news .container .cursor,
+  .section-slide-shared .container .cursor {
     display: none;
   }
   .section-case-studies .container .list-news .item,
-  .section-news .container .list-news .item {
+  .section-news .container .list-news .item,
+  .section-slide-shared .container .list-news .item {
     cursor: pointer;
   }
   .section-case-studies .container .list-news .item .main-item,
-  .section-news .container .list-news .item .main-item {
+  .section-news .container .list-news .item .main-item,
+  .section-slide-shared .container .list-news .item .main-item {
     cursor: pointer;
   }
 }
 @media (max-width: 991.99px) {
   .section-case-studies .container > .row:last-child > div:nth-child(3),
-  .section-news .container > .row:last-child > div:nth-child(3) {
+  .section-news .container > .row:last-child > div:nth-child(3),
+  .section-slide-shared .container > .row:last-child > div:nth-child(3) {
     border-right: 1px solid var(--outline);
   }
   .section-case-studies .container > .row:last-child > div:nth-child(2), .section-case-studies .container > .row:last-child > div:last-child,
   .section-news .container > .row:last-child > div:nth-child(2),
-  .section-news .container > .row:last-child > div:last-child {
+  .section-news .container > .row:last-child > div:last-child,
+  .section-slide-shared .container > .row:last-child > div:nth-child(2),
+  .section-slide-shared .container > .row:last-child > div:last-child {
     border-right: none;
   }
   .section-case-studies .container > .row:last-child > div:last-child > div,
-  .section-news .container > .row:last-child > div:last-child > div {
+  .section-news .container > .row:last-child > div:last-child > div,
+  .section-slide-shared .container > .row:last-child > div:last-child > div {
     display: block;
   }
 }
 @media (max-width: 575.99px) {
   .section-case-studies .container > .row:last-child > div,
-  .section-news .container > .row:last-child > div {
+  .section-news .container > .row:last-child > div,
+  .section-slide-shared .container > .row:last-child > div {
     border-right: none;
   }
 }

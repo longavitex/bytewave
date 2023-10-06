@@ -1,6 +1,38 @@
 /*
 *** About Us Page : Start
 */
+.style-about-us {
+    .section-brand.bg-white {
+        background-color: transparent;
+    }
+
+    .section-about.style-seven-first {
+        .container .row {
+            padding: 60px;
+            border-radius: 28px;
+            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+        }
+
+        @media (max-width: 767.99px) {
+            .container .row {
+                padding: 40px;
+                border-radius: 20px;
+            }
+        }
+
+        @media (max-width: 575.99px) {
+            .container .row {
+                border-radius: 12px;
+                padding: 20px;
+            }
+        }
+    }
+
+    .section-testimonial {
+        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+    }
+}
+
 .our-mission-block {
     .counter {
         >div {
@@ -22,12 +54,47 @@
                 content: "";
                 position: absolute;
                 width: 2px;
-                // height: 100%;
                 top: 0;
                 bottom: 0;
                 background-color: var(--outline);
                 left: 50%;
                 transform: translate(-50%);
+            }
+
+            .text-content-block {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 10px;
+                    background-color: transparent;
+                    border: 2px solid var(--blue);
+                    border-radius: 50%;
+                }
+            }
+
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(5) {
+                .text-content-block {
+                    &::before {
+                        right: -5px;
+                    }
+                }
+            }
+
+            &:nth-child(2),
+            &:nth-child(4),
+            &:nth-child(6) {
+                .text-content-block {
+                    &::before {
+                        left: -5px;
+                    }
+                }
             }
         }
     }
@@ -58,6 +125,13 @@
                 padding-left: 15px;
             }
 
+            .text-content-block {
+                &::before {
+                    display: none;
+                }
+            }
+
+
             &:nth-child(1),
             &:nth-child(3),
             &:nth-child(5) {
@@ -83,35 +157,17 @@
     }
 }
 
-.style-about-us {
-    .section-brand.bg-white {
-        background-color: transparent;
-    }
+.award-block {
+    .list-award {
+        @media (max-width:767.99px) {
+            flex-wrap: wrap;
+            justify-content: center;
 
-    .section-about.style-seven-first {
-        .container .row {
-            padding: 60px;
-            border-radius: 28px;
-            background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
-        }
-
-        @media (max-width: 767.99px) {
-            .container .row {
-                padding: 40px;
-                border-radius: 20px;
+            img.w-120 {
+                width: 80px;
+                height: 80px;
             }
         }
-
-        @media (max-width: 575.99px) {
-            .container .row {
-                border-radius: 12px;
-                padding: 20px;
-            }
-        }
-    }
-
-    .section-testimonial {
-        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
     }
 }
 /*

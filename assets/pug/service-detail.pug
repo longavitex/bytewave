@@ -5,15 +5,14 @@ block header
     div(class="style-subpage style-service style-one")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingContent.pug
+    include mixins/headingTitle.pug
     include mixins/blogItem.pug
     .bg-subpage
-    div(class="style-service-detail-block")
-        +headingContent({classname: 'pt-60', style:'style-one', heading:true, headingTitle:'Our Service', subHeading:'Empowering Your Success Through Comprehensive Solutions', category:'IT Solution', heading2:"Manufacturing & Industry 4.0", desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', img:'assets/images/component/bg-case-detail.png'})
+    +headingTitle({classname: 'heading-service-title pt-60', style:'style-cate', cate:'IT Solution', title:'Cybersecurity Solutions'})
+    div(class="style-about-us pt-60")
+        include components/home7/about-first.pug
     div(class="style-about-us")
         include components/home1/brand.pug
-    div(class="style-about-us")
-        include components/home7/about-first.pug
     include components/home7/about-second.pug
     include components/home7/about-third.pug
     .our-value-block.bg-linear-gradient.pt-80.pb-80

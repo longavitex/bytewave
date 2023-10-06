@@ -172,15 +172,10 @@ if (selectedService == null) {
 if (serviceItems) {
     serviceItems.forEach(serviceItem => {
         serviceItem.addEventListener('click', () => {
-            let serviceCate = serviceItem.parentElement.parentElement.parentElement.parentElement
-            let serviceDesc = serviceItem.getAttribute('data-desc')
-            console.log(serviceDesc);
-
             // Listen for click events, get service information, save to serviceInfor
             var serviceInfor = {
-                category: serviceCate.querySelector('.service-cate').innerHTML,
-                name: serviceItem.querySelector('.service-name').innerHTML,
-                desc: serviceDesc,
+                category: serviceItem.getAttribute('data-cate'),
+                name: serviceItem.querySelector('.service-name').textContent,
             }
 
             // Save service item information to localStorage
@@ -191,16 +186,17 @@ if (serviceItems) {
 
 
 // Display service information on the service details page
-if (document.querySelector('.style-service-detail-block')) {
+if (document.querySelector('.heading-service-title')) {
     // Extract service item information from localStorage
     var selectedServiceInfo = JSON.parse(localStorage.getItem('selectedService'));
 
-    if(selectedServiceInfo !== null) {
-        if (document.querySelector('.category') && document.querySelector('.name')) {
-            document.querySelector('.category').textContent = selectedServiceInfo.category;
-            document.querySelector('.name').textContent = selectedServiceInfo.name;
-            document.querySelector('.desc').textContent = selectedServiceInfo.desc;
-        }
+    if (selectedServiceInfo !== null) {
+        document.querySelector('.category').textContent = selectedServiceInfo.category;
+        document.querySelector('.title').textContent = selectedServiceInfo.name;
+    }
+    else {
+        document.querySelector('.category').textContent = 'IT Solutions'
+        document.querySelector('.title').textContent = 'Cybersecurity Solutions';
     }
 }
 
@@ -262,8 +258,8 @@ if (btnMain) {
     })
 }
 
-// slider
-$(".slider-block .list-slider").slick({
+// slider animation1
+$(".slider-block.animation-one .list-slider").slick({
     dots: false,
     arrows: true,
     prevArrow: '.prev-arrow',
@@ -275,7 +271,7 @@ $(".slider-block .list-slider").slick({
     swipe: true,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     fade: true,
     speed: 800,
     pauseOnFocus: false,
@@ -291,7 +287,7 @@ $(".slider-block .list-slider").slick({
     ]
 });
 
-// Animate slider
+// Animate slider Style home2
 const animateTextSlider = () => {
     let sliderActive = document.querySelector('.slider-block .slick-list .slick-active')
     let img = sliderActive.querySelector('.bg-img img')
@@ -334,9 +330,9 @@ const animateTextSlider = () => {
 }
 
 
-// Listen event click prev, next Arrow
-const prevArrow = document.querySelector('.slider-block .prev-arrow')
-const nextArrow = document.querySelector('.slider-block .next-arrow')
+// Listen event click prev, next Arrow style home2
+const prevArrow = document.querySelector('.slider-block.animation-one .prev-arrow')
+const nextArrow = document.querySelector('.slider-block.animation-one .next-arrow')
 
 if (prevArrow) {
     prevArrow.addEventListener('click', () => {
@@ -353,6 +349,125 @@ if (nextArrow) {
         animateTextSlider()
     })
 }
+
+
+// slider animation2
+$(".slider-block.animation-two .list-slider").slick({
+    dots: false,
+    arrows: true,
+    prevArrow: '.prev-arrow',
+    nextArrow: '.next-arrow',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    touchThreshold: 100,
+    infinite: true,
+    swipe: true,
+    swipeToSlide: true,
+    autoplay: false,
+    autoplaySpeed: 5000,
+    fade: true,
+    speed: 800,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+            }
+        },
+    ]
+});
+
+// Animate slider Style home3
+const animateTextSlider3 = () => {
+    // Get slider active
+    let sliderActive = document.querySelector('.slider-block .slick-list .slick-active')
+    let textBodyActive = sliderActive.querySelector('.text-content .body2')
+    let listFeatureActive = sliderActive.querySelector('.text-content .list-feature')
+    let blockBtnActive = sliderActive.querySelector('.text-content .block-button')
+
+    // Get the elements in text content
+    let textHeadings = document.querySelectorAll('.slider-item .text-content .heading1');
+    let textBodys = document.querySelectorAll('.slider-item .text-content .body2');
+    let listFeatures = document.querySelectorAll('.slider-item .text-content .list-feature');
+    let blockBtns = document.querySelectorAll('.slider-item .text-content .block-button');
+
+    // Split the text into each character
+    textHeadings.forEach(textItem => {
+        textItem.classList.remove('animate__animated', 'animate__fadeIn')
+        let characters = textItem.textContent.split(' ');
+
+        // Delete current content in the text
+        textItem.textContent = '';
+
+        // Go through each character and add class to each character
+        characters.forEach((char, index) => {
+            let span = document.createElement('span')
+            span.textContent = `${char} `
+            if (index < 4) {
+                span.classList.add('animate__animated', 'animate__fadeIn', `animate__delay-0-${(index + 1) * 2}s`) // Thêm class 'highlighted'
+            }
+
+            if (index >= 4) {
+                span.classList.add('animate__animated', 'animate__fadeIn', `animate__delay-1-${((index + 1) * 2) % 10}s`) // Thêm class 'highlighted'
+            }
+
+            if (index >= 9) {
+                span.classList.add('animate__animated', 'animate__fadeIn', `animate__delay-2-${((index + 1) * 2) % 20}s`) // Thêm class 'highlighted'
+            }
+
+            textItem.appendChild(span)
+        })
+    })
+
+
+    listFeatures.forEach(item => {
+        item.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-1-5s");
+    })
+
+    if (listFeatureActive) {
+        listFeatureActive.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-1-5s");
+    }
+
+    textBodys.forEach(item => {
+        item.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-1-5s");
+    })
+
+    if (textBodyActive) {
+        textBodyActive.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-1-5s");
+    }
+
+    blockBtns.forEach(item => {
+        item.classList.remove("animate__animated", "animate__fadeInUp", "animate__delay-2s");
+    })
+
+    blockBtnActive.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-2s");
+}
+
+
+// Listen event click prev, next Arrow style home3
+const prevArrow3 = document.querySelector('.slider-block.animation-two .prev-arrow')
+const nextArrow3 = document.querySelector('.slider-block.animation-two .next-arrow')
+
+if (prevArrow3) {
+    prevArrow3.addEventListener('click', () => {
+        animateTextSlider3()
+    })
+}
+
+
+if (nextArrow3) {
+    nextArrow3.addEventListener('click', () => {
+        animateTextSlider3()
+    })
+}
+
+// Execute the function that creates the effect after dragging the slide
+$('.slider-block.animation-two .list-slider').on('swipe', function (event, slick, currentSlide) {
+    animateTextSlider3()
+});
 
 
 // Count number
@@ -407,7 +522,7 @@ $(".section-news .container .list-news").slick({
 });
 
 // Change cursor
-const listSlideItem = document.querySelectorAll('.section-news .slick-list')
+const listSlideItem = document.querySelectorAll('.section-slide-shared .slick-list')
 const mouseCursor = document.querySelectorAll('.cursor')
 
 if (listSlideItem && mouseCursor) {
@@ -457,6 +572,7 @@ $(".section-testimonial.style-one .testimonial-item").slick({
     autoplay: false,
     autoplaySpeed: 3000,
     speed: 500,
+    grab: true,
     pauseOnFocus: false,
     pauseOnHover: false,
     pauseOnDotsHover: false,
@@ -483,6 +599,7 @@ const changeAvatarTestimonial = () => {
     })
 }
 
+// Execute the function that creates the effect after click the dot
 if (dots) {
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
@@ -491,14 +608,10 @@ if (dots) {
     })
 }
 
-const slickList = document.querySelector('.section-testimonial.style-one .testimonial-item .slick-list')
-
-if (slickList) {
-    slickList.addEventListener('mousemove', () => {
-        changeAvatarTestimonial()
-    })
-}
-
+// Execute the function that creates the effect after dragging the slide
+$('.section-testimonial.style-one .testimonial-item').on('swipe', function (event, slick, currentSlide) {
+    changeAvatarTestimonial()
+})
 
 
 // testimonial home2
@@ -510,7 +623,7 @@ $(".section-testimonial.style-two .container .list-comment").slick({
     touchThreshold: 100,
     swipe: true,
     swipeToSlide: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     speed: 500,
     pauseOnFocus: false,
@@ -681,7 +794,7 @@ $(".section-testimonial.style-seven .container .list-comment").slick({
 const videoModal = document.querySelector('.js-video-modal')
 const videoModalContainer = document.querySelector('.js-video-modal-container')
 const closeVideo = document.querySelector('.js-modal-close')
-const playBtn = document.querySelector('.video-block .ph-play')
+const playBtn = document.querySelectorAll('.video-block .ph-play')
 
 //Show modal video
 function showVideo() {
@@ -699,7 +812,9 @@ function removeVideoModal() {
 
 //Listen click
 if (playBtn) {
-    playBtn.addEventListener('click', showVideo)
+    playBtn.forEach(btn => {
+        btn.addEventListener('click', showVideo)
+    })
 }
 
 //Listen click and close modal video
@@ -775,8 +890,8 @@ if (memberItems) {
         memberItem.addEventListener('click', () => {
             // Listen for click events, get member information, save to memberInfor
             const memberInfor = {
-                name: memberItem.querySelector('.name').innerHTML,
-                position: memberItem.querySelector('.position').innerHTML,
+                name: memberItem.querySelector('.name').textContent,
+                position: memberItem.querySelector('.position').textContent,
                 img: memberItem.querySelector('.bg-img img').getAttribute('src'),
             }
 
@@ -791,7 +906,7 @@ let selectedMemberInfo = JSON.parse(localStorage.getItem('selectedMember'));
 
 // Display member information on the member details page
 if (document.querySelector('.team-detail-block')) {
-    if(selectedMemberInfo !== null) {
+    if (selectedMemberInfo !== null) {
         if (document.querySelector('.member-img img') && document.querySelector('.member-position') && document.querySelector('.member-name')) {
             document.querySelector('.member-name').textContent = selectedMemberInfo.name;
             document.querySelector('.member-position').textContent = selectedMemberInfo.position;
@@ -810,7 +925,7 @@ if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', () => {
         loadMoreBtn.querySelector('button span').style.opacity = '0'
         loadMoreBtn.querySelector('button i').style.display = 'block'
-        
+
         setTimeout(() => {
             listMore.classList.add('open')
             loadMoreBtn.style.display = 'none'
@@ -824,6 +939,10 @@ if (loadMoreBtn) {
 // Initialize selectedBlog in localStorage
 let selectedBlog = localStorage.getItem('selectedBlog');
 
+if (selectedBlog === null) {
+    localStorage.setItem('selectedBlog', JSON.stringify([]));
+}
+
 // Get all blog entries on the list page
 const blogItems = document.querySelectorAll('.blog-item-filter');
 
@@ -832,11 +951,13 @@ if (blogItems) {
     blogItems.forEach(blogItem => {
         blogItem.addEventListener('click', () => {
             // Listen for click events, get blog information, save to blogInfor
-            const blogInfor = {
-                cate: blogItem.querySelector('.category').innerHTML,
-                title: blogItem.querySelector('.title').innerHTML,
-                date: blogItem.querySelector('.date').innerHTML,
-                img: blogItem.querySelector('.bg-img img').getAttribute('src'),
+            if (blogItem.querySelector('.category') || blogItem.querySelector('.title') || blogItem.querySelector('.date')) {
+                var blogInfor = {
+                    cate: blogItem.querySelector('.category').textContent,
+                    title: blogItem.querySelector('.title').textContent,
+                    date: blogItem.querySelector('.date').textContent,
+                    img: blogItem.querySelector('.bg-img img').getAttribute('src'),
+                }
             }
 
             // Save blog item information to localStorage
@@ -850,7 +971,7 @@ let selectedBlogInfo = JSON.parse(localStorage.getItem('selectedBlog'));
 
 // Display blog information on the blog details page
 if (document.querySelector('.blog-detail-page')) {
-    if(selectedBlogInfo !== null) {
+    if (selectedBlogInfo !== null) {
         if (document.querySelector('.category') && document.querySelector('.title') && document.querySelector('.main-img img')) {
             document.querySelector('.category').textContent = selectedBlogInfo.cate;
             document.querySelector('.title').textContent = selectedBlogInfo.title;
@@ -950,9 +1071,9 @@ if (productItems) {
         productItem.addEventListener('click', () => {
             // Listen for click events, get product information, save to productInfor
             var productInfor = {
-                name: productItem.querySelector('.name').innerHTML,
-                price: productItem.querySelector('.price').innerHTML,
-                star: productItem.querySelector('.star').innerHTML,
+                name: productItem.querySelector('.name').textContent,
+                price: productItem.querySelector('.price').textContent,
+                star: productItem.querySelector('.star').textContent,
                 img: productItem.querySelector('.bg-img img').getAttribute('src'),
             }
 
@@ -1128,10 +1249,10 @@ if (addToCartBtn) {
     // Handle add product to cart
     addToCartBtn.addEventListener('click', () => {
         // Get product infor
-        const prdName = document.querySelector('.name').innerHTML
-        const prdPrice = document.querySelector('.price').innerHTML
+        const prdName = document.querySelector('.name').textContent
+        const prdPrice = document.querySelector('.price').textContent
         const prdImg = document.querySelector('.bg-img img').getAttribute('src')
-        const prdQuantity = document.querySelector('.prd-quantity .quantity-block span').innerHTML
+        const prdQuantity = document.querySelector('.prd-quantity .quantity-block span').textContent
         // Removes all characters that are not numbers or periods from the product price string. 
         // Then we convert it to a floating point number (parseFloat()) to perform the calculation.
         const totalPrdPrice = Number(prdQuantity) * parseFloat(prdPrice.replace(/[^0-9.]/g, ''))
@@ -1223,7 +1344,6 @@ if (document.querySelector('.cart-block')) {
         })
         totalPricePrds.innerHTML = totalPricePrdsNew
 
-
         // Handle total price carts
         const totalPriceCart = document.querySelector('.total-cart-block span.total-cart')
         const discountPrice = document.querySelector('.discount-block span.discount')
@@ -1283,7 +1403,23 @@ if (document.querySelector('.cart-block')) {
 
             totalPricePrdItem.innerHTML = `$${parseFloat(pricePrd.replace(/[^0-9.]/g, '')) * quantity}.00`
 
+
             handleShoppingCartPage()
+
+            // // Save product infor to productDetailInfor
+            // var productDetailInfor = {
+            //     prdName: prdName,
+            //     prdPrice: prdPrice,
+            //     prdImg: prdImg,
+            //     prdQuantity: quantity,
+            //     totalPrdPrice: totalPricePrdItem,
+            // };
+
+            // // Add product to cartStore
+            // cartStore.push(productDetailInfor);
+
+            // // Save cartStore to localStorage
+            // localStorage.setItem('cartStore', JSON.stringify(cartStore));
         })
     })
 

@@ -1,57 +1,6 @@
 /*
 *** About Us Page : Start
 */
-.our-mission-block .counter > div .counter-item {
-  border-left: 4px solid var(--blue);
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.history-block .content-main > .row {
-  position: relative;
-}
-.history-block .content-main > .row::before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  top: 0;
-  bottom: 0;
-  background-color: var(--outline);
-  left: 50%;
-  transform: translate(-50%);
-}
-@media (max-width: 991.99px) {
-  .history-block .content-main > .row .pr-125 {
-    padding-right: 60px;
-  }
-  .history-block .content-main > .row .pl-125 {
-    padding-left: 60px;
-  }
-}
-@media (max-width: 767.99px) {
-  .history-block .content-main > .row::before {
-    display: none;
-  }
-  .history-block .content-main > .row .pr-125 {
-    padding-right: 15px;
-  }
-  .history-block .content-main > .row .pl-125 {
-    padding-left: 15px;
-  }
-  .history-block .content-main > .row:nth-child(1) .text-end, .history-block .content-main > .row:nth-child(3) .text-end, .history-block .content-main > .row:nth-child(5) .text-end {
-    text-align: left !important;
-  }
-  .history-block .content-main > .row:nth-child(2), .history-block .content-main > .row:nth-child(4), .history-block .content-main > .row:nth-child(6) {
-    flex-direction: column-reverse;
-  }
-  .history-block .pr-80 {
-    padding-right: 0;
-  }
-  .history-block .pl-80 {
-    padding-left: 0;
-  }
-}
-
 .style-about-us .section-brand.bg-white {
   background-color: transparent;
 }
@@ -74,6 +23,91 @@
 }
 .style-about-us .section-testimonial {
   background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
+}
+
+.our-mission-block .counter > div .counter-item {
+  border-left: 4px solid var(--blue);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.history-block .content-main > .row {
+  position: relative;
+}
+.history-block .content-main > .row::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background-color: var(--outline);
+  left: 50%;
+  transform: translate(-50%);
+}
+.history-block .content-main > .row .text-content-block {
+  position: relative;
+}
+.history-block .content-main > .row .text-content-block::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+.history-block .content-main > .row:nth-child(1) .text-content-block::before, .history-block .content-main > .row:nth-child(3) .text-content-block::before, .history-block .content-main > .row:nth-child(5) .text-content-block::before {
+  right: -5px;
+}
+.history-block .content-main > .row:nth-child(2) .text-content-block::before, .history-block .content-main > .row:nth-child(4) .text-content-block::before, .history-block .content-main > .row:nth-child(6) .text-content-block::before {
+  left: -5px;
+}
+@media (max-width: 991.99px) {
+  .history-block .content-main > .row .pr-125 {
+    padding-right: 60px;
+  }
+  .history-block .content-main > .row .pl-125 {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 767.99px) {
+  .history-block .content-main > .row::before {
+    display: none;
+  }
+  .history-block .content-main > .row .pr-125 {
+    padding-right: 15px;
+  }
+  .history-block .content-main > .row .pl-125 {
+    padding-left: 15px;
+  }
+  .history-block .content-main > .row .text-content-block::before {
+    display: none;
+  }
+  .history-block .content-main > .row:nth-child(1) .text-end, .history-block .content-main > .row:nth-child(3) .text-end, .history-block .content-main > .row:nth-child(5) .text-end {
+    text-align: left !important;
+  }
+  .history-block .content-main > .row:nth-child(2), .history-block .content-main > .row:nth-child(4), .history-block .content-main > .row:nth-child(6) {
+    flex-direction: column-reverse;
+  }
+  .history-block .pr-80 {
+    padding-right: 0;
+  }
+  .history-block .pl-80 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767.99px) {
+  .award-block .list-award {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .award-block .list-award img.w-120 {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /*

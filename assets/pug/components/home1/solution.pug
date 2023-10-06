@@ -4,17 +4,16 @@ include ../../mixins/solutionItem.pug
     .container.text-center
         .text-label.text-blue.text-center.pt-4.pb-4.pl-12.pr-12.bg-grey.bora-2.display-inline-block How we do
         .heading3.text-center.mt-12 Our solutions
-        .row.row-gap-40.mt-40.list-service-main
+        .row.row-gap-40.mt-40.sub-nav-solution
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'service-item p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', icon: 'icon-phone-sync fs-60 text-blue', title: 'Managed IT Services', desc: 'Outsourcing IT management and maintenance, including network monitoring, data backup, cybersecurity, help desk support.'})
+                +solutionItem({classname:'service-item nav-item-main p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', dataCate:'IT Solutions', dataItem:'solution1', icon: 'icon-phone-sync fs-60 text-blue', title: 'Managed IT Services', desc: 'Outsourcing IT management and maintenance, including network monitoring, data backup, cybersecurity, help desk support.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'service-item p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', icon: 'icon-user-sync fs-60 text-blue', title: 'IT Consulting', desc: 'Strategic guidance on IT strategy, digital transformation, software implementation, and project management.'})
+                +solutionItem({classname:'service-item nav-item-main p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', dataCate:'IT Services', dataItem:'solution2', icon: 'icon-user-sync fs-60 text-blue', title: 'IT Consulting', desc: 'Strategic guidance on IT strategy, digital transformation, software implementation, and project management.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'service-item p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', icon: 'icon-device-cloud fs-60 text-blue', title: 'Cloud Computing', desc: 'Access to remote servers and infrastructure for data storage, application hosting, and scalable resources.'})
+                +solutionItem({classname:'service-item nav-item-main p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', dataCate:'IT Services', dataItem:'solution3', icon: 'icon-device-cloud fs-60 text-blue', title: 'Cloud Computing', desc: 'Access to remote servers and infrastructure for data storage, application hosting, and scalable resources.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'service-item p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', icon: 'icon-cloud-dots fs-60 text-blue', title: 'Cybersecurity Solutions', desc: 'Protecting businesses from cyber threats through measures like network security, encryption, and training.'})
+                +solutionItem({classname:'service-item nav-item-main p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', dataCate:'IT Solutions', dataItem:'solution4', icon: 'icon-cloud-dots fs-60 text-blue', title: 'Cybersecurity Solutions', desc: 'Protecting businesses from cyber threats through measures like network security, encryption, and training.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'service-item p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', icon: 'icon-phone-cloud fs-60 text-blue', title: 'Data Analytics', desc: 'Services for data storage, backup, integration, governance, and analytics to drive insights and informed decisions.'})
+                +solutionItem({classname:'service-item nav-item-main p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', dataCate:'IT Services', dataItem:'solution5', icon: 'icon-phone-cloud fs-60 text-blue', title: 'Data Analytics', desc: 'Services for data storage, backup, integration, governance, and analytics to drive insights and informed decisions.'})
             .col-12.col-xl-4.col-sm-6
-                +solutionItem({classname:'service-item p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', icon: 'icon-device-sync fs-60 text-blue', title: 'Software Development', desc: ' Custom software development and integration services to meet specific business needs.'})
-            
+                +solutionItem({classname:'service-item nav-item-main p-40 bora-20 bg-white h-100', href:'service-detail.html', style:'solution-one', dataCate:'IT Solutions', dataItem:'solution5', icon: 'icon-device-sync fs-60 text-blue', title: 'Software Development', desc: ' Custom software development and integration services to meet specific business needs.'})

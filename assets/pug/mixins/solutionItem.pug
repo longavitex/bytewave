@@ -1,6 +1,6 @@
 mixin solutionItem(props = {})
-    -var {classname = '', style, href='#!', icon, title, desc} = props
-    div(class=`solution-item ${classname}`)
+    -var {classname = '', style, dataCate, dataItem, href='service-detail.html', icon, title, desc} = props
+    div(class=`solution-item ${classname}` data-cate=`${dataCate}` data-item=`${dataItem}`)
         if(style=='solution-one')
             a(href=`${href}`).main-item.flex-column-item-center
                 i(class=`${icon}`)
