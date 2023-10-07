@@ -239,6 +239,14 @@
                 transform: unset;
                 bottom: 80px;
 
+                .heading1 {
+
+                    span:nth-child(6),
+                    span:nth-child(7) {
+                        color: var(--green);
+                    }
+                }
+
                 .button.bg-white {
                     &:hover {
                         background-color: var(--green);
@@ -574,7 +582,8 @@
                             color: var(--white);
                         }
                     }
-                }}
+                }
+            }
         }
     }
 

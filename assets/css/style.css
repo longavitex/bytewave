@@ -2617,39 +2617,73 @@ input:focus, textarea:focus {
 *** Section Service Home1: End
 */
 /*
-*** Section Solution Home1,2: Start
+*** Section Solution Home1: Start
 */
 .section-solution .solution-item {
   transition: 0.3s;
 }
 .section-solution .solution-item .heading5 {
   position: relative;
+}
+.section-solution .solution-item .heading5::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--on-surface);
   transition: 0.3s;
 }
 .section-solution .solution-item:hover {
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
-.section-solution .solution-item:hover .heading5 {
+.section-solution .solution-item:hover .heading5::before {
+  width: 100%;
+}
+
+/*
+*** Section Solution Home1: End
+*/
+/*
+*** Section Solution Home2: Start
+*/
+.section-solution.style-two .solution-item {
+  transition: 0.3s;
+}
+.section-solution.style-two .solution-item .heading5 {
+  position: relative;
+}
+.section-solution.style-two .solution-item .heading5::before {
+  display: none;
+}
+.section-solution.style-two .solution-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+}
+.section-solution.style-two .solution-item:hover .heading5 {
   text-decoration: underline;
 }
 
 /*
-*** Section Solution Home1,2: End
+*** Section Solution Home2: End
 */
 /*
 *** Section Solution Home3: Start
 */
+.section-solution.style-three .heading .text-button-small {
+  transition: 0.3s;
+}
 .section-solution.style-three .heading .text-button-small:hover {
   color: var(--yellow);
 }
 .section-solution.style-three .heading .text-button-small:hover::before {
   background-color: var(--yellow);
 }
+.section-solution.style-three .solution-item .heading5 {
+  display: inline-block;
+}
 .section-solution.style-three .solution-item:hover {
   box-shadow: none;
-}
-.section-solution.style-three .solution-item:hover .heading5 {
-  color: var(--yellow);
 }
 
 /*
@@ -2664,8 +2698,8 @@ input:focus, textarea:focus {
 .section-solution.style-four .heading a:hover {
   color: var(--pink);
 }
-.section-solution.style-four .solution-item:hover .heading5 {
-  color: var(--pink);
+.section-solution.style-four .solution-item .heading5 {
+  display: inline-block;
 }
 
 /*
@@ -2702,6 +2736,12 @@ input:focus, textarea:focus {
 .section-solution.style-five .container > .row > div .solution-item .heading5 {
   transition: all linear 0.3s;
 }
+.section-solution.style-five .container > .row > div .solution-item .heading5::before {
+  display: none;
+}
+.section-solution.style-five .container > .row > div .solution-item:hover {
+  box-shadow: none;
+}
 .section-solution.style-five .container > .row > div:hover {
   cursor: pointer;
 }
@@ -2727,14 +2767,17 @@ input:focus, textarea:focus {
   border-right: 1px solid var(--outline);
   transition: all linear 0.3s;
 }
+.section-solution.style-six .row > div .solution-item .heading5 {
+  transition: all linear 0.3s;
+}
+.section-solution.style-six .row > div .solution-item .heading5::before {
+  display: none;
+}
 .section-solution.style-six .row > div .solution-item:hover {
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
 }
 .section-solution.style-six .row > div .solution-item:hover .heading5 {
   color: var(--purple);
-}
-.section-solution.style-six .row > div .solution-item:hover .text-on-surface-variant1 {
-  text-decoration: none;
 }
 
 /*
@@ -2946,15 +2989,16 @@ input:focus, textarea:focus {
     opacity: 1;
   }
 }
-.section-testimonial .slick-dots {
+.section-testimonial .container .slick-dots {
   display: flex;
   align-items: center;
   justify-content: left;
   gap: 16px;
   margin-left: 60px;
   padding-bottom: 40px;
+  margin-top: 16px;
 }
-.section-testimonial .slick-dots li {
+.section-testimonial .container .slick-dots li {
   position: relative;
   border: none;
   width: 16px;
@@ -2966,10 +3010,10 @@ input:focus, textarea:focus {
   justify-content: center;
   cursor: pointer;
 }
-.section-testimonial .slick-dots li button {
+.section-testimonial .container .slick-dots li button {
   display: none;
 }
-.section-testimonial .slick-dots li::after {
+.section-testimonial .container .slick-dots li::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -2978,13 +3022,18 @@ input:focus, textarea:focus {
   border: 1px solid #171717;
   transition: 0.5s;
 }
-.section-testimonial .slick-dots li.slick-active {
+.section-testimonial .container .slick-dots li.slick-active {
   border: 1px solid var(--on-surface);
   background-color: #fff;
 }
-.section-testimonial .slick-dots li.slick-active::after {
+.section-testimonial .container .slick-dots li.slick-active::after {
   background-color: var(--on-surface);
   border: 1px solid var(--on-surface);
+}
+@media (max-width: 575.99px) {
+  .section-testimonial .container .slick-dots {
+    margin-top: 0;
+  }
 }
 
 /*
@@ -5319,6 +5368,10 @@ a.border-underline-purple-2px:hover {
   top: unset;
   transform: unset;
   bottom: 80px;
+}
+.slider-block.style-five .slider-item .container .row .heading1 span:nth-child(6),
+.slider-block.style-five .slider-item .container .row .heading1 span:nth-child(7) {
+  color: var(--green);
 }
 .slider-block.style-five .slider-item .container .row .button.bg-white:hover {
   background-color: var(--green);

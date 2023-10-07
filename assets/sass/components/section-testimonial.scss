@@ -111,13 +111,14 @@
         }
     }
 
-    .slick-dots {
+    .container .slick-dots {
         display: flex;
         align-items: center;
         justify-content: left;
         gap: 16px;
         margin-left: 60px;
         padding-bottom: 40px;
+        margin-top: 16px;
 
         li {
             position: relative;
@@ -154,6 +155,12 @@
                     border: 1px solid var(--on-surface);
                 }
             }
+        }
+    }
+
+    @media (max-width: 575.99px) {
+        .container .slick-dots {
+            margin-top: 0;
         }
     }
 }
@@ -526,6 +533,7 @@
         }
     }
 }
+
 /*
 *** Section Testimonial Case Studies Page: End
 */

@@ -4,13 +4,13 @@ include ../../mixins/solutionItem.pug
     .container
         .heading.flex-between 
             .heading3 Our solutions
-            a(href="#!").text-button-small.display-inline-block.border-underline-purple-2px View All Solutions
-        .row.row-gap-32.mt-40
+            a(href="service-detail.html").text-button-small.display-inline-block.border-underline-purple-2px View All Solutions
+        .row.row-gap-32.mt-40.sub-nav-solution
             .col-12.col-xl-3.col-sm-6
-                +solutionItem({classname:'h-100 p-32 bora-20 bg-white', style:'solution-three', icon: 'icon-chart fs-60', title: 'Search Engine Optimization', desc: 'Outsourcing IT management and maintenance, including network monitoring, data backup, cybersecurity, help desk support.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-32 bora-20 bg-white', style:'solution-three', dataCate:'Digital SEO Marketing', dataItem:'', icon: 'icon-chart fs-60', title: 'Search Engine Optimization', desc: 'Outsourcing IT management and maintenance, including network monitoring, data backup, cybersecurity, help desk support.'})
             .col-12.col-xl-3.col-sm-6
-                +solutionItem({classname:'h-100 p-32 bora-20 bg-white', style:'solution-three', icon: 'icon-sms fs-60', title: 'Social Media Marketing', desc: 'Strategic guidance on IT strategy, digital transformation, software implementation, and project management.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-32 bora-20 bg-white', style:'solution-three', dataCate:'Digital SEO Marketing', dataItem:'', icon: 'icon-sms fs-60', title: 'Social Media Marketing', desc: 'Strategic guidance on IT strategy, digital transformation, software implementation, and project management.'})
             .col-12.col-xl-3.col-sm-6
-                +solutionItem({classname:'h-100 p-32 bora-20 bg-white', style:'solution-three', icon: 'icon-notification fs-60', title: 'Pay-Per-Click Advertising', desc: 'Access to remote servers and infrastructure for data storage, application hosting, and scalable resources.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-32 bora-20 bg-white', style:'solution-three', dataCate:'Digital SEO Marketing', dataItem:'', icon: 'icon-notification fs-60', title: 'Pay-Per-Click Advertising', desc: 'Access to remote servers and infrastructure for data storage, application hosting, and scalable resources.'})
             .col-12.col-xl-3.col-sm-6
-                +solutionItem({classname:'h-100 p-32 bora-20 bg-white', style:'solution-three', icon: 'icon-hand-touch fs-60', title: 'Content Marketing', desc: 'Protecting businesses from cyber threats through measures like network security, encryption, and training.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-32 bora-20 bg-white', style:'solution-three', dataCate:'Digital SEO Marketing', dataItem:'', icon: 'icon-hand-touch fs-60', title: 'Content Marketing', desc: 'Protecting businesses from cyber threats through measures like network security, encryption, and training.'})

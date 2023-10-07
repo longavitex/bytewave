@@ -187,6 +187,10 @@
   transform: unset;
   bottom: 80px;
 }
+.slider-block.style-five .slider-item .container .row .heading1 span:nth-child(6),
+.slider-block.style-five .slider-item .container .row .heading1 span:nth-child(7) {
+  color: var(--green);
+}
 .slider-block.style-five .slider-item .container .row .button.bg-white:hover {
   background-color: var(--green);
   color: var(--on-surface);

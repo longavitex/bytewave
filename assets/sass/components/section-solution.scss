@@ -1,5 +1,5 @@
 /*
-*** Section Solution Home1,2: Start
+*** Section Solution Home1: Start
 */
 .section-solution {
     .solution-item {
@@ -7,7 +7,48 @@
 
         .heading5 {
             position: relative;
-            transition: 0.3s;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: var(--on-surface);
+                transition: 0.3s;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+
+            .heading5 {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Section Solution Home1: End
+*/
+
+/*
+*** Section Solution Home2: Start
+*/
+.section-solution.style-two {
+    .solution-item {
+        transition: 0.3s;
+
+        .heading5 {
+            position: relative;
+
+            &::before {
+                display: none;
+            }
         }
 
         &:hover {
@@ -21,13 +62,16 @@
 }
 
 /*
-*** Section Solution Home1,2: End
+*** Section Solution Home2: End
 */
+
 /*
 *** Section Solution Home3: Start
 */
 .section-solution.style-three {
     .heading .text-button-small {
+        transition: 0.3s;
+
         &:hover {
             color: var(--yellow);
 
@@ -38,12 +82,12 @@
     }
 
     .solution-item {
+        .heading5 {
+            display: inline-block;
+        }
+
         &:hover {
             box-shadow: none;
-
-            .heading5 {
-                color: var(--yellow);
-            }
         }
     }
 }
@@ -59,6 +103,7 @@
         a {
             transition: all ease 0.4s;
 
+
             &:hover {
                 color: var(--pink);
             }
@@ -66,10 +111,8 @@
     }
 
     .solution-item {
-        &:hover {
-            .heading5 {
-                color: var(--pink);
-            }
+        .heading5 {
+            display: inline-block;
         }
     }
 }
@@ -113,6 +156,14 @@
                 .solution-item {
                     .heading5 {
                         transition: all linear 0.3s;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    &:hover {
+                        box-shadow: none;
                     }
                 }
 
@@ -153,15 +204,19 @@
                 border-right: 1px solid var(--outline);
                 transition: all linear 0.3s;
 
+                .heading5 {
+                    transition: all linear 0.3s;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
                 &:hover {
                     box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
 
                     .heading5 {
                         color: var(--purple);
-                    }
-
-                    .text-on-surface-variant1 {
-                        text-decoration: none;
                     }
                 }
             }

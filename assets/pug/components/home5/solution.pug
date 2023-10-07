@@ -4,26 +4,26 @@ include ../../mixins/solutionItem.pug
     .container.text-center
         .heading.flex-between 
             .heading3.text-center.mt-12 Our solutions
-            a(href="#!").text-button-small.display-inline-block.border-underline-green-2px View All Solutions
-        .row.row-gap-32.mt-40
+            a(href="service-detail.html").text-button-small.display-inline-block.border-underline-green-2px View All Solutions
+        .row.row-gap-32.mt-40.sub-nav-solution
             .col-12.col-lg-3.col-sm-6
                 .double-slash
                     i.icon-slash
                     i.icon-slash
-                +solutionItem({classname:'h-100 p-40 bg-white', style:'solution-three', icon: 'icon-coin-user fs-60', title: 'Financial Advisory', desc: 'Tailored guidance for individuals and businesses, managing debt, budgeting, and future financial plans.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-40 bg-white', style:'solution-three', dataCate:'Finance Solutions', dataItem:'', icon: 'icon-coin-user fs-60', title: 'Financial Advisory', desc: 'Tailored guidance for individuals and businesses, managing debt, budgeting, and future financial plans.'})
             .col-12.col-lg-3.col-sm-6
                 .double-slash
                     i.icon-slash
                     i.icon-slash
-                +solutionItem({classname:'h-100 p-40 bg-white', style:'solution-three', icon: 'icon-hand-coin-up fs-60', title: 'Investment Management', desc: 'Optimizing investment portfolios, digital analysis, and smart investment strategies.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-40 bg-white', style:'solution-three', dataCate:'Finance Solutions', dataItem:'', icon: 'icon-hand-coin-up fs-60', title: 'Investment Management', desc: 'Optimizing investment portfolios, digital analysis, and smart investment strategies.'})
             .col-12.col-lg-3.col-sm-6
                 .double-slash
                     i.icon-slash
                     i.icon-slash
-                +solutionItem({classname:'h-100 p-40 bg-white', style:'solution-three', icon: 'icon-coin-up fs-60', title: 'Retirement Planning', desc: 'Ensuring stable post-retirement finances through savings and wise investments.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-40 bg-white', style:'solution-three', dataCate:'Finance Solutions', dataItem:'', icon: 'icon-coin-up fs-60', title: 'Retirement Planning', desc: 'Ensuring stable post-retirement finances through savings and wise investments.'})
             .col-12.col-lg-3.col-sm-6
                 .double-slash
                     i.icon-slash
                     i.icon-slash
-                +solutionItem({classname:'h-100 p-40 bg-white', style:'solution-three', icon: 'icon-money-transfer fs-60', title: 'Risk Management & Insurance', desc: 'Protecting assets with tailored insurance solutions against unexpected events.'})
+                +solutionItem({classname:'service-item nav-item-main h-100 p-40 bg-white', style:'solution-three', dataCate:'Finance Solutions', dataItem:'', icon: 'icon-money-transfer fs-60', title: 'Risk Management & Insurance', desc: 'Protecting assets with tailored insurance solutions against unexpected events.'})
             

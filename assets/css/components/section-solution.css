@@ -1,37 +1,71 @@
 /*
-*** Section Solution Home1,2: Start
+*** Section Solution Home1: Start
 */
 .section-solution .solution-item {
   transition: 0.3s;
 }
 .section-solution .solution-item .heading5 {
   position: relative;
+}
+.section-solution .solution-item .heading5::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--on-surface);
   transition: 0.3s;
 }
 .section-solution .solution-item:hover {
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
 }
-.section-solution .solution-item:hover .heading5 {
+.section-solution .solution-item:hover .heading5::before {
+  width: 100%;
+}
+
+/*
+*** Section Solution Home1: End
+*/
+/*
+*** Section Solution Home2: Start
+*/
+.section-solution.style-two .solution-item {
+  transition: 0.3s;
+}
+.section-solution.style-two .solution-item .heading5 {
+  position: relative;
+}
+.section-solution.style-two .solution-item .heading5::before {
+  display: none;
+}
+.section-solution.style-two .solution-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+}
+.section-solution.style-two .solution-item:hover .heading5 {
   text-decoration: underline;
 }
 
 /*
-*** Section Solution Home1,2: End
+*** Section Solution Home2: End
 */
 /*
 *** Section Solution Home3: Start
 */
+.section-solution.style-three .heading .text-button-small {
+  transition: 0.3s;
+}
 .section-solution.style-three .heading .text-button-small:hover {
   color: var(--yellow);
 }
 .section-solution.style-three .heading .text-button-small:hover::before {
   background-color: var(--yellow);
 }
+.section-solution.style-three .solution-item .heading5 {
+  display: inline-block;
+}
 .section-solution.style-three .solution-item:hover {
   box-shadow: none;
-}
-.section-solution.style-three .solution-item:hover .heading5 {
-  color: var(--yellow);
 }
 
 /*
@@ -46,8 +80,8 @@
 .section-solution.style-four .heading a:hover {
   color: var(--pink);
 }
-.section-solution.style-four .solution-item:hover .heading5 {
-  color: var(--pink);
+.section-solution.style-four .solution-item .heading5 {
+  display: inline-block;
 }
 
 /*
@@ -84,6 +118,12 @@
 .section-solution.style-five .container > .row > div .solution-item .heading5 {
   transition: all linear 0.3s;
 }
+.section-solution.style-five .container > .row > div .solution-item .heading5::before {
+  display: none;
+}
+.section-solution.style-five .container > .row > div .solution-item:hover {
+  box-shadow: none;
+}
 .section-solution.style-five .container > .row > div:hover {
   cursor: pointer;
 }
@@ -109,14 +149,17 @@
   border-right: 1px solid var(--outline);
   transition: all linear 0.3s;
 }
+.section-solution.style-six .row > div .solution-item .heading5 {
+  transition: all linear 0.3s;
+}
+.section-solution.style-six .row > div .solution-item .heading5::before {
+  display: none;
+}
 .section-solution.style-six .row > div .solution-item:hover {
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
 }
 .section-solution.style-six .row > div .solution-item:hover .heading5 {
   color: var(--purple);
-}
-.section-solution.style-six .row > div .solution-item:hover .text-on-surface-variant1 {
-  text-decoration: none;
 }
 
 /*
