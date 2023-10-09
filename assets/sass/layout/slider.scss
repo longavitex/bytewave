@@ -665,13 +665,15 @@
 
         .slider-item {
             height: unset;
+            padding-top: 74px;
 
             .row {
-                flex-direction: column-reverse;
+                flex-direction: column;
+                border-top: 1px solid var(--line);
 
                 >div:first-child {
                     padding-top: 32px;
-                    padding-bottom: 32px;
+                    padding-bottom: 50px;
 
                     >div {
                         width: 100%;
@@ -714,6 +716,8 @@
 
     @media (max-width: 575.99px) {
         .slider-item {
+            padding-top: 60px;
+
             .row {
                 >div:last-child {
                     .bg-img {

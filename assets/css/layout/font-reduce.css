@@ -228,6 +228,9 @@
   .p-12 {
     padding: 10px;
   }
+  .pl-8 {
+    padding-left: 4px;
+  }
   .row-gap-40 {
     row-gap: 24px;
   }

@@ -351,6 +351,7 @@
 
         .testimonial-item {
             padding: 144.5px 80px;
+            cursor: pointer;
 
             .content-main {
                 padding: 0;
@@ -378,7 +379,12 @@
 
         @media (max-width: 991.99px) {
             .testimonial-item {
-                padding: 60px 40px;
+                padding: 60px 40px 100px;
+
+                .slick-dots {
+                    left: 40px;
+                    bottom: 12px;
+                }
             }
         }
 
@@ -389,7 +395,12 @@
             }
 
             .testimonial-item {
-                padding: 32px 24px;
+                padding: 32px 24px 80px;
+
+                .slick-dots {
+                    left: 24px;
+                    bottom: 0px;
+                }
 
                 .mt-24 {
                     margin-top: 16px;

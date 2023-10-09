@@ -570,15 +570,15 @@
 .menu-style-three .header-menu .menu-main ul li > a::before {
   background-color: var(--yellow);
 }
-.menu-style-three .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .more-infor .call i {
-  color: var(--on-surface);
-  background-color: var(--yellow);
+.menu-style-three .header-menu .more-infor .call i {
+  color: var(--on-surface) !important;
+  background-color: var(--yellow) !important;
 }
-.menu-style-three .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a:hover {
-  background-color: var(--yellow);
+.menu-style-three .header-menu .list-social a:hover {
+  background-color: var(--yellow) !important;
 }
-.menu-style-three .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a:hover i {
-  color: var(--on-surface);
+.menu-style-three .header-menu .list-social a:hover i {
+  color: var(--on-surface) !important;
 }
 .menu-style-three .header-menu .right-block {
   margin-right: 0;
@@ -619,11 +619,15 @@
 .menu-style-four .header-menu .menu-main ul li a::before {
   background-color: var(--pink);
 }
-.menu-style-four .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .more-infor .call i {
-  background-color: var(--pink);
+.menu-style-four .header-menu .more-infor .call i {
+  color: var(--white) !important;
+  background-color: var(--pink) !important;
 }
-.menu-style-four .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a:hover {
-  background-color: var(--pink);
+.menu-style-four .header-menu .list-social a:hover {
+  background-color: var(--pink) !important;
+}
+.menu-style-four .header-menu .list-social a:hover i {
+  color: var(--white) !important;
 }
 .menu-style-four .header-menu .right-block {
   margin-right: 0;
@@ -658,14 +662,15 @@
 .menu-style-five .header-menu .menu-main ul li a::before {
   background-color: var(--green);
 }
-.menu-style-five .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .more-infor .call i {
-  background-color: var(--green);
+.menu-style-five .header-menu .more-infor .call i {
+  color: var(--on-surface) !important;
+  background-color: var(--green) !important;
 }
-.menu-style-five .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a:hover {
-  background-color: var(--green);
+.menu-style-five .header-menu .list-social a:hover {
+  background-color: var(--green) !important;
 }
-.menu-style-five .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a:hover i {
-  color: var(--on-surface);
+.menu-style-five .header-menu .list-social a:hover i {
+  color: var(--on-surface) !important;
 }
 .menu-style-five .header-menu .right-block .call-block {
   background-color: transparent;
@@ -715,11 +720,15 @@
 .menu-style-six .header-menu .menu-main ul li a::before {
   background-color: var(--purple);
 }
-.menu-style-six .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .more-infor .call i {
-  background-color: var(--purple);
+.menu-style-six .header-menu .more-infor .call i {
+  color: var(--white) !important;
+  background-color: var(--purple) !important;
 }
-.menu-style-six .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a:hover {
-  background-color: var(--purple);
+.menu-style-six .header-menu .list-social a:hover {
+  background-color: var(--purple) !important;
+}
+.menu-style-six .header-menu .list-social a:hover i {
+  color: var(--white) !important;
 }
 
 /*
@@ -734,11 +743,15 @@
 .menu-style-seven .header-menu .menu-main ul li a::before {
   background-color: var(--blue);
 }
-.menu-style-seven .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .more-infor .call i {
-  background-color: var(--blue);
+.menu-style-seven .header-menu .more-infor .call i {
+  color: var(--white) !important;
+  background-color: var(--blue) !important;
 }
-.menu-style-seven .header-menu .menu-main ul > li:nth-child(2) .sub-nav .container .content-main .row > div:last-child .content .list-social a:hover {
-  background-color: var(--blue);
+.menu-style-seven .header-menu .list-social a:hover {
+  background-color: var(--blue) !important;
+}
+.menu-style-seven .header-menu .list-social a:hover i {
+  color: var(--white) !important;
 }
 @media (max-width: 1820px) {
   .menu-style-seven .header-menu .container {
@@ -790,8 +803,11 @@
   }
 }
 @media (max-width: 1350px) {
-  .menu-style-seven .header-menu .logo svg path {
-    fill: var(--white);
+  .menu-style-seven .header-menu .right-block i {
+    color: var(--on-surface);
+  }
+  .menu-style-seven .header-menu .right-block .menu-humburger i {
+    color: var(--on-surface);
   }
   .menu-style-seven .header-menu #menu-mobile-block .logo svg path {
     fill: var(--on-surface);

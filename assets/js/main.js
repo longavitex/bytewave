@@ -1138,6 +1138,40 @@ cartModalContainer.addEventListener('click', function (event) {
 })
 
 
+// confirm delete modal
+const confirmDeleteModal = document.querySelector('.confirm-delete-modal')
+const confirmDeleteModalContainer = document.querySelector('.confirm-delete-modal-container')
+const cancelConfirmDelete = document.querySelector('.confirm-delete-modal .cancel')
+const confirmDelete = document.querySelector('.confirm-delete-modal .delete')
+
+//Function show modal confirm delete
+function showConfirmDeleteModal() {
+    confirmDeleteModal.classList.add('open')
+    document.querySelector('body').style.overflow = 'hidden'
+}
+
+//Function close modal confirm delete
+function removeConfirmDeleteModal() {
+    confirmDeleteModal.classList.remove('open')
+    document.querySelector('body').style.overflow = 'unset'
+}
+
+//listen event click and close modal confirm delete
+confirmDelete.addEventListener('click', removeConfirmDeleteModal)
+
+//listen event click and close modal confirm delete
+cancelConfirmDelete.addEventListener('click', removeConfirmDeleteModal)
+
+//listen event click outside modal-container and close modal confirm delete
+confirmDeleteModal.addEventListener('click', removeConfirmDeleteModal)
+
+//Stop prevent default when click on container modal confirm delete
+confirmDeleteModalContainer.addEventListener('click', function (event) {
+    event.stopPropagation()
+})
+
+
+
 // Initialize cartStore in localStorage
 // Get cartStore from localStorage.
 let cartStore = JSON.parse(localStorage.getItem('cartStore'));
@@ -1167,28 +1201,28 @@ const showProductToCart = () => {
 
             cartStore.forEach(list => {
                 const productItem = document.createElement('div')
-                productItem.classList.add('main-item', 'pt-24', 'pb-24')
+                productItem.classList.add('product-item', 'pt-24', 'pb-24')
+                productItem.setAttribute('product-id', list.prdId)
                 productItem.innerHTML = `
-                    <img class="item-img" src="${list.prdImg}" alt="${list.prdName}"/>
-                    <div class="item-infor"> 
-                        <div class="item-name text-button-small">${list.prdName}</div>
-                        <div class="item-price caption1">Price: 
-                            <span>${list.prdPrice}</span>
+                    <div class="main-item">
+                        <img class="item-img" src="${list.prdImg}" alt="${list.prdName}"/>
+                        <div class="item-infor"> 
+                            <div class="item-name text-button-small">${list.prdName}</div>
+                            <div class="item-price caption1">Price: 
+                                <span>${list.prdPrice}</span>
+                            </div>
+                            <div class="quantity-block"> 
+                                <span class="caption1">Quantity: 
+                                    <span class="quantity">${list.prdQuantity}</span>
+                                </span>
+                            </div>
                         </div>
-                        <div class="quantity-block"> 
-                            <span class="caption1">Quantity: 
-                                <span class="quantity">${list.prdQuantity}</span>
-                            </span>
+                        <div class="item-remove"> 
+                            <i class="delete-btn ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i>
                         </div>
-                    </div>
-                    <div class="item-remove"> 
-                        <i class="ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i>
                     </div>
                 `;
                 listProductModalCart.appendChild(productItem)
-                if (list.prdQuantity > 1) {
-                    document.querySelector('.list .item .quantity-block .ph-minus')
-                }
 
                 // Total money cart
                 totalModalCart += list.totalPrdPrice
@@ -1253,6 +1287,7 @@ if (addToCartBtn) {
     // Handle add product to cart
     addToCartBtn.addEventListener('click', () => {
         // Get product infor
+        const prdId = cartStore.length
         const prdName = document.querySelector('.name').textContent
         const prdPrice = document.querySelector('.price').textContent
         const prdImg = document.querySelector('.bg-img img').getAttribute('src')
@@ -1263,6 +1298,7 @@ if (addToCartBtn) {
 
         // Save product infor to productDetailInfor
         var productDetailInfor = {
+            prdId: prdId,
             prdName: prdName,
             prdPrice: prdPrice,
             prdImg: prdImg,
@@ -1284,59 +1320,66 @@ if (addToCartBtn) {
 }
 
 
-
 // Display list product in cart on the shopping cart page
-if (document.querySelector('.cart-block')) {
-    const listProduct = document.querySelector('.cart-block .list-product .list')
+const showListProductInCart = () => {
+    if (document.querySelector('.cart-block')) {
+        const listProduct = document.querySelector('.cart-block .list-product .list')
+        listProduct.innerHTML = ``
 
-    if (cartStore && cartStore.length > 0) {
-        cartStore.forEach(list => {
-            const productItem = document.createElement('div')
-            productItem.classList.add('item', 'pt-20', 'pb-16', 'border-underline-outline')
-            productItem.innerHTML = `
-                <div class="row">
-                    <div class="col-6">
-                        <div class="flex-item-center"> 
-                            <div class="bg-img pr-28 pl-28 flex-center border-outline bora-8">
-                                <img class="w-100" src="${list.prdImg}" alt="${list.prdName}"/>
+        if (cartStore && cartStore.length > 0) {
+            cartStore.forEach(list => {
+                const productItem = document.createElement('div')
+                productItem.classList.add('item', 'pt-20', 'pb-16', 'border-underline-outline')
+                productItem.setAttribute('product-id', list.prdId)
+                productItem.innerHTML = `
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="flex-item-center"> 
+                                <div class="bg-img pr-28 pl-28 flex-center border-outline bora-8">
+                                    <img class="w-100" src="${list.prdImg}" alt="${list.prdName}"/>
+                                </div>
+                                <div class="name text-button pl-16">${list.prdName}</div>
                             </div>
-                            <div class="name text-button pl-16">${list.prdName}</div>
                         </div>
-                    </div>
-                    <div class="col-1 flex-center">
-                        <div class="text-button price">${list.prdPrice}</div>
-                    </div>
-                    <div class="col-2 flex-center">
-                        <div class="quantity-block flex-item-center border-outline bora-4">
-                            ${list.prdQuantity > 1
-                    ? `
-                                        <i class="ph ph-minus"></i>
-                                    `
-                    : `
-                                        <i class="ph ph-minus disable"></i>
-                                    `
-                }
-                            <span class="text-button quantity">${list.prdQuantity}</span>
-                            <i class="ph ph-plus"></i>
+                        <div class="col-1 flex-center">
+                            <div class="text-button price">${list.prdPrice}</div>
                         </div>
+                        <div class="col-2 flex-center">
+                            <div class="quantity-block flex-item-center border-outline bora-4">
+                                ${list.prdQuantity > 1
+                        ? `
+                                            <i class="ph ph-minus"></i>
+                                        `
+                        : `
+                                            <i class="ph ph-minus disable"></i>
+                                        `
+                    }
+                                <span class="text-button quantity">${list.prdQuantity}</span>
+                                <i class="ph ph-plus"></i>
+                            </div>
+                        </div>
+                        <div class="col-2 flex-center">
+                            <div class="text-button total">$${list.totalPrdPrice}.00</div>
+                        </div>
+                        <div class="col-1 flex-center"> <i class="delete-btn ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i></div>
                     </div>
-                    <div class="col-2 flex-center">
-                        <div class="text-button total">$${list.totalPrdPrice}.00</div>
-                    </div>
-                    <div class="col-1 flex-center"> <i class="ph-fill ph-x-circle fs-20 pointer text-on-surface-variant1"></i></div>
-                </div>
-            `;
-            listProduct.appendChild(productItem)
-        })
-    } else {
-        listProduct.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
-        document.querySelector('.discount-block span.discount').innerHTML = `0`
-        document.querySelector('.discount-block >div:last-child span:first-child').innerHTML = `$`
+                `;
+                listProduct.appendChild(productItem)
+            })
+        } else {
+            listProduct.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
+            document.querySelector('.discount-block span.discount').innerHTML = `0`
+            document.querySelector('.discount-block >div:last-child span:first-child').innerHTML = `$`
+        }
     }
+}
+
+showListProductInCart()
 
 
-    // Function handle progress, total money 
-    const handleShoppingCartPage = () => {
+// Function handle progress, total money 
+const handleShoppingCartPage = () => {
+    if (document.querySelector('.cart-block')) {
         // Handle total price list products
         const totalPricePrds = document.querySelector('.checkout-block span.total-product')
         const arrayPrd = document.querySelectorAll('.list-product .list .item')
@@ -1369,10 +1412,12 @@ if (document.querySelector('.cart-block')) {
         var percentProgress = ((Number(priceToFreeShip.innerHTML) / Number(totalPriceToFreeship)) * 100)
         progressLine.style.width = 100 - Number(percentProgress) + '%'
     }
+}
 
-    handleShoppingCartPage()
+handleShoppingCartPage()
 
 
+if (document.querySelector('.cart-block')) {
     // increaseQuantity, reduceQuantity button
     const increaseQuantity = document.querySelectorAll('.item .quantity-block .ph-plus')
     const reduceQuantity = document.querySelectorAll('.item .quantity-block .ph-minus')
@@ -1407,23 +1452,7 @@ if (document.querySelector('.cart-block')) {
 
             totalPricePrdItem.innerHTML = `$${parseFloat(pricePrd.replace(/[^0-9.]/g, '')) * quantity}.00`
 
-
             handleShoppingCartPage()
-
-            // // Save product infor to productDetailInfor
-            // var productDetailInfor = {
-            //     prdName: prdName,
-            //     prdPrice: prdPrice,
-            //     prdImg: prdImg,
-            //     prdQuantity: quantity,
-            //     totalPrdPrice: totalPricePrdItem,
-            // };
-
-            // // Add product to cartStore
-            // cartStore.push(productDetailInfor);
-
-            // // Save cartStore to localStorage
-            // localStorage.setItem('cartStore', JSON.stringify(cartStore));
         })
     })
 
@@ -1453,7 +1482,100 @@ if (document.querySelector('.cart-block')) {
             handleShoppingCartPage()
         })
     })
+
+    // Delete product from cartStore
+    const productItems = document.querySelectorAll('.list-product-main>div')
+
+    productItems.forEach((item) => {
+        const deleteIcon = item.querySelector('.delete-btn')
+
+        deleteIcon.addEventListener('click', () => {
+            showConfirmDeleteModal()
+            const prdId = item.getAttribute('product-id')
+            console.log(prdId);
+
+            const confirmDeleteBtn = document.querySelector('.confirm-delete-modal .delete')
+            confirmDeleteBtn.addEventListener('click', () => {
+                // Xóa sản phẩm khỏi giỏ hàng trong localStorage
+                const updatedCart = JSON.parse(localStorage.getItem('cartStore'));
+                
+                // Tìm vị trí của sản phẩm cần xóa trong mảng
+                const productIndex = updatedCart.findIndex((product) => product.prdId == prdId);
+                
+                if (productIndex !== -1) {
+                    updatedCart.splice(productIndex, 1); // Xóa sản phẩm
+                    localStorage.setItem('cartStore', JSON.stringify(updatedCart));
+                }
+                
+                // Cập nhật giao diện bằng cách xóa sản phẩm khỏi DOM
+                item.remove();
+                handleShoppingCartPage()
+            })
+        })
+    })
+
 }
+
+
+// Save list product in cart after increase, reduce quantity to checkout
+// Initialize checkoutProduct in localStorage
+// Get checkoutProduct from localStorage.
+let checkoutProduct = JSON.parse(localStorage.getItem('checkoutProduct'));
+
+// Check if 'checkoutProduct' already exists in localStorage.
+if (localStorage.getItem('checkoutProduct') === null) {
+    // If it does not exist, initialize 'checkoutProduct' with default value (empty array).
+    localStorage.setItem('checkoutProduct', JSON.stringify([]));
+}
+
+// Listen event click btn checkout
+// if (document.querySelector('.cart-block')) {
+const checkoutBtn = document.querySelectorAll('.checkout-btn')
+checkoutBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Reset checkoutProduct
+        checkoutProduct = []
+        localStorage.removeItem('checkoutProduct');
+
+        const productItems = document.querySelectorAll('.list-product .list .item')
+        productItems.forEach(item => {
+            // Get product infor
+            const prdName = item.querySelector('.name').textContent
+            const prdPrice = item.querySelector('.price').textContent
+            const prdImg = item.querySelector('.bg-img img').getAttribute('src')
+            const prdQuantity = item.querySelector('.quantity-block .quantity').textContent
+            const totalPrdPrice = item.querySelector('.total').textContent
+            const totalPricePrdToCheckout = document.querySelector('.total-product').textContent
+            const discount = document.querySelector('.discount').textContent
+            const totalPriceCartToCheckout = document.querySelector('.total-cart').textContent
+
+            // Save product infor to productDetailInfor
+            var productInforToCheckout = {
+                // products: [
+                //     {
+                prdName: prdName,
+                prdPrice: prdPrice,
+                prdImg: prdImg,
+                prdQuantity: prdQuantity,
+                totalPrdPrice: totalPrdPrice,
+                //     }
+                // ],
+                totalAllPrdPrice: totalPricePrdToCheckout,
+                discount: discount,
+                totalCartPrice: totalPriceCartToCheckout,
+            };
+
+            // Add product to checkoutProduct
+            checkoutProduct.push(productInforToCheckout);
+            console.log(productInforToCheckout);
+        })
+
+
+        // Save checkoutProduct to localStorage
+        localStorage.setItem('checkoutProduct', JSON.stringify(checkoutProduct));
+    })
+})
+// }
 
 
 // Countdown time in cart
@@ -1495,9 +1617,9 @@ window.onload = () => {
 
 // Check out page
 // Show, hide login block in checkout
-const formLoginHeading = document.querySelector('.checkout-block .form-login-block')
-const loginHeading = document.querySelector('.checkout-block .login .left span.text-button')
-const iconDownHeading = document.querySelector('.checkout-block .login .right i')
+const formLoginHeading = document.querySelector('.checkout-block-main .form-login-block')
+const loginHeading = document.querySelector('.checkout-block-main .login .left span.text-button')
+const iconDownHeading = document.querySelector('.checkout-block-main .login .right i')
 
 if (loginHeading) {
     loginHeading.addEventListener('click', () => {
@@ -1512,14 +1634,18 @@ if (loginHeading) {
 }
 
 // Show, hide payment type in checkout
-const paymentType = document.querySelectorAll('.payment-block .list-payment .type')
+const listPayment = document.querySelector('.payment-block .list-payment')
 const paymentCheckbox = document.querySelectorAll('.payment-block .list-payment .type>input')
 
 if (paymentCheckbox) {
     paymentCheckbox.forEach(item => {
-        item.addEventListener('change', () => {
+        item.addEventListener('click', () => {
+            if (listPayment.querySelector('.open')) {
+                listPayment.querySelector('.open').classList.remove('open')
+            }
+
+            let parentType = item.parentElement
             if (item.checked) {
-                let parentType = item.parentElement
                 parentType.classList.add('open')
             }
         })
@@ -1530,11 +1656,10 @@ if (paymentCheckbox) {
 if (document.querySelector('.checkout-block-main')) {
     const listProductCheckout = document.querySelector('.checkout-block-main .checkout-block .list-product-checkout')
 
-    if (cartStore && cartStore.length > 0) {
-        // Total money cart
-        var totalCheckOut = 0
+    if (checkoutProduct && checkoutProduct.length > 0) {
+        listProductCheckout.innerHTML = ``
 
-        cartStore.forEach(list => {
+        checkoutProduct.forEach((list, index) => {
             const productItem = document.createElement('div')
             productItem.classList.add('product', 'flex-between', 'pb-12', 'border-underline-outline', 'mt-20', 'gap-8')
             productItem.innerHTML = `
@@ -1553,14 +1678,13 @@ if (document.querySelector('.checkout-block-main')) {
             listProductCheckout.appendChild(productItem)
 
             // Set total money cart
-            totalCheckOut += list.totalPrdPrice
+            // totalCheckOut += list.totalPrdPrice
+            document.querySelector('.total-block .total-product').innerHTML = `$${list.totalAllPrdPrice}.00`
+            document.querySelector('.discount-block span.discount').innerHTML = list.discount
+
+            document.querySelector('.total-cart-block .total-cart').innerHTML = `$${list.totalCartPrice}.00`
         })
 
-        // Handle total price cart
-        document.querySelector('.total-block .total-product').innerHTML = `$${totalCheckOut}.00`
-        const discountCheckout = document.querySelector('.discount-block span.discount').innerHTML
-
-        document.querySelector('.total-cart-block .total-cart').innerHTML = `$${Number(totalCheckOut - discountCheckout)}.00`
     } else {
         listProductCheckout.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
     }

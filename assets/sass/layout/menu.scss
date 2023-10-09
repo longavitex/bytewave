@@ -763,41 +763,25 @@
                         }
                     }
                 }
+            }
+        }
 
-                >li {
-                    &:nth-child(2) {
-                        .sub-nav {
-                            .container {
-                                .content-main {
-                                    .row {
-                                        >div:last-child {
-                                            .content {
-                                                .more-infor {
-                                                    .call {
-                                                        i {
-                                                            color: var(--on-surface);
-                                                            background-color: var(--yellow);
-                                                        }
-                                                    }
-                                                }
+        .more-infor {
+            .call {
+                i {
+                    color: var(--on-surface) !important;
+                    background-color: var(--yellow) !important;
+                }
+            }
+        }
 
-                                                .list-social {
-                                                    a {
-                                                        &:hover {
-                                                            background-color: var(--yellow);
+        .list-social {
+            a {
+                &:hover {
+                    background-color: var(--yellow) !important;
 
-                                                            i {
-                                                                color: var(--on-surface);
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    i {
+                        color: var(--on-surface) !important;
                     }
                 }
             }
@@ -867,37 +851,25 @@
                         }
                     }
                 }
+            }
+        }
 
-                >li {
-                    &:nth-child(2) {
-                        .sub-nav {
-                            .container {
-                                .content-main {
-                                    .row {
-                                        >div:last-child {
-                                            .content {
-                                                .more-infor {
-                                                    .call {
-                                                        i {
+        .more-infor {
+            .call {
+                i {
+                    color: var(--white) !important;
+                    background-color: var(--pink) !important;
+                }
+            }
+        }
 
-                                                            background-color: var(--pink);
-                                                        }
-                                                    }
-                                                }
+        .list-social {
+            a {
+                &:hover {
+                    background-color: var(--pink) !important;
 
-                                                .list-social {
-                                                    a {
-                                                        &:hover {
-                                                            background-color: var(--pink);
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    i {
+                        color: var(--white) !important;
                     }
                 }
             }
@@ -950,41 +922,25 @@
                         }
                     }
                 }
+            }
+        }
 
-                >li {
-                    &:nth-child(2) {
-                        .sub-nav {
-                            .container {
-                                .content-main {
-                                    .row {
-                                        >div:last-child {
-                                            .content {
-                                                .more-infor {
-                                                    .call {
-                                                        i {
+        .more-infor {
+            .call {
+                i {
+                    color: var(--on-surface) !important;
+                    background-color: var(--green) !important;
+                }
+            }
+        }
 
-                                                            background-color: var(--green);
-                                                        }
-                                                    }
-                                                }
+        .list-social {
+            a {
+                &:hover {
+                    background-color: var(--green) !important;
 
-                                                .list-social {
-                                                    a {
-                                                        &:hover {
-                                                            background-color: var(--green);
-
-                                                            i {
-                                                                color: var(--on-surface);
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    i {
+                        color: var(--on-surface) !important;
                     }
                 }
             }
@@ -1069,37 +1025,25 @@
                         }
                     }
                 }
+            }
+        }
 
-                >li {
-                    &:nth-child(2) {
-                        .sub-nav {
-                            .container {
-                                .content-main {
-                                    .row {
-                                        >div:last-child {
-                                            .content {
-                                                .more-infor {
-                                                    .call {
-                                                        i {
+        .more-infor {
+            .call {
+                i {
+                    color: var(--white) !important;
+                    background-color: var(--purple) !important;
+                }
+            }
+        }
 
-                                                            background-color: var(--purple);
-                                                        }
-                                                    }
-                                                }
+        .list-social {
+            a {
+                &:hover {
+                    background-color: var(--purple) !important;
 
-                                                .list-social {
-                                                    a {
-                                                        &:hover {
-                                                            background-color: var(--purple);
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    i {
+                        color: var(--white) !important;
                     }
                 }
             }
@@ -1129,37 +1073,25 @@
                         }
                     }
                 }
+            }
+        }
 
-                >li {
-                    &:nth-child(2) {
-                        .sub-nav {
-                            .container {
-                                .content-main {
-                                    .row {
-                                        >div:last-child {
-                                            .content {
-                                                .more-infor {
-                                                    .call {
-                                                        i {
+        .more-infor {
+            .call {
+                i {
+                    color: var(--white) !important;
+                    background-color: var(--blue) !important;
+                }
+            }
+        }
 
-                                                            background-color: var(--blue);
-                                                        }
-                                                    }
-                                                }
+        .list-social {
+            a {
+                &:hover {
+                    background-color: var(--blue) !important;
 
-                                                .list-social {
-                                                    a {
-                                                        &:hover {
-                                                            background-color: var(--blue);
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    i {
+                        color: var(--white) !important;
                     }
                 }
             }
@@ -1229,10 +1161,14 @@
         }
 
         @media (max-width: 1350px) {
-            .logo {
-                svg {
-                    path {
-                        fill: var(--white);
+            .right-block {
+                i {
+                    color: var(--on-surface);
+                }
+
+                .menu-humburger {
+                    i {
+                        color: var(--on-surface);
                     }
                 }
             }
@@ -1318,7 +1254,7 @@
             .row {
                 >div {
                     .service-item.active {
-                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%); 
+                        background: linear-gradient(238deg, #FAF7EF 0%, #F4F6FC 99.66%);
 
                         .text-button {
                             &::before {
