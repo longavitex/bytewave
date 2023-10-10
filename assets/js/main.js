@@ -127,6 +127,26 @@ if (subNavItem) {
     })
 }
 
+// Top Nav Home2, Home3
+const chooseType = document.querySelectorAll('.top-nav .left>div')
+
+if(chooseType) {
+    chooseType.forEach(item => {
+        item.addEventListener('click', () => {
+            item.querySelector('.sub-menu').classList.toggle('open')
+        })
+
+        const itemType = item.querySelectorAll('.sub-menu a')
+        itemType.forEach(type => {
+            type.addEventListener('click', () => {
+                const parentElement = type.parentElement.parentElement
+                const parentName = parentElement.querySelector('.name')
+                parentName.textContent = type.textContent
+            })
+        })
+    })
+}
+
 
 // Change the active of nav items in the submenu when switching pages.
 // Get the list of nav items in the submenu.
@@ -164,10 +184,6 @@ const serviceItems = document.querySelectorAll('.sub-nav-solution .service-item'
 // Initialize selectedService in localStorage
 let selectedService = localStorage.getItem('selectedService');
 
-if (selectedService == null) {
-    localStorage.setItem('selectedService', JSON.stringify([]));
-}
-
 // Handle click events for each service entry
 if (serviceItems) {
     serviceItems.forEach(serviceItem => {
@@ -198,6 +214,22 @@ if (document.querySelector('.heading-service-title')) {
         document.querySelector('.category').textContent = 'IT Solutions'
         document.querySelector('.title').textContent = 'Cybersecurity Solutions';
     }
+}
+
+
+// Show, hide search block
+const iconSearch = document.querySelector('.header-menu .right-block .search-icon')
+const searchBlock = document.querySelector('.header-menu .search-block')
+const iconCloseSearch = document.querySelector('.header-menu .search-block .icon-close')
+
+if(iconSearch) {
+    iconSearch.addEventListener('click', () => {
+        searchBlock.classList.add('open')
+    })
+
+    iconCloseSearch.addEventListener('click', () => {
+        searchBlock.classList.remove('open')
+    })
 }
 
 
@@ -525,7 +557,7 @@ $(".section-news .container .list-news").slick({
     ]
 });
 
-// Change cursor
+// Change cursor list blog, case studies
 const listSlideItem = document.querySelectorAll('.section-slide-shared .slick-list')
 const mouseCursor = document.querySelectorAll('.cursor')
 
@@ -616,6 +648,63 @@ if (dots) {
 $('.section-testimonial.style-one .testimonial-item').on('swipe', function (event, slick, currentSlide) {
     changeAvatarTestimonial()
 })
+
+
+// Change cursor list testimonials
+const listTestimonials = document.querySelectorAll('.section-testimonial-shared .slick-list')
+const mouseCursorTestimonials = document.querySelectorAll('.cursor-testimonials')
+
+if (listTestimonials && mouseCursorTestimonials) {
+    listTestimonials.forEach(listItem => {
+        listItem.addEventListener('mousemove', (e) => {
+            mouseCursorTestimonials.forEach(item => {
+                item.style.top = e.pageY + 'px'
+                item.style.left = e.pageX + 'px'
+                item.style.opacity = '1'
+            })
+        })
+
+        listItem.addEventListener('mouseout', () => {
+            mouseCursorTestimonials.forEach(item => {
+                item.style.opacity = '0'
+            })
+        })
+
+        listItem.addEventListener('mousedown', () => {
+            mouseCursorTestimonials.forEach(item => {
+                item.style.width = '50px'
+                item.style.height = '50px'
+                item.style.gap = '0px'
+            })
+        })
+
+        listItem.addEventListener('mouseup', () => {
+            mouseCursorTestimonials.forEach(item => {
+                item.style.width = '60px'
+                item.style.height = '60px'
+                item.style.gap = '6px'
+            })
+        })
+    })
+
+    // Fix hover link testimonials home5
+    const link5 = document.querySelectorAll('.link-main')
+    if (link5) {
+        link5.forEach(link => {
+            link.addEventListener('mousemove', () => {
+                mouseCursorTestimonials.forEach(item => {
+                    item.style.display = 'none'
+                })
+            })
+
+            link.addEventListener('mouseout', () => {
+                mouseCursorTestimonials.forEach(item => {
+                    item.style.display = 'flex'
+                })
+            })
+        })
+    }
+}
 
 
 // testimonial home2
@@ -920,8 +1009,7 @@ if (document.querySelector('.team-detail-block')) {
 }
 
 
-// Show more list testimonials page
-const listTestimonialBlock = document.querySelector('.list-testimonials-block')
+// Show more list testimonials page, case studies two
 const loadMoreBtn = document.querySelector('.load-more-btn')
 const listMore = document.querySelector('.list-more .list')
 
@@ -933,19 +1021,62 @@ if (loadMoreBtn) {
         setTimeout(() => {
             listMore.classList.add('open')
             loadMoreBtn.style.display = 'none'
-            listTestimonialBlock.style.paddingBottom = '80px'
         }, 800)
     })
 }
 
 
+// Get caseStudies information when click on a caseStudies item
+// Initialize selectedCaseStudies in localStorage
+let selectedCaseStudies = localStorage.getItem('selectedCaseStudies');
+
+// Get all caseStudies entries on the list caseStudies
+const caseStudiesItems = document.querySelectorAll('.case-studies-item-main');
+
+// Handle click events for each caseStudies entry
+if (caseStudiesItems) {
+    caseStudiesItems.forEach(caseStudiesItem => {
+        caseStudiesItem.addEventListener('click', () => {
+            // Listen for click events, get caseStudies information, save to caseStudiesInfor
+            const caseStudiesInfor = {
+                title: caseStudiesItem.querySelector('.title').textContent,
+                category: caseStudiesItem.querySelector('.category').textContent,
+                img: caseStudiesItem.querySelector('.bg-img img').getAttribute('src'),
+            }
+
+            // Save caseStudies item information to localStorage
+            localStorage.setItem('selectedCaseStudies', JSON.stringify(caseStudiesInfor));
+        });
+    });
+}
+
+// Extract caseStudies item information from localStorage
+let selectedCaseStudiesInfo = JSON.parse(localStorage.getItem('selectedCaseStudies'));
+
+// Display caseStudies information on the caseStudies details page
+if (document.querySelector('.case-studies-detail-block')) {
+    if (selectedCaseStudiesInfo !== null) {
+        if (document.querySelector('.heading-content .bg-img img') && document.querySelector('.category') && document.querySelector('.title')) {
+            document.querySelector('.title').textContent = selectedCaseStudiesInfo.title;
+            document.querySelector('.category').textContent = selectedCaseStudiesInfo.category;
+            document.querySelector('.heading-content .bg-img img').src = selectedCaseStudiesInfo.img;
+        }
+    }
+
+    else if (selectedCaseStudiesInfo == null) {
+        if (document.querySelector('.heading-content .bg-img img') && document.querySelector('.category') && document.querySelector('.title')) {
+            document.querySelector('.title').textContent = 'exploring tech trends';
+            document.querySelector('.category').textContent = 'IT Solution';
+            document.querySelector('.heading-content .bg-img img').src = 'assets/images/blog/item16.png';
+        }
+    }
+}
+
+
+
 // Get blog information when click on a blog item
 // Initialize selectedBlog in localStorage
 let selectedBlog = localStorage.getItem('selectedBlog');
-
-if (selectedBlog === null) {
-    localStorage.setItem('selectedBlog', JSON.stringify([]));
-}
 
 // Get all blog entries on the list page
 const blogItems = document.querySelectorAll('.blog-item-filter');
@@ -981,6 +1112,14 @@ if (document.querySelector('.blog-detail-page')) {
             document.querySelector('.title').textContent = selectedBlogInfo.title;
             document.querySelector('.date').textContent = selectedBlogInfo.date;
             document.querySelector('.main-img img').src = selectedBlogInfo.img;
+        }
+    }
+    else if (selectedBlogInfo == null) {
+        if (document.querySelector('.category') && document.querySelector('.title') && document.querySelector('.main-img img')) {
+            document.querySelector('.category').textContent = 'E-Commerce & Retail';
+            document.querySelector('.title').textContent = "Strategies For Thriving: Unveiling Business Consulting's Impact";
+            document.querySelector('.date').textContent = 'February 23, 2023';
+            document.querySelector('.main-img img').src = 'assets/images/blog/item4.png';
         }
     }
 }
@@ -1367,9 +1506,10 @@ const showListProductInCart = () => {
                 listProduct.appendChild(productItem)
             })
         } else {
-            listProduct.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
+            listProduct.innerHTML = `<div class="text-button mt-16">No product in your shopping cart!</div>`
             document.querySelector('.discount-block span.discount').innerHTML = `0`
             document.querySelector('.discount-block >div:last-child span:first-child').innerHTML = `$`
+            localStorage.setItem('checkoutProduct', JSON.stringify([]));
         }
     }
 }
@@ -1482,38 +1622,42 @@ if (document.querySelector('.cart-block')) {
             handleShoppingCartPage()
         })
     })
+}
 
-    // Delete product from cartStore
+// Delete product from cartStore
+if (document.querySelector('.cart-modal')) {
     const productItems = document.querySelectorAll('.list-product-main>div')
 
     productItems.forEach((item) => {
         const deleteIcon = item.querySelector('.delete-btn')
 
-        deleteIcon.addEventListener('click', () => {
-            showConfirmDeleteModal()
-            const prdId = item.getAttribute('product-id')
-            console.log(prdId);
+        if (deleteIcon) {
+            deleteIcon.addEventListener('click', () => {
+                showConfirmDeleteModal()
+                const prdId = item.getAttribute('product-id')
 
-            const confirmDeleteBtn = document.querySelector('.confirm-delete-modal .delete')
-            confirmDeleteBtn.addEventListener('click', () => {
-                // Xóa sản phẩm khỏi giỏ hàng trong localStorage
-                const updatedCart = JSON.parse(localStorage.getItem('cartStore'));
-                
-                // Tìm vị trí của sản phẩm cần xóa trong mảng
-                const productIndex = updatedCart.findIndex((product) => product.prdId == prdId);
-                
-                if (productIndex !== -1) {
-                    updatedCart.splice(productIndex, 1); // Xóa sản phẩm
-                    localStorage.setItem('cartStore', JSON.stringify(updatedCart));
-                }
-                
-                // Cập nhật giao diện bằng cách xóa sản phẩm khỏi DOM
-                item.remove();
-                handleShoppingCartPage()
+                const confirmDeleteBtn = document.querySelector('.confirm-delete-modal .delete')
+                confirmDeleteBtn.addEventListener('click', () => {
+                    // Remove product from cart in localStorage
+                    const updatedCart = JSON.parse(localStorage.getItem('cartStore'))
+
+                    // Find product position to delete
+                    const productIndex = updatedCart.findIndex((product) => product.prdId == prdId)
+
+                    // If product.prdId == prdId, delete product
+                    if (productIndex !== -1) {
+                        updatedCart.splice(productIndex, 1) // delete product
+                        localStorage.setItem('cartStore', JSON.stringify(updatedCart))
+                    }
+
+                    // Update the appearance by removing the product from the DOM
+                    item.remove()
+                    handleShoppingCartPage()
+                    location.reload()
+                })
             })
-        })
+        }
     })
-
 }
 
 
@@ -1551,15 +1695,11 @@ checkoutBtn.forEach(btn => {
 
             // Save product infor to productDetailInfor
             var productInforToCheckout = {
-                // products: [
-                //     {
                 prdName: prdName,
                 prdPrice: prdPrice,
                 prdImg: prdImg,
                 prdQuantity: prdQuantity,
                 totalPrdPrice: totalPrdPrice,
-                //     }
-                // ],
                 totalAllPrdPrice: totalPricePrdToCheckout,
                 discount: discount,
                 totalCartPrice: totalPriceCartToCheckout,
@@ -1567,7 +1707,6 @@ checkoutBtn.forEach(btn => {
 
             // Add product to checkoutProduct
             checkoutProduct.push(productInforToCheckout);
-            console.log(productInforToCheckout);
         })
 
 
@@ -1653,13 +1792,14 @@ if (paymentCheckbox) {
 }
 
 
+// Display list product in checkout page
 if (document.querySelector('.checkout-block-main')) {
     const listProductCheckout = document.querySelector('.checkout-block-main .checkout-block .list-product-checkout')
 
     if (checkoutProduct && checkoutProduct.length > 0) {
         listProductCheckout.innerHTML = ``
 
-        checkoutProduct.forEach((list, index) => {
+        checkoutProduct.forEach(list => {
             const productItem = document.createElement('div')
             productItem.classList.add('product', 'flex-between', 'pb-12', 'border-underline-outline', 'mt-20', 'gap-8')
             productItem.innerHTML = `
@@ -1678,14 +1818,13 @@ if (document.querySelector('.checkout-block-main')) {
             listProductCheckout.appendChild(productItem)
 
             // Set total money cart
-            // totalCheckOut += list.totalPrdPrice
             document.querySelector('.total-block .total-product').innerHTML = `$${list.totalAllPrdPrice}.00`
             document.querySelector('.discount-block span.discount').innerHTML = list.discount
-
             document.querySelector('.total-cart-block .total-cart').innerHTML = `$${list.totalCartPrice}.00`
         })
 
     } else {
-        listProductCheckout.innerHTML = `<div class="text-button">No product in your shopping cart!</div>`
+        listProductCheckout.innerHTML = `<div class="text-button mt-24">No product in your shopping cart!</div>`
+        document.querySelector('.discount-block span.discount').innerHTML = '0'
     }
 }

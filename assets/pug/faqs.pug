@@ -5,11 +5,11 @@ block header
     div(class="style-subpage style-pages style-two")
         include components/header/menu/menu-one.pug
 block content 
-    include mixins/headingContent.pug
+    include mixins/headingTitle.pug
     include mixins/questionItem.pug
     .bg-subpage
-    +headingContent({classname: 'pt-60', style:'style-two', heading:true, headingTitle:'Frequently Asked Questions', subHeading:'Your Queries, Our Answers', content: false})
-    .faqs-block-page.pt-20.pb-80 
+    +headingTitle({classname: 'pt-60', style:'style-desc', title:'Frequently Asked Questions', desc:'Your Queries, Our Answers'})
+    .faqs-block-page.pt-60.pb-80 
         .container 
             .row
                 .col-xl-4.col-sm-10
@@ -38,7 +38,7 @@ block content
                             .block-button.mt-20
                                 button.button-blue.button-blue-hover.w-100 Send Request
                 .col-xl-8.col-sm-10.pl-45.pl-col-lg-0
-                    .list-faqs.bg-white.p-32.bora-16
+                    .list-faqs.bg-white.pt-32.pb-32.pl-40.pr-40.bora-16
                         .heading4 IT solutions
                         .list.mt-12 
                             +questionItem({title:'Which device can I use to enter your service?', content:'You can access our service from any device with an internet connection.'})

@@ -1,18 +1,20 @@
 .top-nav.style-two.style-three.bg-yellow 
     .container.flex-between
         .left.flex-item-center
-            .select-language 
-                select.caption2
-                    option(value="English") English
-                    option(value="France") France
-                    option(value="Espana") Espana
+            .select-language.flex-item-center 
+                .caption2.name English
                 i.ph-bold.ph-caret-down
-            .select-office 
-                select.caption2
-                    option(value="New York Office") New York Office
-                    option(value="Montpellier Office") Montpellier Office
-                    option(value="Barcelona Office") Barcelona Office
+                .sub-menu.bg-white
+                    a(href="#!").caption2 English
+                    a(href="#!").caption2 France
+                    a(href="#!").caption2 Espana
+            .select-office.flex-item-center 
+                .caption2.name New York Office
                 i.ph-bold.ph-caret-down
+                .sub-menu.bg-white
+                    a(href="#!").caption2 New York Office
+                    a(href="#!").caption2 Paris Office
+                    a(href="#!").caption2 Madrid Office
         .right.flex-item-center
             .mail.flex-item-center
                 i.ph.ph-envelope.fs-20

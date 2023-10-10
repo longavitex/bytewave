@@ -2,6 +2,19 @@
 *** Section Testimonial Home1: Start
 */
 .section-testimonial {
+    .cursor-testimonials {
+        background-color: #111;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition: all linear 0.1s;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 2;
+    }
+
     .row {
         >.col-md-11 {
             width: 100%;
@@ -17,7 +30,7 @@
                 .content-main {
                     padding: 40px 60px 24px;
                     overflow: hidden;
-                    cursor: pointer;
+                    cursor: none;
                 }
             }
 
@@ -111,6 +124,22 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        .cursor-testimonials {
+            display: none !important;
+        }
+
+        .row {
+            >.col-md-11 {
+                .testimonial-item {
+                    .content-main {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
     .container .slick-dots {
         display: flex;
         align-items: center;
@@ -177,6 +206,7 @@
             margin-left: -15px;
             margin-right: -15px;
             padding-bottom: 40px;
+            cursor: pointer;
 
             .slick-track>div {
                 padding-left: 15px;
@@ -264,6 +294,7 @@
 
                     .content-main {
                         padding: 0;
+                        cursor: none;
                     }
                 }
             }
@@ -351,11 +382,11 @@
 
         .testimonial-item {
             padding: 144.5px 80px;
-            cursor: pointer;
 
             .content-main {
                 padding: 0;
                 width: 100%;
+                cursor: none;
 
                 .double-slash {
                     i {

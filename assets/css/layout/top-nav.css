@@ -4,6 +4,7 @@
 .top-nav {
   height: 44px;
   position: relative;
+  z-index: 11;
 }
 .top-nav .container {
   height: 100%;
@@ -16,12 +17,7 @@
   position: relative;
   padding-left: 20px;
   padding-right: 40px;
-  line-height: 40px;
   height: 100%;
-}
-.top-nav .container .left .select-language select,
-.top-nav .container .left .select-office select {
-  background-color: transparent;
 }
 .top-nav .container .left .select-language i,
 .top-nav .container .left .select-office i {
@@ -31,26 +27,40 @@
   right: 20px;
   font-size: 11px;
 }
-.top-nav .container .left .select-language:hover, .top-nav .container .left .select-language:active, .top-nav .container .left .select-language:focus,
-.top-nav .container .left .select-office:hover,
-.top-nav .container .left .select-office:active,
-.top-nav .container .left .select-office:focus {
-  background-color: var(--blue);
-  cursor: pointer;
-}
-.top-nav .container .left .select-language:hover select,
-.top-nav .container .left .select-language:hover i, .top-nav .container .left .select-language:active select,
-.top-nav .container .left .select-language:active i, .top-nav .container .left .select-language:focus select,
-.top-nav .container .left .select-language:focus i,
-.top-nav .container .left .select-office:hover select,
-.top-nav .container .left .select-office:hover i,
-.top-nav .container .left .select-office:active select,
-.top-nav .container .left .select-office:active i,
-.top-nav .container .left .select-office:focus select,
-.top-nav .container .left .select-office:focus i {
+.top-nav .container .left .select-language:hover,
+.top-nav .container .left .select-office:hover {
   background-color: var(--blue);
   color: var(--white);
   cursor: pointer;
+}
+.top-nav .container .left .select-language:hover i,
+.top-nav .container .left .select-office:hover i {
+  color: var(--white);
+}
+.top-nav .container .left .select-language .sub-menu,
+.top-nav .container .left .select-office .sub-menu {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  display: none;
+  z-index: 2;
+}
+.top-nav .container .left .select-language .sub-menu a,
+.top-nav .container .left .select-office .sub-menu a {
+  display: block;
+  padding: 4px 12px;
+}
+.top-nav .container .left .select-language .sub-menu a:hover,
+.top-nav .container .left .select-office .sub-menu a:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.top-nav .container .left .select-language .sub-menu.open,
+.top-nav .container .left .select-office .sub-menu.open {
+  display: block;
 }
 .top-nav .container .left .select-language {
   border-right: 1px solid var(--outline);
@@ -96,28 +106,24 @@
   left: 0;
   position: relative;
 }
-.top-nav.style-three .container .left .select-language:hover, .top-nav.style-three .container .left .select-language:active, .top-nav.style-three .container .left .select-language:focus,
-.top-nav.style-three .container .left .select-office:hover,
-.top-nav.style-three .container .left .select-office:active,
-.top-nav.style-three .container .left .select-office:focus {
-  background-color: var(--white);
-}
-.top-nav.style-three .container .left .select-language:hover select,
-.top-nav.style-three .container .left .select-language:hover i, .top-nav.style-three .container .left .select-language:active select,
-.top-nav.style-three .container .left .select-language:active i, .top-nav.style-three .container .left .select-language:focus select,
-.top-nav.style-three .container .left .select-language:focus i,
-.top-nav.style-three .container .left .select-office:hover select,
-.top-nav.style-three .container .left .select-office:hover i,
-.top-nav.style-three .container .left .select-office:active select,
-.top-nav.style-three .container .left .select-office:active i,
-.top-nav.style-three .container .left .select-office:focus select,
-.top-nav.style-three .container .left .select-office:focus i {
+.top-nav.style-three .container .left .select-language:hover,
+.top-nav.style-three .container .left .select-office:hover {
   background-color: var(--white);
   color: var(--on-surface);
+}
+.top-nav.style-three .container .left .select-language:hover i,
+.top-nav.style-three .container .left .select-office:hover i {
+  color: var(--on-surface);
+}
+.top-nav.style-three .container .left .select-language .sub-menu a:hover,
+.top-nav.style-three .container .left .select-office .sub-menu a:hover {
+  color: var(--on-surface);
+  background-color: var(--yellow);
 }
 .top-nav.style-three .container .left .select-language {
   padding-left: 15px;
   margin-left: -15px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .top-nav.style-three .container .right {
   margin-right: 0;

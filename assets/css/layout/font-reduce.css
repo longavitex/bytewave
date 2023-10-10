@@ -198,6 +198,12 @@
   .mt-8 {
     margin-top: 4px;
   }
+  .pl-40 {
+    padding-left: 28px;
+  }
+  .pr-40 {
+    padding-right: 28px;
+  }
   .pl-32 {
     padding-left: 24px;
   }

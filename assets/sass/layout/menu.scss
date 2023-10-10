@@ -26,7 +26,7 @@
         border-bottom: none;
     }
 
-    .container {
+    >.container {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -378,6 +378,36 @@
                 top: -4px;
                 right: -6px;
             }
+        }
+    }
+
+    .search-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--white);
+        z-index: 5;
+        display: none;
+
+        .left {
+            width: 90%;
+
+            input {
+                border: none;
+                outline: none;
+            }
+        }
+
+        i {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &.open {
+            display: block;
         }
     }
 
@@ -850,6 +880,14 @@
                             background-color: var(--pink);
                         }
                     }
+                }
+            }
+        }
+
+        .sub-nav-solution {
+            .block-button {
+                a {
+                    color: var(--white) !important;
                 }
             }
         }

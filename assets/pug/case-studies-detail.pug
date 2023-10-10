@@ -9,7 +9,7 @@ block content
     include mixins/headingContent.pug
     include mixins/blogItem.pug
     .bg-subpage
-    +headingTitle({classname: 'pt-60', style:'style-cate', cate:'IT Solution', title:'exploring tech trends'})
+    +headingTitle({classname: 'case-studies-detail-block pt-60', style:'style-cate', cate:'IT Solution', title:'exploring tech trends'})
     +headingContent({classname: 'pt-60', style:'style-two', desc:'American tech companies continue to propel the nation’s economy forward. Not only has technological innovation become an integral part of the way we live, it is also important to our nation’s economic success.', img:'assets/images/component/bg-case-detail.png'})
     .about-us-block.pt-80.pb-80
         .container 
@@ -106,7 +106,7 @@ block content
     div(class="style-case-studies pb-80")
         include components/home4/testimonial.pug
     include mixins/blogItem.pug
-    .section-case-studies.section-news.bg-linear.pt-80.pb-80 
+    .section-case-studies.section-news.section-slide-shared.bg-linear.pt-80.pb-80 
         .container
             .cursor.flex-center.gap-12
                 i.ph.ph-caret-left.text-white

@@ -307,7 +307,50 @@
         .slick-dots {
             margin-left: 0;
             margin-top: 24px;
+            display: flex;
             padding-bottom: 0;
+            gap: 16px;
+
+            @media (max-width:767.99px) {
+                margin-top: 30px;
+            }
+
+            li {
+                position: relative;
+                border: none;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                button {
+                    display: none;
+                }
+
+                &::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 1px solid #171717;
+                    transition: 0.5s;
+                }
+
+                &.slick-active {
+                    border: 1px solid var(--on-surface);
+                    background-color: #fff;
+
+                    &::after {
+                        background-color: var(--on-surface);
+                        border: 1px solid var(--on-surface);
+                    }
+                }
+            }
         }
     }
 

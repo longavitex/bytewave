@@ -24,7 +24,7 @@
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
   border-bottom: none;
 }
-.header-menu .container {
+.header-menu > .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -299,6 +299,29 @@
   padding: 2px 5px;
   top: -4px;
   right: -6px;
+}
+.header-menu .search-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--white);
+  z-index: 5;
+  display: none;
+}
+.header-menu .search-block .left {
+  width: 90%;
+}
+.header-menu .search-block .left input {
+  border: none;
+  outline: none;
+}
+.header-menu .search-block i:hover {
+  opacity: 0.8;
+}
+.header-menu .search-block.open {
+  display: block;
 }
 .header-menu .menu-humburger {
   display: none;
@@ -618,6 +641,9 @@
 }
 .menu-style-four .header-menu .menu-main ul li a::before {
   background-color: var(--pink);
+}
+.menu-style-four .header-menu .sub-nav-solution .block-button a {
+  color: var(--white) !important;
 }
 .menu-style-four .header-menu .more-infor .call i {
   color: var(--white) !important;

@@ -11,7 +11,7 @@ block content
     +headingTitle({classname: 'heading-service-title pt-60', style:'style-cate', cate:'IT Solution', title:'Cybersecurity Solutions'})
     div(class="style-about-us pt-60")
         include components/home7/about-first.pug
-    div(class="style-about-us")
+    div(class="style-service-detail")
         include components/home1/brand.pug
     include components/home7/about-second.pug
     include components/home7/about-third.pug
@@ -61,7 +61,7 @@ block content
         include components/home4/testimonial.pug
     include components/home7/pricing.pug
     include mixins/blogItem.pug
-    .section-case-studies.section-news.bg-linear.pt-80.pb-80 
+    .section-case-studies.section-news.section-slide-shared.bg-linear.pt-80.pb-80 
         .container
             .cursor.flex-center.gap-12
                 i.ph.ph-caret-left.text-white
@@ -73,15 +73,16 @@ block content
                     .body2 Case studies that showcase the agency's approach, process, and results for specific clients.
             .list-news.mt-40
                 .item
-                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item1.png', category:'Performance Enhancement', title:'Demystifying IT Services: Exploring Tech Trends & Solutions', desc:'Enhanced performance for a manufacturing firm by optimizing their database structure, resulting in improved efficiency and competitiveness.', learn:true})
+                    +blogItem({classname:'case-studies-item-main', style:'style-one', href:'case-studies-detail.html', img:'assets/images/blog/item1.png', category:'Performance Enhancement', title:'Demystifying IT Services: Exploring Tech Trends & Solutions', desc:'Enhanced performance for a manufacturing firm by optimizing their database structure, resulting in improved efficiency and competitiveness.', learn:true})
                 .item
-                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item7.png', category:'Cloud Solutions', title:'Unlocking Business Potential: The Role of IT Services Today', desc:"Secured sensitive data during a financial company's cloud migration by designing a hybrid solution combining cloud flexibility and on-premises control.", learn:true})
+                    +blogItem({classname:'case-studies-item-main', style:'style-one', href:'case-studies-detail.html', img:'assets/images/blog/item7.png', category:'Cloud Solutions', title:'Unlocking Business Potential: The Role of IT Services Today', desc:"Secured sensitive data during a financial company's cloud migration by designing a hybrid solution combining cloud flexibility and on-premises control.", learn:true})
                 .item
-                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item2.png', category:'Application Development', title:'Tech Insights: How IT Services Drive Modern Business', desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', learn:true})
+                    +blogItem({classname:'case-studies-item-main', style:'style-one', href:'case-studies-detail.html', img:'assets/images/blog/item2.png', category:'Application Development', title:'Tech Insights: How IT Services Drive Modern Business', desc:'Enabled a startup to launch a successful mobile app by providing end-to-end development, leading to high downloads and recognition.', learn:true})
                 .item
-                    +blogItem({classname:'', style:'style-one', img:'assets/images/blog/item8.png', category:'Trendy Technologies', title:'Exploring Trendy Technologies Shaping the IT Landscape', desc:'Explore the trending technologies that are reshaping the IT industry, discover how they are transforming our interactions with the digital world.', learn:true})
+                    +blogItem({classname:'case-studies-item-main', style:'style-one', href:'case-studies-detail.html', img:'assets/images/blog/item8.png', category:'Trendy Technologies', title:'Exploring Trendy Technologies Shaping the IT Landscape', desc:'Explore the trending technologies that are reshaping the IT industry, discover how they are transforming our interactions with the digital world.', learn:true})
         
     include components/home1/contact.pug
+    include components/modal-video.pug
 block footer 
     div(class="style-subpage")
         include components/footer/footer.pug

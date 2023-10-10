@@ -211,7 +211,46 @@
 .case-studies-detail-two .section-testimonial .slick-dots {
   margin-left: 0;
   margin-top: 24px;
+  display: flex;
   padding-bottom: 0;
+  gap: 16px;
+}
+@media (max-width: 767.99px) {
+  .case-studies-detail-two .section-testimonial .slick-dots {
+    margin-top: 30px;
+  }
+}
+.case-studies-detail-two .section-testimonial .slick-dots li {
+  position: relative;
+  border: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.case-studies-detail-two .section-testimonial .slick-dots li button {
+  display: none;
+}
+.case-studies-detail-two .section-testimonial .slick-dots li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #171717;
+  transition: 0.5s;
+}
+.case-studies-detail-two .section-testimonial .slick-dots li.slick-active {
+  border: 1px solid var(--on-surface);
+  background-color: #fff;
+}
+.case-studies-detail-two .section-testimonial .slick-dots li.slick-active::after {
+  background-color: var(--on-surface);
+  border: 1px solid var(--on-surface);
 }
 @media (max-width: 992px) {
   .case-studies-detail-two .container .row {

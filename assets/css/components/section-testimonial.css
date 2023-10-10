@@ -1,6 +1,18 @@
 /*
 *** Section Testimonial Home1: Start
 */
+.section-testimonial .cursor-testimonials {
+  background-color: #111;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all linear 0.1s;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
 .section-testimonial .row > .col-md-11 {
   width: 100%;
   position: relative;
@@ -14,7 +26,7 @@
 .section-testimonial .row > .col-md-11 .testimonial-item .content-main {
   padding: 40px 60px 24px;
   overflow: hidden;
-  cursor: pointer;
+  cursor: none;
 }
 .section-testimonial .row > .col-md-11 .bg-img {
   width: 40.9090909091%;
@@ -86,6 +98,14 @@
     opacity: 1;
   }
 }
+@media (max-width: 1024px) {
+  .section-testimonial .cursor-testimonials {
+    display: none !important;
+  }
+  .section-testimonial .row > .col-md-11 .testimonial-item .content-main {
+    cursor: pointer;
+  }
+}
 .section-testimonial .container .slick-dots {
   display: flex;
   align-items: center;
@@ -143,6 +163,7 @@
   margin-left: -15px;
   margin-right: -15px;
   padding-bottom: 40px;
+  cursor: pointer;
 }
 .section-testimonial.style-two .list-comment .slick-list .slick-track > div {
   padding-left: 15px;
@@ -206,6 +227,7 @@
 }
 .section-testimonial.style-four .container > .row > div:first-child .testimonial-item .content-main {
   padding: 0;
+  cursor: none;
 }
 .section-testimonial.style-four .container > .row > div:last-child {
   width: 41.66666667%;
@@ -277,11 +299,11 @@
 }
 .section-testimonial.style-five .row .testimonial-item {
   padding: 144.5px 80px;
-  cursor: pointer;
 }
 .section-testimonial.style-five .row .testimonial-item .content-main {
   padding: 0;
   width: 100%;
+  cursor: none;
 }
 .section-testimonial.style-five .row .testimonial-item .content-main .double-slash i {
   font-size: 46px;
