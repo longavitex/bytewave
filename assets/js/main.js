@@ -34,12 +34,10 @@ const popupNewsletterBlock = document.querySelector('#popup-newsletter-block')
 const popupNewsletterMain = document.querySelector('#popup-newsletter-block .popup-newsletter-main')
 const closePopupNewsletterBtn = document.querySelector('#popup-newsletter-block .close-block')
 
-window.onload = () => {
-    if (popupNewsletterBlock) {
-        setTimeout(() => {
-            popupNewsletterBlock.classList.add('open')
-        }, 1000)
-    }
+if (popupNewsletterBlock) {
+    setTimeout(() => {
+        popupNewsletterBlock.classList.add('open')
+    }, 1000)
 }
 
 if (closePopupNewsletterBtn) {
@@ -65,7 +63,6 @@ if (popupNewsletterMain) {
 // Prevent Pop up
 // check for saved 'popupNewsletter' in localStorage
 let popupNewsletter = localStorage.getItem('popupNewsletter');
-localStorage.setItem('popupNewsletter', '')
 
 const disablePopupNewsletter = () => {
     // 1. Add the class to the body
