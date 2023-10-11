@@ -35,6 +35,12 @@
                 .main-item {
                     cursor: none;
                 }
+
+                &:hover {
+                    .title {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
 

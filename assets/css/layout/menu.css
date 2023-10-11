@@ -844,6 +844,16 @@
 *** Section Menu Header Home7: End
 */
 /*
+*** Header No Fixed Top: Start
+*/
+.header-no-fixed .header-menu.sticky {
+  position: relative;
+}
+
+/*
+*** Header No Fixed Top: End
+*/
+/*
 *** Remove active Home: Start
 */
 .style-subpage .header-menu .menu-main > ul li a.active::before {

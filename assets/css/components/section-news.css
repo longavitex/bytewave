@@ -37,6 +37,11 @@
 .section-slide-shared .container .list-news .item .main-item {
   cursor: none;
 }
+.section-case-studies .container .list-news .item:hover .title,
+.section-news .container .list-news .item:hover .title,
+.section-slide-shared .container .list-news .item:hover .title {
+  text-decoration: underline;
+}
 .section-case-studies .container .slick-dots,
 .section-news .container .slick-dots,
 .section-slide-shared .container .slick-dots {

@@ -548,6 +548,10 @@ input:focus, textarea:focus {
   row-gap: 8px;
 }
 
+.row-gap-4 {
+  row-gap: 4px !important;
+}
+
 .fs-64 {
   font-size: 64px;
 }
@@ -2138,6 +2142,11 @@ input:focus, textarea:focus {
 .section-slide-shared .container .list-news .item .main-item {
   cursor: none;
 }
+.section-case-studies .container .list-news .item:hover .title,
+.section-news .container .list-news .item:hover .title,
+.section-slide-shared .container .list-news .item:hover .title {
+  text-decoration: underline;
+}
 .section-case-studies .container .slick-dots,
 .section-news .container .slick-dots,
 .section-slide-shared .container .slick-dots {
@@ -2858,6 +2867,12 @@ input:focus, textarea:focus {
   bottom: 20px;
   background: rgba(247, 243, 249, 0.7);
   backdrop-filter: blur(4px);
+}
+.section-success-stories .container .list-news .item .main-item:hover .bg-img img {
+  transform: unset !important;
+}
+.section-success-stories .container .list-news .item:hover .title {
+  text-decoration: unset;
 }
 .section-success-stories .slick-dots {
   display: flex;
@@ -4645,6 +4660,30 @@ Shared List Questions: End
   color: var(--white);
   background-color: var(--blue);
 }
+.blog-list-page .container > .row > div:last-child {
+  position: relative;
+}
+.blog-list-page .container > .row > div:last-child .text-content.fixed-top {
+  position: fixed;
+  top: 20px;
+  left: unset;
+  right: unset;
+  width: 302.5px;
+  z-index: 0;
+}
+@media (max-width: 1320px) {
+  .blog-list-page .container > .row > div:last-child .text-content.fixed-top {
+    width: calc(25% - 30px);
+    right: 15px;
+  }
+}
+.blog-list-page .container > .row > div:last-child .text-content.fixed-bottom {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+  z-index: 0;
+}
 .blog-list-page .container > .row > div:last-child .search-block {
   position: relative;
   height: 44px;
@@ -4688,6 +4727,12 @@ Shared List Questions: End
 @media (max-width: 991.99px) {
   .blog-list-page .container > .row {
     row-gap: 50px;
+  }
+  .blog-list-page .container > .row > div:last-child .text-content.fixed-bottom {
+    position: relative;
+    left: unset;
+    right: unset;
+    bottom: unset;
   }
 }
 @media (max-width: 767.99px) {
@@ -4797,6 +4842,7 @@ Shared List Questions: End
 .blog-detail-page .blog-comment .list-comment .comment-item .heading img {
   width: 52px;
   height: 52px;
+  border-radius: 50%;
 }
 .blog-detail-page .blog-comment .list-comment .comment-item .comment-infor .like i {
   transition: all ease 0.3s;
@@ -4834,6 +4880,18 @@ Shared List Questions: End
 }
 .blog-detail-page .blog-form-contact textarea:focus {
   border: 1px solid var(--blue);
+}
+@media (max-width: 399.99px) {
+  .blog-detail-page .heading-infor {
+    flex-wrap: wrap;
+  }
+  .blog-detail-page .heading-infor i:nth-child(4) {
+    display: none;
+  }
+  .blog-detail-page .heading-infor .date {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*
@@ -5059,6 +5117,30 @@ Shared List Questions: End
 /*
 *** Case Studies Detail Page - Style2: Start
 */
+.case-studies-detail-two .section-fixed-sidebar {
+  position: relative;
+}
+.case-studies-detail-two .section-fixed-sidebar .text-content.fixed-top {
+  position: fixed;
+  top: 20px;
+  left: unset;
+  right: unset;
+  width: 384.99957px;
+  z-index: 0;
+}
+@media (max-width: 1320px) {
+  .case-studies-detail-two .section-fixed-sidebar .text-content.fixed-top {
+    width: calc(33.3333% - 45px);
+    right: 15px;
+  }
+}
+.case-studies-detail-two .section-fixed-sidebar .text-content.fixed-bottom {
+  position: absolute;
+  left: 45px;
+  right: 15px;
+  bottom: 0;
+  z-index: 0;
+}
 .case-studies-detail-two .section-testimonial .slick-dots {
   margin-left: 0;
   margin-top: 24px;
@@ -6891,6 +6973,16 @@ a.border-underline-purple-2px:hover {
 *** Section Menu Header Home7: End
 */
 /*
+*** Header No Fixed Top: Start
+*/
+.header-no-fixed .header-menu.sticky {
+  position: relative;
+}
+
+/*
+*** Header No Fixed Top: End
+*/
+/*
 *** Remove active Home: Start
 */
 .style-subpage .header-menu .menu-main > ul li a.active::before {
@@ -7320,7 +7412,7 @@ a.border-underline-purple-2px:hover {
 }
 @media (max-width: 991.99px) {
   .heading-content .content-main.style-one .row > div:first-child .text-content {
-    padding: 32px 32px 0 32px;
+    padding: 24px 12px 0 24px;
   }
   .heading-content .content-main.style-one .row > div:last-child .bg-img {
     position: relative;
@@ -7342,7 +7434,7 @@ a.border-underline-purple-2px:hover {
     left: unset;
   }
   .heading-content .content-main.style-three .row > div:last-child .text-content {
-    padding: 32px 32px 0 32px;
+    padding: 24px 20px 0 7px;
   }
 }
 @media (max-width: 575.99px) {

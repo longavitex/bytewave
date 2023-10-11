@@ -35,7 +35,7 @@
 }
 @media (max-width: 991.99px) {
   .heading-content .content-main.style-one .row > div:first-child .text-content {
-    padding: 32px 32px 0 32px;
+    padding: 24px 12px 0 24px;
   }
   .heading-content .content-main.style-one .row > div:last-child .bg-img {
     position: relative;
@@ -57,7 +57,7 @@
     left: unset;
   }
   .heading-content .content-main.style-three .row > div:last-child .text-content {
-    padding: 32px 32px 0 32px;
+    padding: 24px 20px 0 7px;
   }
 }
 @media (max-width: 575.99px) {

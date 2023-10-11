@@ -208,6 +208,30 @@
 /*
 *** Case Studies Detail Page - Style2: Start
 */
+.case-studies-detail-two .section-fixed-sidebar {
+  position: relative;
+}
+.case-studies-detail-two .section-fixed-sidebar .text-content.fixed-top {
+  position: fixed;
+  top: 20px;
+  left: unset;
+  right: unset;
+  width: 384.99957px;
+  z-index: 0;
+}
+@media (max-width: 1320px) {
+  .case-studies-detail-two .section-fixed-sidebar .text-content.fixed-top {
+    width: calc(33.3333% - 45px);
+    right: 15px;
+  }
+}
+.case-studies-detail-two .section-fixed-sidebar .text-content.fixed-bottom {
+  position: absolute;
+  left: 45px;
+  right: 15px;
+  bottom: 0;
+  z-index: 0;
+}
 .case-studies-detail-two .section-testimonial .slick-dots {
   margin-left: 0;
   margin-top: 24px;

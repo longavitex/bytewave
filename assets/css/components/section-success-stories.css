@@ -33,6 +33,12 @@
   background: rgba(247, 243, 249, 0.7);
   backdrop-filter: blur(4px);
 }
+.section-success-stories .container .list-news .item .main-item:hover .bg-img img {
+  transform: unset !important;
+}
+.section-success-stories .container .list-news .item:hover .title {
+  text-decoration: unset;
+}
 .section-success-stories .slick-dots {
   display: flex;
   align-items: center;

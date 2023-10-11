@@ -303,6 +303,32 @@
 *** Case Studies Detail Page - Style2: Start
 */
 .case-studies-detail-two {
+    .section-fixed-sidebar {
+        position: relative;
+
+        .text-content.fixed-top {
+            position: fixed;
+            top: 20px;
+            left: unset;
+            right: unset;
+            width: calc(((1290px / 100%) * 33.3333%) - 45px);
+            z-index: 0;
+
+            @media (max-width: 1320px) {
+                width: calc(33.3333% - 45px);
+                right: 15px;
+            }
+        }
+
+        .text-content.fixed-bottom {
+            position: absolute;
+            left: 45px;
+            right: 15px;
+            bottom: 0;
+            z-index: 0;
+        }
+    }
+
     .section-testimonial {
         .slick-dots {
             margin-left: 0;

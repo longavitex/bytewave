@@ -130,7 +130,7 @@ if (subNavItem) {
 // Top Nav Home2, Home3
 const chooseType = document.querySelectorAll('.top-nav .left>div')
 
-if(chooseType) {
+if (chooseType) {
     chooseType.forEach(item => {
         item.addEventListener('click', () => {
             item.querySelector('.sub-menu').classList.toggle('open')
@@ -222,7 +222,7 @@ const iconSearch = document.querySelector('.header-menu .right-block .search-ico
 const searchBlock = document.querySelector('.header-menu .search-block')
 const iconCloseSearch = document.querySelector('.header-menu .search-block .icon-close')
 
-if(iconSearch) {
+if (iconSearch) {
     iconSearch.addEventListener('click', () => {
         searchBlock.classList.add('open')
     })
@@ -1070,6 +1070,55 @@ if (document.querySelector('.case-studies-detail-block')) {
             document.querySelector('.heading-content .bg-img img').src = 'assets/images/blog/item16.png';
         }
     }
+}
+
+
+// Fixed sidebar in case studies detail two
+const sectionFixed = document.querySelector('.section-fixed-sidebar');
+const divToFix = document.querySelector('.section-fixed-sidebar .text-content');
+
+if (sectionFixed && divToFix) {
+    // Listen event scroll mouse
+    window.addEventListener('scroll', () => {
+        const sectionFixedRect = sectionFixed.getBoundingClientRect();
+        const divToFixRect = divToFix.getBoundingClientRect();
+
+        if (sectionFixedRect.top <= 20) {
+            // When divToFixRect is 20px from the top of the page, 
+            // add class "fixed-top" to divToFix need to fixed-top.
+            divToFix.classList.add('fixed-top');
+        } else {
+            // Remove class "fixed-top".
+            divToFix.classList.remove('fixed-top');
+        }
+
+        // Space from sectionFixed bottom to divToFix bottom
+        const distanceToBottom = sectionFixedRect.bottom - divToFixRect.bottom;
+
+        // if space from sectionFixed bottom to divToFix bottom less than or equal to 0,
+        // Remove class fixed-top, add class fixed-bottom
+        if (distanceToBottom <= 0) {
+            divToFix.classList.add('fixed-bottom');
+            divToFix.classList.remove('fixed-top');
+        }
+    });
+
+    // Listen for mouse drag events
+    window.addEventListener('wheel', (event) => {
+        const sectionFixedRect = sectionFixed.getBoundingClientRect();
+        const divToFixRect = divToFix.getBoundingClientRect();
+
+        // Listen for mouse drag events from bottom to top
+        if (event.deltaY < 0) {
+            // If divToFix is greater than or equal to 20px from top and
+            // sectionFixedRect is less than or equal to 20px from top,
+            // Delete class fixed-bottom, add class fixed-top
+            if (sectionFixedRect.top <= 20 && divToFixRect.top >= 20) {
+                divToFix.classList.add('fixed-top');
+                divToFix.classList.remove('fixed-bottom');
+            }
+        }
+    })
 }
 
 

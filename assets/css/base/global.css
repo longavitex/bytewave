@@ -418,6 +418,10 @@
   row-gap: 8px;
 }
 
+.row-gap-4 {
+  row-gap: 4px !important;
+}
+
 .fs-64 {
   font-size: 64px;
 }

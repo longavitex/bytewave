@@ -2,7 +2,7 @@ extends base/layout.pug
 block title
     title Blog Standard
 block header
-    div(class="style-subpage style-blog style-three")
+    div(class="style-subpage style-blog style-three header-no-fixed")
         include components/header/menu/menu-one.pug
 block content 
     include mixins/headingTitle.pug
@@ -51,46 +51,47 @@ block content
                         a(href="#!").nav-item.bora-50.flex-center 3
                         a(href="#!").nav-item.bora-50.flex-center
                             i.ph.ph-caret-right
-                .col-12.col-lg-3
-                    .search-block.bora-8
-                        input(type="text" placeholder="Search").bora-8.w-100
-                        i.ph.ph-magnifying-glass
-                    .cate-block.mt-32
-                        .heading6 Categories
-                        .list-nav.mt-8.d-flex.flex-column
-                            a(href="#!").nav-item.pointer.mt-8.active&attributes({"data-name":"tab-one"}) Digital Agency
-                            a(href="#!").nav-item.pointer.mt-8&attributes({"data-name":"tab-two"}) IT Solution
-                            a(href="#!").nav-item.pointer.mt-8&attributes({"data-name":"tab-three"}) Career
-                            a(href="#!").nav-item.pointer.mt-8&attributes({"data-name":"tab-one"}) Company
-                    .recent-post-block.mt-32
-                        .heading6 Recent Posts
-                        .list-recent-post.mt-20
-                            a(href="blog-detail.html").recent-post-item.d-flex.item-start.gap-16
-                                .item-img
-                                    img(src="assets/images/industry/1.png", alt="").w-80.h-80.bora-8.object-fit-cover
-                                .item-infor
-                                    .caption2.bg-surface.pl-8.pr-8.display-inline-block Solutions
-                                    .item-title.mt-4 Digital Marketing Success: E-Commerce Case
-                            a(href="blog-detail.html").recent-post-item.d-flex.item-start.gap-16.mt-28
-                                .item-img
-                                    img(src="assets/images/industry/2.png", alt="").w-80.h-80.bora-8.object-fit-cover
-                                .item-infor
-                                    .caption2.bg-surface.pl-8.pr-8.display-inline-block Data
-                                    .item-title.mt-4 Sustainable Practices in Manufacturing
-                            a(href="blog-detail.html").recent-post-item.d-flex.item-start.gap-16.mt-28
-                                .item-img
-                                    img(src="assets/images/industry/3.png", alt="").w-80.h-80.bora-8.object-fit-cover
-                                .item-infor
-                                    .caption2.bg-surface.pl-8.pr-8.display-inline-block IT Services
-                                    .item-title.mt-4 Enhancing User Experien in Mobile App Development
-                    .tags-popular-block.mt-40
-                        .tag-heading.heading7 Popular Tags
-                        .list-tag.mt-16.d-flex.flex-wrap.gap-12
-                            a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Featured
-                            a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Experience
-                            a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Interview
-                            a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Skill
-                            a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Business
+                .col-12.col-lg-3.section-fixed-sidebar
+                    .text-content
+                        .search-block.bora-8
+                            input(type="text" placeholder="Search").bora-8.w-100
+                            i.ph.ph-magnifying-glass
+                        .cate-block.mt-32
+                            .heading6 Categories
+                            .list-nav.mt-8.d-flex.flex-column
+                                a(href="#!").nav-item.pointer.mt-8.active&attributes({"data-name":"tab-one"}) Digital Agency
+                                a(href="#!").nav-item.pointer.mt-8&attributes({"data-name":"tab-two"}) IT Solution
+                                a(href="#!").nav-item.pointer.mt-8&attributes({"data-name":"tab-three"}) Career
+                                a(href="#!").nav-item.pointer.mt-8&attributes({"data-name":"tab-one"}) Company
+                        .recent-post-block.mt-32
+                            .heading6 Recent Posts
+                            .list-recent-post.mt-20
+                                a(href="blog-detail.html").recent-post-item.d-flex.item-start.gap-16
+                                    .item-img
+                                        img(src="assets/images/industry/1.png", alt="").w-80.h-80.bora-8.object-fit-cover
+                                    .item-infor
+                                        .caption2.bg-surface.pl-8.pr-8.display-inline-block Solutions
+                                        .item-title.mt-4 Digital Marketing Success: E-Commerce Case
+                                a(href="blog-detail.html").recent-post-item.d-flex.item-start.gap-16.mt-28
+                                    .item-img
+                                        img(src="assets/images/industry/2.png", alt="").w-80.h-80.bora-8.object-fit-cover
+                                    .item-infor
+                                        .caption2.bg-surface.pl-8.pr-8.display-inline-block Data
+                                        .item-title.mt-4 Sustainable Practices in Manufacturing
+                                a(href="blog-detail.html").recent-post-item.d-flex.item-start.gap-16.mt-28
+                                    .item-img
+                                        img(src="assets/images/industry/3.png", alt="").w-80.h-80.bora-8.object-fit-cover
+                                    .item-infor
+                                        .caption2.bg-surface.pl-8.pr-8.display-inline-block IT Services
+                                        .item-title.mt-4 Enhancing User Experien in Mobile App Development
+                        .tags-popular-block.mt-40
+                            .tag-heading.heading7 Popular Tags
+                            .list-tag.mt-16.d-flex.flex-wrap.gap-12
+                                a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Featured
+                                a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Experience
+                                a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Interview
+                                a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Skill
+                                a(href="#!").caption2.pt-8.pb-8.pl-16.pr-16.bg-surface.bora-8.hover-button-blue Business
 block footer 
     div(class="style-subpage style-blog")
         include components/footer/footer.pug
