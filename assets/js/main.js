@@ -1062,14 +1062,6 @@ if (document.querySelector('.case-studies-detail-block')) {
             document.querySelector('.heading-content .bg-img img').src = selectedCaseStudiesInfo.img;
         }
     }
-
-    else if (selectedCaseStudiesInfo == null) {
-        if (document.querySelector('.heading-content .bg-img img') && document.querySelector('.category') && document.querySelector('.title')) {
-            document.querySelector('.title').textContent = 'exploring tech trends';
-            document.querySelector('.category').textContent = 'IT Solution';
-            document.querySelector('.heading-content .bg-img img').src = 'assets/images/blog/item16.png';
-        }
-    }
 }
 
 
@@ -1161,14 +1153,6 @@ if (document.querySelector('.blog-detail-page')) {
             document.querySelector('.title').textContent = selectedBlogInfo.title;
             document.querySelector('.date').textContent = selectedBlogInfo.date;
             document.querySelector('.main-img img').src = selectedBlogInfo.img;
-        }
-    }
-    else if (selectedBlogInfo == null) {
-        if (document.querySelector('.category') && document.querySelector('.title') && document.querySelector('.main-img img')) {
-            document.querySelector('.category').textContent = 'E-Commerce & Retail';
-            document.querySelector('.title').textContent = "Strategies For Thriving: Unveiling Business Consulting's Impact";
-            document.querySelector('.date').textContent = 'February 23, 2023';
-            document.querySelector('.main-img img').src = 'assets/images/blog/item4.png';
         }
     }
 }
