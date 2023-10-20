@@ -384,6 +384,12 @@
         .container .row {
             flex-direction: column-reverse;
         }
+
+        .section-fixed-sidebar .text-content {
+            position: relative !important;
+            left: unset !important;
+            right: unset !important;
+        }
     }
 
     @media (max-width: 400px) {
